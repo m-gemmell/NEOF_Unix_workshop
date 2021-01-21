@@ -1,0 +1,33 @@
+# Practical cheat sheet
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/cheatsheet.png", auto_pdf = TRUE)
+``` 
+
+```{r echo = FALSE, results = 'cheatsheet_table'}
+library("knitr")
+Command <- c("echo","man","clear","\\<tab>","cd","pwd","ls",
+             "mkdir","cp","mv","rm","cat","head","tail","less",
+             "wc","grep","vim")
+Description <- c("Print out a string to screen","Look at the manual page of a command",
+                 "Clear the screen","Complete a path or command","Change directory",
+                 "Print Working Directory","List the contents of a directory",
+                 "Make a directory","Copy content to another path","Move content to a new path",
+                 "Delete content","Print contents of a file to screen",
+                 "Print out the first n lines of a file to screen",
+                 "Print the last n lines of a file to screen","Read a file one page at a time",
+                 "Print out line, word and byte count",
+                 "Search for lines that contain a specific pattern","Text editor")
+Usage_example <- c("Echo ‘Hello World’","man man","clear","\\<tab>","cd /directory/path/",
+                   "pwd","ls /directory/path/","mkdir /directory/path/new_directory/",
+                   "cp /directory/path/file.txt /directory/path/new_directory/",
+                   "mv /directory/path/file.txt /directory/path/new_directory/",
+                   "rm /directory/path/file.txt","cat /directory/path/file.txt",
+                   "head -n 10 /directory/path/file.txt","tail -n 12 /directory/path/file.txt",
+                   "less /directory/path/file.txt","wc /directory/path/file.txt",
+                   'grep “pattern”  /directory/path/file.txt', "vim /directory/path/file.txt")
+
+cdf <- data.frame(Command, Description,Usage_example)
+colnames(cdf) <- c("Command","Description","Usage example")
+
+kable(cdf)
+```

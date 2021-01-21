@@ -1,0 +1,89 @@
+# Manipulating directories
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
+``` 
+
+## Make a directory
+To make a directory the command `mkdir` is used. 
+
+Type in the following commands to make a subdirectory within the __"CGR_Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
+```{bash eval=FALSE}
+cd ~/CGR_Linux/
+mkdir Chicken
+``` 
+
+Using the up arrow key, edit the previous command to quickly run the below:
+```{bash eval=FALSE}
+mkdir Chicken/Egg
+``` 
+
+## Moving Directories and Files
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/chicken.png", auto_pdf = TRUE)
+```
+Files and directories can be moved with the `mv` command. This can also be used to change the name of a file or a directory.
+
+__Note__: If you move a file to the path of a file that already exists, the pre existing file will be overwritten.
+
+First ensure your working directory is the __"CGR_Linux"__ directory
+
+Move the __"Chicken"__ directory into the __"3_chicken_farm/3_1_hut/"__ directory. This will move the directory and all its contents.
+```{bash eval=FALSE}
+mv Chicken/ 3_chicken_farm/3_1_hut/
+``` 
+
+Move the Directory __"3_chicken_farm/3_1_hut/Chicken/"__ to __"3_chicken_farm/3_2_field"__ and rename it __"Outdoor_Chicken"__.
+```{bash eval=FALSE}
+mv ~/CGR_Linux/3_chicken_farm/3_1_hut/Chicken/ \
+~/CGR_Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+``` 
+
+Move the file __"3_chicken_farm/3_3_supplies/feed.txt"__ to the directory __"3_chicken_farm/3_2_field"__ and rename it __"used_feed.txt"__
+```{bash eval=FALSE}
+mv 3_chicken_farm/3_3_supplies/feed.txt \
+3_chicken_farm/3_2_field/used_feed.txt
+``` 
+
+## Copying Directories and Files
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/copy.png", auto_pdf = TRUE)
+```
+Files and directories can be copied with the `cp` command. Directories and files can be copied to any directory and given a new name.
+Note: If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.
+
+Before running the below command move into your __"~/CGR_Linux/3_chicken_farm/"__ directory
+
+Copy the file __"3_1_hut/Laid_Egg.txt"__ to the __"3_2_field"__ directory and give it the filename __"Chick.txt"__
+```{bash eval=FALSE}
+cp 3_1_hut/Laid_Egg.txt 3_2_field/Chick.txt
+``` 
+
+Copy the file __"3_2_hut/Chick.txt"__ and give the copy the name __"Chick_2.txt"__
+```{bash eval=FALSE}
+cp 3_2_field/Chick.txt 3_2_field/Chick_2.txt
+``` 
+
+Copy the directory __"3_1_hut"__ to __"3_1_hut_2"__
+```{bash eval=FALSE}
+cp -r 3_1_hut 3_1_hut_2 
+``` 
+
+## Deleting Files and Directories
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/erase.png", auto_pdf = TRUE)
+```
+To delete files and directories the command `rm` can be used. 
+
+__Important__: This command can be very dangerous. There is no recycle bin on Linux machines so once you delete something it cannot be recovered. Be very careful when deleting files and directories. To avoid major loss try to keep backups of important data and scripts.
+
+Ensure you are in your __"3_chicken_farm/"__ directory
+
+Remove the file __"3_2_field/Chick_2.txt"__
+```{bash eval=FALSE}
+rm 3_2_field/Chick_2.txt
+``` 
+
+Remove the directory __"3_1_hut_2/"__ and its contents
+```{bash eval=FALSE}
+rm -r  3_1_hut_2
+``` 

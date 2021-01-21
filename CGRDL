@@ -1,0 +1,8 @@
+CGR download link
+matt@watt23:~$ mkilluminaagfdir.sh Intro_to_Unix_2020
+Using full name of IntrotoUnix2020
+New user/ID, creating new secret key...
+Making directory /agf/illum/IntrotoUnix2020_0362f7602a3df3cc
+Changing ownership to you, matt
+Direct url is:
+http://cgr.liv.ac.uk:80/illum/IntrotoUnix2020_0362f7602a3df3cc/
