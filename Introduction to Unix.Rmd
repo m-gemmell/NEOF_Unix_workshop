@@ -69,52 +69,17 @@ It is important to learn the Linux language so you can run commands on the comma
 knitr::include_graphics(path = "figures/start.png", auto_pdf = TRUE)
 ```  
 
-## Logon instructions  
-For this workshop we will be using Virtual Network Computing (VNC). You will log onto our machines so you can access our VNC desktops.
-
-__Prior to logging in you will need to know the following key:__
-
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/f8_key.png", auto_pdf = TRUE)
-```  
-
-The VNC will be set to full screen by default. __F8__ will bring up a menu in the VNC that will allow you to disable full screen.
-
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/fullscreen_button.png", 
-                        auto_pdf = TRUE)
-``` 
-
-Below are instructions on how to log in to our Linux teaching VNC.
-
-__Windows__
-
-1. Go to the following link: http://ada01.liv.ac.uk/pcvnc.exe
-2. Save the file as "pcvnc.exe"
-3. Run the file
-4. Enter your password when the prompt appears
-
-__Mac__
-
-1. Open a terminal
-2. Run the following command in the terminal "curl -s http://ada01.liv.ac.uk/MacVNC.sh | KEY=\<password\> bash" where \<password\> is replaced with your password
-3. Answer the resulting questions with yes
-
-__Linux__
-
-1. Open a terminal
-2. Run the following command in the terminal 
-    - `curl -s http://ada01.liv.ac.uk/LinuxVNC.sh | KEY=<password> bash` 
-    - \<password\> is replaced with your password
+## Logon instructions
+For this workshop we will be using Virtual Network Computing (VNC). Connect to the VNC with a browser by using the webVNC link you were sent.
 
 You will now be in a logged-in Linux VNC desktop with two terminals. You will see something as below (there may be only one terminal which is fine). If you do not see something similar please ask for assistance.
 ```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
 knitr::include_graphics(path = "figures/logon_pic.png", auto_pdf = TRUE)
 ``` 
 
-If the VNC is taking up to much space of your screen you can move it so alot of it is off the screen. Ensure you can see one whole terminal.
+If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
 
-These instructions will not work outside of this workshop. If your workplace has its own Linux cluster please ask your cluster manager for a user guide. If you would like to install your own Linux OS on your desktop or laptop we would recommend Ubuntu. 
+These instructions will not work outside of this workshop. If you would like to install your own Linux OS on your desktop or laptop we would recommend Ubuntu. 
 
 The following link is a guide to install Ubuntu:  
 https://www.ubuntu.com/download/desktop/install-ubuntu-desktop.  
