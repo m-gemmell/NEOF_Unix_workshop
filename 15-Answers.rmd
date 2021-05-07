@@ -191,9 +191,9 @@ sed "s/.*sample/sample/" | sed "s/_corrected.fastq//"
 9. Count the number of Gs and Cs within the sequences of file sample_16_AACC.fastq
 ```{bash eval=FALSE}
 cat fastq/sample_16_AACC.fastq | grep -B 1 "^+$" | /
-grep -v "+\|--" | sed "s/G\|C//g" | wc -c
+grep -v "+\|--" | sed "s/A\|T//g" | wc -c
 ```
-10. Get the fastq headers of sequences with homopolymers with a length of 5 or greater for the uncorrected fastq files for samples 8-13 with one command. Then in the same command make the final output of each line in the format of “Sample_13: Sequence 12”
+10. Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 8-13 with one command. Then in the same command make the final output of each line in the format of “Sample_13: Sequence 12”
 ```{bash eval=FALSE}
 cat fastq/*[3-5]*[AGCT].fastq | grep -B 2 "^+$" | /
 grep -B 1 "AAAAA" | grep "^@" | sed "s/^@s/S/" | /

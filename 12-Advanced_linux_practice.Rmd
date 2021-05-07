@@ -332,4 +332,4 @@ http://www.grymoire.com/Unix/Sed.html
 All files, directories and programs have permissions. It is important to know about this so you know your read, write and executability permissions for the content within machines.
 
 Below is a useful link to learn about file permissions:  
-http://linuxcommand.org/lts0070.php
+https://www.guru99.com/file-permissions.html

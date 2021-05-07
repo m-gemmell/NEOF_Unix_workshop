@@ -381,6 +381,25 @@ Notice that there is a space before the `\`. This is because there needs to be a
 
 Bash escape is useful for this document as it will show if commands in this document are separate commands or one command over multiple lines.
 
+## Annotations
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/hashtag.png", auto_pdf = TRUE)
+``` 
+
+You can annotate your code so it will not run. This is carried out by putting a `#` at the start of a code line.
+
+An example:
+
+```{bash eval=FALSE}
+#This line is annotation and will not run
+#The below line will print out the text "this line is not annotated"
+echo "this line is not annotated"
+```
+
+This is useful to give yourself information about what your code is doing and it is vital if you are creating scripts.
+
+I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. Just be sure to remove the `#` at the start of the line before you want to run it.
+
 ## Navigating directories
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/tol.png", auto_pdf = TRUE)
@@ -837,7 +856,7 @@ The directory __"~/CGR_Linux/6_final_exercise/"__ has all the files you need. Be
 8. Check if the last read names match in the paired files.  
 9. In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter'.  
 10. In the sample __1-P1__ remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 files.  
-11. Print to screen the fastq header, sequence and quality data for the 25th sequence in sample __2-P2__ for both the R1 and R2 file. Do this with one command.
+11. Print to screen the fastq header, sequence and quality data for the 25th sequence in sample __2-P2__ for both the R1 and R2 file. Do this with one command for R1 and a separate command for R2.
 
 <!--chapter:end:11-Exercise2.Rmd-->
 
@@ -1175,7 +1194,7 @@ http://www.grymoire.com/Unix/Sed.html
 All files, directories and programs have permissions. It is important to know about this so you know your read, write and executability permissions for the content within machines.
 
 Below is a useful link to learn about file permissions:  
-http://linuxcommand.org/lts0070.php
+https://www.guru99.com/file-permissions.html
 
 <!--chapter:end:12-Advanced_linux_practice.Rmd-->
 
@@ -1193,7 +1212,7 @@ knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
 7. Append the metadata line for sample_1_AAAA to the bottom of the file __sample_1_AAA.txt__ in the __txt__  directory.
 8. For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (e.g. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)
 9. Count the number of Gs and Cs within file __sample_16_AACC.fastq__
-10. Get the fastq headers of sequences with homopolymers with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.
+10. Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.
 
 <!--chapter:end:13-Advanced_practice_exercise.Rmd-->
 
@@ -1512,9 +1531,9 @@ sed "s/.*sample/sample/" | sed "s/_corrected.fastq//"
 9. Count the number of Gs and Cs within the sequences of file sample_16_AACC.fastq
 ```{bash eval=FALSE}
 cat fastq/sample_16_AACC.fastq | grep -B 1 "^+$" | /
-grep -v "+\|--" | sed "s/G\|C//g" | wc -c
+grep -v "+\|--" | sed "s/A\|T//g" | wc -c
 ```
-10. Get the fastq headers of sequences with homopolymers with a length of 5 or greater for the uncorrected fastq files for samples 8-13 with one command. Then in the same command make the final output of each line in the format of “Sample_13: Sequence 12”
+10. Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 8-13 with one command. Then in the same command make the final output of each line in the format of “Sample_13: Sequence 12”
 ```{bash eval=FALSE}
 cat fastq/*[3-5]*[AGCT].fastq | grep -B 2 "^+$" | /
 grep -B 1 "AAAAA" | grep "^@" | sed "s/^@s/S/" | /

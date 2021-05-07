@@ -22,6 +22,7 @@ ending-a-command
 history
 clear
 bash-escape
+annotations
 navigating-directories
 manipulating-directories
 make-a-directory

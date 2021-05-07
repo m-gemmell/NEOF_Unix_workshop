@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-02-16" />
+<meta name="date" content="2021-05-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -168,7 +168,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#history"><i class="fa fa-check"></i><b>5.3</b> History</a></li>
 <li class="chapter" data-level="5.4" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#clear"><i class="fa fa-check"></i><b>5.4</b> Clear</a></li>
 <li class="chapter" data-level="5.5" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#bash-escape"><i class="fa fa-check"></i><b>5.5</b> Bash escape</a></li>
-<li class="chapter" data-level="5.6" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#navigating-directories"><i class="fa fa-check"></i><b>5.6</b> Navigating directories</a></li>
+<li class="chapter" data-level="5.6" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#annotations"><i class="fa fa-check"></i><b>5.6</b> Annotations</a></li>
+<li class="chapter" data-level="5.7" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#navigating-directories"><i class="fa fa-check"></i><b>5.7</b> Navigating directories</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="06-Manipulating_directories.html"><a href="06-Manipulating_directories.html"><i class="fa fa-check"></i><b>6</b> Manipulating directories</a>
 <ul>
@@ -250,10 +251,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">6.1</span> Make a directory</h2>
 <p>To make a directory the command <code>mkdir</code> is used.</p>
 <p>Type in the following commands to make a subdirectory within the <strong>“CGR_Linux”</strong> directory called <strong>“Chicken”</strong> then make a subdirectory within <strong>“Chicken”</strong> called <strong>“Egg”</strong>.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="06-Manipulating_directories.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/CGR_Linux/</span>
-<span id="cb25-2"><a href="06-Manipulating_directories.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> Chicken</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="06-Manipulating_directories.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/CGR_Linux/</span>
+<span id="cb26-2"><a href="06-Manipulating_directories.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> Chicken</span></code></pre></div>
 <p>Using the up arrow key, edit the previous command to quickly run the below:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="06-Manipulating_directories.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> Chicken/Egg</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="06-Manipulating_directories.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> Chicken/Egg</span></code></pre></div>
 </div>
 <div id="moving-directories-and-files" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Moving Directories and Files</h2>
@@ -262,13 +263,13 @@ Files and directories can be moved with the <code>mv</code> command. This can al
 <p><strong>Note</strong>: If you move a file to the path of a file that already exists, the pre existing file will be overwritten.</p>
 <p>First ensure your working directory is the <strong>“CGR_Linux”</strong> directory</p>
 <p>Move the <strong>“Chicken”</strong> directory into the <strong>“3_chicken_farm/3_1_hut/”</strong> directory. This will move the directory and all its contents.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="06-Manipulating_directories.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> Chicken/ 3_chicken_farm/3_1_hut/</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="06-Manipulating_directories.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> Chicken/ 3_chicken_farm/3_1_hut/</span></code></pre></div>
 <p>Move the Directory <strong>“3_chicken_farm/3_1_hut/Chicken/”</strong> to <strong>“3_chicken_farm/3_2_field”</strong> and rename it <strong>“Outdoor_Chicken”</strong>.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="06-Manipulating_directories.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> ~/CGR_Linux/3_chicken_farm/3_1_hut/Chicken/ <span class="kw">\</span></span>
-<span id="cb28-2"><a href="06-Manipulating_directories.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ex">~/CGR_Linux/3_chicken_farm/3_2_field/Outdoor_Chicken</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="06-Manipulating_directories.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> ~/CGR_Linux/3_chicken_farm/3_1_hut/Chicken/ <span class="kw">\</span></span>
+<span id="cb29-2"><a href="06-Manipulating_directories.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ex">~/CGR_Linux/3_chicken_farm/3_2_field/Outdoor_Chicken</span></span></code></pre></div>
 <p>Move the file <strong>“3_chicken_farm/3_3_supplies/feed.txt”</strong> to the directory <strong>“3_chicken_farm/3_2_field”</strong> and rename it <strong>“used_feed.txt”</strong></p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="06-Manipulating_directories.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> 3_chicken_farm/3_3_supplies/feed.txt <span class="kw">\</span></span>
-<span id="cb29-2"><a href="06-Manipulating_directories.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ex">3_chicken_farm/3_2_field/used_feed.txt</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="06-Manipulating_directories.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> 3_chicken_farm/3_3_supplies/feed.txt <span class="kw">\</span></span>
+<span id="cb30-2"><a href="06-Manipulating_directories.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="ex">3_chicken_farm/3_2_field/used_feed.txt</span></span></code></pre></div>
 </div>
 <div id="copying-directories-and-files" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> Copying Directories and Files</h2>
@@ -277,11 +278,11 @@ Files and directories can be copied with the <code>cp</code> command. Directorie
 Note: If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.</p>
 <p>Before running the below command move into your <strong>“~/CGR_Linux/3_chicken_farm/”</strong> directory</p>
 <p>Copy the file <strong>“3_1_hut/Laid_Egg.txt”</strong> to the <strong>“3_2_field”</strong> directory and give it the filename <strong>“Chick.txt”</strong></p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="06-Manipulating_directories.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> 3_1_hut/Laid_Egg.txt 3_2_field/Chick.txt</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="06-Manipulating_directories.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> 3_1_hut/Laid_Egg.txt 3_2_field/Chick.txt</span></code></pre></div>
 <p>Copy the file <strong>“3_2_hut/Chick.txt”</strong> and give the copy the name <strong>“Chick_2.txt”</strong></p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="06-Manipulating_directories.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> 3_2_field/Chick.txt 3_2_field/Chick_2.txt</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="06-Manipulating_directories.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> 3_2_field/Chick.txt 3_2_field/Chick_2.txt</span></code></pre></div>
 <p>Copy the directory <strong>“3_1_hut”</strong> to <strong>“3_1_hut_2”</strong></p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="06-Manipulating_directories.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> -r 3_1_hut 3_1_hut_2 </span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="06-Manipulating_directories.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> -r 3_1_hut 3_1_hut_2 </span></code></pre></div>
 </div>
 <div id="deleting-files-and-directories" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Deleting Files and Directories</h2>
@@ -290,9 +291,9 @@ To delete files and directories the command <code>rm</code> can be used.</p>
 <p><strong>Important</strong>: This command can be very dangerous. There is no recycle bin on Linux machines so once you delete something it cannot be recovered. Be very careful when deleting files and directories. To avoid major loss try to keep backups of important data and scripts.</p>
 <p>Ensure you are in your <strong>“3_chicken_farm/”</strong> directory</p>
 <p>Remove the file <strong>“3_2_field/Chick_2.txt”</strong></p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="06-Manipulating_directories.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> 3_2_field/Chick_2.txt</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="06-Manipulating_directories.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> 3_2_field/Chick_2.txt</span></code></pre></div>
 <p>Remove the directory <strong>“3_1_hut_2/”</strong> and its contents</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="06-Manipulating_directories.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> -r  3_1_hut_2</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="06-Manipulating_directories.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> -r  3_1_hut_2</span></code></pre></div>
 
 </div>
 </div>

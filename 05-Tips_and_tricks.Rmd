@@ -72,6 +72,25 @@ Notice that there is a space before the `\`. This is because there needs to be a
 
 Bash escape is useful for this document as it will show if commands in this document are separate commands or one command over multiple lines.
 
+## Annotations
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/hashtag.png", auto_pdf = TRUE)
+``` 
+
+You can annotate your code so it will not run. This is carried out by putting a `#` at the start of a code line.
+
+An example:
+
+```{bash eval=FALSE}
+#This line is annotation and will not run
+#The below line will print out the text "this line is not annotated"
+echo "this line is not annotated"
+```
+
+This is useful to give yourself information about what your code is doing and it is vital if you are creating scripts.
+
+I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. Just be sure to remove the `#` at the start of the line before you want to run it.
+
 ## Navigating directories
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/tol.png", auto_pdf = TRUE)

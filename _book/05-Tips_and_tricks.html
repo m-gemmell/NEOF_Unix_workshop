@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-02-16" />
+<meta name="date" content="2021-05-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -168,7 +168,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#history"><i class="fa fa-check"></i><b>5.3</b> History</a></li>
 <li class="chapter" data-level="5.4" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#clear"><i class="fa fa-check"></i><b>5.4</b> Clear</a></li>
 <li class="chapter" data-level="5.5" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#bash-escape"><i class="fa fa-check"></i><b>5.5</b> Bash escape</a></li>
-<li class="chapter" data-level="5.6" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#navigating-directories"><i class="fa fa-check"></i><b>5.6</b> Navigating directories</a></li>
+<li class="chapter" data-level="5.6" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#annotations"><i class="fa fa-check"></i><b>5.6</b> Annotations</a></li>
+<li class="chapter" data-level="5.7" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#navigating-directories"><i class="fa fa-check"></i><b>5.7</b> Navigating directories</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="06-Manipulating_directories.html"><a href="06-Manipulating_directories.html"><i class="fa fa-check"></i><b>6</b> Manipulating directories</a>
 <ul>
@@ -294,8 +295,19 @@ In the below example press “enter” after the end of a line.</p>
 <p>Notice that there is a space before the <code>\</code>. This is because there needs to be a space between the echo and text to print out. It is always recommended to use a space before a <code>\</code> to bash escape.</p>
 <p>Bash escape is useful for this document as it will show if commands in this document are separate commands or one command over multiple lines.</p>
 </div>
-<div id="navigating-directories" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> Navigating directories</h2>
+<div id="annotations" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Annotations</h2>
+<p><img src="figures/hashtag.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>You can annotate your code so it will not run. This is carried out by putting a <code>#</code> at the start of a code line.</p>
+<p>An example:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="05-Tips_and_tricks.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#This line is annotation and will not run</span></span>
+<span id="cb25-2"><a href="05-Tips_and_tricks.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co">#The below line will print out the text &quot;this line is not annotated&quot;</span></span>
+<span id="cb25-3"><a href="05-Tips_and_tricks.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;this line is not annotated&quot;</span></span></code></pre></div>
+<p>This is useful to give yourself information about what your code is doing and it is vital if you are creating scripts.</p>
+<p>I also find it useful to put a <code>#</code> at the front of a long command that I am typing or editing. This means the command won’t run if I accidentally press enter. Just be sure to remove the <code>#</code> at the start of the line before you want to run it.</p>
+</div>
+<div id="navigating-directories" class="section level2" number="5.7">
+<h2><span class="header-section-number">5.7</span> Navigating directories</h2>
 <p><img src="figures/tol.png" width="15%" style="display: block; margin: auto;" />
 With the skills and knowledge from the above sections you may want to practice navigating directories to get a better feel of it. For this purpose there is a directory called <strong>“~/CGR_Linux/TOL”</strong>. This contains directories and subdirectories in the structure of Bacterial and Archaeal taxonomy from the Silva 16S rRNA database.</p>
 

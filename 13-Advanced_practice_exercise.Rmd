@@ -12,4 +12,4 @@ knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
 7. Append the metadata line for sample_1_AAAA to the bottom of the file __sample_1_AAA.txt__ in the __txt__  directory.
 8. For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (e.g. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)
 9. Count the number of Gs and Cs within file __sample_16_AACC.fastq__
-10. Get the fastq headers of sequences with homopolymers with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.
+10. Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.

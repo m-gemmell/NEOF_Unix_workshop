@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-02-16" />
+<meta name="date" content="2021-05-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -168,7 +168,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#history"><i class="fa fa-check"></i><b>5.3</b> History</a></li>
 <li class="chapter" data-level="5.4" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#clear"><i class="fa fa-check"></i><b>5.4</b> Clear</a></li>
 <li class="chapter" data-level="5.5" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#bash-escape"><i class="fa fa-check"></i><b>5.5</b> Bash escape</a></li>
-<li class="chapter" data-level="5.6" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#navigating-directories"><i class="fa fa-check"></i><b>5.6</b> Navigating directories</a></li>
+<li class="chapter" data-level="5.6" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#annotations"><i class="fa fa-check"></i><b>5.6</b> Annotations</a></li>
+<li class="chapter" data-level="5.7" data-path="05-Tips_and_tricks.html"><a href="05-Tips_and_tricks.html#navigating-directories"><i class="fa fa-check"></i><b>5.7</b> Navigating directories</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="06-Manipulating_directories.html"><a href="06-Manipulating_directories.html"><i class="fa fa-check"></i><b>6</b> Manipulating directories</a>
 <ul>
@@ -255,11 +256,11 @@ The <code>cat</code> command will print out the entire contents of a file to the
 Example commands are below (remember to replace xxx with your user name number):</p>
 <p><strong>Note</strong>: remember tab complete and using the arrow keys</p>
 <p>Print contents of <strong>“short_file.txt”</strong> to screen</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="08-File_reading_and_processing.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/CGR_Linux/5_reading_files/short_file.txt</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="08-File_reading_and_processing.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/CGR_Linux/5_reading_files/short_file.txt</span></code></pre></div>
 <p>Print contents of <strong>“Scientist.txt”</strong> to screen</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="08-File_reading_and_processing.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/CGR_Linux/5_reading_files/Scientist.txt</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="08-File_reading_and_processing.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/CGR_Linux/5_reading_files/Scientist.txt</span></code></pre></div>
 <p>Print contents of <strong>“ecoli.gbk”</strong> to screen</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="08-File_reading_and_processing.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/CGR_Linux/5_reading_files/ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="08-File_reading_and_processing.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/CGR_Linux/5_reading_files/ecoli.gbk</span></code></pre></div>
 <p><strong>Remember</strong>: The <code>clear</code> command.</p>
 </div>
 <div id="head-and-tail" class="section level2" number="8.2">
@@ -270,25 +271,25 @@ The <code>head</code>_command will print out to screen the top n lines of a file
 <p>The default value is 10. The <code>-n</code> option can be used to indicate how many lines to print out.</p>
 <p>Carry out the below commands in the directory <strong>“/pub39/tea/nscxxx/CGR_Linux/5_reading_files/”</strong></p>
 <p>Print out the top 10 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="08-File_reading_and_processing.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="08-File_reading_and_processing.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> ecoli.gbk</span></code></pre></div>
 <p>Print out the bottom 10 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="08-File_reading_and_processing.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="08-File_reading_and_processing.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> ecoli.gbk</span></code></pre></div>
 <p>Print out the top 25 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="08-File_reading_and_processing.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> -n 25 ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb41-1"><a href="08-File_reading_and_processing.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> -n 25 ecoli.gbk</span></code></pre></div>
 <p>Print out the bottom 2 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb41-1"><a href="08-File_reading_and_processing.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> -n 2 ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="08-File_reading_and_processing.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> -n 2 ecoli.gbk</span></code></pre></div>
 <p>Print out all but the bottom 2 lines of <strong>“Scientist.txt”</strong></p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="08-File_reading_and_processing.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> -n -2 Scientist.txt</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb43-1"><a href="08-File_reading_and_processing.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> -n -2 Scientist.txt</span></code></pre></div>
 <p>Print out all lines starting from the 2nd top line of <strong>“Scientist.txt”</strong></p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb43-1"><a href="08-File_reading_and_processing.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> -n +2 Scientist.txt</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb44-1"><a href="08-File_reading_and_processing.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> -n +2 Scientist.txt</span></code></pre></div>
 <p>Print out all but the bottom 5 lines of <strong>“Scientist.txt”</strong></p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb44-1"><a href="08-File_reading_and_processing.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> -n -5 Scientist.txt</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb45-1"><a href="08-File_reading_and_processing.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> -n -5 Scientist.txt</span></code></pre></div>
 <p>Print out all lines starting from the 3rd top line of <strong>“Scientist.txt”</strong></p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb45-1"><a href="08-File_reading_and_processing.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> -n +3 Scientist.txt</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="08-File_reading_and_processing.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> -n +3 Scientist.txt</span></code></pre></div>
 <p>Print out the top 25 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="08-File_reading_and_processing.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> -n +25 ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb47-1"><a href="08-File_reading_and_processing.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> -n +25 ecoli.gbk</span></code></pre></div>
 <p>Print out the bottom 2 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb47-1"><a href="08-File_reading_and_processing.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> -n -2 ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="08-File_reading_and_processing.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> -n -2 ecoli.gbk</span></code></pre></div>
 </div>
 <div id="file-viewing-with-less" class="section level2" number="8.3">
 <h2><span class="header-section-number">8.3</span> File viewing with less</h2>
@@ -306,33 +307,33 @@ The <code>less</code> command will display a file’s contents one page at a tim
 <li><strong>G</strong> : Jump to the bottom line of the file</li>
 </ul>
 <p>Use the <code>less</code> command to view the contents of the <strong>“ecoli.gbk”</strong> file. Then find the 3rd occurrence of the word ‘ribosome.’ Afterwards move around the file.</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="08-File_reading_and_processing.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb49-1"><a href="08-File_reading_and_processing.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> ecoli.gbk</span></code></pre></div>
 <p>Look at the <code>man</code>ual for <code>less</code> and search for the first occurrence of the string ‘percent.’ Afterwards look around the manual page.</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb49-1"><a href="08-File_reading_and_processing.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> less</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb50-1"><a href="08-File_reading_and_processing.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> less</span></code></pre></div>
 </div>
 <div id="word-count" class="section level2" number="8.4">
 <h2><span class="header-section-number">8.4</span> Word count</h2>
 <p><img src="figures/wc.png" width="20%" style="display: block; margin: auto;" />
 The <code>wc</code> command will allow allow you to word count files. It will display line, word and byte counts for files in that order.</p>
 <p>Use <code>wc</code> to see the line, word and byte count of the <strong>“short_file.txt”</strong> and <strong>“ecoli.gbk”</strong> files. As you can see you can carry this out on multiple files at once.</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb50-1"><a href="08-File_reading_and_processing.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> short_file.txt Scientist.txt ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb51-1"><a href="08-File_reading_and_processing.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> short_file.txt Scientist.txt ecoli.gbk</span></code></pre></div>
 <p>Count the number of characters in the <strong>“short_file.txt”</strong> file</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb51-1"><a href="08-File_reading_and_processing.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> -m short_file.txt</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb52-1"><a href="08-File_reading_and_processing.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> -m short_file.txt</span></code></pre></div>
 <p>Count the number of lines in the <strong>“ecoli.gbk”</strong> file</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb52-1"><a href="08-File_reading_and_processing.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> -l ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb53-1"><a href="08-File_reading_and_processing.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> -l ecoli.gbk</span></code></pre></div>
 </div>
 <div id="pattern-searching" class="section level2" number="8.5">
 <h2><span class="header-section-number">8.5</span> Pattern searching</h2>
 <p><img src="figures/pattern.png" width="20%" style="display: block; margin: auto;" />
 The <code>grep</code> command will search for a pattern in a text file and output all the lines containing the pattern.</p>
 <p>Print out the lines from <strong>“Scientist.txt”</strong> that have the number 18 in them. In this particular example it prints out all scientists which were born in the 1800s. This will not always be the case depending on the data in the file.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb53-1"><a href="08-File_reading_and_processing.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> “18” Scientist.txt</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb54-1"><a href="08-File_reading_and_processing.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> “18” Scientist.txt</span></code></pre></div>
 <p>Print out the lines which have the string “Ada” in them.</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb54-1"><a href="08-File_reading_and_processing.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> “Ada” Scientist.txt</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb55-1"><a href="08-File_reading_and_processing.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> “Ada” Scientist.txt</span></code></pre></div>
 <p>Print out the lines which have the string “ada” in them. There should be none, as grep is case sensitive.</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb55-1"><a href="08-File_reading_and_processing.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> “ada” Scientist.txt</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb56-1"><a href="08-File_reading_and_processing.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> “ada” Scientist.txt</span></code></pre></div>
 <p>Type in the following command.</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb56-1"><a href="08-File_reading_and_processing.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> Scientist.txt</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb57-1"><a href="08-File_reading_and_processing.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> Scientist.txt</span></code></pre></div>
 <p>The above command will be stuck as <code>grep</code> does not know what it is looking for. To cancel the command use <strong>‘Ctrl’ + ‘c’</strong></p>
 </div>
 <div id="text-editor" class="section level2" number="8.6">
