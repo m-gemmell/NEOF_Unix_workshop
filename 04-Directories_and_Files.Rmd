@@ -154,7 +154,8 @@ List the contents in the root directory and put each separate file/directory on 
 ```{bash eval=FALSE}
 ls -1 /
 ``` 
+
 __Reminder__: you can use the `man` command to look at more options for commands.
 
-
+`ls` is my most typed command. I am consistently using it to see what directories and files are in my current directory and other directories. I suggest you do the same.
 

@@ -87,7 +87,7 @@ An example:
 echo "this line is not annotated"
 ```
 
-This is useful to give yourself information about what your code is doing and it is vital if you are creating scripts.
+This is useful to give yourself information about what your code is doing and it is vital if you are creating scripts. We will also use annotations in this workbook to explain what some lines of code are doing.
 
 I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. Just be sure to remove the `#` at the start of the line before you want to run it.
 
