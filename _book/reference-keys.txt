@@ -1,10 +1,10 @@
-introduction
-linux
+intro
+linuxintro
 starting
-logon-instructions
+cluster
 the-terminal-window
 commands
-directories-and-files
+dirsandfiles
 acquiring-workshop-data
 changing-directories
 copying
@@ -16,7 +16,7 @@ absolute-paths
 relative-paths
 change-directory-examples
 listing-directory-content
-tips-and-tricks
+tipsandtricks
 tab-complete
 ending-a-command
 history
@@ -24,13 +24,13 @@ clear
 bash-escape
 annotations
 navigating-directories
-manipulating-directories
+manipulatingdirectories
 make-a-directory
 moving-directories-and-files
 copying-directories-and-files
 deleting-files-and-directories
 exercise-1
-file-reading-and-processing
+filereadingandprocessing
 print-out-a-file
 head-and-tail
 file-viewing-with-less
@@ -44,7 +44,7 @@ cheat-sheet
 recap
 fastq-format
 exercise-2
-advance-linux-practice
+advancedlinux
 wildcard-characters
 redirection
 pipes
@@ -52,7 +52,7 @@ regular-expressions
 sed
 permissions
 advance-practice-exercise
-bioinformatic-languages
+bfxlanguages
 awk
 python
 perl
@@ -60,8 +60,4 @@ python-or-perl
 ruby
 golang-aka-go
 r
-answers
-exercise-1-1
-exercise-2-1
-advanced-exercise
-practical-cheat-sheet
+cheatsheet

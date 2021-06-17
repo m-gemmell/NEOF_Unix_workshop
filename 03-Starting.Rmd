@@ -3,7 +3,7 @@
 knitr::include_graphics(path = "figures/start.png", auto_pdf = TRUE)
 ```  
 
-## Logon instructions
+## Logon instructions {#cluster}
 For this workshop we will be using Virtual Network Computing (VNC). Connect to the VNC with a browser by using the webVNC link you were sent.
 
 You will now be in a logged-in Linux VNC desktop with two terminals. You will see something as below (there may be only one terminal which is fine). If you do not see something similar please ask for assistance.

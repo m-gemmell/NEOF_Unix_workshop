@@ -1,4 +1,6 @@
-# Linux
+# (PART\*) Part 1 {-}
+
+# Linux {#linuxintro}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/linux_beginner.png", auto_pdf = TRUE)
 ``` 

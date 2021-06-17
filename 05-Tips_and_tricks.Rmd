@@ -1,4 +1,4 @@
-# Tips and tricks
+# Tips and tricks {#tipsandtricks}
 ```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
 knitr::include_graphics(path = "figures/skateboard_trick.png", auto_pdf = TRUE)
 ``` 

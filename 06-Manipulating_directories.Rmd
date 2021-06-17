@@ -1,4 +1,4 @@
-# Manipulating directories
+# Manipulating directories {#manipulatingdirectories}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
 ``` 

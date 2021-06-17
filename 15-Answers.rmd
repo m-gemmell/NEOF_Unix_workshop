@@ -1,9 +1,6 @@
-# Answers
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/answers.png", auto_pdf = TRUE)
-``` 
+# (PART\*) Answers {-}
 
-## Exercise 1
+# Exercise 1 {-}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/exercise.png", auto_pdf = TRUE)
 ``` 
@@ -54,7 +51,7 @@ f. Delete the initial copy_this_file.txt file
 rm copy_this_file.txt
 ```
 
-## Exercise 2
+# Exercise 2 {-}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
 ``` 
@@ -150,7 +147,7 @@ grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R1_001.fastq
 grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R2_001.fastq
 ```
 
-## Advanced exercise
+# Advanced exercise {-}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
 ``` 

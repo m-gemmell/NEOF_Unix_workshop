@@ -4,36 +4,36 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 15 Answers | Intro to Unix</title>
-  <meta name="description" content="Chapter 15 Answers | Intro to Unix" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <title>Exercise 1 | Intro to Unix</title>
+  <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 15 Answers | Intro to Unix" />
+  <meta property="og:title" content="Exercise 1 | Intro to Unix" />
   <meta property="og:type" content="book" />
   
-  
-  
+  <meta property="og:image" content="/figures/NEOF.png" />
+  <meta property="og:description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 15 Answers | Intro to Unix" />
+  <meta name="twitter:title" content="Exercise 1 | Intro to Unix" />
   
-  
-  
+  <meta name="twitter:description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
+  <meta name="twitter:image" content="/figures/NEOF.png" />
 
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-06-03" />
+<meta name="date" content="2021-06-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
 <link rel="prev" href="14-Bioinformatica_languages.html"/>
 <link rel="next" href="16-Cheatsheet.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,12 +51,15 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -117,6 +120,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -130,14 +134,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li class="toc-logo"><a href="https://neof.org.uk/" target="blank"><img src="figures/neof_small_logo.png"></a></li>
 <li><a>Intro to Unix</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="01-Intro_to_Unix.html"><a href="01-Intro_to_Unix.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="part"><span><b>Part 1</b></span></li>
 <li class="chapter" data-level="2" data-path="02-Linux_Introduction.html"><a href="02-Linux_Introduction.html"><i class="fa fa-check"></i><b>2</b> Linux</a></li>
 <li class="chapter" data-level="3" data-path="03-Starting.html"><a href="03-Starting.html"><i class="fa fa-check"></i><b>3</b> Starting</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="03-Starting.html"><a href="03-Starting.html#logon-instructions"><i class="fa fa-check"></i><b>3.1</b> Logon instructions</a></li>
+<li class="chapter" data-level="3.1" data-path="03-Starting.html"><a href="03-Starting.html#cluster"><i class="fa fa-check"></i><b>3.1</b> Logon instructions</a></li>
 <li class="chapter" data-level="3.2" data-path="03-Starting.html"><a href="03-Starting.html#the-terminal-window"><i class="fa fa-check"></i><b>3.2</b> The Terminal Window</a></li>
 <li class="chapter" data-level="3.3" data-path="03-Starting.html"><a href="03-Starting.html#commands"><i class="fa fa-check"></i><b>3.3</b> Commands</a></li>
 </ul></li>
@@ -179,6 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="06-Manipulating_directories.html"><a href="06-Manipulating_directories.html#deleting-files-and-directories"><i class="fa fa-check"></i><b>6.4</b> Deleting Files and Directories</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="07-Exercise1.html"><a href="07-Exercise1.html"><i class="fa fa-check"></i><b>7</b> Exercise 1</a></li>
+<li class="part"><span><b>Part 2</b></span></li>
 <li class="chapter" data-level="8" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html"><i class="fa fa-check"></i><b>8</b> File reading and processing</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#print-out-a-file"><i class="fa fa-check"></i><b>8.1</b> Print out a file</a></li>
@@ -197,7 +204,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9" data-path="09-Recap.html"><a href="09-Recap.html"><i class="fa fa-check"></i><b>9</b> Recap</a></li>
 <li class="chapter" data-level="10" data-path="10-Fastq.html"><a href="10-Fastq.html"><i class="fa fa-check"></i><b>10</b> Fastq format</a></li>
 <li class="chapter" data-level="11" data-path="11-Exercise2.html"><a href="11-Exercise2.html"><i class="fa fa-check"></i><b>11</b> Exercise 2</a></li>
-<li class="chapter" data-level="12" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html"><i class="fa fa-check"></i><b>12</b> Advance Linux practice</a>
+<li class="part"><span><b>Advanced topics</b></span></li>
+<li class="chapter" data-level="12" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html"><i class="fa fa-check"></i><b>12</b> Advanced Linux practice</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#wildcard-characters"><i class="fa fa-check"></i><b>12.1</b> Wildcard characters</a></li>
 <li class="chapter" data-level="12.2" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#redirection"><i class="fa fa-check"></i><b>12.2</b> Redirection</a></li>
@@ -217,13 +225,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.6" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#golang-aka-go"><i class="fa fa-check"></i><b>14.6</b> Golang (AKA Go)</a></li>
 <li class="chapter" data-level="14.7" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#r"><i class="fa fa-check"></i><b>14.7</b> R</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="15-Answers.html"><a href="15-Answers.html"><i class="fa fa-check"></i><b>15</b> Answers</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="15-Answers.html"><a href="15-Answers.html#exercise-1-1"><i class="fa fa-check"></i><b>15.1</b> Exercise 1</a></li>
-<li class="chapter" data-level="15.2" data-path="15-Answers.html"><a href="15-Answers.html#exercise-2-1"><i class="fa fa-check"></i><b>15.2</b> Exercise 2</a></li>
-<li class="chapter" data-level="15.3" data-path="15-Answers.html"><a href="15-Answers.html#advanced-exercise"><i class="fa fa-check"></i><b>15.3</b> Advanced exercise</a></li>
-</ul></li>
-<li class="chapter" data-level="16" data-path="16-Cheatsheet.html"><a href="16-Cheatsheet.html"><i class="fa fa-check"></i><b>16</b> Practical cheat sheet</a></li>
+<li class="part"><span><b>Answers</b></span></li>
+<li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html"><i class="fa fa-check"></i>Exercise 1</a></li>
+<li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html#exercise-2-1"><i class="fa fa-check"></i>Exercise 2</a></li>
+<li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html#advanced-exercise"><i class="fa fa-check"></i>Advanced exercise</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="16-Cheatsheet.html"><a href="16-Cheatsheet.html"><i class="fa fa-check"></i><b>A</b> Practical cheat sheet</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -244,11 +251,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="answers" class="section level1" number="15">
-<h1><span class="header-section-number">Chapter 15</span> Answers</h1>
-<p><img src="figures/answers.png" width="20%" style="display: block; margin: auto;" /></p>
-<div id="exercise-1-1" class="section level2" number="15.1">
-<h2><span class="header-section-number">15.1</span> Exercise 1</h2>
+<div id="exercise-1-1" class="section level1 unnumbered">
+<h1>Exercise 1</h1>
 <p><img src="figures/exercise.png" width="20%" style="display: block; margin: auto;" /></p>
 <p>Ensure you are in the correct directory before carrying out the below commands</p>
 <div class="sourceCode" id="cb104"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb104-1"><a href="15-Answers.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/CGR_Linux/</span></code></pre></div>
@@ -259,7 +263,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="2" style="list-style-type: decimal">
 <li>Make a backup of the 4_exercises directory</li>
 </ol>
-<div class="sourceCode" id="cb106"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb106-1"><a href="15-Answers.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> -r 4_exercises 4_exercises_backup </span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb106-1"><a href="15-Answers.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> 4_exercises 4_exercises_backup </span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>List the contents of the 4_exercises directory</li>
 </ol>
@@ -287,8 +291,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <div class="sourceCode" id="cb113"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb113-1"><a href="15-Answers.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> copy_this_file.txt</span></code></pre></div>
 </div>
-<div id="exercise-2-1" class="section level2" number="15.2">
-<h2><span class="header-section-number">15.2</span> Exercise 2</h2>
+<div id="exercise-2-1" class="section level1 unnumbered">
+<h1>Exercise 2</h1>
 <p><img src="figures/exercise_2.png" width="20%" style="display: block; margin: auto;" /></p>
 <p>Ensure you are in the correct directory before carrying out the below commands</p>
 <div class="sourceCode" id="cb114"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb114-1"><a href="15-Answers.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/CGR_Linux/6_final_exercise</span></code></pre></div>
@@ -299,8 +303,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="2" style="list-style-type: decimal">
 <li>Rename the file 3-P£_CACTTCGA_L001_R1_001.fastq to 3-P3_CACTTCGA_L001_R1_001.fastq</li>
 </ol>
-<div class="sourceCode" id="cb116"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb116-1"><a href="15-Answers.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> 3-P£_CACTTCGA_L001_R1_001.fastq <span class="kw">\</span></span>
-<span id="cb116-2"><a href="15-Answers.html#cb116-2" aria-hidden="true" tabindex="-1"></a><span class="ex">3-P3_CACTTCGA_L001_R1_001.fastq</span></span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb116-1"><a href="15-Answers.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> 3-P£_CACTTCGA_L001_R1_001.fastq <span class="dt">\</span></span>
+<span id="cb116-2"><a href="15-Answers.html#cb116-2" aria-hidden="true" tabindex="-1"></a>3-P3_CACTTCGA_L001_R1_001.fastq</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Make a backup of the files in a directory called backup</li>
 </ol>
@@ -316,48 +320,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb117-10"><a href="15-Answers.html#cb117-10" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> metadata.txt backup/</span></code></pre></div>
 <p>This can be done a lot quicker with the use of wildcard characters (Covered in Advanced Linux section)</p>
 <div class="sourceCode" id="cb118"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb118-1"><a href="15-Answers.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> backup</span>
-<span id="cb118-2"><a href="15-Answers.html#cb118-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> *fastq backup</span>
-<span id="cb118-3"><a href="15-Answers.html#cb118-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> *txt backup</span></code></pre></div>
+<span id="cb118-2"><a href="15-Answers.html#cb118-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="pp">*</span>fastq backup</span>
+<span id="cb118-3"><a href="15-Answers.html#cb118-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="pp">*</span>txt backup</span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>How many reads are in the samples?
 The below command will give the number of lines in the files, this number can then be divided by 4 (mentally or using a calculator). These values will be the same for the R2 files as they are for the matching R1 file.</li>
 </ol>
-<div class="sourceCode" id="cb119"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb119-1"><a href="15-Answers.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> -l 1-P1_ATGCCTGG_L001_R1_001.fastq <span class="kw">\</span></span>
-<span id="cb119-2"><a href="15-Answers.html#cb119-2" aria-hidden="true" tabindex="-1"></a><span class="ex">2-P2_AAGGACAC_L001_R1_001.fastq</span> <span class="kw">\</span></span>
-<span id="cb119-3"><a href="15-Answers.html#cb119-3" aria-hidden="true" tabindex="-1"></a><span class="ex">3-P3_CACTTCGA_L001_R1_001.fastq</span></span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb119-1"><a href="15-Answers.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-l</span> 1-P1_ATGCCTGG_L001_R1_001.fastq <span class="dt">\</span></span>
+<span id="cb119-2"><a href="15-Answers.html#cb119-2" aria-hidden="true" tabindex="-1"></a>2-P2_AAGGACAC_L001_R1_001.fastq <span class="dt">\</span></span>
+<span id="cb119-3"><a href="15-Answers.html#cb119-3" aria-hidden="true" tabindex="-1"></a>3-P3_CACTTCGA_L001_R1_001.fastq</span></code></pre></div>
 <p>An advanced method using regular expressions, wildcard characters and grep</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb120-1"><a href="15-Answers.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> -c <span class="st">&quot;^@[0-9]*_&quot;</span> *R1*.fastq</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb120-1"><a href="15-Answers.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-c</span> <span class="st">&quot;^@[0-9]*_&quot;</span> <span class="pp">*</span>R1<span class="pp">*</span>.fastq</span></code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li>Remove the fastq files with no data
 Check which files have no data</li>
 </ol>
-<div class="sourceCode" id="cb121"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb121-1"><a href="15-Answers.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="kw">\</span></span>
-<span id="cb121-2"><a href="15-Answers.html#cb121-2" aria-hidden="true" tabindex="-1"></a><span class="ex">1-P1_ATGCCTGG_L001_R1_001.fastq</span> 1-P1_ATGCCTGG_L001_R2_001.fastq <span class="kw">\</span></span>
-<span id="cb121-3"><a href="15-Answers.html#cb121-3" aria-hidden="true" tabindex="-1"></a><span class="ex">2-P2_AAGGACAC_L001_R1_001.fastq</span> 2-P2_AAGGACAC_L001_R2_001.fastq <span class="kw">\</span></span>
-<span id="cb121-4"><a href="15-Answers.html#cb121-4" aria-hidden="true" tabindex="-1"></a><span class="ex">3-P3_CACTTCGA_L001_R1_001.fastq</span> 3-P3_CACTTCGA_L001_R2_001.fastq <span class="kw">\</span></span>
-<span id="cb121-5"><a href="15-Answers.html#cb121-5" aria-hidden="true" tabindex="-1"></a><span class="ex">4-E1_ATTGGCTC_L001_R1_001.fastq</span> 4-E1_ATTGGCTC_L001_R2_001.fastq </span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb121-1"><a href="15-Answers.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="dt">\</span></span>
+<span id="cb121-2"><a href="15-Answers.html#cb121-2" aria-hidden="true" tabindex="-1"></a>1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq <span class="dt">\</span></span>
+<span id="cb121-3"><a href="15-Answers.html#cb121-3" aria-hidden="true" tabindex="-1"></a>2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq <span class="dt">\</span></span>
+<span id="cb121-4"><a href="15-Answers.html#cb121-4" aria-hidden="true" tabindex="-1"></a>3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq <span class="dt">\</span></span>
+<span id="cb121-5"><a href="15-Answers.html#cb121-5" aria-hidden="true" tabindex="-1"></a>4-E1_ATTGGCTC_L001_R1_001.fastq 4-E1_ATTGGCTC_L001_R2_001.fastq </span></code></pre></div>
 <p>Remove empty files</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb122-1"><a href="15-Answers.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="kw">\</span></span>
-<span id="cb122-2"><a href="15-Answers.html#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="ex">4-E1_ATTGGCTC_L001_R1_001.fastq</span> 4-E1_ATTGGCTC_L001_R2_001.fastq</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb122-1"><a href="15-Answers.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="dt">\</span></span>
+<span id="cb122-2"><a href="15-Answers.html#cb122-2" aria-hidden="true" tabindex="-1"></a>4-E1_ATTGGCTC_L001_R1_001.fastq 4-E1_ATTGGCTC_L001_R2_001.fastq</span></code></pre></div>
 <ol start="6" style="list-style-type: decimal">
 <li>Update the backup files with the previous change</li>
 </ol>
-<div class="sourceCode" id="cb123"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb123-1"><a href="15-Answers.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> backup/4-E1_ATTGGCTC_L001_R1_001.fastq <span class="kw">\</span></span>
-<span id="cb123-2"><a href="15-Answers.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="ex">backup/4-E1_ATTGGCTC_L001_R2_001.fastq</span> </span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb123-1"><a href="15-Answers.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> backup/4-E1_ATTGGCTC_L001_R1_001.fastq <span class="dt">\</span></span>
+<span id="cb123-2"><a href="15-Answers.html#cb123-2" aria-hidden="true" tabindex="-1"></a>backup/4-E1_ATTGGCTC_L001_R2_001.fastq </span></code></pre></div>
 <ol start="7" style="list-style-type: decimal">
 <li>Check if the 1st read names match in the paired files</li>
 </ol>
-<div class="sourceCode" id="cb124"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb124-1"><a href="15-Answers.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> -n 1 <span class="kw">\</span></span>
-<span id="cb124-2"><a href="15-Answers.html#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="ex">1-P1_ATGCCTGG_L001_R1_001.fastq</span> 1-P1_ATGCCTGG_L001_R2_001.fastq <span class="kw">\</span></span>
-<span id="cb124-3"><a href="15-Answers.html#cb124-3" aria-hidden="true" tabindex="-1"></a><span class="ex">2-P2_AAGGACAC_L001_R1_001.fastq</span> 2-P2_AAGGACAC_L001_R2_001.fastq <span class="kw">\</span></span>
-<span id="cb124-4"><a href="15-Answers.html#cb124-4" aria-hidden="true" tabindex="-1"></a><span class="ex">3-P3_CACTTCGA_L001_R1_001.fastq</span> 3-P3_CACTTCGA_L001_R2_001.fastq </span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb124-1"><a href="15-Answers.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> 1 <span class="dt">\</span></span>
+<span id="cb124-2"><a href="15-Answers.html#cb124-2" aria-hidden="true" tabindex="-1"></a>1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq <span class="dt">\</span></span>
+<span id="cb124-3"><a href="15-Answers.html#cb124-3" aria-hidden="true" tabindex="-1"></a>2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq <span class="dt">\</span></span>
+<span id="cb124-4"><a href="15-Answers.html#cb124-4" aria-hidden="true" tabindex="-1"></a>3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq </span></code></pre></div>
 <ol start="8" style="list-style-type: decimal">
 <li>Check if the last read names match in the paired files</li>
 </ol>
-<div class="sourceCode" id="cb125"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb125-1"><a href="15-Answers.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> -n 4 <span class="kw">\</span></span>
-<span id="cb125-2"><a href="15-Answers.html#cb125-2" aria-hidden="true" tabindex="-1"></a><span class="ex">1-P1_ATGCCTGG_L001_R1_001.fastq</span> 1-P1_ATGCCTGG_L001_R2_001.fastq <span class="kw">\</span></span>
-<span id="cb125-3"><a href="15-Answers.html#cb125-3" aria-hidden="true" tabindex="-1"></a><span class="ex">2-P2_AAGGACAC_L001_R1_001.fastq</span> 2-P2_AAGGACAC_L001_R2_001.fastq <span class="kw">\</span></span>
-<span id="cb125-4"><a href="15-Answers.html#cb125-4" aria-hidden="true" tabindex="-1"></a><span class="ex">3-P3_CACTTCGA_L001_R1_001.fastq</span> 3-P3_CACTTCGA_L001_R2_001.fastq </span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb125-1"><a href="15-Answers.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-n</span> 4 <span class="dt">\</span></span>
+<span id="cb125-2"><a href="15-Answers.html#cb125-2" aria-hidden="true" tabindex="-1"></a>1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq <span class="dt">\</span></span>
+<span id="cb125-3"><a href="15-Answers.html#cb125-3" aria-hidden="true" tabindex="-1"></a>2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq <span class="dt">\</span></span>
+<span id="cb125-4"><a href="15-Answers.html#cb125-4" aria-hidden="true" tabindex="-1"></a>3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq </span></code></pre></div>
 <ol start="9" style="list-style-type: decimal">
 <li>In file 1-P1_ATGCCTGG_L001_R1_001.fastq look for sequence headers with the term ‘psychrobacter’</li>
 </ol>
@@ -371,14 +375,14 @@ Check which files have no data</li>
 <li>Print to screen the fastq header, sequence and quality data for the 25th sequence in sample 2-P2 for both the R1 and R2 file. Do this with one command.
 @24_ecoli is grepped as the first sequence is @0_ecoli</li>
 </ol>
-<div class="sourceCode" id="cb127"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb127-1"><a href="15-Answers.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> -A 3 <span class="st">&quot;@24_ecoli&quot;</span> 2-P2_AAGGACAC_L001_R1_001.fastq</span>
-<span id="cb127-2"><a href="15-Answers.html#cb127-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> -A 3 <span class="st">&quot;@24_ecoli&quot;</span> 2-P2_AAGGACAC_L001_R2_001.fastq</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb127-1"><a href="15-Answers.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-A</span> 3 <span class="st">&quot;@24_ecoli&quot;</span> 2-P2_AAGGACAC_L001_R1_001.fastq</span>
+<span id="cb127-2"><a href="15-Answers.html#cb127-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-A</span> 3 <span class="st">&quot;@24_ecoli&quot;</span> 2-P2_AAGGACAC_L001_R2_001.fastq</span></code></pre></div>
 </div>
-<div id="advanced-exercise" class="section level2" number="15.3">
-<h2><span class="header-section-number">15.3</span> Advanced exercise</h2>
+<div id="advanced-exercise" class="section level1 unnumbered">
+<h1>Advanced exercise</h1>
 <p><img src="figures/adv_exercise.png" width="20%" style="display: block; margin: auto;" />
 1. Copy the directory ~/CGR_Linux/advanced_practice to ~/CGR_Linux/advanced_practice_exercise</p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb128-1"><a href="15-Answers.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> -r ~/CGR_Linux/advanced_practice ~/CGR_Linux/advanced_practice_exercise</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb128-1"><a href="15-Answers.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> ~/CGR_Linux/advanced_practice ~/CGR_Linux/advanced_practice_exercise</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Move into ~/CGR_Linux/advanced_practice_exercise</li>
 </ol>
@@ -390,15 +394,15 @@ Check which files have no data</li>
 <ol start="4" style="list-style-type: decimal">
 <li>With one command move all the fastq files into the directory fastq</li>
 </ol>
-<div class="sourceCode" id="cb131"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb131-1"><a href="15-Answers.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> *.fastq fastq/</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb131-1"><a href="15-Answers.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> <span class="pp">*</span>.fastq fastq/</span></code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li>With one command move all the txt files, excluding metadata.txt and samples.txt, into the directory txt.</li>
 </ol>
-<div class="sourceCode" id="cb132"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb132-1"><a href="15-Answers.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> sample_*txt txt/</span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb132-1"><a href="15-Answers.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> sample_<span class="pp">*</span>txt txt/</span></code></pre></div>
 <ol start="6" style="list-style-type: decimal">
 <li>Create a file in the fastq directory called patient_1_corrected.fastq and put all the corrected fastq data for patient_1 into the file.</li>
 </ol>
-<div class="sourceCode" id="cb133"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb133-1"><a href="15-Answers.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> fastq/sample_[1-2]_*corrected.fastq <span class="op">&gt;</span> /</span>
+<div class="sourceCode" id="cb133"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb133-1"><a href="15-Answers.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> fastq/sample_[1-2]_<span class="pp">*</span>corrected.fastq <span class="op">&gt;</span> /</span>
 <span id="cb133-2"><a href="15-Answers.html#cb133-2" aria-hidden="true" tabindex="-1"></a><span class="ex">fastq/patient_1_corrected.fastq</span></span></code></pre></div>
 <ol start="7" style="list-style-type: decimal">
 <li>Append the metadata line for sample_1_AAAA from metadata.txt to the bottom of the file sample_1_AAA.txt in the txt directory.</li>
@@ -407,22 +411,24 @@ Check which files have no data</li>
 <ol start="8" style="list-style-type: decimal">
 <li>For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (i.e. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)</li>
 </ol>
-<div class="sourceCode" id="cb135"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb135-1"><a href="15-Answers.html#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">&quot;^TA[AG]\|^TGA&quot;</span> fastq/*corrected.fastq <span class="kw">|</span> <span class="ex">/</span></span>
+<div class="sourceCode" id="cb135"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb135-1"><a href="15-Answers.html#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">&quot;^TA[AG]\|^TGA&quot;</span> fastq/<span class="pp">*</span>corrected.fastq <span class="kw">|</span> <span class="ex">/</span></span>
 <span id="cb135-2"><a href="15-Answers.html#cb135-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sed</span> <span class="st">&quot;s/.*sample/sample/&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&quot;s/_corrected.fastq//&quot;</span></span></code></pre></div>
 <ol start="9" style="list-style-type: decimal">
 <li>Count the number of Gs and Cs within the sequences of file sample_16_AACC.fastq</li>
 </ol>
-<div class="sourceCode" id="cb136"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb136-1"><a href="15-Answers.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> fastq/sample_16_AACC.fastq <span class="kw">|</span> <span class="fu">grep</span> -B 1 <span class="st">&quot;^+$&quot;</span> <span class="kw">|</span> <span class="ex">/</span></span>
-<span id="cb136-2"><a href="15-Answers.html#cb136-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> -v <span class="st">&quot;+\|--&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&quot;s/A\|T//g&quot;</span> <span class="kw">|</span> <span class="fu">wc</span> -c</span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb136-1"><a href="15-Answers.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> fastq/sample_16_AACC.fastq <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-B</span> 1 <span class="st">&quot;^+$&quot; | /</span></span>
+<span id="cb136-2"><a href="15-Answers.html#cb136-2" aria-hidden="true" tabindex="-1"></a><span class="st">grep -v &quot;+\|--&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&quot;s/A\|T//g&quot;</span> <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-c</span></span></code></pre></div>
 <ol start="10" style="list-style-type: decimal">
 <li>Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 8-13 with one command. Then in the same command make the final output of each line in the format of “Sample_13: Sequence 12”</li>
 </ol>
-<div class="sourceCode" id="cb137"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb137-1"><a href="15-Answers.html#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> fastq/*[3-5]*[AGCT].fastq <span class="kw">|</span> <span class="fu">grep</span> -B 2 <span class="st">&quot;^+$&quot;</span> <span class="kw">|</span> <span class="ex">/</span></span>
-<span id="cb137-2"><a href="15-Answers.html#cb137-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> -B 1 <span class="st">&quot;AAAAA&quot;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;^@&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&quot;s/^@s/S/&quot;</span> <span class="kw">|</span> <span class="ex">/</span></span>
+<div class="sourceCode" id="cb137"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb137-1"><a href="15-Answers.html#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> fastq/<span class="pp">*</span>[3-5]<span class="pp">*</span>[AGCT].fastq <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-B</span> 2 <span class="st">&quot;^+$&quot; | /</span></span>
+<span id="cb137-2"><a href="15-Answers.html#cb137-2" aria-hidden="true" tabindex="-1"></a><span class="st">grep -B 1 &quot;AAAAA&quot;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;^@&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&quot;s/^@s/S/&quot;</span> <span class="kw">|</span> <span class="ex">/</span></span>
 <span id="cb137-3"><a href="15-Answers.html#cb137-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sed</span> <span class="st">&quot;s/_[AGCT]*_/: Sequence /&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&quot;s/ 1:$//&quot;</span></span></code></pre></div>
 
 </div>
-</div>
+
+
+
             </section>
 
           </div>
@@ -452,6 +458,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": {}
 },
 "fontsettings": {
@@ -473,7 +480,7 @@ gitbook.start({
 },
 "download": null,
 "toc": {
-"collapse": "subsection",
+"collapse": "section",
 "edit": null
 },
 "search": null

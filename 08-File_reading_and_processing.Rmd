@@ -1,4 +1,6 @@
-# File reading and processing
+# (PART\*) Part 2 {-}
+
+# File reading and processing {#filereadingandprocessing}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/files.png", auto_pdf = TRUE)
 ``` 

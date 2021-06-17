@@ -1,4 +1,6 @@
-# Practical cheat sheet
+# (APPENDIX) Appendix {-}
+
+# Practical cheat sheet {#cheatsheet}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/cheatsheet.png", auto_pdf = TRUE)
 ``` 

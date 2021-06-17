@@ -1,4 +1,6 @@
-# Advance Linux practice
+# (PART\*) Advanced topics {-}
+
+# Advanced Linux practice {#advancedlinux}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/linux_intermdiary.png", auto_pdf = TRUE)
 ``` 

@@ -1,4 +1,4 @@
-# Directories and Files
+# Directories and Files {#dirsandfiles}
 
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/directory.png", auto_pdf = TRUE)

@@ -5,35 +5,35 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 11 Exercise 2 | Intro to Unix</title>
-  <meta name="description" content="Chapter 11 Exercise 2 | Intro to Unix" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 11 Exercise 2 | Intro to Unix" />
   <meta property="og:type" content="book" />
   
-  
-  
+  <meta property="og:image" content="/figures/NEOF.png" />
+  <meta property="og:description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 11 Exercise 2 | Intro to Unix" />
   
-  
-  
+  <meta name="twitter:description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
+  <meta name="twitter:image" content="/figures/NEOF.png" />
 
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-06-03" />
+<meta name="date" content="2021-06-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
 <link rel="prev" href="10-Fastq.html"/>
 <link rel="next" href="12-Advanced_linux_practice.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,12 +51,15 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -117,6 +120,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -130,14 +134,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li class="toc-logo"><a href="https://neof.org.uk/" target="blank"><img src="figures/neof_small_logo.png"></a></li>
 <li><a>Intro to Unix</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="01-Intro_to_Unix.html"><a href="01-Intro_to_Unix.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="part"><span><b>Part 1</b></span></li>
 <li class="chapter" data-level="2" data-path="02-Linux_Introduction.html"><a href="02-Linux_Introduction.html"><i class="fa fa-check"></i><b>2</b> Linux</a></li>
 <li class="chapter" data-level="3" data-path="03-Starting.html"><a href="03-Starting.html"><i class="fa fa-check"></i><b>3</b> Starting</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="03-Starting.html"><a href="03-Starting.html#logon-instructions"><i class="fa fa-check"></i><b>3.1</b> Logon instructions</a></li>
+<li class="chapter" data-level="3.1" data-path="03-Starting.html"><a href="03-Starting.html#cluster"><i class="fa fa-check"></i><b>3.1</b> Logon instructions</a></li>
 <li class="chapter" data-level="3.2" data-path="03-Starting.html"><a href="03-Starting.html#the-terminal-window"><i class="fa fa-check"></i><b>3.2</b> The Terminal Window</a></li>
 <li class="chapter" data-level="3.3" data-path="03-Starting.html"><a href="03-Starting.html#commands"><i class="fa fa-check"></i><b>3.3</b> Commands</a></li>
 </ul></li>
@@ -179,6 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="06-Manipulating_directories.html"><a href="06-Manipulating_directories.html#deleting-files-and-directories"><i class="fa fa-check"></i><b>6.4</b> Deleting Files and Directories</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="07-Exercise1.html"><a href="07-Exercise1.html"><i class="fa fa-check"></i><b>7</b> Exercise 1</a></li>
+<li class="part"><span><b>Part 2</b></span></li>
 <li class="chapter" data-level="8" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html"><i class="fa fa-check"></i><b>8</b> File reading and processing</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#print-out-a-file"><i class="fa fa-check"></i><b>8.1</b> Print out a file</a></li>
@@ -197,7 +204,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9" data-path="09-Recap.html"><a href="09-Recap.html"><i class="fa fa-check"></i><b>9</b> Recap</a></li>
 <li class="chapter" data-level="10" data-path="10-Fastq.html"><a href="10-Fastq.html"><i class="fa fa-check"></i><b>10</b> Fastq format</a></li>
 <li class="chapter" data-level="11" data-path="11-Exercise2.html"><a href="11-Exercise2.html"><i class="fa fa-check"></i><b>11</b> Exercise 2</a></li>
-<li class="chapter" data-level="12" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html"><i class="fa fa-check"></i><b>12</b> Advance Linux practice</a>
+<li class="part"><span><b>Advanced topics</b></span></li>
+<li class="chapter" data-level="12" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html"><i class="fa fa-check"></i><b>12</b> Advanced Linux practice</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#wildcard-characters"><i class="fa fa-check"></i><b>12.1</b> Wildcard characters</a></li>
 <li class="chapter" data-level="12.2" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#redirection"><i class="fa fa-check"></i><b>12.2</b> Redirection</a></li>
@@ -217,13 +225,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.6" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#golang-aka-go"><i class="fa fa-check"></i><b>14.6</b> Golang (AKA Go)</a></li>
 <li class="chapter" data-level="14.7" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#r"><i class="fa fa-check"></i><b>14.7</b> R</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="15-Answers.html"><a href="15-Answers.html"><i class="fa fa-check"></i><b>15</b> Answers</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="15-Answers.html"><a href="15-Answers.html#exercise-1-1"><i class="fa fa-check"></i><b>15.1</b> Exercise 1</a></li>
-<li class="chapter" data-level="15.2" data-path="15-Answers.html"><a href="15-Answers.html#exercise-2-1"><i class="fa fa-check"></i><b>15.2</b> Exercise 2</a></li>
-<li class="chapter" data-level="15.3" data-path="15-Answers.html"><a href="15-Answers.html#advanced-exercise"><i class="fa fa-check"></i><b>15.3</b> Advanced exercise</a></li>
-</ul></li>
-<li class="chapter" data-level="16" data-path="16-Cheatsheet.html"><a href="16-Cheatsheet.html"><i class="fa fa-check"></i><b>16</b> Practical cheat sheet</a></li>
+<li class="part"><span><b>Answers</b></span></li>
+<li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html"><i class="fa fa-check"></i>Exercise 1</a></li>
+<li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html#exercise-2-1"><i class="fa fa-check"></i>Exercise 2</a></li>
+<li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html#advanced-exercise"><i class="fa fa-check"></i>Advanced exercise</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="16-Cheatsheet.html"><a href="16-Cheatsheet.html"><i class="fa fa-check"></i><b>A</b> Practical cheat sheet</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -272,6 +279,9 @@ The directory <strong>“~/CGR_Linux/6_final_exercise/”</strong> has all the f
 </ol>
 
 </div>
+
+
+
             </section>
 
           </div>
@@ -301,6 +311,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": {}
 },
 "fontsettings": {
@@ -322,7 +333,7 @@ gitbook.start({
 },
 "download": null,
 "toc": {
-"collapse": "subsection",
+"collapse": "section",
 "edit": null
 },
 "search": null
