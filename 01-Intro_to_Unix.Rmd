@@ -42,4 +42,4 @@ Commands are in the following font, colour, and box.They should be run in the co
 echo "This is a command example" 
 ```
 
-Additionally please use the [cheatsheet](#cheatsheet) as a reminder of all the commands you will be learnigng.
+Additionally please use the [cheatsheet](#cheatsheet) as a reminder of all the commands you will be learning.
