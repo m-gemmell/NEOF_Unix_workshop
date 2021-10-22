@@ -3,8 +3,8 @@
 knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
 ``` 
 
-1. Copy the directory __~/CGR_Linux/advanced_practice__ to __~/CGR_Linux/advanced_practice_exercise__
-2. Move into __~/CGR_Linux/advanced_practice_exercise__
+1. Copy the directory __~/Linux/advanced_practice__ to __~/Linux/advanced_practice_exercise__
+2. Move into __~/Linux/advanced_practice_exercise__
 3. Make a directory called __fastq__ and one called __txt__
 4. With one command move all the fastq files into the directory __fastq__
 5. With one command move all the txt files, excluding __metadata.txt__ and __samples.txt__, into the directory __txt__

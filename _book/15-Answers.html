@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise 1 | Intro to Unix</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise 1 | Intro to Unix" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-09-09" />
+<meta name="date" content="2021-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
 <link rel="prev" href="14-Bioinformatica_languages.html"/>
 <link rel="next" href="16-Cheatsheet.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -255,9 +255,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Exercise 1</h1>
 <p><img src="figures/exercise.png" width="20%" style="display: block; margin: auto;" /></p>
 <p>Ensure you are in the correct directory before carrying out the below commands</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb104-1"><a href="15-Answers.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/CGR_Linux/</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb104-1"><a href="15-Answers.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Linux/</span></code></pre></div>
 <ol style="list-style-type: decimal">
-<li>Change the name of the subdirectory 4_exercises_aaaa within your CGR_Linux to 4_exercises</li>
+<li>Change the name of the subdirectory 4_exercises_aaaa within your Linux to 4_exercises</li>
 </ol>
 <div class="sourceCode" id="cb105"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb105-1"><a href="15-Answers.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> 4_exercises_aaaa 4_exercises</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
@@ -295,7 +295,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Exercise 2</h1>
 <p><img src="figures/exercise_2.png" width="20%" style="display: block; margin: auto;" /></p>
 <p>Ensure you are in the correct directory before carrying out the below commands</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb114-1"><a href="15-Answers.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/CGR_Linux/6_final_exercise</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb114-1"><a href="15-Answers.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Linux/6_final_exercise</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>See what files are in the directory</li>
 </ol>
@@ -381,12 +381,12 @@ Check which files have no data</li>
 <div id="advanced-exercise" class="section level1 unnumbered">
 <h1>Advanced exercise</h1>
 <p><img src="figures/adv_exercise.png" width="20%" style="display: block; margin: auto;" />
-1. Copy the directory ~/CGR_Linux/advanced_practice to ~/CGR_Linux/advanced_practice_exercise</p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb128-1"><a href="15-Answers.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> ~/CGR_Linux/advanced_practice ~/CGR_Linux/advanced_practice_exercise</span></code></pre></div>
+1. Copy the directory ~/Linux/advanced_practice to ~/Linux/advanced_practice_exercise</p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb128-1"><a href="15-Answers.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
-<li>Move into ~/CGR_Linux/advanced_practice_exercise</li>
+<li>Move into ~/Linux/advanced_practice_exercise</li>
 </ol>
-<div class="sourceCode" id="cb129"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb129-1"><a href="15-Answers.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/CGR_Linux/advanced_practice_exercise</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb129-1"><a href="15-Answers.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Linux/advanced_practice_exercise</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Make a directory called fastq and one called txt</li>
 </ol>
@@ -439,7 +439,6 @@ Check which files have no data</li>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -479,11 +478,11 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": null,
 "toc": {
 "collapse": "section",
 "edit": null
-},
-"search": null
+}
 });
 });
 </script>

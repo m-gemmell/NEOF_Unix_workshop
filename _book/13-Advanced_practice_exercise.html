@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 13 Advance practice exercise | Intro to Unix</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 13 Advance practice exercise | Intro to Unix" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-09-09" />
+<meta name="date" content="2021-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
 <link rel="prev" href="12-Advanced_linux_practice.html"/>
 <link rel="next" href="14-Bioinformatica_languages.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -255,8 +255,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 13</span> Advance practice exercise</h1>
 <p><img src="figures/adv_exercise.png" width="20%" style="display: block; margin: auto;" /></p>
 <ol style="list-style-type: decimal">
-<li>Copy the directory <strong>~/CGR_Linux/advanced_practice</strong> to <strong>~/CGR_Linux/advanced_practice_exercise</strong></li>
-<li>Move into <strong>~/CGR_Linux/advanced_practice_exercise</strong></li>
+<li>Copy the directory <strong>~/Linux/advanced_practice</strong> to <strong>~/Linux/advanced_practice_exercise</strong></li>
+<li>Move into <strong>~/Linux/advanced_practice_exercise</strong></li>
 <li>Make a directory called <strong>fastq</strong> and one called <strong>txt</strong></li>
 <li>With one command move all the fastq files into the directory <strong>fastq</strong></li>
 <li>With one command move all the txt files, excluding <strong>metadata.txt</strong> and <strong>samples.txt</strong>, into the directory <strong>txt</strong></li>
@@ -278,7 +278,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -318,11 +317,11 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": null,
 "toc": {
 "collapse": "section",
 "edit": null
-},
-"search": null
+}
 });
 });
 </script>

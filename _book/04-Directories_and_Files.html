@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Directories and Files | Intro to Unix</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Directories and Files | Intro to Unix" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-09-09" />
+<meta name="date" content="2021-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
 <link rel="prev" href="03-Starting.html"/>
 <link rel="next" href="05-Tips_and_tricks.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -284,9 +284,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>To do this we can use the command <code>cp</code>. This command is followed by the directory/file we want to copy then by the directory we want to copy it to.</p>
 <p>To copy a directory we need to add the option <code>-r</code> which means recursively copy this directory and all its contents. Otherwise <code>cp</code> can only be used to copy files.</p>
 <p>Use the below command to copy the workshop data to your current directory. The <strong>“.”</strong> refers to your current directory.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="04-Directories_and_Files.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /pub39/tea/matthew/NEOF/CGR_Linux/ .</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="04-Directories_and_Files.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /pub39/tea/matthew/NEOF/Linux/ .</span></code></pre></div>
 <p>Now change directory into your newly copied directory.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="04-Directories_and_Files.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> CGR_Linux</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="04-Directories_and_Files.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Linux</span></code></pre></div>
 <p>Print to screen the path of your current working directory.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="04-Directories_and_Files.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
 </div>
@@ -297,20 +297,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="the-directory-tree" class="section level3" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> The Directory tree</h3>
 <p>This starts as the root (<strong>“/”</strong>) which branches out into directories and files. Directories contain files and subdirectories which contain files and subdirectories etc.</p>
-<p>Below is an example of visualising the location of the <strong>“CGR_Linux”</strong> directory within the user ncs006’s home directory as a tree. This only includes a subset of directories.</p>
+<p>Below is an example of visualising the location of the <strong>“Linux”</strong> directory within the user ncs006’s home directory as a tree. This only includes a subset of directories.</p>
 <p><img src="figures/linux_tree_structure.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="boxes" class="section level3" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Boxes</h3>
 <p>Another analogy to the directory structure is boxes and items. In this case there is one large box that contains all the boxes and items, this is the root (<strong>“/”</strong>). In the root are items and boxes which hold items and boxes etc.</p>
-<p>Below is an example of visualising the location of the <strong>“CGR_Linux”</strong> directory within the user ncs006’s home directory as boxes. This only includes a subset of directories.</p>
+<p>Below is an example of visualising the location of the <strong>“Linux”</strong> directory within the user ncs006’s home directory as boxes. This only includes a subset of directories.</p>
 <p><img src="figures/linux_box_structure.png" width="60%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="paths" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Paths</h2>
 <p><img src="figures/paths.png" width="20%" style="display: block; margin: auto;" /></p>
-<p>On the command line directories and files are referred to by paths e.g. <strong>“/pub39/tea/matthew/CGR_Linux/”</strong> is a path.</p>
+<p>On the command line directories and files are referred to by paths e.g. <strong>“/pub39/tea/matthew/Linux/”</strong> is a path.</p>
 <p>Paths are case sensitive. The path <strong>“directory/file.txt”</strong> is different than <strong>“diRectory/File.txt”</strong>.</p>
 <p>Spaces should always be avoided in path names. It is highly recommended to <strong>“_”</strong> instead. This is because spaces are used to separate options and parameters in commands.</p>
 <p>There are multiple ways to refer to a path. The two main ways are through <strong>absolute paths</strong> and <strong>relative paths</strong>.</p>
@@ -318,8 +318,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">4.3.1</span> Absolute paths</h3>
 <p>Absolute paths are paths that start from the root e.g.</p>
 <ul>
-<li><strong>“/pub39/tea/matthew/teaching/CGR_Linux/”</strong></li>
-<li><strong>“~/CGR_Linux/”</strong> (In this case ~ is a shortcut which includes the root)</li>
+<li><strong>“/pub39/tea/matthew/teaching/Linux/”</strong></li>
+<li><strong>“~/Linux/”</strong> (In this case ~ is a shortcut which includes the root)</li>
 <li><strong>“/pub39/tea/nsc006/file.txt”</strong></li>
 </ul>
 </div>
@@ -334,21 +334,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="change-directory-examples" class="section level3" number="4.3.3">
 <h3><span class="header-section-number">4.3.3</span> Change directory examples</h3>
-<p>Below is a subset of valid methods to change directory into your <strong>“CGR_Linux/”</strong> directory</p>
+<p>Below is a subset of valid methods to change directory into your <strong>“Linux/”</strong> directory</p>
 <p><strong>Note</strong>:change <strong>nscxxx</strong> to your specific user name as shown on the command line prompt.</p>
 <p>Method 1</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="04-Directories_and_Files.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /pub39/tea/nscxxx/CGR_Linux/</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="04-Directories_and_Files.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /pub39/tea/nscxxx/Linux/</span></code></pre></div>
 <p>Method 2</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="04-Directories_and_Files.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
-<span id="cb13-2"><a href="04-Directories_and_Files.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> CGR_Linux/</span></code></pre></div>
+<span id="cb13-2"><a href="04-Directories_and_Files.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Linux/</span></code></pre></div>
 <p>Method 3</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="04-Directories_and_Files.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /pub39/tea/nscxxx/CGR_Linux/1_directory/</span>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="04-Directories_and_Files.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /pub39/tea/nscxxx/Linux/1_directory/</span>
 <span id="cb14-2"><a href="04-Directories_and_Files.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code></pre></div>
 <p>Method 4</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="04-Directories_and_Files.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /pub39/</span>
 <span id="cb15-2"><a href="04-Directories_and_Files.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> tea/</span>
 <span id="cb15-3"><a href="04-Directories_and_Files.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> nscxxx/</span>
-<span id="cb15-4"><a href="04-Directories_and_Files.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> CGR_Linux/</span></code></pre></div>
+<span id="cb15-4"><a href="04-Directories_and_Files.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Linux/</span></code></pre></div>
 </div>
 </div>
 <div id="listing-directory-content" class="section level2" number="4.4">
@@ -356,7 +356,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="figures/List.png" width="20%" style="display: block; margin: auto;" /></p>
 <p>To list the contents (files and directories) within a directory you can use the <code>ls</code> command.</p>
 <p>The output of <code>ls</code> will include file names that are coloured black and directory names that are coloured blue in our VNC terminals.</p>
-<p>Before carrying out the below commands make sure you are in your <strong>“CGR_Linux”</strong> directory with the <code>pwd</code> command.</p>
+<p>Before carrying out the below commands make sure you are in your <strong>“Linux”</strong> directory with the <code>pwd</code> command.</p>
 <p>List the contents in your current directory:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="04-Directories_and_Files.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
 <p>List the contents in your home directory:</p>
@@ -378,7 +378,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -418,11 +417,11 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": null,
 "toc": {
 "collapse": "section",
 "edit": null
-},
-"search": null
+}
 });
 });
 </script>

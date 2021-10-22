@@ -223,13 +223,13 @@ To copy a directory we need to add the option `-r` which means recursively copy 
 Use the below command to copy the workshop data to your current directory. The **"."** refers to your current directory.
 
 ```{bash eval=FALSE}
-cp -r /pub39/tea/matthew/NEOF/CGR_Linux/ .
+cp -r /pub39/tea/matthew/NEOF/Linux/ .
 ```
 
 Now change directory into your newly copied directory.
 
 ```{bash eval=FALSE}
-cd CGR_Linux
+cd Linux
 ```
 
 Print to screen the path of your current working directory.
@@ -246,7 +246,7 @@ You can think of the directory structure in two different ways.
 
 This starts as the root (**"/"**) which branches out into directories and files. Directories contain files and subdirectories which contain files and subdirectories etc.
 
-Below is an example of visualising the location of the **"CGR_Linux"** directory within the user ncs006's home directory as a tree. This only includes a subset of directories.
+Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as a tree. This only includes a subset of directories.
 
 ```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
 knitr::include_graphics(path = "figures/linux_tree_structure.png", auto_pdf = TRUE)
@@ -256,7 +256,7 @@ knitr::include_graphics(path = "figures/linux_tree_structure.png", auto_pdf = TR
 
 Another analogy to the directory structure is boxes and items. In this case there is one large box that contains all the boxes and items, this is the root (**"/"**). In the root are items and boxes which hold items and boxes etc.
 
-Below is an example of visualising the location of the **"CGR_Linux"** directory within the user ncs006's home directory as boxes. This only includes a subset of directories.
+Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as boxes. This only includes a subset of directories.
 
 ```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
 knitr::include_graphics(path = "figures/linux_box_structure.png", auto_pdf = TRUE)
@@ -268,7 +268,7 @@ knitr::include_graphics(path = "figures/linux_box_structure.png", auto_pdf = TRU
 knitr::include_graphics(path = "figures/paths.png", auto_pdf = TRUE)
 ```
 
-On the command line directories and files are referred to by paths e.g. **"/pub39/tea/matthew/CGR_Linux/"** is a path.
+On the command line directories and files are referred to by paths e.g. **"/pub39/tea/matthew/Linux/"** is a path.
 
 Paths are case sensitive. The path **"directory/file.txt"** is different than **"diRectory/File.txt"**.
 
@@ -280,8 +280,8 @@ There are multiple ways to refer to a path. The two main ways are through **abso
 
 Absolute paths are paths that start from the root e.g.
 
--   **"/pub39/tea/matthew/teaching/CGR_Linux/"**
--   **"\~/CGR_Linux/"** (In this case \~ is a shortcut which includes the root)
+-   **"/pub39/tea/matthew/teaching/Linux/"**
+-   **"\~/Linux/"** (In this case \~ is a shortcut which includes the root)
 -   **"/pub39/tea/nsc006/file.txt"**
 
 ### Relative paths
@@ -294,27 +294,27 @@ Relative paths are paths that are relative to another location besides the root 
 
 ### Change directory examples
 
-Below is a subset of valid methods to change directory into your **"CGR_Linux/"** directory
+Below is a subset of valid methods to change directory into your **"Linux/"** directory
 
 **Note**:change **nscxxx** to your specific user name as shown on the command line prompt.
 
 Method 1
 
 ```{bash eval=FALSE}
-cd /pub39/tea/nscxxx/CGR_Linux/
+cd /pub39/tea/nscxxx/Linux/
 ```
 
 Method 2
 
 ```{bash eval=FALSE}
 cd ~
-cd CGR_Linux/
+cd Linux/
 ```
 
 Method 3
 
 ```{bash eval=FALSE}
-cd /pub39/tea/nscxxx/CGR_Linux/1_directory/
+cd /pub39/tea/nscxxx/Linux/1_directory/
 cd ..
 ```
 
@@ -324,7 +324,7 @@ Method 4
 cd /pub39/
 cd tea/
 cd nscxxx/
-cd CGR_Linux/
+cd Linux/
 ```
 
 ## Listing Directory content
@@ -337,7 +337,7 @@ To list the contents (files and directories) within a directory you can use the 
 
 The output of `ls` will include file names that are coloured black and directory names that are coloured blue in our VNC terminals.
 
-Before carrying out the below commands make sure you are in your **"CGR_Linux"** directory with the `pwd` command.
+Before carrying out the below commands make sure you are in your **"Linux"** directory with the `pwd` command.
 
 List the contents in your current directory:
 
@@ -383,7 +383,7 @@ In the below examples press the tab button when you see __\<tab>__ and __replace
 
 Move into the directory __"1_directory"__
 ```{bash eval=FALSE}
-cd /pub39/t<tab>n<tab>xxx<tab>CGR_L<tab>1_d<tab>
+cd /pub39/t<tab>n<tab>xxx<tab>L<tab>1_d<tab>
 ``` 
 
 Print out all the content within the current directory that starts with __"1_"__ in the file or directory name. This is carried out with a double tab.
@@ -460,7 +460,7 @@ I also find it useful to put a `#` at the front of a long command that I am typi
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/tol.png", auto_pdf = TRUE)
 ``` 
-With the skills and knowledge from the above sections you may want to practice navigating directories to get a better feel of it. For this purpose there is a directory called __"~/CGR_Linux/TOL"__. This contains directories and subdirectories in the structure of Bacterial and Archaeal taxonomy from the Silva 16S rRNA database.
+With the skills and knowledge from the above sections you may want to practice navigating directories to get a better feel of it. For this purpose there is a directory called __"~/Linux/TOL"__. This contains directories and subdirectories in the structure of Bacterial and Archaeal taxonomy from the Silva 16S rRNA database.
 
 <!--chapter:end:05-Tips_and_tricks.Rmd-->
 
@@ -474,11 +474,11 @@ To make a directory the command `mkdir` is used.
 
 For the below examples we will be making heavy use of `ls` so you can hopefully visualise the contents of the directories.
 
-Type in the following commands to make a subdirectory within the __"CGR_Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
+Type in the following commands to make a subdirectory within the __"Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
 
 ```{bash eval=FALSE}
-#Change directory to CGR_linux in your home (~)
-cd ~/CGR_Linux/
+#Change directory to Linux in your home (~)
+cd ~/Linux/
 #Always good to list contents when you move into a directory
 ls
 #Make a directory called Chicken in your current directory
@@ -500,7 +500,7 @@ Files and directories can be moved with the `mv` command. This can also be used 
 
 __Note__: If you move a file to the path of a file that already exists, the pre existing file will be overwritten.
 
-First ensure your working directory is the __"CGR_Linux"__ directory.
+First ensure your working directory is the __"Linux"__ directory.
 
 Move the __"Chicken"__ directory into the __"3_chicken_farm/3_1_hut/"__ directory. This will move the directory and all its contents.
 
@@ -520,12 +520,12 @@ Move the Directory __"3_chicken_farm/3_1_hut/Chicken/"__ to __"3_chicken_farm/3_
 
 ```{bash eval=FALSE}
 #List the contents of the start directory
-ls ~/CGR_Linux/3_chicken_farm/3_1_hut
+ls ~/Linux/3_chicken_farm/3_1_hut
 #Move the Chicken directory whilst renaming it
-mv ~/CGR_Linux/3_chicken_farm/3_1_hut/Chicken/ \
-~/CGR_Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
+~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 #List the contents of the destination directory
-ls ~/CGR_Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+ls ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 ``` 
 
 Move the file __"3_chicken_farm/3_3_supplies/feed.txt"__ to the directory __"3_chicken_farm/3_2_field"__ and rename it __"used_feed.txt"__
@@ -548,11 +548,11 @@ knitr::include_graphics(path = "figures/copy.png", auto_pdf = TRUE)
 Files and directories can be copied with the `cp` command. Directories and files can be copied to any directory and given a new name.
 Note: If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.
 
-Before running the below commands move into your __"~/CGR_Linux/3_chicken_farm/"__ directory.
+Before running the below commands move into your __"~/Linux/3_chicken_farm/"__ directory.
 
 ```{bash eval=FALSE}
 #Change directory
-cd ~/CGR_Linux/3_chicken_farm/
+cd ~/Linux/3_chicken_farm/
 #List contents of current directory
 ls
 ```
@@ -627,7 +627,7 @@ knitr::include_graphics(path = "figures/exercise.png", auto_pdf = TRUE)
 ``` 
 Perform the following tasks with the skills and knowledge you have gained.  
 
-Change the name of the subdirectory __"four_exercises"__ within your __"CGR_Linux"__ directory to __"4_exercises"__  
+Change the name of the subdirectory __"four_exercises"__ within your __"Linux"__ directory to __"4_exercises"__  
 
 1. Make a backup of the __"4_exercises"__ directory 
 2. List the contents of the __"4_exercises"__ directory
@@ -648,7 +648,7 @@ knitr::include_graphics(path = "figures/files.png", auto_pdf = TRUE)
 ``` 
 There are many ways to show the contents of a file. Below are a few examples. 
 
-The files for the examples are within the directory:  __"/pub39/tea/nscxxx/CGR_linux/5_reading_files/"__ __(replace xxx with your user number)__.
+The files for the examples are within the directory:  __"/pub39/tea/nscxxx/Linux/5_reading_files/"__ __(replace xxx with your user number)__.
 
 ## Print out a file
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
@@ -661,17 +661,17 @@ __Note__: remember tab complete and using the arrow keys
 
 Print contents of __"short_file.txt"__ to screen
 ```{bash eval=FALSE}
-cat /pub39/tea/nscxxx/CGR_Linux/5_reading_files/short_file.txt
+cat /pub39/tea/nscxxx/Linux/5_reading_files/short_file.txt
 ``` 
 
 Print contents of __"Scientist.txt"__ to screen
 ```{bash eval=FALSE}
-cat /pub39/tea/nscxxx/CGR_Linux/5_reading_files/Scientist.txt
+cat /pub39/tea/nscxxx/Linux/5_reading_files/Scientist.txt
 ``` 
 
 Print contents of __"ecoli.gbk"__ to screen
 ```{bash eval=FALSE}
-cat /pub39/tea/nscxxx/CGR_Linux/5_reading_files/ecoli.gbk
+cat /pub39/tea/nscxxx/Linux/5_reading_files/ecoli.gbk
 ``` 
 __Remember__: The `clear` command.
 
@@ -685,7 +685,7 @@ The `tail` command will print out to screen the bottom n lines of a file.
 
 The default value is 10. The `-n` option can be used to indicate how many lines to print out.
 
-Carry out the below commands in the directory __"/pub39/tea/nscxxx/CGR_Linux/5_reading_files/"__
+Carry out the below commands in the directory __"/pub39/tea/nscxxx/Linux/5_reading_files/"__
 
 Print out the top 10 lines of __"ecoli.gbk"__
 ```{bash eval=FALSE}
@@ -885,7 +885,7 @@ Below are a subset of commands you can use in the command mode of vim.
 - __G__ - Go to the last line of the file
 
 ### Tasks
-Carry out the following tasks in the directory: __"/pub39/tea/nscxx/CGR_Linux/5_reading_files/"__
+Carry out the following tasks in the directory: __"/pub39/tea/nscxx/Linux/5_reading_files/"__
 
 Using a text editor (__nano__ or __vim__) add an entry for Scientist Mae Jemison (Born: 1956) to the file __"Scientist.txt"__. The names and date are separated by one tab.
 
@@ -967,7 +967,7 @@ https://en.wikipedia.org/wiki/FASTQ_format
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
 ``` 
-The directory __"~/CGR_Linux/6_final_exercise/"__ has all the files you need. Below is a set of tasks and questions that will require all the skills you have gained from this practical.
+The directory __"~/Linux/6_final_exercise/"__ has all the files you need. Below is a set of tasks and questions that will require all the skills you have gained from this practical.
 
 1. See what files are in the directory.  
 2. Rename the file "3-P£_CACTTCGA_L001_R1_001.fastq" as "3-P3_CACTTCGA_L001_R1_001.fastq".  
@@ -993,7 +993,7 @@ We have covered a small amount of Linux coding. This should be sufficient to car
 
 Below are some short sections to introduce you to some more advanced linux coding techniques. These give you a quick overview and some examples. This will hopefully put you in a good position to allow you to to learn these techniques in more depth outside of this workshop.
 
-The following sections will all be run with the files in the directory __"~/CGR_Linux/advanced_practice/"__. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and txt file for uncorrected and corrected reads. These fastq files are single end (i.e. there is no reverse/R2 reads).
+The following sections will all be run with the files in the directory __"~/Linux/advanced_practice/"__. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and txt file for uncorrected and corrected reads. These fastq files are single end (i.e. there is no reverse/R2 reads).
 
 ## Wildcard characters
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
@@ -1328,8 +1328,8 @@ https://www.guru99.com/file-permissions.html
 knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
 ``` 
 
-1. Copy the directory __~/CGR_Linux/advanced_practice__ to __~/CGR_Linux/advanced_practice_exercise__
-2. Move into __~/CGR_Linux/advanced_practice_exercise__
+1. Copy the directory __~/Linux/advanced_practice__ to __~/Linux/advanced_practice_exercise__
+2. Move into __~/Linux/advanced_practice_exercise__
 3. Make a directory called __fastq__ and one called __txt__
 4. With one command move all the fastq files into the directory __fastq__
 5. With one command move all the txt files, excluding __metadata.txt__ and __samples.txt__, into the directory __txt__
@@ -1472,11 +1472,11 @@ knitr::include_graphics(path = "figures/exercise.png", auto_pdf = TRUE)
 
 Ensure you are in the correct directory before carrying out the below commands
 ```{bash eval=FALSE}
-cd ~/CGR_Linux/
+cd ~/Linux/
 ```
 
 
-1. Change the name of the subdirectory 4_exercises_aaaa within your CGR_Linux to 4_exercises
+1. Change the name of the subdirectory 4_exercises_aaaa within your Linux to 4_exercises
 ```{bash eval=FALSE}
 mv 4_exercises_aaaa 4_exercises
 ```
@@ -1523,7 +1523,7 @@ knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
 
 Ensure you are in the correct directory before carrying out the below commands
 ```{bash eval=FALSE}
-cd ~/CGR_Linux/6_final_exercise
+cd ~/Linux/6_final_exercise
 ```
 1. See what files are in the directory
 ```{bash eval=FALSE}
@@ -1616,13 +1616,13 @@ grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R2_001.fastq
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
 ``` 
-1. Copy the directory ~/CGR_Linux/advanced_practice to ~/CGR_Linux/advanced_practice_exercise
+1. Copy the directory ~/Linux/advanced_practice to ~/Linux/advanced_practice_exercise
 ```{bash eval=FALSE}
-cp -r ~/CGR_Linux/advanced_practice ~/CGR_Linux/advanced_practice_exercise
+cp -r ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise
 ```
-2. Move into ~/CGR_Linux/advanced_practice_exercise
+2. Move into ~/Linux/advanced_practice_exercise
 ```{bash eval=FALSE}
-cd ~/CGR_Linux/advanced_practice_exercise
+cd ~/Linux/advanced_practice_exercise
 ```
 3. Make a directory called fastq and one called txt
 ```{bash eval=FALSE}

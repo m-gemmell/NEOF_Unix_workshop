@@ -4,7 +4,7 @@ knitr::include_graphics(path = "figures/exercise.png", auto_pdf = TRUE)
 ``` 
 Perform the following tasks with the skills and knowledge you have gained.  
 
-Change the name of the subdirectory __"four_exercises"__ within your __"CGR_Linux"__ directory to __"4_exercises"__  
+Change the name of the subdirectory __"four_exercises"__ within your __"Linux"__ directory to __"4_exercises"__  
 
 1. Make a backup of the __"4_exercises"__ directory 
 2. List the contents of the __"4_exercises"__ directory

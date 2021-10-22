@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 File reading and processing | Intro to Unix</title>
+  <title>Page not found | Intro to Unix</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 File reading and processing | Intro to Unix" />
+  <meta property="og:title" content="Page not found | Intro to Unix" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/figures/NEOF.png" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 File reading and processing | Intro to Unix" />
+  <meta name="twitter:title" content="Page not found | Intro to Unix" />
   
   <meta name="twitter:description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
   <meta name="twitter:image" content="/figures/NEOF.png" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
-<link rel="prev" href="07-Exercise1.html"/>
-<link rel="next" href="09-Recap.html"/>
+
+
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -251,183 +251,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="filereadingandprocessing" class="section level1" number="8">
-<h1><span class="header-section-number">Chapter 8</span> File reading and processing</h1>
-<p><img src="figures/files.png" width="20%" style="display: block; margin: auto;" />
-There are many ways to show the contents of a file. Below are a few examples.</p>
-<p>The files for the examples are within the directory: <strong>“/pub39/tea/nscxxx/Linux/5_reading_files/”</strong> <strong>(replace xxx with your user number)</strong>.</p>
-<div id="print-out-a-file" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Print out a file</h2>
-<p><img src="figures/cat.png" width="20%" style="display: block; margin: auto;" />
-The <code>cat</code> command will print out the entire contents of a file to the screen. This is useful for small text files and pipelines (pipelines are not covered here).
-Example commands are below (remember to replace xxx with your user name number):</p>
-<p><strong>Note</strong>: remember tab complete and using the arrow keys</p>
-<p>Print contents of <strong>“short_file.txt”</strong> to screen</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="08-File_reading_and_processing.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/Linux/5_reading_files/short_file.txt</span></code></pre></div>
-<p>Print contents of <strong>“Scientist.txt”</strong> to screen</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="08-File_reading_and_processing.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/Linux/5_reading_files/Scientist.txt</span></code></pre></div>
-<p>Print contents of <strong>“ecoli.gbk”</strong> to screen</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="08-File_reading_and_processing.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/Linux/5_reading_files/ecoli.gbk</span></code></pre></div>
-<p><strong>Remember</strong>: The <code>clear</code> command.</p>
-</div>
-<div id="head-and-tail" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> head and tail</h2>
-<p><img src="figures/head_and_tails.png" width="30%" style="display: block; margin: auto;" />
-The <code>head</code>_command will print out to screen the top n lines of a file.</p>
-<p>The <code>tail</code> command will print out to screen the bottom n lines of a file.</p>
-<p>The default value is 10. The <code>-n</code> option can be used to indicate how many lines to print out.</p>
-<p>Carry out the below commands in the directory <strong>“/pub39/tea/nscxxx/Linux/5_reading_files/”</strong></p>
-<p>Print out the top 10 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="08-File_reading_and_processing.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> ecoli.gbk</span></code></pre></div>
-<p>Print out the bottom 10 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="08-File_reading_and_processing.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> ecoli.gbk</span></code></pre></div>
-<p>Print out the top 25 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb41-1"><a href="08-File_reading_and_processing.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> 25 ecoli.gbk</span></code></pre></div>
-<p>Print out the bottom 2 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="08-File_reading_and_processing.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-n</span> 2 ecoli.gbk</span></code></pre></div>
-<p>Print out all but the bottom 2 lines of <strong>“Scientist.txt”</strong></p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb43-1"><a href="08-File_reading_and_processing.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> <span class="at">-2</span> Scientist.txt</span></code></pre></div>
-<p>Print out all lines starting from the 2nd top line of <strong>“Scientist.txt”</strong></p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb44-1"><a href="08-File_reading_and_processing.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-n</span> +2 Scientist.txt</span></code></pre></div>
-<p>Print out all but the bottom 5 lines of <strong>“Scientist.txt”</strong></p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb45-1"><a href="08-File_reading_and_processing.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> <span class="at">-5</span> Scientist.txt</span></code></pre></div>
-<p>Print out all lines starting from the 3rd top line of <strong>“Scientist.txt”</strong></p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="08-File_reading_and_processing.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-n</span> +3 Scientist.txt</span></code></pre></div>
-<p>Print out the top 25 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb47-1"><a href="08-File_reading_and_processing.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> +25 ecoli.gbk</span></code></pre></div>
-<p>Print out the bottom 2 lines of <strong>“ecoli.gbk”</strong></p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="08-File_reading_and_processing.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-n</span> <span class="at">-2</span> ecoli.gbk</span></code></pre></div>
-</div>
-<div id="file-viewing-with-less" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> File viewing with less</h2>
-<p><img src="figures/less.png" width="20%" style="display: block; margin: auto;" />
-The <code>less</code> command will display a file’s contents one page at a time. Various keys on the keyboard will allow you to navigate the contents of the files. The below actions will occur identically with the man command.</p>
-<ul>
-<li><strong>q</strong> : Exit</li>
-<li><strong>up and down arrow keys</strong> : Will move up/down 1 line at a time</li>
-<li><strong>space</strong> : Move down one page</li>
-<li><strong>b</strong> : Move up one page</li>
-<li><strong><code>/</code></strong> : Follow this by a term to search for it in the file’s contents</li>
-<li><strong>n</strong> : Find the next occurrence of the term last searched for</li>
-<li><strong>N</strong> : Find the previous occurrence of the term last searched for</li>
-<li><strong>g</strong> : Jump to the first line of the file</li>
-<li><strong>G</strong> : Jump to the bottom line of the file</li>
-</ul>
-<p>Use the <code>less</code> command to view the contents of the <strong>“ecoli.gbk”</strong> file. Then find the 3rd occurrence of the word ‘ribosome.’ Afterwards move around the file.</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb49-1"><a href="08-File_reading_and_processing.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> ecoli.gbk</span></code></pre></div>
-<p>Look at the <code>man</code>ual for <code>less</code> and search for the first occurrence of the string ‘percent.’ Afterwards look around the manual page.</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb50-1"><a href="08-File_reading_and_processing.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> less</span></code></pre></div>
-</div>
-<div id="word-count" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Word count</h2>
-<p><img src="figures/wc.png" width="20%" style="display: block; margin: auto;" />
-The <code>wc</code> command will allow allow you to word count files. It will display line, word and byte counts for files in that order.</p>
-<p>Use <code>wc</code> to see the line, word and byte count of the <strong>“short_file.txt”</strong> and <strong>“ecoli.gbk”</strong> files. As you can see you can carry this out on multiple files at once.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb51-1"><a href="08-File_reading_and_processing.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> short_file.txt Scientist.txt ecoli.gbk</span></code></pre></div>
-<p>Count the number of characters in the <strong>“short_file.txt”</strong> file</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb52-1"><a href="08-File_reading_and_processing.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-m</span> short_file.txt</span></code></pre></div>
-<p>Count the number of lines in the <strong>“ecoli.gbk”</strong> file</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb53-1"><a href="08-File_reading_and_processing.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-l</span> ecoli.gbk</span></code></pre></div>
-</div>
-<div id="pattern-searching" class="section level2" number="8.5">
-<h2><span class="header-section-number">8.5</span> Pattern searching</h2>
-<p><img src="figures/pattern.png" width="20%" style="display: block; margin: auto;" />
-The <code>grep</code> command will search for a pattern in a text file and output all the lines containing the pattern.</p>
-<p>Print out the lines from <strong>“Scientist.txt”</strong> that have the number 18 in them. In this particular example it prints out all scientists which were born in the 1800s. This will not always be the case depending on the data in the file.</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb54-1"><a href="08-File_reading_and_processing.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> “18” Scientist.txt</span></code></pre></div>
-<p>Print out the lines which have the string “Ada” in them.</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb55-1"><a href="08-File_reading_and_processing.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> “Ada” Scientist.txt</span></code></pre></div>
-<p>Print out the lines which have the string “ada” in them. There should be none, as grep is case sensitive.</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb56-1"><a href="08-File_reading_and_processing.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> “ada” Scientist.txt</span></code></pre></div>
-<p>Type in the following command.</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb57-1"><a href="08-File_reading_and_processing.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> Scientist.txt</span></code></pre></div>
-<p>The above command will be stuck as <code>grep</code> does not know what it is looking for. To cancel the command use <strong>‘Ctrl’ + ‘c’</strong></p>
-</div>
-<div id="text-editor" class="section level2" number="8.6">
-<h2><span class="header-section-number">8.6</span> Text editor</h2>
-<p><img src="figures/text_editor.png" width="20%" style="display: block; margin: auto;" />
-Three of the most popular text editors are <strong>vim</strong>, <strong>gedit</strong> and <strong>nano</strong>. Below are quick introductions to <strong>nano</strong> and <strong>vim</strong>.</p>
-<p><strong>nano</strong> is the easiest to learn but is quite limiting. <strong>vim</strong> and <strong>gedit</strong> are quite similar in power with different people preferring one or the other.</p>
-<p>Please choose either <strong>nano</strong> or <strong>vim</strong> to learn now and go through its section.</p>
-<div id="nano" class="section level3" number="8.6.1">
-<h3><span class="header-section-number">8.6.1</span> nano</h3>
-<p><img src="figures/1200px-Gnu-nano.png" width="20%" style="display: block; margin: auto;" />
-To enter the <code>nano</code> text editor you can use the command <code>nano</code>. The command is: <code>nano file.txt</code>.</p>
-<p><code>nano</code> can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.</p>
-<p>Once you are in the editor you can type characters and move around with the arrow keys.</p>
-<p>To carry out specific functions you will need to use <strong>Ctrl</strong> or <strong>Alt</strong> with another key. At the bottom of the editor are a few examples where the <code>^</code> indicates <strong>Ctrl</strong>. For example the <code>^G Get Help</code> means you need to press <strong>Ctrl+G</strong> to get help. When you use letters this way in <strong>nano</strong> they are case insensitive (i.e. the CAPS lock can be on or off and you will get the same result).</p>
-<p>After you carry out a function ensure you look at the bottom of the editor again as it may ask you to type something or you may get a new series of functions you can use.</p>
-<p>Below are some important examples:</p>
-<ul>
-<li><strong>Ctrl+X</strong> - Exit nano</li>
-<li><strong>Ctrl+S</strong> - Save file</li>
-<li><strong>Ctrl+O</strong> - Save file as</li>
-<li><strong>Ctrl+A</strong> - Jump to the start of a line</li>
-<li><strong>Ctrl+E</strong> - Jump to the end of a line</li>
-<li><strong>Ctrl+W</strong> - Start search (Where is)</li>
-<li><strong>Alt+W</strong> - Continue search forward (find next occurrence forward)</li>
-<li><strong>Alt+Q</strong> - Find next occurrence backward</li>
-<li><strong>Alt+K</strong> - Cut current line</li>
-<li><strong>Alt+\</strong> - Go to the first line</li>
-<li><strong>Alt+/</strong> - Go to the last line</li>
-</ul>
-</div>
-<div id="vim" class="section level3" number="8.6.2">
-<h3><span class="header-section-number">8.6.2</span> vim</h3>
-<p><img src="figures/Vimlogo.png" width="20%" style="display: block; margin: auto;" />
-To enter the <code>vim</code> text editor you can use the command <code>vim</code>. The command is: <code>vim file.txt</code>.</p>
-<p><code>vim</code> can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.</p>
-<p>Once you are in the <code>vim</code> editor there are two main modes:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Command mode</strong>: This is the starting mode of <code>vim</code>. It can be used to enter commands but not for typing.</li>
-<li><strong>Insert mode</strong>: This mode can be used to insert characters into the text. Pasting only works properly in insert mode. You will know you are in insert mode as at the bottom of the screen will be <strong>“– INSERT –”</strong>.
-<ol style="list-style-type: decimal">
-<li>To <strong>enter</strong> insert mode press <strong>i</strong></li>
-<li>To <strong>escape</strong> Insert mode press <strong>esc</strong></li>
-</ol></li>
-</ol>
-<p>Below are a subset of commands you can use in the command mode of vim.</p>
-<ul>
-<li><strong>:q</strong> - Quit vim. Will fail if there are any unsaved changes</li>
-<li><strong>:w</strong> - Save the file</li>
-<li><strong>:wq</strong> - Save and quit</li>
-<li><strong>:x</strong> - Save and quit</li>
-<li><strong>:q!</strong> - Quit and throw away unsaved changes</li>
-<li><strong>:saveas file</strong> - Save file as. File name can be changed</li>
-<li><strong>:w file</strong> - Save file as. File name can be changed</li>
-<li><strong>arrow keys</strong> - Navigate the text. (works in insert mode too)</li>
-<li><strong>^</strong> - Jump to the start of a line</li>
-<li><strong>$</strong> - Jump to the end of a line</li>
-<li><strong>/pattern</strong> - Search for pattern</li>
-<li><strong>n</strong> - Repeat search in same direction</li>
-<li><strong>N</strong> - Repeat search in reverse direction</li>
-<li><strong>dd</strong> - Delete the current line</li>
-<li><strong>i</strong> - Enter insert mode</li>
-<li><strong>1G</strong> - Go to the first line in the file. Number can be changed</li>
-<li><strong>G</strong> - Go to the last line of the file</li>
-</ul>
-</div>
-<div id="tasks" class="section level3" number="8.6.3">
-<h3><span class="header-section-number">8.6.3</span> Tasks</h3>
-<p>Carry out the following tasks in the directory: <strong>“/pub39/tea/nscxx/Linux/5_reading_files/”</strong></p>
-<p>Using a text editor (<strong>nano</strong> or <strong>vim</strong>) add an entry for Scientist Mae Jemison (Born: 1956) to the file <strong>“Scientist.txt”</strong>. The names and date are separated by one tab.</p>
-<p>Using your text editor of choice delete all the scientists born before 1000 in the <strong>“Scientist.txt”</strong> file and save this as <strong>“Scientist_post_1000.txt”</strong>.</p>
-</div>
-<div id="cheat-sheet" class="section level3" number="8.6.4">
-<h3><span class="header-section-number">8.6.4</span> Cheat sheet</h3>
-<p><strong>Nano cheatsheet</strong>: <a href="https://www.nano-editor.org/dist/latest/cheatsheet.html" class="uri">https://www.nano-editor.org/dist/latest/cheatsheet.html</a></p>
-<p><strong>Vim cheatsheet</strong>: <a href="https://vim.rtorr.com/" class="uri">https://vim.rtorr.com/</a></p>
-
-</div>
-</div>
+<div id="page-not-found" class="section level1">
+<h1>Page not found</h1>
+<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p>You may want to try searching to find the page's new location, or use
+the table of contents to find the page you are looking for.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="07-Exercise1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="09-Recap.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

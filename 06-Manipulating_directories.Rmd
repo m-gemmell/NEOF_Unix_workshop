@@ -8,11 +8,11 @@ To make a directory the command `mkdir` is used.
 
 For the below examples we will be making heavy use of `ls` so you can hopefully visualise the contents of the directories.
 
-Type in the following commands to make a subdirectory within the __"CGR_Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
+Type in the following commands to make a subdirectory within the __"Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
 
 ```{bash eval=FALSE}
-#Change directory to CGR_linux in your home (~)
-cd ~/CGR_Linux/
+#Change directory to Linux in your home (~)
+cd ~/Linux/
 #Always good to list contents when you move into a directory
 ls
 #Make a directory called Chicken in your current directory
@@ -34,7 +34,7 @@ Files and directories can be moved with the `mv` command. This can also be used 
 
 __Note__: If you move a file to the path of a file that already exists, the pre existing file will be overwritten.
 
-First ensure your working directory is the __"CGR_Linux"__ directory.
+First ensure your working directory is the __"Linux"__ directory.
 
 Move the __"Chicken"__ directory into the __"3_chicken_farm/3_1_hut/"__ directory. This will move the directory and all its contents.
 
@@ -54,12 +54,12 @@ Move the Directory __"3_chicken_farm/3_1_hut/Chicken/"__ to __"3_chicken_farm/3_
 
 ```{bash eval=FALSE}
 #List the contents of the start directory
-ls ~/CGR_Linux/3_chicken_farm/3_1_hut
+ls ~/Linux/3_chicken_farm/3_1_hut
 #Move the Chicken directory whilst renaming it
-mv ~/CGR_Linux/3_chicken_farm/3_1_hut/Chicken/ \
-~/CGR_Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
+~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 #List the contents of the destination directory
-ls ~/CGR_Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+ls ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 ``` 
 
 Move the file __"3_chicken_farm/3_3_supplies/feed.txt"__ to the directory __"3_chicken_farm/3_2_field"__ and rename it __"used_feed.txt"__
@@ -82,11 +82,11 @@ knitr::include_graphics(path = "figures/copy.png", auto_pdf = TRUE)
 Files and directories can be copied with the `cp` command. Directories and files can be copied to any directory and given a new name.
 Note: If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.
 
-Before running the below commands move into your __"~/CGR_Linux/3_chicken_farm/"__ directory.
+Before running the below commands move into your __"~/Linux/3_chicken_farm/"__ directory.
 
 ```{bash eval=FALSE}
 #Change directory
-cd ~/CGR_Linux/3_chicken_farm/
+cd ~/Linux/3_chicken_farm/
 #List contents of current directory
 ls
 ```
