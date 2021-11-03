@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-10-22" />
+<meta name="date" content="2021-11-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -284,7 +284,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>To do this we can use the command <code>cp</code>. This command is followed by the directory/file we want to copy then by the directory we want to copy it to.</p>
 <p>To copy a directory we need to add the option <code>-r</code> which means recursively copy this directory and all its contents. Otherwise <code>cp</code> can only be used to copy files.</p>
 <p>Use the below command to copy the workshop data to your current directory. The <strong>“.”</strong> refers to your current directory.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="04-Directories_and_Files.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /pub39/tea/matthew/NEOF/Linux/ .</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="04-Directories_and_Files.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /pub39/tea/nsc006/Linux/ .</span></code></pre></div>
 <p>Now change directory into your newly copied directory.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="04-Directories_and_Files.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Linux</span></code></pre></div>
 <p>Print to screen the path of your current working directory.</p>
@@ -310,7 +310,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="paths" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Paths</h2>
 <p><img src="figures/paths.png" width="20%" style="display: block; margin: auto;" /></p>
-<p>On the command line directories and files are referred to by paths e.g. <strong>“/pub39/tea/matthew/Linux/”</strong> is a path.</p>
+<p>On the command line directories and files are referred to by paths e.g. <strong>“/pub39/tea/nsc006/Linux/”</strong> is a path.</p>
 <p>Paths are case sensitive. The path <strong>“directory/file.txt”</strong> is different than <strong>“diRectory/File.txt”</strong>.</p>
 <p>Spaces should always be avoided in path names. It is highly recommended to <strong>“_”</strong> instead. This is because spaces are used to separate options and parameters in commands.</p>
 <p>There are multiple ways to refer to a path. The two main ways are through <strong>absolute paths</strong> and <strong>relative paths</strong>.</p>
@@ -318,7 +318,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">4.3.1</span> Absolute paths</h3>
 <p>Absolute paths are paths that start from the root e.g.</p>
 <ul>
-<li><strong>“/pub39/tea/matthew/teaching/Linux/”</strong></li>
+<li><strong>“/pub39/tea/nsc006/Linux/”</strong></li>
 <li><strong>“~/Linux/”</strong> (In this case ~ is a shortcut which includes the root)</li>
 <li><strong>“/pub39/tea/nsc006/file.txt”</strong></li>
 </ul>
@@ -328,7 +328,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Relative paths are paths that are relative to another location besides the root e.g.</p>
 <ul>
 <li><strong>“.”</strong> (This means the current working directory).</li>
-<li><strong>“..”</strong> (This refers to one directory up e.g. if the current directory was <strong>“/pub39/nsc006/”</strong>, the <strong>“..”</strong> directory would be <strong>“/pub39/”</strong>).</li>
+<li><strong>“..”</strong> (This refers to one directory up e.g. if the current directory was <strong>“/pub39/tea/nsc006/”</strong>, the <strong>“..”</strong> directory would be <strong>“/pub39/tea/”</strong>).</li>
 <li><strong>“1_directory/”</strong>, would refer to the directory <strong>“1_directory/”</strong> in your current directory</li>
 </ul>
 </div>
