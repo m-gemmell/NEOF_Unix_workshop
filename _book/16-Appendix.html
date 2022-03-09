@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Directories and Files | Intro to Unix</title>
+  <title>A Practical cheat sheet | Intro to Unix</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Directories and Files | Intro to Unix" />
+  <meta property="og:title" content="A Practical cheat sheet | Intro to Unix" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/figures/NEOF.png" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Directories and Files | Intro to Unix" />
+  <meta name="twitter:title" content="A Practical cheat sheet | Intro to Unix" />
   
   <meta name="twitter:description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
   <meta name="twitter:image" content="/figures/NEOF.png" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
-<link rel="prev" href="03-Starting.html"/>
-<link rel="next" href="05-Tips_and_tricks.html"/>
+<link rel="prev" href="15-Answers.html"/>
+
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -255,130 +255,154 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dirsandfiles" class="section level1" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Directories and Files</h1>
-<p><img src="figures/directory.png" width="20%" style="display: block; margin: auto;" /></p>
-<div id="acquiring-workshop-data" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Acquiring Workshop data</h2>
-<p>The first step to carry out is to copy the data for the workshop to your home directory.</p>
-<div id="changing-directories" class="section level3" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Changing directories</h3>
-<p>Before copying you will change directory to your home directory.</p>
+<div id="cheatsheet" class="section level1" number="15">
+<h1><span class="header-section-number">A</span> Practical cheat sheet</h1>
+<p><img src="figures/cheatsheet.png" width="20%" style="display: block; margin: auto;" /></p>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="40%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Usage example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>echo</td>
+<td>Print out a string to screen</td>
+<td>Echo ‘Hello World’</td>
+</tr>
+<tr class="even">
+<td>man</td>
+<td>Look at the manual page of a command</td>
+<td>man man</td>
+</tr>
+<tr class="odd">
+<td>clear</td>
+<td>Clear the screen</td>
+<td>clear</td>
+</tr>
+<tr class="even">
+<td>&lt;tab&gt;</td>
+<td>Complete a path or command</td>
+<td>&lt;tab&gt;</td>
+</tr>
+<tr class="odd">
+<td>cd</td>
+<td>Change directory</td>
+<td>cd /directory/path/</td>
+</tr>
+<tr class="even">
+<td>pwd</td>
+<td>Print Working Directory</td>
+<td>pwd</td>
+</tr>
+<tr class="odd">
+<td>ls</td>
+<td>List the contents of a directory</td>
+<td>ls /directory/path/</td>
+</tr>
+<tr class="even">
+<td>mkdir</td>
+<td>Make a directory</td>
+<td>mkdir /directory/path/new_directory/</td>
+</tr>
+<tr class="odd">
+<td>cp</td>
+<td>Copy content to another path</td>
+<td>cp /directory/path/file.txt /directory/path/new_directory/</td>
+</tr>
+<tr class="even">
+<td>mv</td>
+<td>Move content to a new path</td>
+<td>mv /directory/path/file.txt /directory/path/new_directory/</td>
+</tr>
+<tr class="odd">
+<td>rm</td>
+<td>Delete content</td>
+<td>rm /directory/path/file.txt</td>
+</tr>
+<tr class="even">
+<td>cat</td>
+<td>Print contents of a file to screen</td>
+<td>cat /directory/path/file.txt</td>
+</tr>
+<tr class="odd">
+<td>head</td>
+<td>Print out the first n lines of a file to screen</td>
+<td>head -n 10 /directory/path/file.txt</td>
+</tr>
+<tr class="even">
+<td>tail</td>
+<td>Print the last n lines of a file to screen</td>
+<td>tail -n 12 /directory/path/file.txt</td>
+</tr>
+<tr class="odd">
+<td>less</td>
+<td>Read a file one page at a time</td>
+<td>less /directory/path/file.txt</td>
+</tr>
+<tr class="even">
+<td>wc</td>
+<td>Print out line, word and byte count</td>
+<td>wc /directory/path/file.txt</td>
+</tr>
+<tr class="odd">
+<td>grep</td>
+<td>Search for lines that contain a specific pattern</td>
+<td>grep “pattern” /directory/path/file.txt</td>
+</tr>
+<tr class="even">
+<td>vim</td>
+<td>Text editor</td>
+<td>vim /directory/path/file.txt</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="windows-terminals" class="section level1" number="16">
+<h1><span class="header-section-number">B</span> Windows terminals</h1>
+<p>If you are on a windows you may need to download a terminal program to <code>ssh</code> to a linux cluster. Thankfully Macs come with an in built terminal. Below are a few suggestions of windows terminals:</p>
 <ul>
-<li><code>cd</code> is the command to Change Directory. It is followed by the directory you want to change to.</li>
-<li><strong>“~”</strong> represents your home directory.</li>
+<li><a href="https://mobaxterm.mobatek.net/">MobaXterm</a></li>
+<li><a href="https://www.putty.org/">Putty</a></li>
+<li><a href="https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab">Ubuntu on Windows</a></li>
 </ul>
-<p>Change directory to your home directory by running the following command in your terminal:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="04-Directories_and_Files.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~ </span></code></pre></div>
-<p>In Linux the default of <code>cd</code> is to change directory to your home directory. Therefore the following command will do the same as the above.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="04-Directories_and_Files.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span></code></pre></div>
-<p>To determine your current working directory you can either look at the part of the terminal which displays it or you can use the command <code>pwd</code> (print working directory). Enter the following command:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="04-Directories_and_Files.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
-<p>In this case it will not show a <strong>“~”</strong> but the full path of your home directory. E.g. <strong>“/pub39/tea/nsc006/”</strong>.</p>
+</div>
+<div id="ssh" class="section level1" number="17">
+<h1><span class="header-section-number">C</span> <code>ssh</code></h1>
+<p>The <code>ssh</code> command is used to login into cluster and other machines. For more information on this please see the following online tutorial: <a href="https://opensource.com/article/20/9/ssh" class="uri">https://opensource.com/article/20/9/ssh</a></p>
+</div>
+<div id="file-transferring" class="section level1" number="18">
+<h1><span class="header-section-number">D</span> File transferring</h1>
+<p>When working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.</p>
+<p>For transferring on windows machine I would suggest <a href="https://winscp.net/eng/index.php">WinSCP</a>.</p>
+<p>For transferring on Macs I would suggest <a href="https://filezilla-project.org/">FileZIlla</a></p>
+</div>
+<div id="anaconda" class="section level1" number="19">
+<h1><span class="header-section-number">E</span> ANACONDA</h1>
+<p>Once you start using bioinformatic tools you will notice that a lot of installing is required. I would highly suggest using ANACONDA’s <code>conda</code> for this purpose.</p>
+<p>Links:</p>
 <ul>
-<li>The first <strong>“/”</strong> is the root of the system. Every directory, subdirectory, file and program of the machine is within the root.</li>
-<li><strong>“pub39/”</strong>: A directory within the root.</li>
-<li><strong>“tea/”</strong>: A subdirectory of <strong>“pub39/”</strong> and a sub-subdirectory of the root (<strong>“/”</strong>).</li>
-<li><strong>“nsc006”</strong>: The home directory of user nsc006. It is a subdirectory of <strong>“tea/”</strong> which is a subdirectory of <strong>“pub39/”</strong> which is a subdirectory of the root (<strong>“/”</strong>).</li>
+<li><a href="https://www.anaconda.com/?modal=nucleus">ANACONDA main page</a></li>
+<li><a href="https://docs.anaconda.com/anaconda/install/">Installing ANACONDA</a></li>
+<li><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html">Getting started with <code>conda</code></a></li>
 </ul>
-</div>
-<div id="copying" class="section level3" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Copying</h3>
-<p>Now that we are in our home directory we can copy the data we need to it.</p>
-<p>To do this we can use the command <code>cp</code>. This command is followed by the directory/file we want to copy then by the directory we want to copy it to.</p>
-<p>To copy a directory we need to add the option <code>-r</code> which means recursively copy this directory and all its contents. Otherwise <code>cp</code> can only be used to copy files.</p>
-<p>Use the below command to copy the workshop data to your current directory. The <strong>“.”</strong> refers to your current directory.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="04-Directories_and_Files.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /pub39/tea/nsc006/Linux/ .</span></code></pre></div>
-<p>Now change directory into your newly copied directory.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="04-Directories_and_Files.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Linux</span></code></pre></div>
-<p>Print to screen the path of your current working directory.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="04-Directories_and_Files.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
-</div>
-</div>
-<div id="directory-structure" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Directory structure</h2>
-<p>You can think of the directory structure in two different ways.</p>
-<div id="the-directory-tree" class="section level3" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> The Directory tree</h3>
-<p>This starts as the root (<strong>“/”</strong>) which branches out into directories and files. Directories contain files and subdirectories which contain files and subdirectories etc.</p>
-<p>Below is an example of visualising the location of the <strong>“Linux”</strong> directory within the user ncs006’s home directory as a tree. This only includes a subset of directories.</p>
-<p><img src="figures/linux_tree_structure.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="boxes" class="section level3" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> Boxes</h3>
-<p>Another analogy to the directory structure is boxes and items. In this case there is one large box that contains all the boxes and items, this is the root (<strong>“/”</strong>). In the root are items and boxes which hold items and boxes etc.</p>
-<p>Below is an example of visualising the location of the <strong>“Linux”</strong> directory within the user ncs006’s home directory as boxes. This only includes a subset of directories.</p>
-<p><img src="figures/linux_box_structure.png" width="60%" style="display: block; margin: auto;" /></p>
-</div>
-</div>
-<div id="paths" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Paths</h2>
-<p><img src="figures/paths.png" width="20%" style="display: block; margin: auto;" /></p>
-<p>On the command line directories and files are referred to by paths e.g. <strong>“/pub39/tea/nsc006/Linux/”</strong> is a path.</p>
-<p>Paths are case sensitive. The path <strong>“directory/file.txt”</strong> is different than <strong>“diRectory/File.txt”</strong>.</p>
-<p>Spaces should always be avoided in path names. It is highly recommended to <strong>“_”</strong> instead. This is because spaces are used to separate options and parameters in commands.</p>
-<p>There are multiple ways to refer to a path. The two main ways are through <strong>absolute paths</strong> and <strong>relative paths</strong>.</p>
-<div id="absolute-paths" class="section level3" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> Absolute paths</h3>
-<p>Absolute paths are paths that start from the root e.g.</p>
-<ul>
-<li><strong>“/pub39/tea/nsc006/Linux/”</strong></li>
-<li><strong>“~/Linux/”</strong> (In this case ~ is a shortcut which includes the root)</li>
-<li><strong>“/pub39/tea/nsc006/file.txt”</strong></li>
-</ul>
-</div>
-<div id="relative-paths" class="section level3" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> Relative paths</h3>
-<p>Relative paths are paths that are relative to another location besides the root e.g.</p>
-<ul>
-<li><strong>“.”</strong> (This means the current working directory).</li>
-<li><strong>“..”</strong> (This refers to one directory up e.g. if the current directory was <strong>“/pub39/tea/nsc006/”</strong>, the <strong>“..”</strong> directory would be <strong>“/pub39/tea/”</strong>).</li>
-<li><strong>“1_directory/”</strong>, would refer to the directory <strong>“1_directory/”</strong> in your current directory</li>
-</ul>
-</div>
-<div id="change-directory-examples" class="section level3" number="4.3.3">
-<h3><span class="header-section-number">4.3.3</span> Change directory examples</h3>
-<p>Below is a subset of valid methods to change directory into your <strong>“Linux/”</strong> directory</p>
-<p><strong>Note</strong>:change <strong>nscxxx</strong> to your specific user name as shown on the command line prompt.</p>
-<p>Method 1</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="04-Directories_and_Files.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /pub39/tea/nscxxx/Linux/</span></code></pre></div>
-<p>Method 2</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="04-Directories_and_Files.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
-<span id="cb13-2"><a href="04-Directories_and_Files.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Linux/</span></code></pre></div>
-<p>Method 3</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="04-Directories_and_Files.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /pub39/tea/nscxxx/Linux/1_directory/</span>
-<span id="cb14-2"><a href="04-Directories_and_Files.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code></pre></div>
-<p>Method 4</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="04-Directories_and_Files.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /pub39/</span>
-<span id="cb15-2"><a href="04-Directories_and_Files.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> tea/</span>
-<span id="cb15-3"><a href="04-Directories_and_Files.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> nscxxx/</span>
-<span id="cb15-4"><a href="04-Directories_and_Files.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Linux/</span></code></pre></div>
-</div>
-</div>
-<div id="listing-directory-content" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Listing Directory content</h2>
-<p><img src="figures/List.png" width="20%" style="display: block; margin: auto;" /></p>
-<p>To list the contents (files and directories) within a directory you can use the <code>ls</code> command.</p>
-<p>The output of <code>ls</code> will include file names that are coloured black and directory names that are coloured blue in our VNC terminals.</p>
-<p>Before carrying out the below commands make sure you are in your <strong>“Linux”</strong> directory with the <code>pwd</code> command.</p>
-<p>List the contents in your current directory:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="04-Directories_and_Files.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
-<p>List the contents in your home directory:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="04-Directories_and_Files.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> ..</span></code></pre></div>
-<p>List the contents in the root directory and put each separate file/directory on a separate line. In the below command the <code>-1</code> is a parameter that indicates there will be only 1 piece of content on each line. Note: <code>-2</code>, <code>-3</code> etc are not parameters that work with <code>ls</code>.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="04-Directories_and_Files.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-1</span> /</span></code></pre></div>
-<p><strong>Reminder</strong>: you can use the <code>man</code> command to look at more options for commands.</p>
-<p><code>ls</code> is my most typed command. I am consistently using it to see what directories and files are in my current directory and other directories. I suggest you do the same.</p>
+<p>Once you are familiar with <code>conda</code> I would then suggest using <a href="https://github.com/mamba-org/mamba"><code>mamba</code></a>. This is installed on top of <code>conda</code> and improves the speed of <code>conda</code>.</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="03-Starting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="05-Tips_and_tricks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="15-Answers.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

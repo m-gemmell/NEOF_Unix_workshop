@@ -61,3 +61,7 @@ ruby
 golang-aka-go
 r
 cheatsheet
+windows-terminals
+ssh
+file-transferring
+anaconda

@@ -1712,5 +1712,37 @@ knitr::include_graphics(path = "figures/cheatsheet.png", auto_pdf = TRUE)
 | vim         | Text editor                                      | vim /directory/path/file.txt                               |
 +-------------+--------------------------------------------------+------------------------------------------------------------+
 
-<!--chapter:end:16-Cheatsheet.rmd-->
+# Windows terminals
+
+If you are on a windows you may need to download a terminal program to `ssh` to a linux cluster. Thankfully Macs come with an in built terminal. Below are a few suggestions of windows terminals:
+
+- [MobaXterm](https://mobaxterm.mobatek.net/)
+- [Putty](https://www.putty.org/)
+- [Ubuntu on Windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab)
+
+# `ssh`
+
+The `ssh` command is used to login into cluster and other machines. For more information on this please see the following online tutorial: https://opensource.com/article/20/9/ssh
+
+# File transferring
+
+When working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.
+
+For transferring on windows machine I would suggest [WinSCP](https://winscp.net/eng/index.php).
+
+For transferring on Macs I would suggest [FileZIlla](https://filezilla-project.org/)
+
+# ANACONDA
+
+Once you start using bioinformatic tools you will notice that a lot of installing is required. I would highly suggest using ANACONDA's `conda` for this purpose.
+
+Links:
+
+- [ANACONDA main page](https://www.anaconda.com/?modal=nucleus)
+- [Installing ANACONDA](https://docs.anaconda.com/anaconda/install/)
+- [Getting started with `conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+
+Once you are familiar with `conda` I would then suggest using [`mamba`](https://github.com/mamba-org/mamba). This is installed on top of `conda` and improves the speed of `conda`.
+
+<!--chapter:end:16-Appendix.rmd-->
 
