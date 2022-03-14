@@ -51,13 +51,13 @@ To copy a directory we need to add the option `-r` which means recursively copy 
 Use the below command to copy the workshop data to your current directory. The **"."** refers to your current directory.
 
 ```{bash eval=FALSE}
-cp -r /pub39/tea/matthew/NEOF/CGR_Linux/ .
+cp -r /pub39/tea/nsc006/Linux/ .
 ```
 
 Now change directory into your newly copied directory.
 
 ```{bash eval=FALSE}
-cd CGR_Linux
+cd Linux
 ```
 
 Print to screen the path of your current working directory.
@@ -74,7 +74,7 @@ You can think of the directory structure in two different ways.
 
 This starts as the root (**"/"**) which branches out into directories and files. Directories contain files and subdirectories which contain files and subdirectories etc.
 
-Below is an example of visualising the location of the **"CGR_Linux"** directory within the user ncs006's home directory as a tree. This only includes a subset of directories.
+Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as a tree. This only includes a subset of directories.
 
 ```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
 knitr::include_graphics(path = "figures/linux_tree_structure.png", auto_pdf = TRUE)
@@ -84,7 +84,7 @@ knitr::include_graphics(path = "figures/linux_tree_structure.png", auto_pdf = TR
 
 Another analogy to the directory structure is boxes and items. In this case there is one large box that contains all the boxes and items, this is the root (**"/"**). In the root are items and boxes which hold items and boxes etc.
 
-Below is an example of visualising the location of the **"CGR_Linux"** directory within the user ncs006's home directory as boxes. This only includes a subset of directories.
+Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as boxes. This only includes a subset of directories.
 
 ```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
 knitr::include_graphics(path = "figures/linux_box_structure.png", auto_pdf = TRUE)
@@ -96,7 +96,7 @@ knitr::include_graphics(path = "figures/linux_box_structure.png", auto_pdf = TRU
 knitr::include_graphics(path = "figures/paths.png", auto_pdf = TRUE)
 ```
 
-On the command line directories and files are referred to by paths e.g. **"/pub39/tea/matthew/CGR_Linux/"** is a path.
+On the command line directories and files are referred to by paths e.g. **"/pub39/tea/nsc006/Linux/"** is a path.
 
 Paths are case sensitive. The path **"directory/file.txt"** is different than **"diRectory/File.txt"**.
 
@@ -108,8 +108,8 @@ There are multiple ways to refer to a path. The two main ways are through **abso
 
 Absolute paths are paths that start from the root e.g.
 
--   **"/pub39/tea/matthew/teaching/CGR_Linux/"**
--   **"\~/CGR_Linux/"** (In this case \~ is a shortcut which includes the root)
+-   **"/pub39/tea/nsc006/Linux/"**
+-   **"\~/Linux/"** (In this case \~ is a shortcut which includes the root)
 -   **"/pub39/tea/nsc006/file.txt"**
 
 ### Relative paths
@@ -117,32 +117,32 @@ Absolute paths are paths that start from the root e.g.
 Relative paths are paths that are relative to another location besides the root e.g.
 
 -   **"."** (This means the current working directory).
--   **".."** (This refers to one directory up e.g. if the current directory was **"/pub39/nsc006/"**, the **".."** directory would be **"/pub39/"**).
+-   **".."** (This refers to one directory up e.g. if the current directory was **"/pub39/tea/nsc006/"**, the **".."** directory would be **"/pub39/tea/"**).
 -   **"1_directory/"**, would refer to the directory **"1_directory/"** in your current directory
 
 ### Change directory examples
 
-Below is a subset of valid methods to change directory into your **"CGR_Linux/"** directory
+Below is a subset of valid methods to change directory into your **"Linux/"** directory
 
 **Note**:change **nscxxx** to your specific user name as shown on the command line prompt.
 
 Method 1
 
 ```{bash eval=FALSE}
-cd /pub39/tea/nscxxx/CGR_Linux/
+cd /pub39/tea/nscxxx/Linux/
 ```
 
 Method 2
 
 ```{bash eval=FALSE}
 cd ~
-cd CGR_Linux/
+cd Linux/
 ```
 
 Method 3
 
 ```{bash eval=FALSE}
-cd /pub39/tea/nscxxx/CGR_Linux/1_directory/
+cd /pub39/tea/nscxxx/Linux/1_directory/
 cd ..
 ```
 
@@ -152,7 +152,7 @@ Method 4
 cd /pub39/
 cd tea/
 cd nscxxx/
-cd CGR_Linux/
+cd Linux/
 ```
 
 ## Listing Directory content
@@ -165,7 +165,7 @@ To list the contents (files and directories) within a directory you can use the 
 
 The output of `ls` will include file names that are coloured black and directory names that are coloured blue in our VNC terminals.
 
-Before carrying out the below commands make sure you are in your **"CGR_Linux"** directory with the `pwd` command.
+Before carrying out the below commands make sure you are in your **"Linux"** directory with the `pwd` command.
 
 List the contents in your current directory:
 

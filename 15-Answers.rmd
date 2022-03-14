@@ -7,11 +7,11 @@ knitr::include_graphics(path = "figures/exercise.png", auto_pdf = TRUE)
 
 Ensure you are in the correct directory before carrying out the below commands
 ```{bash eval=FALSE}
-cd ~/CGR_Linux/
+cd ~/Linux/
 ```
 
 
-1. Change the name of the subdirectory 4_exercises_aaaa within your CGR_Linux to 4_exercises
+1. Change the name of the subdirectory 4_exercises_aaaa within your Linux to 4_exercises
 ```{bash eval=FALSE}
 mv 4_exercises_aaaa 4_exercises
 ```
@@ -58,7 +58,7 @@ knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
 
 Ensure you are in the correct directory before carrying out the below commands
 ```{bash eval=FALSE}
-cd ~/CGR_Linux/6_final_exercise
+cd ~/Linux/6_final_exercise
 ```
 1. See what files are in the directory
 ```{bash eval=FALSE}
@@ -151,13 +151,13 @@ grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R2_001.fastq
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
 ``` 
-1. Copy the directory ~/CGR_Linux/advanced_practice to ~/CGR_Linux/advanced_practice_exercise
+1. Copy the directory ~/Linux/advanced_practice to ~/Linux/advanced_practice_exercise
 ```{bash eval=FALSE}
-cp -r ~/CGR_Linux/advanced_practice ~/CGR_Linux/advanced_practice_exercise
+cp -r ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise
 ```
-2. Move into ~/CGR_Linux/advanced_practice_exercise
+2. Move into ~/Linux/advanced_practice_exercise
 ```{bash eval=FALSE}
-cd ~/CGR_Linux/advanced_practice_exercise
+cd ~/Linux/advanced_practice_exercise
 ```
 3. Make a directory called fastq and one called txt
 ```{bash eval=FALSE}

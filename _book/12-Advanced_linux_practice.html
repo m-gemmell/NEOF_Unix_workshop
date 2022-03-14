@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 12 Advanced Linux practice | Intro to Unix</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 12 Advanced Linux practice | Intro to Unix" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-09-09" />
+<meta name="date" content="2022-03-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
 <link rel="prev" href="11-Exercise2.html"/>
 <link rel="next" href="13-Advanced_practice_exercise.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -230,7 +230,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html#exercise-2-1"><i class="fa fa-check"></i>Exercise 2</a></li>
 <li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html#advanced-exercise"><i class="fa fa-check"></i>Advanced exercise</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="16-Cheatsheet.html"><a href="16-Cheatsheet.html"><i class="fa fa-check"></i><b>A</b> Practical cheat sheet</a></li>
+<li class="chapter" data-level="A" data-path="16-Appendix.html"><a href="16-Appendix.html"><i class="fa fa-check"></i><b>A</b> Practical cheat sheet</a></li>
+<li class="chapter" data-level="B" data-path="16-Appendix.html"><a href="16-Appendix.html#windows-terminals"><i class="fa fa-check"></i><b>B</b> Windows terminals</a></li>
+<li class="chapter" data-level="C" data-path="16-Appendix.html"><a href="16-Appendix.html#ssh"><i class="fa fa-check"></i><b>C</b> <code>ssh</code></a></li>
+<li class="chapter" data-level="D" data-path="16-Appendix.html"><a href="16-Appendix.html#file-transferring"><i class="fa fa-check"></i><b>D</b> File transferring</a></li>
+<li class="chapter" data-level="E" data-path="16-Appendix.html"><a href="16-Appendix.html#anaconda"><i class="fa fa-check"></i><b>E</b> ANACONDA</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -256,7 +260,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="figures/linux_intermdiary.png" width="20%" style="display: block; margin: auto;" />
 We have covered a small amount of Linux coding. This should be sufficient to carry out our future workshops but if you were to continue in bioinformatics we would recommend learning more advanced methods.</p>
 <p>Below are some short sections to introduce you to some more advanced linux coding techniques. These give you a quick overview and some examples. This will hopefully put you in a good position to allow you to to learn these techniques in more depth outside of this workshop.</p>
-<p>The following sections will all be run with the files in the directory <strong>“~/CGR_Linux/advanced_practice/”</strong>. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and txt file for uncorrected and corrected reads. These fastq files are single end (i.e. there is no reverse/R2 reads).</p>
+<p>The following sections will all be run with the files in the directory <strong>“~/Linux/advanced_practice/”</strong>. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and txt file for uncorrected and corrected reads. These fastq files are single end (i.e. there is no reverse/R2 reads).</p>
 <div id="wildcard-characters" class="section level2" number="12.1">
 <h2><span class="header-section-number">12.1</span> Wildcard characters</h2>
 <p><img src="figures/wildcard.png" width="20%" style="display: block; margin: auto;" />
@@ -285,7 +289,7 @@ These are characters that can be used to represent a variety of other characters
 <div class="sourceCode" id="cb63"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb63-1"><a href="12-Advanced_linux_practice.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> sample_2<span class="pp">*</span></span></code></pre></div>
 <p>List all files that begin with “sample_2_”</p>
 <div class="sourceCode" id="cb64"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb64-1"><a href="12-Advanced_linux_practice.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> sample_2_<span class="pp">*</span></span></code></pre></div>
-<p>List the files that begin with “sample_1” and ends with “AAAA.txt.” It may have zero or more characters between these two.</p>
+<p>List the files that begin with “sample_1” and ends with “AAAA.txt”. It may have zero or more characters between these two.</p>
 <div class="sourceCode" id="cb65"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb65-1"><a href="12-Advanced_linux_practice.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> sample_1_<span class="pp">*</span>AAAA.txt</span></code></pre></div>
 <p>List the fastq files of samples with a single digit number</p>
 <div class="sourceCode" id="cb66"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb66-1"><a href="12-Advanced_linux_practice.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> sample_<span class="pp">?</span>_<span class="pp">*</span>fastq</span></code></pre></div>
@@ -380,24 +384,24 @@ Regular expressions are similar to wildcard characters but more complex and used
 <p>Print out the lines for the IBD patients from Craigavon and Belfast. In the below command <code>\</code> is used to allow <code>|</code> to be used as an <strong>or</strong> operator instead of acting as a string to match.</p>
 <div class="sourceCode" id="cb86"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb86-1"><a href="12-Advanced_linux_practice.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;IBD&quot;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;BELFAST\|CRAIGAVON&quot;</span></span></code></pre></div>
 <p>Print out the lines for the Pre information of patients not from Edinburgh or Aberdeen</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb87-1"><a href="12-Advanced_linux_practice.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;PRE$&quot; | grep -v &quot;ABERDEEN\|EDINBURGH&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb87-1"><a href="12-Advanced_linux_practice.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;PRE$&quot;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> <span class="st">&quot;ABERDEEN\|EDINBURGH&quot;</span></span></code></pre></div>
 <p>Print out the lines for patients 1,2,3 and 4</p>
 <div class="sourceCode" id="cb88"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb88-1"><a href="12-Advanced_linux_practice.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;Patient_[1-4][^0-9]&quot;</span> </span></code></pre></div>
 <p>Print to screen every fastq header of file <strong>sample_15_AACG_corrected.fastq</strong></p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb89-1"><a href="12-Advanced_linux_practice.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> sample_15_AACG_corrected.fastq <span class="kw">|</span> <span class="fu">grep</span> “^@sample”</span></code></pre></div>
-<p>In the piping examples we counted the number of lines with the text “TAG” within the fastq files. However this also counted fastq headers due to the name of the samples. Let us use a regular expression to only count the number of sequences within the fastq files that contain “TAG.”</p>
+<p>In the piping examples we counted the number of lines with the text “TAG” within the fastq files. However this also counted fastq headers due to the name of the samples. Let us use a regular expression to only count the number of sequences within the fastq files that contain “TAG”.</p>
 <div class="sourceCode" id="cb90"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb90-1"><a href="12-Advanced_linux_practice.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> <span class="pp">*</span>fastq <span class="kw">|</span> <span class="fu">grep</span> “^[^@].<span class="pp">*</span>TAG”</span></code></pre></div>
 <p>Print to screen every line within the file <strong>sample_3_AAAG_corrected.fastq</strong> that has a possible Threonine codon in the forward direction.</p>
 <div class="sourceCode" id="cb91"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb91-1"><a href="12-Advanced_linux_practice.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">&quot;^[^@].*AC[ACTG]&quot;</span> sample_3_AAAG_corrected.fastq</span></code></pre></div>
-<p>In the above example fastq quality lines are also extracted as some of them also contain the pattern we are searching for. To get around this we can pipe. First grep the fastq quality header (i.e. +), as no other line only contains “+,” and the line before it. Then we can remove lines with only a plus with an invert grep. Finally we can grep for the threonine pattern using only the sequence lines. Let us build this up step by step.</p>
+<p>In the above example fastq quality lines are also extracted as some of them also contain the pattern we are searching for. To get around this we can pipe. First grep the fastq quality header (i.e. +), as no other line only contains “+”, and the line before it. Then we can remove lines with only a plus with an invert grep. Finally we can grep for the threonine pattern using only the sequence lines. Let us build this up step by step.</p>
 <p>Print to screen the fastq quality header plus the one line preceding each (i.e. Sequence line) for file <strong>sample_3_AAAG_corrected.fastq.</strong></p>
 <div class="sourceCode" id="cb92"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb92-1"><a href="12-Advanced_linux_practice.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-B</span> 1 “^+$” sample_3_AAAG_corrected.fastq</span></code></pre></div>
 <p>Now pipe this output so it removes the lines with “+” (fastq quality headers) and “–” (separators of each <code>grep</code> match provided by grep because of the -B 1 option).</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb93-1"><a href="12-Advanced_linux_practice.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-B</span> 1 <span class="st">&quot;^+$&quot; sample_3_AAAG_corrected.fastq | grep -v &quot;+\|--&quot;</span></span></code></pre></div>
-<p>Now from this output, <code>grep</code> for the Threonine pattern plus colour each match within the line with the option “<strong>–color</strong>.”</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb94-1"><a href="12-Advanced_linux_practice.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-B</span> 1 <span class="st">&quot;^+$&quot; sample_3_AAAG_corrected.fastq | grep -v &quot;+\|--&quot;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">--color</span> <span class="st">&quot;AC[ACTG]&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb93-1"><a href="12-Advanced_linux_practice.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-B</span> 1 <span class="st">&quot;^+$&quot;</span> sample_3_AAAG_corrected.fastq <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> <span class="st">&quot;+\|--&quot;</span></span></code></pre></div>
+<p>Now from this output, <code>grep</code> for the Threonine pattern plus colour each match within the line with the option “<strong>–color</strong>”.</p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb94-1"><a href="12-Advanced_linux_practice.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-B</span> 1 <span class="st">&quot;^+$&quot;</span> sample_3_AAAG_corrected.fastq <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> <span class="st">&quot;+\|--&quot;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">--color</span> <span class="st">&quot;AC[ACTG]&quot;</span></span></code></pre></div>
 <p>Let us repeat the above but add the possibility of the threonine being in the reverse direction.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb95-1"><a href="12-Advanced_linux_practice.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-B</span> 1 <span class="st">&quot;^+$&quot; sample_3_AAAG_corrected.fastq | grep -v &quot;+\|--&quot;</span> <span class="dt">\</span></span>
+<div class="sourceCode" id="cb95"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb95-1"><a href="12-Advanced_linux_practice.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-B</span> 1 <span class="st">&quot;^+$&quot;</span> sample_3_AAAG_corrected.fastq <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> <span class="st">&quot;+\|--&quot;</span> <span class="dt">\</span></span>
 <span id="cb95-2"><a href="12-Advanced_linux_practice.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="kw">|</span> <span class="fu">grep</span> <span class="at">--color</span> <span class="st">&quot;AC[ACTG]\|[ACTG]CA&quot;</span></span></code></pre></div>
 <p><strong>Resources to learn more in the future</strong></p>
 <p>Rex Egg, A good resource to learn more about regular expressions:</p>
@@ -426,7 +430,7 @@ This is a complicated yet powerful command that can be used to edit text files q
 Print <strong>metadata.txt</strong> to screen and then change the “P” in “Patient” to “Human_P”</p>
 <div class="sourceCode" id="cb101"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb101-1"><a href="12-Advanced_linux_practice.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&quot;s/P/Human_P/&quot;</span></span></code></pre></div>
 <p>To replace every instance of the old pattern within each line <code>g</code> can be added after the last <code>/</code>. This stands for global therefore it changes the command to a global substitute.</p>
-<p>Print <strong>metadata.txt</strong> to screen and change every occurrence of a number to “number.” To get the regular expression meaning of “+” it needs a “<strong><code>\</code></strong>” before the “+”</p>
+<p>Print <strong>metadata.txt</strong> to screen and change every occurrence of a number to “number”. To get the regular expression meaning of “+” it needs a “<strong><code>\</code></strong>” before the “+”</p>
 <div class="sourceCode" id="cb102"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb102-1"><a href="12-Advanced_linux_practice.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&quot;s/[0-9]\+/number/g&quot;</span></span></code></pre></div>
 <p>The file metadata.txt is tab delimited (i.e. there is a tab between each column. Make a comma separated file containing the information of <strong>metadata.txt</strong> called <strong>metadata.csv</strong> (csv = comma separated value). <code>\t</code> presents a tab.</p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb103-1"><a href="12-Advanced_linux_practice.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&quot;s/\t/,/g&quot;</span> <span class="op">&gt;</span> metadata.csv</span></code></pre></div>
@@ -451,7 +455,6 @@ Print <strong>metadata.txt</strong> to screen and then change the “P” in “
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -462,26 +465,13 @@ Print <strong>metadata.txt</strong> to screen and then change the “P” in “
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": false,
-"twitter": false,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": {}
-},
+"sharing": null,
 "fontsettings": {
 "theme": "white",
 "family": "sans",
 "size": 2
 },
-"edit": {
-"link": null,
-"text": null
-},
+"edit": null,
 "history": {
 "link": null,
 "text": null
@@ -491,11 +481,13 @@ gitbook.start({
 "text": null
 },
 "download": null,
-"toc": {
-"collapse": "section",
-"edit": null
+"search": {
+"engine": "fuse",
+"options": null
 },
-"search": null
+"toc": {
+"collapse": "section"
+}
 });
 });
 </script>

@@ -18,7 +18,7 @@ In the below examples press the tab button when you see __\<tab>__ and __replace
 
 Move into the directory __"1_directory"__
 ```{bash eval=FALSE}
-cd /pub39/t<tab>n<tab>xxx<tab>CGR_L<tab>1_d<tab>
+cd /pub39/t<tab>n<tab>xxx<tab>L<tab>1_d<tab>
 ``` 
 
 Print out all the content within the current directory that starts with __"1_"__ in the file or directory name. This is carried out with a double tab.
@@ -95,4 +95,4 @@ I also find it useful to put a `#` at the front of a long command that I am typi
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/tol.png", auto_pdf = TRUE)
 ``` 
-With the skills and knowledge from the above sections you may want to practice navigating directories to get a better feel of it. For this purpose there is a directory called __"~/CGR_Linux/TOL"__. This contains directories and subdirectories in the structure of Bacterial and Archaeal taxonomy from the Silva 16S rRNA database.
+With the skills and knowledge from the above sections you may want to practice navigating directories to get a better feel of it. For this purpose there is a directory called __"~/Linux/TOL"__. This contains directories and subdirectories in the structure of Bacterial and Archaeal taxonomy from the Silva 16S rRNA database.

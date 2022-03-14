@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 8 File reading and processing | Intro to Unix</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 8 File reading and processing | Intro to Unix" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2021-09-09" />
+<meta name="date" content="2022-03-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
 <link rel="prev" href="07-Exercise1.html"/>
 <link rel="next" href="09-Recap.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -230,7 +230,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html#exercise-2-1"><i class="fa fa-check"></i>Exercise 2</a></li>
 <li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html#advanced-exercise"><i class="fa fa-check"></i>Advanced exercise</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="16-Cheatsheet.html"><a href="16-Cheatsheet.html"><i class="fa fa-check"></i><b>A</b> Practical cheat sheet</a></li>
+<li class="chapter" data-level="A" data-path="16-Appendix.html"><a href="16-Appendix.html"><i class="fa fa-check"></i><b>A</b> Practical cheat sheet</a></li>
+<li class="chapter" data-level="B" data-path="16-Appendix.html"><a href="16-Appendix.html#windows-terminals"><i class="fa fa-check"></i><b>B</b> Windows terminals</a></li>
+<li class="chapter" data-level="C" data-path="16-Appendix.html"><a href="16-Appendix.html#ssh"><i class="fa fa-check"></i><b>C</b> <code>ssh</code></a></li>
+<li class="chapter" data-level="D" data-path="16-Appendix.html"><a href="16-Appendix.html#file-transferring"><i class="fa fa-check"></i><b>D</b> File transferring</a></li>
+<li class="chapter" data-level="E" data-path="16-Appendix.html"><a href="16-Appendix.html#anaconda"><i class="fa fa-check"></i><b>E</b> ANACONDA</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -255,7 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 8</span> File reading and processing</h1>
 <p><img src="figures/files.png" width="20%" style="display: block; margin: auto;" />
 There are many ways to show the contents of a file. Below are a few examples.</p>
-<p>The files for the examples are within the directory: <strong>“/pub39/tea/nscxxx/CGR_linux/5_reading_files/”</strong> <strong>(replace xxx with your user number)</strong>.</p>
+<p>The files for the examples are within the directory: <strong>“/pub39/tea/nscxxx/Linux/5_reading_files/”</strong> <strong>(replace xxx with your user number)</strong>.</p>
 <div id="print-out-a-file" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Print out a file</h2>
 <p><img src="figures/cat.png" width="20%" style="display: block; margin: auto;" />
@@ -263,11 +267,11 @@ The <code>cat</code> command will print out the entire contents of a file to the
 Example commands are below (remember to replace xxx with your user name number):</p>
 <p><strong>Note</strong>: remember tab complete and using the arrow keys</p>
 <p>Print contents of <strong>“short_file.txt”</strong> to screen</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="08-File_reading_and_processing.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/CGR_Linux/5_reading_files/short_file.txt</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="08-File_reading_and_processing.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/Linux/5_reading_files/short_file.txt</span></code></pre></div>
 <p>Print contents of <strong>“Scientist.txt”</strong> to screen</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="08-File_reading_and_processing.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/CGR_Linux/5_reading_files/Scientist.txt</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="08-File_reading_and_processing.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/Linux/5_reading_files/Scientist.txt</span></code></pre></div>
 <p>Print contents of <strong>“ecoli.gbk”</strong> to screen</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="08-File_reading_and_processing.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/CGR_Linux/5_reading_files/ecoli.gbk</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="08-File_reading_and_processing.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /pub39/tea/nscxxx/Linux/5_reading_files/ecoli.gbk</span></code></pre></div>
 <p><strong>Remember</strong>: The <code>clear</code> command.</p>
 </div>
 <div id="head-and-tail" class="section level2" number="8.2">
@@ -276,7 +280,7 @@ Example commands are below (remember to replace xxx with your user name number):
 The <code>head</code>_command will print out to screen the top n lines of a file.</p>
 <p>The <code>tail</code> command will print out to screen the bottom n lines of a file.</p>
 <p>The default value is 10. The <code>-n</code> option can be used to indicate how many lines to print out.</p>
-<p>Carry out the below commands in the directory <strong>“/pub39/tea/nscxxx/CGR_Linux/5_reading_files/”</strong></p>
+<p>Carry out the below commands in the directory <strong>“/pub39/tea/nscxxx/Linux/5_reading_files/”</strong></p>
 <p>Print out the top 10 lines of <strong>“ecoli.gbk”</strong></p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="08-File_reading_and_processing.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> ecoli.gbk</span></code></pre></div>
 <p>Print out the bottom 10 lines of <strong>“ecoli.gbk”</strong></p>
@@ -313,9 +317,9 @@ The <code>less</code> command will display a file’s contents one page at a tim
 <li><strong>g</strong> : Jump to the first line of the file</li>
 <li><strong>G</strong> : Jump to the bottom line of the file</li>
 </ul>
-<p>Use the <code>less</code> command to view the contents of the <strong>“ecoli.gbk”</strong> file. Then find the 3rd occurrence of the word ‘ribosome.’ Afterwards move around the file.</p>
+<p>Use the <code>less</code> command to view the contents of the <strong>“ecoli.gbk”</strong> file. Then find the 3rd occurrence of the word ‘ribosome’. Afterwards move around the file.</p>
 <div class="sourceCode" id="cb49"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb49-1"><a href="08-File_reading_and_processing.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> ecoli.gbk</span></code></pre></div>
-<p>Look at the <code>man</code>ual for <code>less</code> and search for the first occurrence of the string ‘percent.’ Afterwards look around the manual page.</p>
+<p>Look at the <code>man</code>ual for <code>less</code> and search for the first occurrence of the string ‘percent’. Afterwards look around the manual page.</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb50-1"><a href="08-File_reading_and_processing.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> less</span></code></pre></div>
 </div>
 <div id="word-count" class="section level2" number="8.4">
@@ -409,7 +413,7 @@ To enter the <code>vim</code> text editor you can use the command <code>vim</cod
 </div>
 <div id="tasks" class="section level3" number="8.6.3">
 <h3><span class="header-section-number">8.6.3</span> Tasks</h3>
-<p>Carry out the following tasks in the directory: <strong>“/pub39/tea/nscxx/CGR_Linux/5_reading_files/”</strong></p>
+<p>Carry out the following tasks in the directory: <strong>“/pub39/tea/nscxx/Linux/5_reading_files/”</strong></p>
 <p>Using a text editor (<strong>nano</strong> or <strong>vim</strong>) add an entry for Scientist Mae Jemison (Born: 1956) to the file <strong>“Scientist.txt”</strong>. The names and date are separated by one tab.</p>
 <p>Using your text editor of choice delete all the scientists born before 1000 in the <strong>“Scientist.txt”</strong> file and save this as <strong>“Scientist_post_1000.txt”</strong>.</p>
 </div>
@@ -431,7 +435,6 @@ To enter the <code>vim</code> text editor you can use the command <code>vim</cod
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -442,26 +445,13 @@ To enter the <code>vim</code> text editor you can use the command <code>vim</cod
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": false,
-"twitter": false,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": {}
-},
+"sharing": null,
 "fontsettings": {
 "theme": "white",
 "family": "sans",
 "size": 2
 },
-"edit": {
-"link": null,
-"text": null
-},
+"edit": null,
 "history": {
 "link": null,
 "text": null
@@ -471,11 +461,13 @@ gitbook.start({
 "text": null
 },
 "download": null,
-"toc": {
-"collapse": "section",
-"edit": null
+"search": {
+"engine": "fuse",
+"options": null
 },
-"search": null
+"toc": {
+"collapse": "section"
+}
 });
 });
 </script>

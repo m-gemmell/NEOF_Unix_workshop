@@ -2,7 +2,7 @@
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
 ``` 
-The directory __"~/CGR_Linux/6_final_exercise/"__ has all the files you need. Below is a set of tasks and questions that will require all the skills you have gained from this practical.
+The directory __"~/Linux/6_final_exercise/"__ has all the files you need. Below is a set of tasks and questions that will require all the skills you have gained from this practical.
 
 1. See what files are in the directory.  
 2. Rename the file "3-P£_CACTTCGA_L001_R1_001.fastq" as "3-P3_CACTTCGA_L001_R1_001.fastq".  
