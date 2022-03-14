@@ -464,8 +464,6 @@ With the skills and knowledge from the above sections you may want to practice n
 
 <!--chapter:end:05-Tips_and_tricks.Rmd-->
 
-# (PART\*) Week 3 {-}
-
 # Manipulating directories {#manipulatingdirectories}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
