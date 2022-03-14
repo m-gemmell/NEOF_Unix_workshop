@@ -1,3 +1,6 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
 bookdown::gitbook:
   split_by: rmd
   css: style.css
@@ -9,6 +12,50 @@ bookdown::gitbook:
         <li><a>Intro to Unix</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+      edit: null
+    download: null
+    search: null
+    sharing:
+      facebook: no
+      twitter: no
+      all: []
+=======
+>>>>>>> Stashed changes
+bookdown::gitbook:
+  split_by: rmd
+  css: style.css
+  config:
+    toc:
+      collapse: section
+      before: |
+        <li class="toc-logo"><a href="https://neof.org.uk/" target="blank"><img src="figures/neof_small_logo.png"></a></li>
+        <li><a>Intro to Unix</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<<<<<<< Updated upstream
     edit: null
     download: null
     sharing: null
+=======
+<<<<<<< Updated upstream
+      edit: null
+    download: null
+    search: null
+    sharing:
+      facebook: no
+      twitter: no
+      all: []
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default
+=======
+    edit: null
+    download: null
+    sharing: null
+>>>>>>> main
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
