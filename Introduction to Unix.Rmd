@@ -464,6 +464,8 @@ With the skills and knowledge from the above sections you may want to practice n
 
 <!--chapter:end:05-Tips_and_tricks.Rmd-->
 
+# (PART\*) Week 3 {-}
+
 # Manipulating directories {#manipulatingdirectories}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
@@ -474,10 +476,10 @@ To make a directory the command `mkdir` is used.
 
 For the below examples we will be making heavy use of `ls` so you can hopefully visualise the contents of the directories.
 
-Type in the following commands to make a subdirectory within the __"Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
+Type in the following commands to make a subdirectory within the __"CGR_Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
 
 ```{bash eval=FALSE}
-#Change directory to Linux in your home (~)
+#Change directory to CGR_linux in your home (~)
 cd ~/Linux/
 #Always good to list contents when you move into a directory
 ls
@@ -526,6 +528,11 @@ mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
 ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 #List the contents of the destination directory
 ls ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+#Move the Chicken directory whilst renaming it
+mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
+~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+#List the contents of the destination directory
+ls ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 ``` 
 
 Move the file __"3_chicken_farm/3_3_supplies/feed.txt"__ to the directory __"3_chicken_farm/3_2_field"__ and rename it __"used_feed.txt"__
@@ -548,6 +555,7 @@ knitr::include_graphics(path = "figures/copy.png", auto_pdf = TRUE)
 Files and directories can be copied with the `cp` command. Directories and files can be copied to any directory and given a new name.
 Note: If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.
 
+<<<<<<< Updated upstream
 Before running the below commands move into your __"~/Linux/3_chicken_farm/"__ directory.
 
 ```{bash eval=FALSE}
