@@ -37,7 +37,7 @@ __Remember__: The `clear` command.
 ```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
 knitr::include_graphics(path = "figures/head_and_tails.png", auto_pdf = TRUE)
 ``` 
-The `head`_command will print out to screen the top n lines of a file.
+The `head` command will print out to screen the top n lines of a file.
 
 The `tail` command will print out to screen the bottom n lines of a file.
 
@@ -249,8 +249,44 @@ Using a text editor (__nano__ or __vim__) add an entry for Scientist Mae Jemison
 
 Using your text editor of choice delete all the scientists born before 1000 in the __"Scientist.txt"__ file and save this as __"Scientist_post_1000.txt"__.
 
-### Cheat sheet
-__Nano cheatsheet__: https://www.nano-editor.org/dist/latest/cheatsheet.html
+### Cheat sheets
+[__Nano cheatsheet__](https://www.nano-editor.org/dist/latest/cheatsheet.html)
 
-__Vim cheatsheet__: https://vim.rtorr.com/
+[__Vim cheatsheet__](https://vim.rtorr.com/)
 
+## MCQs: File reading and processing
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_purple.png", auto_pdf = TRUE)
+```
+
+Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+
+```{r, echo = FALSE}
+opts_p <- c("__`wc`__", answer="__`grep`__", "__`cat`__")
+```
+1.  What command searches for a pattern? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`wc`__", "__`grep`__", "__`cat`__")
+```
+2.  What command word counts files? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`wc`__", "__`grep`__", answer="__`cat`__")
+```
+3.  What command prints the contents of a file?`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`less`__", "__`tail`__", "__`head`__")
+```
+4.  What command displays a file's contents one page at a time and allows keyboard navigation? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`less`__", "__`tail`__", answer="__`head`__")
+```
+5. What command prints out the top n lines of a file  `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`less`__", answer="__`tail`__", "__`head`__")
+```
+6. What command prints out the bottom n lines of a file`r longmcq(opts_p)`

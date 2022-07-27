@@ -91,8 +91,39 @@ This is useful to give yourself information about what your code is doing and it
 
 I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. Just be sure to remove the `#` at the start of the line before you want to run it.
 
-## Navigating directories
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/tol.png", auto_pdf = TRUE)
-``` 
-With the skills and knowledge from the above sections you may want to practice navigating directories to get a better feel of it. For this purpose there is a directory called __"~/Linux/TOL"__. This contains directories and subdirectories in the structure of Bacterial and Archaeal taxonomy from the Silva 16S rRNA database.
+## MCQs: Tips & tricks
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_blue.png", auto_pdf = TRUE)
+```
+
+Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+
+```{r, echo = FALSE}
+opts_p <- c("__`#`__", answer="__Tab complete__", "__`clear`__")
+```
+1.  What allows you to auto fill paths and commands so you can quickly type without error? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`#`__", "__Tab complete__", answer="__`clear`__")
+```
+2. What command clears text from the terminal?`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`#`__", "__Tab complete__", "__`clear`__")
+```
+3.  What symbol is used for annotation? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Ctrl + c__", "__`\\\`__", "__Up and down arrow__")
+```
+4.  What keyboard short cut cancels/ends a command? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Ctrl + c__", "__`\\\`__", answer="__Up and down arrows__")
+```
+5.  What keys scroll through your previously run commands (aka history)?`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Ctrl + c__", answer="__`\\\`__", "__Up and down arrow__")
+```
+6.  Bash escape allows you to run commands over multiple lines. What symbol is used for bash escape?`r longmcq(opts_p)`

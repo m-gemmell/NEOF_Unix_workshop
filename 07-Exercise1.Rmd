@@ -14,3 +14,5 @@ Change the name of the subdirectory __"four_exercises"__ within your __"Linux"__
     3. Copy the file __"copy_this_file.txt"__ to the directory __"to_me"__ 
     4. Rename the directory __"to_me"__ to __"you"__
     5. Delete the initial __"copy_this_file.txt"__ file
+    
+You can check my solutions in the [Answers section](#exercise1_answers). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.

@@ -16,6 +16,7 @@ absolute-paths
 relative-paths
 change-directory-examples
 listing-directory-content
+mcqs-files-directories
 tipsandtricks
 tab-complete
 ending-a-command
@@ -23,12 +24,13 @@ history
 clear
 bash-escape
 annotations
-navigating-directories
+mcqs-tips-tricks
 manipulatingdirectories
 make-a-directory
 moving-directories-and-files
 copying-directories-and-files
 deleting-files-and-directories
+mcqs-manipulating-directories
 exercise-1
 filereadingandprocessing
 print-out-a-file
@@ -40,7 +42,8 @@ text-editor
 nano
 vim
 tasks
-cheat-sheet
+cheat-sheets
+mcqs-file-reading-and-processing
 recap
 fastq-format
 exercise-2
@@ -51,6 +54,7 @@ pipes
 regular-expressions
 sed
 permissions
+mcqs-file-reading-and-processing-1
 advance-practice-exercise
 bfxlanguages
 awk

@@ -4,8 +4,9 @@ knitr::include_graphics(path = "figures/files.png", auto_pdf = TRUE)
 ``` 
 The next exercise will focus on a set of files including fastq files.
 
-- A fastq file is very commonly used in bioinformatics. 
-- Fastq files contain the base content and its sequencing quality for sequences. 
+- Fastq files are very commonly used in bioinformatics.
+- Fastq files contain DNA or Amino acid sequenceing data.
+- Fastq files contain the nucleotide/amino acid content and its sequencing quality for sequences. 
 - Generally these files are separated by sample but not always.
 - A fastq file acts as a normal txt file that can be read but is of a specific format. 
 - One fastq file contains many fastq entries, one after the other. 

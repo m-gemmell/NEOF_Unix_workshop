@@ -335,3 +335,70 @@ All files, directories and programs have permissions. It is important to know ab
 
 Below is a useful link to learn about file permissions:  
 https://www.guru99.com/file-permissions.html
+
+## MCQs: File reading and processing
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_red.png", auto_pdf = TRUE)
+```
+
+Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+
+```{r, echo = FALSE}
+opts_p <- c("__`>`__", answer="__`|`__", "__`sed`__")
+```
+1.  Which symbol is used to pipe the output of one command to the input of another? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`>`__", "__`|`__", answer="__`sed`__")
+```
+2.  What command can be used to substitute text with other text? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`>`__", "__`|`__", "__`sed`__")
+```
+3.  Which symbol is used to redirect the output of a command to a file? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`*`__", "__`[]`__", answer="__`?`__")
+```
+4. Which wildcard represents a single character? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`*`__", "__`[]`__", "__`?`__")
+```
+5. Which wildcard represents zero or more characters? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`*`__", answer="__`[]`__", "__`?`__")
+```
+6. Which wildcard represents a range of characters? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`.`__", answer="__`?`__", "__`*`__")
+```
+7. Which regular expression indicates that the preceding character matches 1 or 0 times? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`.`__", "__`?`__", "__`*`__")
+```
+8. Which regular expression represents a single character?  `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`.`__", "__`?`__", answer="__`*`__")
+```
+9. Which regular expression indicates that the preceding character matches zero or more times? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`|`__", "__`^`__", answer="__`$`__")
+```
+10. Which regular expression matches the end of the line? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`|`__", "__`^`__", "__`$`__")
+```
+11. Which regular expression is a logical OR operator? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`|`__", answer="__`^`__", "__`$`__")
+```
+12. Which regular expression matches the start of the line? `r longmcq(opts_p)`

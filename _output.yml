@@ -1,6 +1,8 @@
 bookdown::gitbook:
   split_by: rmd
-  css: style.css
+  css:
+  - style.css
+  - www/webex.css
   config:
     toc:
       collapse: section
@@ -9,13 +11,9 @@ bookdown::gitbook:
         <li><a>Intro to Unix</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: null
-    download: null
-    sharing: null
-bookdown::pdf_book:
+    edit: ~
+    download: ~
+    sharing: ~
   includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-bookdown::epub_book: default
+    after_body: www/webex.js
+  md_extensions: -smart

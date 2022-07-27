@@ -87,7 +87,6 @@ knitr::include_graphics(path = "figures/copy.png", auto_pdf = TRUE)
 Files and directories can be copied with the `cp` command. Directories and files can be copied to any directory and given a new name.
 Note: If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.
 
-<<<<<<< Updated upstream
 Before running the below commands move into your __"~/Linux/3_chicken_farm/"__ directory.
 
 ```{bash eval=FALSE}
@@ -158,3 +157,35 @@ rm -r  3_1_hut_2
 #List contents of current directory
 ls
 ``` 
+
+## MCQs: Manipulating directories
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_green.png", auto_pdf = TRUE)
+```
+
+Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`rm`__", "__`mv`__", "__`ls`__")
+```
+1.  What command removes files and directories? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`rm`__", answer="__`mv`__", "__`ls`__")
+```
+2. What command moves files and directories? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`-r`__", answer="__`mkdir`__", "__`ls`__")
+```
+3.  What command makes a new directory? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`-r`__", "__`mkdir`__", "__`ls`__")
+```
+4.  What option is needed for moving or removing a directory? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`-r`__", "__`mkdir`__", answer="__`ls`__")
+```
+5.  What command list the contents of directories? `r longmcq(opts_p)`

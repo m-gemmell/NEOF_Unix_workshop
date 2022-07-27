@@ -51,7 +51,7 @@ To copy a directory we need to add the option `-r` which means recursively copy 
 Use the below command to copy the workshop data to your current directory. The **"."** refers to your current directory.
 
 ```{bash eval=FALSE}
-cp -r /pub39/tea/nsc006/Linux/ .
+cp -r /pub39/tea/nsc006/NEOF/Linux/ .
 ```
 
 Now change directory into your newly copied directory.
@@ -188,3 +188,50 @@ ls -1 /
 **Reminder**: you can use the `man` command to look at more options for commands.
 
 `ls` is my most typed command. I am consistently using it to see what directories and files are in my current directory and other directories. I suggest you do the same.
+
+## MCQs: Files & Directories
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble.png", auto_pdf = TRUE)
+```
+
+Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+
+```{r, echo = FALSE}
+opts_p <- c("__`cp`__", "__`cd`__", answer="__`ls`__")
+```
+1. What command lists the contents of directories? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`cp`__", answer="__`cd`__", "__`ls`__")
+```
+2. What command changes directory? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`cp`__", "__`cd`__", "__`ls`__")
+```
+3. What command copies files and directories? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`~`__", answer="__`/`__", "__`..`__")
+```
+4.  Choose the option that represents the root directory.`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`~`__", "__`/`__", "__`..`__")
+```
+5. Choose the option that represents your home directory. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`~`__", "__`/`__", answer="__`..`__")
+```
+6. Choose the option that represents one directory above. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__./Linux/__", answer="__/pub39/tea/nsc006/Linux/__")
+```
+7.  Which path is an absolute path? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__./Linux__", "__/pub39/tea/nsc006/Linux/__")
+```
+8.  Which path is a relative path? `r longmcq(opts_p)`
