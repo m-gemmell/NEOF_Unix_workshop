@@ -155,12 +155,10 @@ knitr::include_graphics(path = "figures/logon_pic.png", auto_pdf = TRUE)
 
 If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
 
-These instructions will not work outside of this workshop. If you would like to install your own Linux OS on your desktop or laptop we would recommend Ubuntu.
+These instructions will not work outside of this workshop. If you would like to install your own Linux OS on your desktop or laptop we would recommend Mint Linux 
 
-The following link is a guide to install Ubuntu:\
-<https://www.ubuntu.com/download/desktop/install-ubuntu-desktop>.\
-If you use a USB you need to create a bootable USB stick. The following link will assist:\
-<https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows>
+The following link is a guide to install Mint Linux:  
+https://linuxmint-installation-guide.readthedocs.io/en/latest/
 
 ## The Terminal Window
 
