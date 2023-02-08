@@ -94,7 +94,7 @@ Links:
 
 Once you are familiar with `conda` I would then suggest using [`mamba`](https://github.com/mamba-org/mamba). This is installed on top of `conda` and improves the speed of `conda`.
 
-# vim
+# vim {#vim}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/Vimlogo.png", auto_pdf = TRUE)
 ``` 

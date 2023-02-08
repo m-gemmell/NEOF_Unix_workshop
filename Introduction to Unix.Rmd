@@ -1073,7 +1073,7 @@ Three of the most popular text editors are __vim__, __gedit__ and __nano__. Belo
 
 __nano__ is the easiest to learn but is quite limiting. __vim__ and __gedit__ are quite similar in power with different people preferring one or the other. 
 
-The below will teach you __nano__. If you are interested in learning __vim__ in the future you can find a quick guide in the [appendix](#)
+The below will teach you __nano__. If you are interested in learning __vim__ in the future you can find a quick guide in the [appendix](#vim).
 
 ### nano
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
@@ -2220,7 +2220,7 @@ Links:
 
 Once you are familiar with `conda` I would then suggest using [`mamba`](https://github.com/mamba-org/mamba). This is installed on top of `conda` and improves the speed of `conda`.
 
-# vim
+# vim {#vim}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/Vimlogo.png", auto_pdf = TRUE)
 ``` 
