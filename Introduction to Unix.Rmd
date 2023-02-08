@@ -712,11 +712,6 @@ mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
 ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 #List the contents of the destination directory
 ls ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
-#Move the Chicken directory whilst renaming it
-mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
-~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
-#List the contents of the destination directory
-ls ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 ``` 
 
 Move the file __"3_chicken_farm/3_3_supplies/feed.txt"__ to the directory __"3_chicken_farm/3_2_field"__ and rename it __"used_feed.txt"__

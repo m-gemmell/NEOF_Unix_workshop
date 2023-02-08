@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Tips and tricks | Intro to Unix</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Tips and tricks | Intro to Unix" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2022-08-04" />
+<meta name="date" content="2023-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -327,28 +327,28 @@ In the below example press "enter" after the end of a line.</p>
 <p>Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
 <ol style="list-style-type: decimal">
 <li>What allows you to auto fill paths and commands so you can quickly type without error?
-<div id="radio_TDZWUSKGGN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TDZWUSKGGN" value=""></input> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TDZWUSKGGN" value="answer"></input> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TDZWUSKGGN" value=""></input> <span><strong><code>clear</code></strong></span></label>
+<div id="radio_TRBXYHRJOI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TRBXYHRJOI" value=""></input> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TRBXYHRJOI" value="answer"></input> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TRBXYHRJOI" value=""></input> <span><strong><code>clear</code></strong></span></label>
 </div></li>
 <li>What command clears text from the terminal?
-<div id="radio_JZTIMPSVYP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_JZTIMPSVYP" value=""></input> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_JZTIMPSVYP" value=""></input> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JZTIMPSVYP" value="answer"></input> <span><strong><code>clear</code></strong></span></label>
+<div id="radio_CJMZLCVVJA" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_CJMZLCVVJA" value=""></input> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_CJMZLCVVJA" value=""></input> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_CJMZLCVVJA" value="answer"></input> <span><strong><code>clear</code></strong></span></label>
 </div></li>
 <li>What symbol is used for annotation?
-<div id="radio_NSCVORKCVA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NSCVORKCVA" value="answer"></input> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NSCVORKCVA" value=""></input> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NSCVORKCVA" value=""></input> <span><strong><code>clear</code></strong></span></label>
+<div id="radio_FLWEKVHBHU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FLWEKVHBHU" value="answer"></input> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FLWEKVHBHU" value=""></input> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FLWEKVHBHU" value=""></input> <span><strong><code>clear</code></strong></span></label>
 </div></li>
 <li>What keyboard short cut cancels/ends a command?
-<div id="radio_COOCSGWVRA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_COOCSGWVRA" value="answer"></input> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_COOCSGWVRA" value=""></input> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_COOCSGWVRA" value=""></input> <span><strong>Up and down arrow</strong></span></label>
+<div id="radio_OQWDILEOXV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OQWDILEOXV" value="answer"></input> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OQWDILEOXV" value=""></input> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OQWDILEOXV" value=""></input> <span><strong>Up and down arrow</strong></span></label>
 </div></li>
 <li>What keys scroll through your previously run commands (aka history)?
-<div id="radio_KEKKSXDLTG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KEKKSXDLTG" value=""></input> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KEKKSXDLTG" value=""></input> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KEKKSXDLTG" value="answer"></input> <span><strong>Up and down arrows</strong></span></label>
+<div id="radio_FIMVOTLFMT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FIMVOTLFMT" value=""></input> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FIMVOTLFMT" value=""></input> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FIMVOTLFMT" value="answer"></input> <span><strong>Up and down arrows</strong></span></label>
 </div></li>
 <li>Bash escape allows you to run commands over multiple lines. What symbol is used for bash escape?
-<div id="radio_MMKZXJMEDS" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MMKZXJMEDS" value=""></input> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MMKZXJMEDS" value="answer"></input> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MMKZXJMEDS" value=""></input> <span><strong>Up and down arrow</strong></span></label>
+<div id="radio_RMPGGRLXYH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_RMPGGRLXYH" value=""></input> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RMPGGRLXYH" value="answer"></input> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_RMPGGRLXYH" value=""></input> <span><strong>Up and down arrow</strong></span></label>
 </div></li>
 </ol>
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Directories and Files | Intro to Unix</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Directories and Files | Intro to Unix" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2022-08-04" />
+<meta name="date" content="2023-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -380,36 +380,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
 <ol style="list-style-type: decimal">
 <li>What command lists the contents of directories?
-<div id="radio_OEDOHFEQGN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OEDOHFEQGN" value=""></input> <span><strong><code>cp</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OEDOHFEQGN" value=""></input> <span><strong><code>cd</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OEDOHFEQGN" value="answer"></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_WLONIDOQBL" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WLONIDOQBL" value=""></input> <span><strong><code>cp</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WLONIDOQBL" value=""></input> <span><strong><code>cd</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WLONIDOQBL" value="answer"></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>What command changes directory?
-<div id="radio_WNQODAGKLK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WNQODAGKLK" value=""></input> <span><strong><code>cp</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WNQODAGKLK" value="answer"></input> <span><strong><code>cd</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WNQODAGKLK" value=""></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_KYPHVQJVVB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KYPHVQJVVB" value=""></input> <span><strong><code>cp</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KYPHVQJVVB" value="answer"></input> <span><strong><code>cd</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KYPHVQJVVB" value=""></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>What command copies files and directories?
-<div id="radio_ROVFVFAERJ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ROVFVFAERJ" value="answer"></input> <span><strong><code>cp</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ROVFVFAERJ" value=""></input> <span><strong><code>cd</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ROVFVFAERJ" value=""></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_GNHPHKNZGM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GNHPHKNZGM" value="answer"></input> <span><strong><code>cp</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GNHPHKNZGM" value=""></input> <span><strong><code>cd</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GNHPHKNZGM" value=""></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>Choose the option that represents the root directory.
-<div id="radio_UUQMAUUQPV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UUQMAUUQPV" value=""></input> <span><strong><code>~</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UUQMAUUQPV" value="answer"></input> <span><strong><code>/</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UUQMAUUQPV" value=""></input> <span><strong><code>..</code></strong></span></label>
+<div id="radio_NGLFCWNXOB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NGLFCWNXOB" value=""></input> <span><strong><code>~</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NGLFCWNXOB" value="answer"></input> <span><strong><code>/</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NGLFCWNXOB" value=""></input> <span><strong><code>..</code></strong></span></label>
 </div></li>
 <li>Choose the option that represents your home directory.
-<div id="radio_YKKEFEFXOU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YKKEFEFXOU" value="answer"></input> <span><strong><code>~</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YKKEFEFXOU" value=""></input> <span><strong><code>/</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YKKEFEFXOU" value=""></input> <span><strong><code>..</code></strong></span></label>
+<div id="radio_UTHBNLKSCV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_UTHBNLKSCV" value="answer"></input> <span><strong><code>~</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UTHBNLKSCV" value=""></input> <span><strong><code>/</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UTHBNLKSCV" value=""></input> <span><strong><code>..</code></strong></span></label>
 </div></li>
 <li>Choose the option that represents one directory above.
-<div id="radio_YCJORKOCDU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YCJORKOCDU" value=""></input> <span><strong><code>~</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YCJORKOCDU" value=""></input> <span><strong><code>/</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YCJORKOCDU" value="answer"></input> <span><strong><code>..</code></strong></span></label>
+<div id="radio_QHGYJNHEVF" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QHGYJNHEVF" value=""></input> <span><strong><code>~</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QHGYJNHEVF" value=""></input> <span><strong><code>/</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QHGYJNHEVF" value="answer"></input> <span><strong><code>..</code></strong></span></label>
 </div></li>
 <li>Which path is an absolute path?
-<div id="radio_EETSQJYNKA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_EETSQJYNKA" value=""></input> <span><strong>./Linux/</strong></span></label><label><input type="radio" autocomplete="off" name="radio_EETSQJYNKA" value="answer"></input> <span><strong>/pub39/tea/nsc006/Linux/</strong></span></label>
+<div id="radio_JNTQJNUFQM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_JNTQJNUFQM" value=""></input> <span><strong>./Linux/</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JNTQJNUFQM" value="answer"></input> <span><strong>/pub39/tea/nsc006/Linux/</strong></span></label>
 </div></li>
 <li>Which path is a relative path?
-<div id="radio_GFCKWRMVLJ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GFCKWRMVLJ" value="answer"></input> <span><strong>./Linux</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GFCKWRMVLJ" value=""></input> <span><strong>/pub39/tea/nsc006/Linux/</strong></span></label>
+<div id="radio_SEGKELGWAT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SEGKELGWAT" value="answer"></input> <span><strong>./Linux</strong></span></label><label><input type="radio" autocomplete="off" name="radio_SEGKELGWAT" value=""></input> <span><strong>/pub39/tea/nsc006/Linux/</strong></span></label>
 </div></li>
 </ol>
 
