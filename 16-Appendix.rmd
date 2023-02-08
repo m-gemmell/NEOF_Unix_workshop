@@ -93,3 +93,40 @@ Links:
 - [Getting started with `conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
 
 Once you are familiar with `conda` I would then suggest using [`mamba`](https://github.com/mamba-org/mamba). This is installed on top of `conda` and improves the speed of `conda`.
+
+# vim
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/Vimlogo.png", auto_pdf = TRUE)
+``` 
+To enter the `vim` text editor you can use the command `vim`. The command is: `vim file.txt`. 
+
+`vim` can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.
+
+Once you are in the `vim` editor there are two main modes:
+
+1. __Command mode__: This is the starting mode of `vim`. It can be used to enter commands but not for typing.
+2. __Insert mode__: This mode can be used to insert characters into the text. Pasting only works properly in insert mode. You will know you are in insert mode as at the bottom of the screen will be __“-- INSERT --”__.
+    1. To __enter__ insert mode press __i__
+    2. To __escape__ Insert mode press __esc__
+
+Below are a subset of commands you can use in the command mode of vim.
+
+- __:q__ - Quit vim. Will fail if there are any unsaved changes
+- __:w__ - Save the file
+- __:wq__ - Save and quit
+- __:x__ - Save and quit
+- __:q!__ - Quit and throw away unsaved changes
+- __:saveas file__ - Save file as. File name can be changed
+- __:w file__ - Save file as. File name can be changed
+- __arrow keys__ - Navigate the text. (works in insert mode too)
+- __^__ - Jump to the start of a line
+- __$__ - Jump to the end of a line
+- __/pattern__ - Search for pattern
+- __n__ - Repeat search in same direction
+- __N__ - Repeat search in reverse direction
+- __dd__ - Delete the current line
+- __i__ - Enter insert mode
+- __1G__ - Go to the first line in the file. Number can be changed 
+- __G__ - Go to the last line of the file
+
+[__Vim cheatsheet__](https://vim.rtorr.com/)

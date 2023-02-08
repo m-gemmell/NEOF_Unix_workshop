@@ -198,9 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.6" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#text-editor"><i class="fa fa-check"></i><b>8.6</b> Text editor</a>
 <ul>
 <li class="chapter" data-level="8.6.1" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#nano"><i class="fa fa-check"></i><b>8.6.1</b> nano</a></li>
-<li class="chapter" data-level="8.6.2" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#vim"><i class="fa fa-check"></i><b>8.6.2</b> vim</a></li>
-<li class="chapter" data-level="8.6.3" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#tasks"><i class="fa fa-check"></i><b>8.6.3</b> Tasks</a></li>
-<li class="chapter" data-level="8.6.4" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#cheat-sheets"><i class="fa fa-check"></i><b>8.6.4</b> Cheat sheets</a></li>
+<li class="chapter" data-level="8.6.2" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#tasks"><i class="fa fa-check"></i><b>8.6.2</b> Tasks</a></li>
 </ul></li>
 <li class="chapter" data-level="8.7" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#mcqs-file-reading-and-processing"><i class="fa fa-check"></i><b>8.7</b> MCQs: File reading and processing</a></li>
 </ul></li>
@@ -216,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.4" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#regular-expressions"><i class="fa fa-check"></i><b>12.4</b> Regular expressions</a></li>
 <li class="chapter" data-level="12.5" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#sed"><i class="fa fa-check"></i><b>12.5</b> sed</a></li>
 <li class="chapter" data-level="12.6" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#permissions"><i class="fa fa-check"></i><b>12.6</b> Permissions</a></li>
-<li class="chapter" data-level="12.7" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#mcqs-file-reading-and-processing-1"><i class="fa fa-check"></i><b>12.7</b> MCQs: File reading and processing</a></li>
+<li class="chapter" data-level="12.7" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#mcqs-advanced-linux"><i class="fa fa-check"></i><b>12.7</b> MCQs: Advanced linux</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html"><i class="fa fa-check"></i><b>13</b> Advance practice exercise</a></li>
 <li class="chapter" data-level="14" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html"><i class="fa fa-check"></i><b>14</b> Bioinformatic Languages</a>
@@ -239,6 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="C" data-path="16-Appendix.html"><a href="16-Appendix.html#ssh"><i class="fa fa-check"></i><b>C</b> <code>ssh</code></a></li>
 <li class="chapter" data-level="D" data-path="16-Appendix.html"><a href="16-Appendix.html#file-transferring"><i class="fa fa-check"></i><b>D</b> File transferring</a></li>
 <li class="chapter" data-level="E" data-path="16-Appendix.html"><a href="16-Appendix.html#anaconda"><i class="fa fa-check"></i><b>E</b> ANACONDA</a></li>
+<li class="chapter" data-level="F" data-path="16-Appendix.html"><a href="16-Appendix.html#vim"><i class="fa fa-check"></i><b>F</b> vim</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -356,7 +355,7 @@ The <code>grep</code> command will search for a pattern in a text file and outpu
 <p><img src="figures/text_editor.png" width="20%" style="display: block; margin: auto;" />
 Three of the most popular text editors are <strong>vim</strong>, <strong>gedit</strong> and <strong>nano</strong>. Below are quick introductions to <strong>nano</strong> and <strong>vim</strong>.</p>
 <p><strong>nano</strong> is the easiest to learn but is quite limiting. <strong>vim</strong> and <strong>gedit</strong> are quite similar in power with different people preferring one or the other.</p>
-<p>Please choose either <strong>nano</strong> or <strong>vim</strong> to learn now and go through its section.</p>
+<p>The below will teach you <strong>nano</strong>. If you are interested in learning <strong>vim</strong> in the future you can find a quick guide in the <a href="#">appendix</a></p>
 <div id="nano" class="section level3 hasAnchor" number="8.6.1">
 <h3><span class="header-section-number">8.6.1</span> nano<a href="08-File_reading_and_processing.html#nano" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="figures/1200px-Gnu-nano.png" width="20%" style="display: block; margin: auto;" />
@@ -372,59 +371,20 @@ To enter the <code>nano</code> text editor you can use the command <code>nano</c
 <li><strong>Ctrl+O</strong> - Save file as</li>
 <li><strong>Ctrl+A</strong> - Jump to the start of a line</li>
 <li><strong>Ctrl+E</strong> - Jump to the end of a line</li>
-<li><strong>Ctrl+W</strong> - Start search (Where is)</li>
+<li><strong>Ctrl+W</strong> - Start search (Where is) <strong>Note</strong> This unfortunately is also the shortcut to close a tab in internet browsers. Therefore this can't be used with our webVNC.</li>
 <li><strong>Alt+W</strong> - Continue search forward (find next occurrence forward)</li>
 <li><strong>Alt+Q</strong> - Find next occurrence backward</li>
 <li><strong>Alt+K</strong> - Cut current line</li>
 <li><strong>Alt+\</strong> - Go to the first line</li>
 <li><strong>Alt+/</strong> - Go to the last line</li>
 </ul>
+<p><a href="https://www.nano-editor.org/dist/latest/cheatsheet.html"><strong>Nano cheatsheet</strong></a></p>
 </div>
-<div id="vim" class="section level3 hasAnchor" number="8.6.2">
-<h3><span class="header-section-number">8.6.2</span> vim<a href="08-File_reading_and_processing.html#vim" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/Vimlogo.png" width="20%" style="display: block; margin: auto;" />
-To enter the <code>vim</code> text editor you can use the command <code>vim</code>. The command is: <code>vim file.txt</code>.</p>
-<p><code>vim</code> can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.</p>
-<p>Once you are in the <code>vim</code> editor there are two main modes:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Command mode</strong>: This is the starting mode of <code>vim</code>. It can be used to enter commands but not for typing.</li>
-<li><strong>Insert mode</strong>: This mode can be used to insert characters into the text. Pasting only works properly in insert mode. You will know you are in insert mode as at the bottom of the screen will be <strong>“-- INSERT --”</strong>.
-<ol style="list-style-type: decimal">
-<li>To <strong>enter</strong> insert mode press <strong>i</strong></li>
-<li>To <strong>escape</strong> Insert mode press <strong>esc</strong></li>
-</ol></li>
-</ol>
-<p>Below are a subset of commands you can use in the command mode of vim.</p>
-<ul>
-<li><strong>:q</strong> - Quit vim. Will fail if there are any unsaved changes</li>
-<li><strong>:w</strong> - Save the file</li>
-<li><strong>:wq</strong> - Save and quit</li>
-<li><strong>:x</strong> - Save and quit</li>
-<li><strong>:q!</strong> - Quit and throw away unsaved changes</li>
-<li><strong>:saveas file</strong> - Save file as. File name can be changed</li>
-<li><strong>:w file</strong> - Save file as. File name can be changed</li>
-<li><strong>arrow keys</strong> - Navigate the text. (works in insert mode too)</li>
-<li><strong>^</strong> - Jump to the start of a line</li>
-<li><strong>$</strong> - Jump to the end of a line</li>
-<li><strong>/pattern</strong> - Search for pattern</li>
-<li><strong>n</strong> - Repeat search in same direction</li>
-<li><strong>N</strong> - Repeat search in reverse direction</li>
-<li><strong>dd</strong> - Delete the current line</li>
-<li><strong>i</strong> - Enter insert mode</li>
-<li><strong>1G</strong> - Go to the first line in the file. Number can be changed</li>
-<li><strong>G</strong> - Go to the last line of the file</li>
-</ul>
-</div>
-<div id="tasks" class="section level3 hasAnchor" number="8.6.3">
-<h3><span class="header-section-number">8.6.3</span> Tasks<a href="08-File_reading_and_processing.html#tasks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="tasks" class="section level3 hasAnchor" number="8.6.2">
+<h3><span class="header-section-number">8.6.2</span> Tasks<a href="08-File_reading_and_processing.html#tasks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Carry out the following tasks in the directory: <strong>"/pub39/tea/nscxx/Linux/5_reading_files/"</strong></p>
 <p>Using a text editor (<strong>nano</strong> or <strong>vim</strong>) add an entry for Scientist Mae Jemison (Born: 1956) to the file <strong>"Scientist.txt"</strong>. The names and date are separated by one tab.</p>
 <p>Using your text editor of choice delete all the scientists born before 1000 in the <strong>"Scientist.txt"</strong> file and save this as <strong>"Scientist_post_1000.txt"</strong>.</p>
-</div>
-<div id="cheat-sheets" class="section level3 hasAnchor" number="8.6.4">
-<h3><span class="header-section-number">8.6.4</span> Cheat sheets<a href="08-File_reading_and_processing.html#cheat-sheets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="https://www.nano-editor.org/dist/latest/cheatsheet.html"><strong>Nano cheatsheet</strong></a></p>
-<p><a href="https://vim.rtorr.com/"><strong>Vim cheatsheet</strong></a></p>
 </div>
 </div>
 <div id="mcqs-file-reading-and-processing" class="section level2 hasAnchor" number="8.7">
@@ -433,28 +393,28 @@ To enter the <code>vim</code> text editor you can use the command <code>vim</cod
 <p>Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
 <ol style="list-style-type: decimal">
 <li>What command searches for a pattern?
-<div id="radio_PXBXZSSDDR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PXBXZSSDDR" value=""></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PXBXZSSDDR" value="answer"></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PXBXZSSDDR" value=""></input> <span><strong><code>cat</code></strong></span></label>
+<div id="radio_FTTRWZGBFG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FTTRWZGBFG" value=""></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FTTRWZGBFG" value="answer"></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FTTRWZGBFG" value=""></input> <span><strong><code>cat</code></strong></span></label>
 </div></li>
 <li>What command word counts files?
-<div id="radio_QSKWNDXYEI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QSKWNDXYEI" value="answer"></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QSKWNDXYEI" value=""></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QSKWNDXYEI" value=""></input> <span><strong><code>cat</code></strong></span></label>
+<div id="radio_RMJLBBKGDD" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_RMJLBBKGDD" value="answer"></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_RMJLBBKGDD" value=""></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_RMJLBBKGDD" value=""></input> <span><strong><code>cat</code></strong></span></label>
 </div></li>
 <li>What command prints the contents of a file?
-<div id="radio_GYMTWLIZWZ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GYMTWLIZWZ" value=""></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GYMTWLIZWZ" value=""></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GYMTWLIZWZ" value="answer"></input> <span><strong><code>cat</code></strong></span></label>
+<div id="radio_DYOYWZNHHJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DYOYWZNHHJ" value=""></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DYOYWZNHHJ" value=""></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DYOYWZNHHJ" value="answer"></input> <span><strong><code>cat</code></strong></span></label>
 </div></li>
 <li>What command displays a file's contents one page at a time and allows keyboard navigation?
-<div id="radio_PDQNMGJBFY" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PDQNMGJBFY" value="answer"></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PDQNMGJBFY" value=""></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PDQNMGJBFY" value=""></input> <span><strong><code>head</code></strong></span></label>
+<div id="radio_KGXVCIZYCW" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KGXVCIZYCW" value="answer"></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KGXVCIZYCW" value=""></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KGXVCIZYCW" value=""></input> <span><strong><code>head</code></strong></span></label>
 </div></li>
 <li>What command prints out the top n lines of a file
-<div id="radio_BNRXSLTEFZ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BNRXSLTEFZ" value=""></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BNRXSLTEFZ" value=""></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BNRXSLTEFZ" value="answer"></input> <span><strong><code>head</code></strong></span></label>
+<div id="radio_YJAGEDYXYX" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YJAGEDYXYX" value=""></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YJAGEDYXYX" value=""></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YJAGEDYXYX" value="answer"></input> <span><strong><code>head</code></strong></span></label>
 </div></li>
 <li>What command prints out the bottom n lines of a file
-<div id="radio_CBEXCGEVPE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_CBEXCGEVPE" value=""></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_CBEXCGEVPE" value="answer"></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_CBEXCGEVPE" value=""></input> <span><strong><code>head</code></strong></span></label>
+<div id="radio_YWSHXAFCZN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YWSHXAFCZN" value=""></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YWSHXAFCZN" value="answer"></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YWSHXAFCZN" value=""></input> <span><strong><code>head</code></strong></span></label>
 </div></li>
 </ol>
 

@@ -336,7 +336,7 @@ All files, directories and programs have permissions. It is important to know ab
 Below is a useful link to learn about file permissions:  
 https://www.guru99.com/file-permissions.html
 
-## MCQs: File reading and processing
+## MCQs: Advanced linux
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/question_bubble_red.png", auto_pdf = TRUE)
 ```
