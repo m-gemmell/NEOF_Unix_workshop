@@ -6,7 +6,7 @@ knitr::include_graphics(path = "figures/files.png", auto_pdf = TRUE)
 ``` 
 There are many ways to show the contents of a file. Below are a few examples. 
 
-The files for the examples are within the directory:  __"/pub39/tea/nscxxx/Linux/5_reading_files/"__ __(replace xxx with your user number)__.
+The files for the examples are within the directory:  __"/pub14/tea/nsc2xx/Linux/5_reading_files/"__ __(replace xxx with your user number)__.
 
 ## Print out a file
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
@@ -19,17 +19,17 @@ __Note__: remember tab complete and using the arrow keys
 
 Print contents of __"short_file.txt"__ to screen
 ```{bash eval=FALSE}
-cat /pub39/tea/nscxxx/Linux/5_reading_files/short_file.txt
+cat /pub14/tea/nsc2xx/Linux/5_reading_files/short_file.txt
 ``` 
 
 Print contents of __"Scientist.txt"__ to screen
 ```{bash eval=FALSE}
-cat /pub39/tea/nscxxx/Linux/5_reading_files/Scientist.txt
+cat /pub14/tea/nsc2xx/Linux/5_reading_files/Scientist.txt
 ``` 
 
 Print contents of __"ecoli.gbk"__ to screen
 ```{bash eval=FALSE}
-cat /pub39/tea/nscxxx/Linux/5_reading_files/ecoli.gbk
+cat /pub14/tea/nsc2xx/Linux/5_reading_files/ecoli.gbk
 ``` 
 __Remember__: The `clear` command.
 
@@ -43,7 +43,7 @@ The `tail` command will print out to screen the bottom n lines of a file.
 
 The default value is 10. The `-n` option can be used to indicate how many lines to print out.
 
-Carry out the below commands in the directory __"/pub39/tea/nscxxx/Linux/5_reading_files/"__
+Carry out the below commands in the directory __"/pub14/tea/nsc2xx/Linux/5_reading_files/"__
 
 Print out the top 10 lines of __"ecoli.gbk"__
 ```{bash eval=FALSE}
@@ -210,7 +210,7 @@ Below are some important examples:
 [__Nano cheatsheet__](https://www.nano-editor.org/dist/latest/cheatsheet.html)
 
 ### Tasks
-Carry out the following tasks in the directory: __"/pub39/tea/nscxx/Linux/5_reading_files/"__
+Carry out the following tasks in the directory: __"/pub14/tea/nscxx/Linux/5_reading_files/"__
 
 Using a text editor (__nano__ or __vim__) add an entry for Scientist Mae Jemison (Born: 1956) to the file __"Scientist.txt"__. The names and date are separated by one tab.
 

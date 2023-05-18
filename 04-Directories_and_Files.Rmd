@@ -33,12 +33,12 @@ To determine your current working directory you can either look at the part of t
 pwd
 ```
 
-In this case it will not show a **"\~"** but the full path of your home directory. E.g. **"/pub39/tea/nsc006/"**.
+In this case it will not show a **"\~"** but the full path of your home directory. E.g. **"/pub14/tea/nsc206/"**.
 
 -   The first **"/"** is the root of the system. Every directory, subdirectory, file and program of the machine is within the root.
--   **"pub39/"**: A directory within the root.
--   **"tea/"**: A subdirectory of **"pub39/"** and a sub-subdirectory of the root (**"/"**).
--   **"nsc006"**: The home directory of user nsc006. It is a subdirectory of **"tea/"** which is a subdirectory of **"pub39/"** which is a subdirectory of the root (**"/"**).
+-   **"pub14/"**: A directory within the root.
+-   **"tea/"**: A subdirectory of **"pub14/"** and a sub-subdirectory of the root (**"/"**).
+-   **"nsc206"**: The home directory of user nsc206. It is a subdirectory of **"tea/"** which is a subdirectory of **"pub14/"** which is a subdirectory of the root (**"/"**).
 
 ### Copying
 
@@ -51,7 +51,7 @@ To copy a directory we need to add the option `-r` which means recursively copy 
 Use the below command to copy the workshop data to your current directory. The **"."** refers to your current directory.
 
 ```{bash eval=FALSE}
-cp -r /pub39/tea/nsc006/NEOF/Linux/ .
+cp -r /pub14/tea/nsc206/NEOF/Linux/ .
 ```
 
 Now change directory into your newly copied directory.
@@ -96,7 +96,7 @@ knitr::include_graphics(path = "figures/linux_box_structure.png", auto_pdf = TRU
 knitr::include_graphics(path = "figures/paths.png", auto_pdf = TRUE)
 ```
 
-On the command line directories and files are referred to by paths e.g. **"/pub39/tea/nsc006/Linux/"** is a path.
+On the command line directories and files are referred to by paths e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
 
 Paths are case sensitive. The path **"directory/file.txt"** is different than **"diRectory/File.txt"**.
 
@@ -108,28 +108,28 @@ There are multiple ways to refer to a path. The two main ways are through **abso
 
 Absolute paths are paths that start from the root e.g.
 
--   **"/pub39/tea/nsc006/Linux/"**
+-   **"/pub14/tea/nsc206/Linux/"**
 -   **"\~/Linux/"** (In this case \~ is a shortcut which includes the root)
--   **"/pub39/tea/nsc006/file.txt"**
+-   **"/pub14/tea/nsc206/file.txt"**
 
 ### Relative paths
 
 Relative paths are paths that are relative to another location besides the root e.g.
 
 -   **"."** (This means the current working directory).
--   **".."** (This refers to one directory up e.g. if the current directory was **"/pub39/tea/nsc006/"**, the **".."** directory would be **"/pub39/tea/"**).
+-   **".."** (This refers to one directory up e.g. if the current directory was **"/pub14/tea/nsc206/"**, the **".."** directory would be **"/pub14/tea/"**).
 -   **"1_directory/"**, would refer to the directory **"1_directory/"** in your current directory
 
 ### Change directory examples
 
 Below is a subset of valid methods to change directory into your **"Linux/"** directory
 
-**Note**:change **nscxxx** to your specific user name as shown on the command line prompt.
+**Note**:change **nsc2xx** to your specific user name as shown on the command line prompt.
 
 Method 1
 
 ```{bash eval=FALSE}
-cd /pub39/tea/nscxxx/Linux/
+cd /pub14/tea/nsc2xx/Linux/
 ```
 
 Method 2
@@ -142,16 +142,16 @@ cd Linux/
 Method 3
 
 ```{bash eval=FALSE}
-cd /pub39/tea/nscxxx/Linux/1_directory/
+cd /pub14/tea/nsc2xx/Linux/1_directory/
 cd ..
 ```
 
 Method 4
 
 ```{bash eval=FALSE}
-cd /pub39/
+cd /pub14/
 cd tea/
-cd nscxxx/
+cd nsc2xx/
 cd Linux/
 ```
 
@@ -227,11 +227,11 @@ opts_p <- c("__`~`__", "__`/`__", answer="__`..`__")
 6. Choose the option that represents one directory above. `r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
-opts_p <- c("__./Linux/__", answer="__/pub39/tea/nsc006/Linux/__")
+opts_p <- c("__./Linux/__", answer="__/pub14/tea/nsc206/Linux/__")
 ```
 7.  Which path is an absolute path? `r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
-opts_p <- c(answer="__./Linux__", "__/pub39/tea/nsc006/Linux/__")
+opts_p <- c(answer="__./Linux__", "__/pub14/tea/nsc206/Linux/__")
 ```
 8.  Which path is a relative path? `r longmcq(opts_p)`
