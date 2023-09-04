@@ -14,11 +14,11 @@ Tab complete serves the following purposes:
 2. To list all content that starts with what you have already typed
 3. To ensure you have no typos
 
-In the below examples press the tab button when you see __\<tab>__ and __replace xxx with your user number.__
+In the below examples press the tab button when you see __\<tab>__ and __replace 2xx with your user number.__
 
 Move into the directory __"1_directory"__
 ```{bash eval=FALSE}
-cd /pub39/t<tab>n<tab>xxx<tab>L<tab>1_d<tab>
+cd /pub14/t<tab>n<tab>2xx<tab>L<tab>1_d<tab>
 ``` 
 
 Print out all the content within the current directory that starts with __"1_"__ in the file or directory name. This is carried out with a double tab.
