@@ -50,14 +50,27 @@ knitr::include_graphics(path = "figures/map.png", auto_pdf = TRUE)
 
 This practical session aims to introduce you to Linux and its applications. The topics covered are:
 
--   [What is Linux?](#linuxintro)
--   [Logging in to our teaching VNC](#cluster)
--   [Directories and files](#dirsandfiles)
--   [Tips and tricks](#tipsandtricks)
--   [Manipulating Directories](#manipulatingdirectories)
--   [File reading and processing](#filereadingandprocessing)
--   [Advanced Linux](#advancedlinux)
--   [Other Bioinformatics programming languages](#bfxlanguages)
++:-------------------------------------------------------------------:+:----------------------------------------------------------------:+
+| [**What is Linux?**](#linuxintro)                                   | [**Logging in to our teaching VNC**](#cluster)                   |
+|                                                                     |                                                                  |
+| [![](figures/linux_beginner.png){width="142"}](#linuxintro)         | [![](figures/start.png){width="189"}](#cluster)                  |
++---------------------------------------------------------------------+------------------------------------------------------------------+
+| [**Directories and files**](#dirsandfiles)                          | [**Tips and tricks**](#tipsandtricks)                            |
+|                                                                     |                                                                  |
+| [![](figures/directory.png){width="125"}](#dirsandfiles)            | [![](figures/skateboard_trick.png){width="302"}](#tipsandtricks) |
++---------------------------------------------------------------------+------------------------------------------------------------------+
+| [**Manipulating Directories**](#manipulatingdirectories)            | [**File reading and processing**](#filereadingandprocessing)     |
+|                                                                     |                                                                  |
+| [![](figures/transform.png){width="150"}](#manipulatingdirectories) | [![](figures/files.png){width="205"}](#filereadingandprocessing) |
++---------------------------------------------------------------------+------------------------------------------------------------------+
+| [**Advanced Linux**](#advancedlinux)                                | [**Other Bioinformatics programming languages**](#bfxlanguages)  |
+|                                                                     |                                                                  |
+| [![](figures/linux_intermdiary.png){width="142"}](#advancedlinux)   | [![](figures/languages.png){width="159"}](#bfxlanguages)         |
++---------------------------------------------------------------------+------------------------------------------------------------------+
+| [**Appendix**](#cheatsheet)                                         |                                                                  |
+|                                                                     |                                                                  |
+| [![](figures/cheatsheet.png){width="150"}](#cheatsheet)             |                                                                  |
++---------------------------------------------------------------------+------------------------------------------------------------------+
 
 The aim of this practical is to cover everything up to, but not including, Advanced Linux. This will give you sufficient skills in Linux to carry out the other practicals in this workshop. If you are already familiar with Linux or you are a quick learner, please look at the Advanced Linux session followed by the Other Bioinformatics programming languages.
 
@@ -69,7 +82,7 @@ echo "This is a command example"
 
 Additionally please use the [cheatsheet](#cheatsheet) as a reminder of all the commands you will be learning.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 <!--chapter:end:01-Intro_to_Unix.Rmd-->
 
