@@ -203,7 +203,7 @@ To run a command select your terminal by clicking on it or using **"alt+shift"**
 Now run the below command:
 
 ```{bash eval=FALSE}
-echo "Hello World"" 
+echo "Hello World"
 ```
 
 In this case `echo` is a command that prints out the term "Hello World".
@@ -211,7 +211,7 @@ In this case `echo` is a command that prints out the term "Hello World".
 Now try:
 
 ```{bash eval=FALSE}
-echo "Bye World"" 
+echo "Bye World"
 ```
 
 There are many different Linux commands and we will run through a few. With a large variety it can be hard to remember all the commands and how they work.
