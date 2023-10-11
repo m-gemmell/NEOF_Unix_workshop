@@ -172,7 +172,7 @@ Count the number of lines within all the fastq files
 cat *fastq | wc -l
 ``` 
 
-Count the number of lines within all the fastq files which contain the text “TAG”
+Count the number of lines  which contain the text "TAG" within all the fastq files
 ```{bash eval=FALSE}
 cat *fastq | grep “TAG” | wc -l
 ``` 

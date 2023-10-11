@@ -8,7 +8,7 @@ knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
 3. Make a directory called __fastq__ and one called __txt__
 4. With one command move all the fastq files into the directory __fastq__
 5. With one command move all the txt files, excluding __metadata.txt__ and __samples.txt__, into the directory __txt__
-6. Create a file in the __fastq__ directory called __patient_1_corrected.fastq__ and put all the corrected fastq data for patient_1 into the file.
+6. Create a file in the __fastq__ directory called __patient_1_corrected.fastq__ and put all the corrected fastq data for patient_1 into the file. You can look at the metadat.txt file to see which samples belong to patient_1.
 7. Append the metadata line for sample_1_AAAA to the bottom of the file __sample_1_AAAA.txt__ in the __txt__  directory.
 8. For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (e.g. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)
 9. Count the number of Gs and Cs within file __sample_16_AACC.fastq__
