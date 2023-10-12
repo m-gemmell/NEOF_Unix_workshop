@@ -102,7 +102,7 @@ cp 3_1_hut/Laid_Egg.txt 3_2_field/Chick.txt
 ls 3_2_field
 ``` 
 
-Copy the file __"3_2_hut/Chick.txt"__ and give the copy the name __"Chick_2.txt"__
+Copy the file __"3_2_field/Chick.txt"__ and give the copy the name __"Chick_2.txt"__
 
 ```{bash eval=FALSE}
 #List contents of 3_2_field
