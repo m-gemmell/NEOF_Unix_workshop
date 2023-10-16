@@ -23,10 +23,6 @@ knitr::include_graphics(path = "figures/python.png", auto_pdf = TRUE)
 ``` 
 Python is used for software development and other applications It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e. genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.
 
-Tutorial website:
-
-http://pythonforbiologists.com/index.php/introduction-to-python-for-biologists/
-
 Python website:
 
 https://www.python.org/

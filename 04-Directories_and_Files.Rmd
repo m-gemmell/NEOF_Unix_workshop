@@ -1,8 +1,14 @@
 # Directories and Files {#dirsandfiles}
-
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/directory.png", auto_pdf = TRUE)
 ```
+
+`r hide("Chapter 4 video walk-through")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/hJCuJXZQjac" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
 
 ## Acquiring Workshop data
 

@@ -30,6 +30,14 @@ knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
 })
 ```
 
+```{r, echo=FALSE}
+#Change colour, border, and text of code chunks
+#Check style.css for .Rchunk
+#https://stackoverflow.com/questions/65627531/change-r-chunk-background-color-in-bookdown-gitbook
+#https://bookdown.org/yihui/rmarkdown-cookbook/chunk-styling.html
+knitr::opts_chunk$set(class.source="Rchunk") 
+```
+
 ```{r cite-packages, include = FALSE}
 # automatically create a bib database for R packages
 # add any packages you want to cite here
@@ -48,7 +56,24 @@ knitr::include_graphics(path = "figures/NEOF.png", auto_pdf = TRUE)
 knitr::include_graphics(path = "figures/map.png", auto_pdf = TRUE)
 ```
 
-This practical session aims to introduce you to Linux and its applications. The topics covered are:
+This practical session aims to introduce you to Linux and its applications.
+
+The aim of this practical is to cover everything up to, but not including, Advanced Linux. This will give you sufficient skills in Linux to carry out the other practicals in this workshop. If you are already familiar with Linux or you are a quick learner, please look at the Advanced Linux session followed by the Other Bioinformatics programming languages.
+
+Commands are in the following font, colour, and box.They should be run in the command line.
+
+```{bash eval=FALSE}
+echo "This is a command example" 
+```
+
+In some chapters there are video walk-throughs. 
+These are optional and give you a guided visual walk-through of running the practice code in the chapter.
+These are found in an expandable box at the start of the chapters 4,5,6, and 8.
+
+
+Additionally, please use the [cheatsheet](#cheatsheet) as a reminder of all the commands you will be learning.
+
+## Table of contents {-}
 
 +:-------------------------------------------------------------------:+:----------------------------------------------------------------:+
 | [**What is Linux?**](#linuxintro)                                   | [**Logging in to our teaching VNC**](#cluster)                   |
@@ -71,16 +96,6 @@ This practical session aims to introduce you to Linux and its applications. The 
 |                                                                     |                                                                  |
 | [![](figures/cheatsheet.png){width="150"}](#cheatsheet)             |                                                                  |
 +---------------------------------------------------------------------+------------------------------------------------------------------+
-
-The aim of this practical is to cover everything up to, but not including, Advanced Linux. This will give you sufficient skills in Linux to carry out the other practicals in this workshop. If you are already familiar with Linux or you are a quick learner, please look at the Advanced Linux session followed by the Other Bioinformatics programming languages.
-
-Commands are in the following font, colour, and box.They should be run in the command line.
-
-```{bash eval=FALSE}
-echo "This is a command example" 
-```
-
-Additionally please use the [cheatsheet](#cheatsheet) as a reminder of all the commands you will be learning.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
@@ -258,10 +273,16 @@ knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
 })
 ```
 # Directories and Files {#dirsandfiles}
-
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/directory.png", auto_pdf = TRUE)
 ```
+
+`r hide("Chapter 4 video walk-through")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/hJCuJXZQjac" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
 
 ## Acquiring Workshop data
 
@@ -519,6 +540,13 @@ knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
 knitr::include_graphics(path = "figures/skateboard_trick.png", auto_pdf = TRUE)
 ``` 
 
+`r hide("Chapter 5 viedo walk-through")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/968QURuAplk" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
 ## Tab complete
 Tab complete is a method to quickly type commands and file paths without error. In bioinformatics tab complete is your best friend. The tab key looks like:
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
@@ -667,6 +695,13 @@ knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
 ``` 
+
+`r hide("Chapter 6 video walk-through")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/5PguHkogxjI" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
 
 ## Make a directory
 To make a directory the command `mkdir` is used.
@@ -916,6 +951,13 @@ knitr::include_graphics(path = "figures/files.png", auto_pdf = TRUE)
 There are many ways to show the contents of a file. Below are a few examples. 
 
 The files for the examples are within the directory:  __"/pub14/tea/nsc2xx/Linux/5_reading_files/"__ __(replace xxx with your user number)__.
+
+`r hide("Chapter 8 video walk-through")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/rldLi1yAE58" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
 
 ## Print out a file
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
@@ -1394,12 +1436,12 @@ ls sample_?_*fastq
 
 List the txt files of samples with a number in the tens
 ```{bash eval=FALSE}
-ls sample_1?*txt
+ls sample_1?_*txt
 ``` 
 
 List the txt files for samples 3,4,5,6 & 7 i.e. 3-7
 ```{bash eval=FALSE}
-ls sample_[3-7]*txt
+ls sample_[3-7]_*txt
 ``` 
 
 List the txt files for the non corrected information of samples with single digits.
@@ -1409,7 +1451,7 @@ ls sample_?_*[ATGC].txt
 
 List the corrected txt files for samples with numbers divisible by 10.
 ```{bash eval=FALSE}
-ls sample_[0-9][0]*corrected.txt
+ls sample_[0-9][0]_*corrected.txt
 ``` 
 
 ## Redirection
@@ -1804,10 +1846,6 @@ https://www.gnu.org/software/gawk/manual/gawk.html
 knitr::include_graphics(path = "figures/python.png", auto_pdf = TRUE)
 ``` 
 Python is used for software development and other applications It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e. genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.
-
-Tutorial website:
-
-http://pythonforbiologists.com/index.php/introduction-to-python-for-biologists/
 
 Python website:
 

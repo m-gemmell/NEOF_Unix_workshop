@@ -3,6 +3,13 @@
 knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
 ``` 
 
+`r hide("Chapter 6 video walk-through")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/5PguHkogxjI" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
 ## Make a directory
 To make a directory the command `mkdir` is used.
 

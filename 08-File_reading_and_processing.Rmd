@@ -8,6 +8,13 @@ There are many ways to show the contents of a file. Below are a few examples.
 
 The files for the examples are within the directory:  __"/pub14/tea/nsc2xx/Linux/5_reading_files/"__ __(replace xxx with your user number)__.
 
+`r hide("Chapter 8 video walk-through")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/rldLi1yAE58" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
 ## Print out a file
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/cat.png", auto_pdf = TRUE)

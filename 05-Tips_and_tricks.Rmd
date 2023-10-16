@@ -3,6 +3,13 @@
 knitr::include_graphics(path = "figures/skateboard_trick.png", auto_pdf = TRUE)
 ``` 
 
+`r hide("Chapter 5 viedo walk-through")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/968QURuAplk" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
 ## Tab complete
 Tab complete is a method to quickly type commands and file paths without error. In bioinformatics tab complete is your best friend. The tab key looks like:
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
