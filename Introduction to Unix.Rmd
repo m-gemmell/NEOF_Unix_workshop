@@ -2255,21 +2255,25 @@ For transferring on windows machine I would suggest [WinSCP](https://winscp.net/
 
 For transferring on Macs I would suggest [FileZIlla](https://filezilla-project.org/)
 
-# ANACONDA
+# Mamba
 
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/conda.png", auto_pdf = TRUE)
+```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
+knitr::include_graphics(path = "figures/mamba_logo.png", auto_pdf = TRUE)
 ```
 
-Once you start using bioinformatic tools you will notice that a lot of installing is required. I would highly suggest using ANACONDA's `conda` for this purpose.
+## Mamba installation {#mamba_install}
 
-Links:
+Once you start using bioinformatic tools you will notice that a lot of installing is required. I would highly suggest using Mamba for this purpose.
 
-- [ANACONDA main page](https://www.anaconda.com/?modal=nucleus)
-- [Installing ANACONDA](https://docs.anaconda.com/anaconda/install/)
-- [Getting started with `conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+Mamba is a reimplementation of conda. It is a great tool for installing bioinformatic packages including R packages.
 
-Once you are familiar with `conda` I would then suggest using [`mamba`](https://github.com/mamba-org/mamba). This is installed on top of `conda` and improves the speed of `conda`.
+Mamba github: <https://github.com/mamba-org/mamba>
+
+The best way to use Mamba is to install Miniforge. It has both Conda and Mamba commands.
+
+Miniforge installation: <https://github.com/conda-forge/miniforge>
+
+Mamba guide: <https://mamba.readthedocs.io/en/latest/user_guide/mamba.html>
 
 # vim {#vim}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
