@@ -1,5 +1,5 @@
 ---
-title: "Intro to Unix"
+title: "Intro to Linux"
 author: "Matthew R. Gemmell"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -39,24 +39,26 @@ knitr::include_graphics(path = "figures/NEOF.png", auto_pdf = TRUE)
 # Introduction {#intro}
 
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/map.png", auto_pdf = TRUE)
+knitr::include_graphics(path = "figures/linux_beginner.png", auto_pdf = TRUE)
 ```
 
-Bioinformatics is an increasingly important skill for biological scientists. Many bioinformatic tools can only be run on Unix based operating systems. This course aims to introduce you to Linux and is aimed at beginners and novices to the command line.
+Bioinformatics is an increasingly important skill for biological scientists. Many bioinformatic tools can only be run on Linux based operating systems. This course aims to introduce you to Linux and is aimed at beginners and novices to the command line.
 
 Sessions will start with a brief presentation followed by self-paced computer practicals guided by an online interactive book. The book will contain theory, practice code, and exercises. Multiple choice questions will help reinforce what you have learnt throughout the book.
 
 At the end of the course learners will be able to:
 
+- Explain how the user, shell, and kernel interact with each other in the Linux OS.
 - Navigate & manipulate directories in the Linux environment.
 - List and view the contents of directories.
 - Carry out a variety of commands with files including printing them to terminal.
-- Utilise the text editor nano create, edit, and save files.
+- Utilise the text editor nano to create, edit, and save files.
 - Understand the structure of fastq files.
 
 There are additional materials in chapters 12-14 which include some advanced Linux commands and introductions to other programming languages used by bioinformaticians.
 
-Commands are in the following font, colour, and box.They should be run in the command line.
+Commands are in the following font, colour, and box. 
+They should be run in the command line.
 
 ```{bash eval=FALSE}
 echo "This is a command example" 
