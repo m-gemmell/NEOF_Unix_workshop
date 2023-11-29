@@ -1,0 +1,59 @@
+{
+  "index.qmd": {
+    "index.html": "07d843a4"
+  },
+  "intro.qmd": {
+    "intro.html": "f30f9ec8"
+  },
+  "summary.qmd": {
+    "summary.html": "68f77fbd"
+  },
+  "references.qmd": {
+    "references.html": "ad569b53"
+  },
+  "01-Linux_Introduction.qmd": {
+    "01-Linux_Introduction.html": "2fbc2ebb"
+  },
+  "02-Starting.qmd": {
+    "02-Starting.html": "6e0f0290"
+  },
+  "03-Directories_and_Files.qmd": {
+    "03-Directories_and_Files.html": "1fa70c73"
+  },
+  "04-Tips_and_tricks.qmd": {
+    "04-Tips_and_tricks.html": "5e78359d"
+  },
+  "05-Manipulating_directories.qmd": {
+    "05-Manipulating_directories.html": "a2a56427"
+  },
+  "06-Exercise1.qmd": {
+    "06-Exercise1.html": "c73ad740"
+  },
+  "07-File_reading_and_processing.qmd": {
+    "07-File_reading_and_processing.html": "7c96aa1e"
+  },
+  "08-Recap.qmd": {
+    "08-Recap.html": "c2311a66"
+  },
+  "09-Fastq.qmd": {
+    "09-Fastq.html": "237c1cc4"
+  },
+  "10-Exercise2.qmd": {
+    "10-Exercise2.html": "33f5e93b"
+  },
+  "11-Advanced_linux_practice.qmd": {
+    "11-Advanced_linux_practice.html": "93c9f176"
+  },
+  "12-Advanced_practice_exercise.qmd": {
+    "12-Advanced_practice_exercise.html": "ad29a124"
+  },
+  "13-Bioinformatica_languages.qmd": {
+    "13-Bioinformatica_languages.html": "c5c955c7"
+  },
+  "14-Answers.qmd": {
+    "14-Answers.html": "fed786d6"
+  },
+  "15-Appendix.qmd": {
+    "15-Appendix.html": "d0df5062"
+  }
+}
