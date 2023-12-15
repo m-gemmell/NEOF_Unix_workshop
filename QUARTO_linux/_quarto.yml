@@ -10,12 +10,8 @@ book:
   sidebar:
     logo: figures/neof_small_logo.png
     logo-href: "https://neof.org.uk/"
-    style: "docked"
-    collapse-level: 3
-  
-  
-  
-  
+    collapse-level: 4
+
   chapters:
   - part: Start
     chapters:
@@ -41,9 +37,14 @@ book:
     - 13-Bioinformatica_languages.qmd
   - part: Answers
     chapters:
-    - 14-Answers.qmd
+    - 14-Answers_1.qmd
+    - 15-Answers_2.qmd
+    - 16-Answers_advanced.qmd
   appendices:
-    - 15-Appendix.qmd
+    - a1-cheat_sheet.qmd
+    - a2-on_your_pc.qmd
+    - a3-mamba.qmd
+    - a4-vim.qmd
 
 bibliography: references.bib
 
@@ -70,19 +71,16 @@ format:
     grid:
       sidebar-width: 300px
       body-width: 1000px
-      margin-width: 0px
+      margin-width: 200px
       gutter-width: 1.5em
-    theme: cosmo
+    #HTML themes: https://quarto.org/docs/output-formats/html-themes.html
+    theme: 
+      light: [cosmo, style.scss, style_light.scss, include/webex_light.scss]
+      dark: [darkly, style.scss, style_dark.scss, include/webex_dark.scss]
     css:
-    - style.css
     - include/webex.css
+    mainfont: Lexend
+    monofont: Fira Mono
     include-after-body: include/webex.js
   pdf:
     documentclass: scrreprt
-    
-
-
-#Font
-mainfont: Lexend
-monofont: Fira Mono
-editor: source

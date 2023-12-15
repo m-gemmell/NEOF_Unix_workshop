@@ -364,45 +364,66 @@
     "text": "E.1 Mamba installation\nOnce you start using bioinformatic tools you will notice that a lot of installing is required. I would highly suggest using Mamba for this purpose.\nMamba is a reimplementation of conda. It is a great tool for installing bioinformatic packages including R packages.\nMamba github: https://github.com/mamba-org/mamba\nThe best way to use Mamba is to install Miniforge. It has both Conda and Mamba commands.\nMiniforge installation: https://github.com/conda-forge/miniforge\nMamba guide: https://mamba.readthedocs.io/en/latest/user_guide/mamba.html"
   },
   {
-    "objectID": "15-Appendix.html#cheatsheet",
-    "href": "15-Appendix.html#cheatsheet",
-    "title": "Appendix A — Appendix",
-    "section": "A.1 Practical cheat sheet",
-    "text": "A.1 Practical cheat sheet\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommand\nDescription\nUsage example\n\n\n\n\necho\nPrint out a string to screen\nEcho ‘Hello World’\n\n\nman\nLook at the manual page of a command\nman man\n\n\nclear\nClear the screen\nclear\n\n\n&lt;tab&gt;\nComplete a path or command\n&lt;tab&gt;\n\n\ncd\nChange directory\ncd /directory/path/\n\n\npwd\nPrint Working Directory\npwd\n\n\nls\nList the contents of a directory\nls /directory/path/\n\n\nmkdir\nMake a directory\nmkdir /directory/path/new_directory/\n\n\ncp\nCopy content to another path\ncp /directory/path/file.txt /directory/path/new_directory/\n\n\nmv\nMove content to a new path\nmv /directory/path/file.txt /directory/path/new_directory/\n\n\nrm\nDelete content\nrm /directory/path/file.txt\n\n\ncat\nPrint contents of a file to screen\ncat /directory/path/file.txt\n\n\nhead\nPrint out the first n lines of a file to screen\nhead -n 10 /directory/path/file.txt\n\n\ntail\nPrint the last n lines of a file to screen\ntail -n 12 /directory/path/file.txt\n\n\nless\nRead a file one page at a time\nless /directory/path/file.txt\n\n\nwc\nPrint out line, word and byte count\nwc /directory/path/file.txt\n\n\ngrep\nSearch for lines that contain a specific pattern\ngrep “pattern” /directory/path/file.txt\n\n\nvim\nText editor\nvim /directory/path/file.txt"
+    "objectID": "a1-cheat_sheet.html",
+    "href": "a1-cheat_sheet.html",
+    "title": "Appendix A — Practical cheat sheet",
+    "section": "",
+    "text": "Command\nDescription\nUsage example\n\n\n\n\necho\nPrint out a string to screen\nEcho ‘Hello World’\n\n\nman\nLook at the manual page of a command\nman man\n\n\nclear\nClear the screen\nclear\n\n\n&lt;tab&gt;\nComplete a path or command\n&lt;tab&gt;\n\n\ncd\nChange directory\ncd /directory/path/\n\n\npwd\nPrint Working Directory\npwd\n\n\nls\nList the contents of a directory\nls /directory/path/\n\n\nmkdir\nMake a directory\nmkdir /directory/path/new_directory/\n\n\ncp\nCopy content to another path\ncp /directory/path/file.txt /directory/path/new_directory/\n\n\nmv\nMove content to a new path\nmv /directory/path/file.txt /directory/path/new_directory/\n\n\nrm\nDelete content\nrm /directory/path/file.txt\n\n\ncat\nPrint contents of a file to screen\ncat /directory/path/file.txt\n\n\nhead\nPrint out the first n lines of a file to screen\nhead -n 10 /directory/path/file.txt\n\n\ntail\nPrint the last n lines of a file to screen\ntail -n 12 /directory/path/file.txt\n\n\nless\nRead a file one page at a time\nless /directory/path/file.txt\n\n\nwc\nPrint out line, word and byte count\nwc /directory/path/file.txt\n\n\ngrep\nSearch for lines that contain a specific pattern\ngrep “pattern” /directory/path/file.txt\n\n\nvim\nText editor\nvim /directory/path/file.txt"
   },
   {
-    "objectID": "15-Appendix.html#windows-terminals",
-    "href": "15-Appendix.html#windows-terminals",
-    "title": "Appendix A — Appendix",
-    "section": "A.2 Windows terminals",
-    "text": "A.2 Windows terminals\n\n\n\n\n\n\n\n\n\nIf you are on a windows you may need to download a terminal program to ssh to a linux cluster. Thankfully Macs come with an in built terminal. Below are a few suggestions of windows terminals:\n\nMobaXterm\nPutty\nUbuntu on Windows"
+    "objectID": "a2-on_your_pc.html#windows_terminals",
+    "href": "a2-on_your_pc.html#windows_terminals",
+    "title": "Appendix B — On your computer",
+    "section": "B.1 Windows terminals",
+    "text": "B.1 Windows terminals\n\n\n\n\n\n\n\n\n\nIf you are on a windows you may need to download a terminal program to ssh to a linux cluster. Thankfully Macs come with an in built terminal. Below are a few suggestions of windows terminals:\n\nMobaXterm\nPutty\nUbuntu on Windows"
   },
   {
-    "objectID": "15-Appendix.html#ssh",
-    "href": "15-Appendix.html#ssh",
-    "title": "Appendix A — Appendix",
-    "section": "A.3 ssh",
-    "text": "A.3 ssh\n\n\n\n\n\n\n\n\n\nThe ssh (Secure Shell Protocol) command is used to login into cluster and other machines. For more information on this please see the following online tutorial: https://opensource.com/article/20/9/ssh"
+    "objectID": "a2-on_your_pc.html#ssh",
+    "href": "a2-on_your_pc.html#ssh",
+    "title": "Appendix B — On your computer",
+    "section": "B.2 ssh",
+    "text": "B.2 ssh\n\n\n\n\n\n\n\n\n\nThe ssh (Secure Shell Protocol) command is used to login into cluster and other machines. For more information on this please see the following online tutorial: https://opensource.com/article/20/9/ssh"
   },
   {
-    "objectID": "15-Appendix.html#file-transferring",
-    "href": "15-Appendix.html#file-transferring",
-    "title": "Appendix A — Appendix",
-    "section": "A.4 File transferring",
-    "text": "A.4 File transferring\n\n\n\n\n\n\n\n\n\nWhen working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.\nFor transferring on windows machine I would suggest WinSCP.\nFor transferring on Macs I would suggest FileZIlla"
+    "objectID": "a2-on_your_pc.html#file-transferring",
+    "href": "a2-on_your_pc.html#file-transferring",
+    "title": "Appendix B — On your computer",
+    "section": "B.3 File transferring",
+    "text": "B.3 File transferring\n\n\n\n\n\n\n\n\n\nWhen working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.\nFor transferring on windows machine I would suggest WinSCP.\nFor transferring on Macs I would suggest FileZIlla"
   },
   {
-    "objectID": "15-Appendix.html#mamba",
-    "href": "15-Appendix.html#mamba",
-    "title": "Appendix A — Appendix",
-    "section": "A.5 Mamba",
-    "text": "A.5 Mamba"
+    "objectID": "a3-mamba.html#mamba_install",
+    "href": "a3-mamba.html#mamba_install",
+    "title": "Appendix C — Mamba",
+    "section": "C.1 Mamba installation",
+    "text": "C.1 Mamba installation\nOnce you start using bioinformatic tools you will notice that a lot of installing is required. I would highly suggest using Mamba for this purpose.\nMamba is a reimplementation of conda. It is a great tool for installing bioinformatic packages including R packages.\nMamba github: https://github.com/mamba-org/mamba\nThe best way to use Mamba is to install Miniforge. It has both Conda and Mamba commands.\nMiniforge installation: https://github.com/conda-forge/miniforge\nMamba guide: https://mamba.readthedocs.io/en/latest/user_guide/mamba.html"
   },
   {
-    "objectID": "15-Appendix.html#vim",
-    "href": "15-Appendix.html#vim",
-    "title": "Appendix A — Appendix",
-    "section": "A.7 vim",
-    "text": "A.7 vim\n\n\n\n\n\n\n\n\n\nTo enter the vim text editor you can use the command vim. The command is: vim file.txt.\nvim can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.\nOnce you are in the vim editor there are two main modes:\n\nCommand mode: This is the starting mode of vim. It can be used to enter commands but not for typing.\nInsert mode: This mode can be used to insert characters into the text. Pasting only works properly in insert mode. You will know you are in insert mode as at the bottom of the screen will be “– INSERT –”.\n\nTo enter insert mode press i\nTo escape Insert mode press esc\n\n\nBelow are a subset of commands you can use in the command mode of vim.\n\n:q - Quit vim. Will fail if there are any unsaved changes\n:w - Save the file\n:wq - Save and quit\n:x - Save and quit\n:q! - Quit and throw away unsaved changes\n:saveas file - Save file as. File name can be changed\n:w file - Save file as. File name can be changed\narrow keys - Navigate the text. (works in insert mode too)\n^ - Jump to the start of a line\n$ - Jump to the end of a line\n/pattern - Search for pattern\nn - Repeat search in same direction\nN - Repeat search in reverse direction\ndd - Delete the current line\ni - Enter insert mode\n1G - Go to the first line in the file. Number can be changed\nG - Go to the last line of the file\n\nVim cheatsheet"
+    "objectID": "a4-vim.html",
+    "href": "a4-vim.html",
+    "title": "Appendix D — vim",
+    "section": "",
+    "text": "To enter the vim text editor you can use the command vim. The command is: vim file.txt.\nvim can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.\nOnce you are in the vim editor there are two main modes:\n\nCommand mode: This is the starting mode of vim. It can be used to enter commands but not for typing.\nInsert mode: This mode can be used to insert characters into the text. Pasting only works properly in insert mode. You will know you are in insert mode as at the bottom of the screen will be “– INSERT –”.\n\nTo enter insert mode press i\nTo escape Insert mode press esc\n\n\nBelow are a subset of commands you can use in the command mode of vim.\n\n:q - Quit vim. Will fail if there are any unsaved changes\n:w - Save the file\n:wq - Save and quit\n:x - Save and quit\n:q! - Quit and throw away unsaved changes\n:saveas file - Save file as. File name can be changed\n:w file - Save file as. File name can be changed\narrow keys - Navigate the text. (works in insert mode too)\n^ - Jump to the start of a line\n$ - Jump to the end of a line\n/pattern - Search for pattern\nn - Repeat search in same direction\nN - Repeat search in reverse direction\ndd - Delete the current line\ni - Enter insert mode\n1G - Go to the first line in the file. Number can be changed\nG - Go to the last line of the file\n\nVim cheatsheet"
+  },
+  {
+    "objectID": "14-Answers_1.html",
+    "href": "14-Answers_1.html",
+    "title": "Exercise 1",
+    "section": "",
+    "text": "Ensure you are in the correct directory before carrying out the below commands\n\ncd ~/Linux/\n\n\nChange the name of the subdirectory 4_exercises_aaaa within your Linux to 4_exercises\n\n\nmv 4_exercises_aaaa 4_exercises\n\n\nMake a backup of the 4_exercises directory\n\n\ncp -r 4_exercises 4_exercises_backup \n\n\nList the contents of the 4_exercises directory\n\n\nls 4_exercises\n\n\nWithin the directory 4_exercises\n\n\ncd 4_exercises\n\nPrint the working directory\n\npwd\n\n\nPrint out to screen the phrase ‘the echo command allows me to print phrases to screen’\n\n\necho “the echo command allows me to print phrases to screen”\n\n\nCopy the file copy_this_file.txt to the directory to_me\n\n\ncp copy_this_file.txt to_me\n\n\nRename the directory to_me to you\n\n\nmv to_me you\n\n\nDelete the initial copy_this_file.txt file\n\n\nrm copy_this_file.txt"
+  },
+  {
+    "objectID": "15-Answers_2.html",
+    "href": "15-Answers_2.html",
+    "title": "Exercise 2",
+    "section": "",
+    "text": "Ensure you are in the correct directory before carrying out the below commands\n\ncd ~/Linux/6_final_exercise\n\n\nSee what files are in the directory\n\n\nls\n\n\nRename the file 3-P£_CACTTCGA_L001_R1_001.fastq to 3-P3_CACTTCGA_L001_R1_001.fastq\n\n\nmv 3-P£_CACTTCGA_L001_R1_001.fastq \\\n3-P3_CACTTCGA_L001_R1_001.fastq\n\n\nMake a backup of the files in a directory called backup\n\n\nmkdir backup\ncp 1-P1_ATGCCTGG_L001_R1_001.fastq backup/\ncp 1-P1_ATGCCTGG_L001_R2_001.fastq backup/\ncp 2-P2_AAGGACAC_L001_R1_001.fastq backup/\ncp 2-P2_AAGGACAC_L001_R2_001.fastq backup/\ncp 3-P3_CACTTCGA_L001_R1_001.fastq backup/\ncp 3-P3_CACTTCGA_L001_R2_001.fastq backup/\ncp 4-E1_ATTGGCTC_L001_R1_001.fastq backup/\ncp 4-E1_ATTGGCTC_L001_R2_001.fastq backup/\ncp metadata.txt backup/\n\nThis can be done a lot quicker with the use of wildcard characters (Covered in Advanced Linux section)\n\nmkdir backup\ncp *fastq backup\ncp *txt backup\n\n\nHow many reads are in the samples? The below command will give the number of lines in the files, this number can then be divided by 4 (mentally or using a calculator). These values will be the same for the R2 files as they are for the matching R1 file.\n\n\nwc -l 1-P1_ATGCCTGG_L001_R1_001.fastq \\\n2-P2_AAGGACAC_L001_R1_001.fastq \\\n3-P3_CACTTCGA_L001_R1_001.fastq\n\nAn advanced method using regular expressions, wildcard characters and grep\n\ngrep -c \"^@[0-9]*_\" *R1*.fastq\n\n\nRemove the fastq files with no data Check which files have no data\n\n\nwc \\\n1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \\\n2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \\\n3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq \\\n4-E1_ATTGGCTC_L001_R1_001.fastq 4-E1_ATTGGCTC_L001_R2_001.fastq \n\nRemove empty files\n\nrm \\\n4-E1_ATTGGCTC_L001_R1_001.fastq 4-E1_ATTGGCTC_L001_R2_001.fastq\n\n\nUpdate the backup files with the previous change\n\n\nrm backup/4-E1_ATTGGCTC_L001_R1_001.fastq \\\nbackup/4-E1_ATTGGCTC_L001_R2_001.fastq \n\n\nCheck if the 1st read names match in the paired files\n\n\nhead -n 1 \\\n1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \\\n2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \\\n3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq \n\n\nCheck if the last read names match in the paired files\n\n\ntail -n 4 \\\n1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \\\n2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \\\n3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq \n\n\nIn file 1-P1_ATGCCTGG_L001_R1_001.fastq look for sequence headers with the term ‘psychrobacter’\n\n\ngrep “psychrobacter” 1-P1_ATGCCTGG_L001_R1_001.fastq\n\n\nIn the sample 1-P1 remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 file.\n\nUsing nano use “Ctrl+W” to search for psychrobacter. Then use “Ctrl+K” to cut the lines followed by “Ctrl+W” and “Ctrl+X” to save and exit.\nUsing vim with “/” to search for psychrobacter, “dd” to delete lines and “:wq” to save the file and exit it.\n\nPrint to screen the fastq header, sequence and quality data for the 25th sequence in sample 2-P2 for both the R1 and R2 file. Do this with one command. @24_ecoli is grepped as the first sequence is @0_ecoli\n\n\ngrep -A 3 \"@24_ecoli\" 2-P2_AAGGACAC_L001_R1_001.fastq\ngrep -A 3 \"@24_ecoli\" 2-P2_AAGGACAC_L001_R2_001.fastq"
+  },
+  {
+    "objectID": "16-Answers_advanced.html",
+    "href": "16-Answers_advanced.html",
+    "title": "Advanced exercise",
+    "section": "",
+    "text": "Copy the directory ~/Linux/advanced_practice to ~/Linux/advanced_practice_exercise\n\n\ncp -r ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise\n\n\nMove into ~/Linux/advanced_practice_exercise\n\n\ncd ~/Linux/advanced_practice_exercise\n\n\nMake a directory called fastq and one called txt\n\n\nmkdir fastq txt\n\n\nWith one command move all the fastq files into the directory fastq\n\n\nmv *.fastq fastq/\n\n\nWith one command move all the txt files, excluding metadata.txt and samples.txt, into the directory txt.\n\n\nmv sample_*txt txt/\n\n\nCreate a file in the fastq directory called patient_1_corrected.fastq and put all the corrected fastq data for patient_1 into the file.\n\n\ncat fastq/sample_[1-2]_*corrected.fastq &gt; \\\nfastq/patient_1_corrected.fastq\n\n\nAppend the metadata line for sample_1_AAAA from metadata.txt to the bottom of the file sample_1_AAA.txt in the txt directory.\n\n\ncat metadata.txt | grep \"sample_1_AAAA\" &gt;&gt; txt/sample_1_AAAA.txt\n\n\nFor all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (i.e. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)\n\n\ngrep \"^TA[AG]\\|^TGA\" fastq/*corrected.fastq | \\\nsed \"s/.*sample/sample/\" | sed \"s/_corrected.fastq//\"\n\n\nCount the number of Gs and Cs within the sequences of file sample_16_AACC.fastq\n\n\ncat fastq/sample_16_AACC.fastq | grep -B 1 \"^+$\" | \\\ngrep -v \"+\\|--\" | sed \"s/A\\|T//g\" | wc -c\n\n\nGet the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 8-13 with one command. Then in the same command make the final output of each line in the format of “Sample_13: Sequence 12”\n\n\ncat fastq/*[3-5]*[AGCT].fastq | grep -B 2 \"^+$\" | \\\ngrep -B 1 \"AAAAA\" | grep \"^@\" | sed \"s/^@s/S/\" | \\\nsed \"s/_[AGCT]*_/: Sequence /\" | sed \"s/ 1:$//\""
   }
 ]

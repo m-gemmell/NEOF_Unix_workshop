@@ -55,5 +55,26 @@
   },
   "15-Appendix.qmd": {
     "15-Appendix.html": "d0df5062"
+  },
+  "a1-cheat_sheet.qmd": {
+    "a1-cheat_sheet.html": "8505e15c"
+  },
+  "a2-on_your_pc.qmd": {
+    "a2-on_your_pc.html": "0ab73f2f"
+  },
+  "a3-mamba.qmd": {
+    "a3-mamba.html": "ec066452"
+  },
+  "a4-vim.qmd": {
+    "a4-vim.html": "c37d9b77"
+  },
+  "14-Answers_1.qmd": {
+    "14-Answers_1.html": "14e875ec"
+  },
+  "15-Answers_2.qmd": {
+    "15-Answers_2.html": "77f148eb"
+  },
+  "16-Answers_advanced.qmd": {
+    "16-Answers_advanced.html": "2e7f6dcc"
   }
 }
