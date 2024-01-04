@@ -1,0 +1,230 @@
+---
+title: "Introduction to command line bioinformatics"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Upcoming workshops
+
+<https://neof.org.uk/training/>
+
+::: columns
+::: {.column width="60%"}
+-   Introduction to sequencing QC
+
+    -   7th & 9th November 2023
+
+    -   Register by 23 Oct 2023
+
+-   R Primer for omics
+
+    -   21st & 23rd November 2023
+
+-   Python for bioinformatics
+
+    -   12th & 14th December 2023
+
+-   More!
+:::
+
+::: {.column width="40%"}
+<center>![](./figures/workshop.png){width="100%"}</center>
+:::
+:::
+
+## Format & Schedule
+
+::: columns
+::: {.column width="35%"}
+This intro
+
+Bookdown
+
+Theory
+
+Practice
+
+MCQs
+
+Exercises
+
+Optional materials
+:::
+
+::: {.column width="35%"}
+Work at your own pace
+
+We are here to help
+
+Time with breaks in between
+
+-   10:00-11:20
+
+-   11:30-12:30
+
+-   13:30-14:50
+
+-   15:00-16:00
+:::
+
+::: {.column width="30%"}
+<center>![](./figures/clock_antique.png){width="100%"}</center>
+:::
+:::
+
+## Plan
+
+::: columns
+::: {.column width="60%"}
+Linux, command line, and VNC
+
+Files and Directories
+
+Tips and tricks
+
+Directory manipulation
+
+File manipulation
+
+fastq file format
+
+Advanced Linux
+
+Other bioinformatic languages
+:::
+
+::: {.column width="40%"}
+<center>![](./figures/map.png){width="100%"}</center>
+:::
+:::
+
+## Linux
+
+::: columns
+::: {.column width="60%"}
+Operating system
+
+Free
+
+Open source
+
+Multitasking
+
+Multiuser
+
+Bioinformatic programmes
+
+Relatively easy to run and develop software
+:::
+
+::: {.column width="40%"}
+<center>![](./figures/linux_beginner.png){width="100%"}</center>
+:::
+:::
+
+## Applications
+
+::: columns
+::: {.column width="60%"}
+Our Future Workshops
+
+Bioinformatics requires:
+
+-   Storage
+
+-   RAM
+
+-   Cores
+
+Not available on laptops/desktops
+
+HPCs which utilise unix
+
+\>99% of bfx programs work in unix
+:::
+
+::: {.column width="40%"}
+<center>![](./figures/computer_group.png){width="100%"}</center>
+:::
+:::
+
+## User to kernel
+
+<center>![](./figures/linux_user_to_kernel.png){width="90%"}</center>
+
+## VNC: Virtual Network Computing
+
+<center>![](./figures/logon_pic.png){width="90%"}</center>
+
+## Terminal window
+
+::: columns
+::: {.column width="40%"}
+Login name
+
+Machine name
+
+Current directory path
+
+Command line
+:::
+
+::: {.column width="60%"}
+<center>![](./figures/webvnc_terminal.png){width="100%"}</center>
+:::
+:::
+
+## Directories and files
+
+::: columns
+::: {.column width="35%"}
+cd
+
+pwd
+
+cp
+
+Directory structure
+
+Paths
+
+ls
+:::
+
+::: {.column width="20%"}
+<center>![](./figures/directory.png){width="100%"}</center>
+
+<center>![](./figures/paths.png){width="100%"}</center>
+:::
+
+::: {.column width="45%"}
+<center>![](./figures/linux_tree_structure.png){width="100%"}</center>
+
+<center>![](./figures/List.png){width="50%"}</center>
+:::
+:::
+
+## Directories/folders and files
+
+::: columns
+::: {.column width="60%"}
+-   File storage Building
+
+    -   **/** (aka root)
+
+    -   Note: Every other **/** is a divider
+
+-   Rooms
+
+    -   **/room_a**
+
+    -   **/room_b**
+
+    -   **/room_c,** etc.
+:::
+
+::: {.column width="40%"}
+<center>![](./figures/rooms.png){width="100%"}</center>
+:::
+:::

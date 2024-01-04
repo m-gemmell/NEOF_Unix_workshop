@@ -1,0 +1,86 @@
+project:
+  type: book
+
+book:
+  title: Intro to Linux
+  author: Matthew R. Gemmell
+  date: 29 Nov 2023
+  favicon: figures/NEOF_favicon.png
+  description: NEOF book for the Introduction to command line bioinformatics workshop
+  sidebar:
+    logo: figures/neof_small_logo.png
+    logo-href: "https://neof.org.uk/"
+    collapse-level: 4
+
+  chapters:
+  - part: Start
+    chapters:
+    - index.qmd
+  - part: Part 1
+    chapters:
+    - 01-Linux_Introduction.qmd
+    - 02-Starting.qmd
+    - 03-Directories_and_Files.qmd
+    - 04-Tips_and_tricks.qmd
+    - 05-Manipulating_directories.qmd
+    - 06-Exercise1.qmd
+  - part: Part 2
+    chapters:
+    - 07-File_reading_and_processing.qmd
+    - 08-Recap.qmd
+    - 09-Fastq.qmd
+    - 10-Exercise2.qmd
+  - part: Advanced topics
+    chapters:
+    - 11-Advanced_linux_practice.qmd
+    - 12-Advanced_practice_exercise.qmd
+    - 13-Bioinformatica_languages.qmd
+  - part: Answers
+    chapters:
+    - 14-Answers_1.qmd
+    - 15-Answers_2.qmd
+    - 16-Answers_advanced.qmd
+  appendices:
+    - a1-cheat_sheet.qmd
+    - a2-on_your_pc.qmd
+    - a3-mamba.qmd
+    - a4-vim.qmd
+
+bibliography: references.bib
+
+
+knitr:
+#Change colour, border, and text of code chunks
+#Check style.css for .Rchunk
+#https://stackoverflow.com/questions/65627531/change-r-chunk-background-color-in-bookdown-gitbook
+#https://bookdown.org/yihui/rmarkdown-cookbook/chunk-styling.html
+#quarto knitr options
+#https://quarto.org/docs/computations/execution-options.html#knitr-options
+  opts_chunk:
+    class.source: "Rchunk"
+
+format:
+  html:
+    top-level-division: section
+    numbersections : true
+    toc: true
+    toc-location: left
+    toc-title: In this chapter
+    #Page layout
+    page-layout: full
+    grid:
+      sidebar-width: 300px
+      body-width: 1000px
+      margin-width: 200px
+      gutter-width: 1.5em
+    #HTML themes: https://quarto.org/docs/output-formats/html-themes.html
+    theme: 
+      light: [cosmo, style.scss, style_light.scss, include/webex_light.scss]
+      dark: [darkly, style.scss, style_dark.scss, include/webex_dark.scss]
+    css:
+    - include/webex.css
+    mainfont: Lexend
+    monofont: Fira Mono
+    include-after-body: include/webex.js
+  pdf:
+    documentclass: scrreprt

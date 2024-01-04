@@ -1,0 +1,136 @@
+# (APPENDIX) Appendix {.unnumbered}
+
+# Practical cheat sheet {#cheatsheet}
+
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/cheatsheet.png", auto_pdf = TRUE)
+```
+
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| **Command** | **Description**                                  | **Usage example**                                          |
++=============+==================================================+============================================================+
+| echo        | Print out a string to screen                     | Echo 'Hello World'                                         |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| man         | Look at the manual page of a command             | man man                                                    |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| clear       | Clear the screen                                 | clear                                                      |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| \<tab\>     | Complete a path or command                       | \<tab\>                                                    |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| cd          | Change directory                                 | cd /directory/path/                                        |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| pwd         | Print Working Directory                          | pwd                                                        |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| ls          | List the contents of a directory                 | ls /directory/path/                                        |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| mkdir       | Make a directory                                 | mkdir /directory/path/new_directory/                       |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| cp          | Copy content to another path                     | cp /directory/path/file.txt /directory/path/new_directory/ |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| mv          | Move content to a new path                       | mv /directory/path/file.txt /directory/path/new_directory/ |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| rm          | Delete content                                   | rm /directory/path/file.txt                                |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| cat         | Print contents of a file to screen               | cat /directory/path/file.txt                               |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| head        | Print out the first n lines of a file to screen  | head -n 10 /directory/path/file.txt                        |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| tail        | Print the last n lines of a file to screen       | tail -n 12 /directory/path/file.txt                        |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| less        | Read a file one page at a time                   | less /directory/path/file.txt                              |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| wc          | Print out line, word and byte count              | wc /directory/path/file.txt                                |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| grep        | Search for lines that contain a specific pattern | grep "pattern" /directory/path/file.txt                    |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| vim         | Text editor                                      | vim /directory/path/file.txt                               |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+
+# Windows terminals
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/windows.png", auto_pdf = TRUE)
+```
+
+If you are on a windows you may need to download a terminal program to `ssh` to a linux cluster. Thankfully Macs come with an in built terminal. Below are a few suggestions of windows terminals:
+
+- [MobaXterm](https://mobaxterm.mobatek.net/)
+- [Putty](https://www.putty.org/)
+- [Ubuntu on Windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab)
+
+# `ssh`
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/turtle_shell.png", auto_pdf = TRUE)
+```
+
+The `ssh` (Secure Shell Protocol) command is used to login into cluster and other machines. For more information on this please see the following online tutorial: https://opensource.com/article/20/9/ssh
+
+# File transferring
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/file_transfer.png", auto_pdf = TRUE)
+```
+
+When working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.
+
+For transferring on windows machine I would suggest [WinSCP](https://winscp.net/eng/index.php).
+
+For transferring on Macs I would suggest [FileZIlla](https://filezilla-project.org/)
+
+# Mamba
+
+```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
+knitr::include_graphics(path = "figures/mamba_logo.png", auto_pdf = TRUE)
+```
+
+## Mamba installation {#mamba_install}
+
+Once you start using bioinformatic tools you will notice that a lot of installing is required. I would highly suggest using Mamba for this purpose.
+
+Mamba is a reimplementation of conda. It is a great tool for installing bioinformatic packages including R packages.
+
+Mamba github: <https://github.com/mamba-org/mamba>
+
+The best way to use Mamba is to install Miniforge. It has both Conda and Mamba commands.
+
+Miniforge installation: <https://github.com/conda-forge/miniforge>
+
+Mamba guide: <https://mamba.readthedocs.io/en/latest/user_guide/mamba.html>
+
+# vim {#vim}
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/Vimlogo.png", auto_pdf = TRUE)
+``` 
+To enter the `vim` text editor you can use the command `vim`. The command is: `vim file.txt`. 
+
+`vim` can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.
+
+Once you are in the `vim` editor there are two main modes:
+
+1. __Command mode__: This is the starting mode of `vim`. It can be used to enter commands but not for typing.
+2. __Insert mode__: This mode can be used to insert characters into the text. Pasting only works properly in insert mode. You will know you are in insert mode as at the bottom of the screen will be __“-- INSERT --”__.
+    1. To __enter__ insert mode press __i__
+    2. To __escape__ Insert mode press __esc__
+
+Below are a subset of commands you can use in the command mode of vim.
+
+- __:q__ - Quit vim. Will fail if there are any unsaved changes
+- __:w__ - Save the file
+- __:wq__ - Save and quit
+- __:x__ - Save and quit
+- __:q!__ - Quit and throw away unsaved changes
+- __:saveas file__ - Save file as. File name can be changed
+- __:w file__ - Save file as. File name can be changed
+- __arrow keys__ - Navigate the text. (works in insert mode too)
+- __^__ - Jump to the start of a line
+- __$__ - Jump to the end of a line
+- __/pattern__ - Search for pattern
+- __n__ - Repeat search in same direction
+- __N__ - Repeat search in reverse direction
+- __dd__ - Delete the current line
+- __i__ - Enter insert mode
+- __1G__ - Go to the first line in the file. Number can be changed 
+- __G__ - Go to the last line of the file
+
+[__Vim cheatsheet__](https://vim.rtorr.com/)
