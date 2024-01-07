@@ -4,8 +4,9 @@ format:
   revealjs:
     logo: "./figures/linux_beginner.png"
     highlight-style: github
-    slide-number: c/t
-    theme: [default, style.scss]
+    slide-number: true
+    theme: 
+      - style.scss
 
 
 

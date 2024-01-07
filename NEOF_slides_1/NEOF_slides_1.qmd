@@ -1,11 +1,12 @@
----
-title: "Introduction to command line bioinformatics"
-editor: 
-  markdown: 
-    wrap: 72
----
+##  {background-color="black" background-image="https://neof.org.uk/wp-content/uploads/2020/09/Tech_background-e1600357444630.jpg"}
+
+[Introduction to command line bioinformatics]{.title-slide-text}
+
+<center>![](/figures/linux_beginner.png){width="40%"}</center>
 
 ## Upcoming workshops
+
+<hr>
 
 <https://neof.org.uk/training/>
 
@@ -34,6 +35,8 @@ editor:
 :::
 
 ## Format & Schedule
+
+<hr>
 
 ::: columns
 ::: {.column width="35%"}
@@ -75,6 +78,8 @@ Time with breaks in between
 
 ## Plan
 
+<hr>
+
 ::: columns
 ::: {.column width="60%"}
 Linux, command line, and VNC
@@ -101,6 +106,8 @@ Other bioinformatic languages
 
 ## Linux
 
+<hr>
+
 ::: columns
 ::: {.column width="60%"}
 Operating system
@@ -124,6 +131,8 @@ Relatively easy to run and develop software
 :::
 
 ## Applications
+
+<hr>
 
 ::: columns
 ::: {.column width="60%"}
@@ -151,13 +160,19 @@ HPCs which utilise unix
 
 ## User to kernel
 
+<hr>
+
 <center>![](./figures/linux_user_to_kernel.png){width="90%"}</center>
 
 ## VNC: Virtual Network Computing
 
+<hr>
+
 <center>![](./figures/logon_pic.png){width="90%"}</center>
 
 ## Terminal window
+
+<hr>
 
 ::: columns
 ::: {.column width="40%"}
@@ -176,6 +191,8 @@ Command line
 :::
 
 ## Directories and files
+
+<hr>
 
 ::: columns
 ::: {.column width="35%"}
@@ -206,6 +223,8 @@ ls
 :::
 
 ## Directories/folders and files
+
+<hr>
 
 ::: columns
 ::: {.column width="60%"}
