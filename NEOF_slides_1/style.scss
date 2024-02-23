@@ -36,7 +36,7 @@ hr {
   border:0px;
   height:10px;
   border-radius: 5px;
-  background-image: url("/figures/NEOF_bg_180_degrees.jpg");
+  background-image: url("./figures/NEOF_bg_180_degrees.jpg");
 }
 
 // slide title (large)
@@ -50,7 +50,7 @@ hr {
 // Header 2 i.e. the slide headers
 h2 {
   font-family: $font-family-serif;
-  background-image: url("/figures/NEOF_bg_180_degrees.jpg");
+  background-image: url("./figures/NEOF_bg_180_degrees.jpg");
   background-repeat: repeat; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   margin-top: 200px; 
   font-size: 60px; 
