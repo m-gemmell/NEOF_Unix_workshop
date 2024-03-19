@@ -1,7 +1,8 @@
 # Fastq format
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/files.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/files.png){style="width:200px"}
+</center>
+
 The next exercise will focus on a set of files including fastq files.
 
 - Fastq files are very commonly used in bioinformatics.

@@ -1,10 +1,9 @@
 # (PART\*) Part 1 {.unnumbered}
 
 # Linux {#linuxintro}
-
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/linux_beginner.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/linux_beginner.png){style="width:200px"}
+</center>
 
 Linux is a multitasking, multiuser Unix-like computer operating system (OS). Linux can run many different applications (multitasking) and it can be used by many different people (multiuser) on the same computer at the same time.
 
@@ -16,9 +15,9 @@ There are three parts of the Linux OS:
 -   **The shell**: This acts as the interface between the user and the kernel. When a user runs commands, the shell will interpret these commands for the kernel. The shell can be any program that constitutes the user interface e.g. command line, internet browser, start menu etc.
 -   **Programs**: Programs allow the OS to perform specific tasks. Examples of programs include Internet browsers, genome assembly tools, text editors etc.
 
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/linux_user_to_kernel.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/linux_user_to_kernel.png){style="width:800px"}
+</center>
 
 It is important to learn the Linux language so you can run commands on the command line. This is because:
 

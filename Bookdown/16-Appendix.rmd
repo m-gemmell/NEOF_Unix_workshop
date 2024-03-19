@@ -2,9 +2,9 @@
 
 # Practical cheat sheet {#cheatsheet}
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/cheatsheet.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/cheatsheet.png){style="width:200px; border-radius:5px; border:3px solid #333333; background:white"}
+</center>
 
 +-------------+--------------------------------------------------+------------------------------------------------------------+
 | **Command** | **Description**                                  | **Usage example**                                          |
@@ -47,10 +47,9 @@ knitr::include_graphics(path = "figures/cheatsheet.png", auto_pdf = TRUE)
 +-------------+--------------------------------------------------+------------------------------------------------------------+
 
 # Windows terminals
-
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/windows.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/windows.png){style="width:200px"}
+</center>
 
 If you are on a windows you may need to download a terminal program to `ssh` to a linux cluster. Thankfully Macs come with an in built terminal. Below are a few suggestions of windows terminals:
 
@@ -60,17 +59,16 @@ If you are on a windows you may need to download a terminal program to `ssh` to 
 
 # `ssh`
 
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/turtle_shell.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/turtle_shell.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 The `ssh` (Secure Shell Protocol) command is used to login into cluster and other machines. For more information on this please see the following online tutorial: https://opensource.com/article/20/9/ssh
 
 # File transferring
-
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/file_transfer.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/file_transfer.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 When working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.
 
@@ -79,10 +77,9 @@ For transferring on windows machine I would suggest [WinSCP](https://winscp.net/
 For transferring on Macs I would suggest [FileZIlla](https://filezilla-project.org/)
 
 # Mamba
-
-```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
-knitr::include_graphics(path = "figures/mamba_logo.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/mamba_logo.png){style="width:250px; border-radius:15px; border:5px solid #333333"}
+</center>
 
 ## Mamba installation {#mamba_install}
 
@@ -99,9 +96,10 @@ Miniforge installation: <https://github.com/conda-forge/miniforge>
 Mamba guide: <https://mamba.readthedocs.io/en/latest/user_guide/mamba.html>
 
 # vim {#vim}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/Vimlogo.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/Vimlogo.png){style="width:200px"}
+</center>
+
 To enter the `vim` text editor you can use the command `vim`. The command is: `vim file.txt`. 
 
 `vim` can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.

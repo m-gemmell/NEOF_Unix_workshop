@@ -1,9 +1,10 @@
 # (PART\*) Part 2 {-}
 
 # File reading and processing {#filereadingandprocessing}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/files.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/files.png){style="width:200px"}
+</center>
+
 There are many ways to show the contents of a file. Below are a few examples. 
 
 The files for the examples are within the directory:  __"/pub14/tea/nsc2xx/Linux/5_reading_files/"__ __(replace xxx with your user number)__.
@@ -16,9 +17,10 @@ frameborder="0" allowfullscreen class="video"></iframe>
 `r unhide()`
 
 ## Print out a file
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/cat.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/cat.png){style="width:200px"}
+</center>
+
 The `cat` command will print out the entire contents of a file to the screen. This is useful for small text files and pipelines (pipelines are not covered here).
 Example commands are below (remember to replace xxx with your user name number):
 
@@ -41,9 +43,10 @@ cat /pub14/tea/nsc2xx/Linux/5_reading_files/ecoli.gbk
 __Remember__: The `clear` command.
 
 ## head and tail
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/head_and_tails.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/head_and_tails.png){style="width:300px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 The `head` command will print out to screen the top n lines of a file.
 
 The `tail` command will print out to screen the bottom n lines of a file.
@@ -103,9 +106,10 @@ tail -n -2 ecoli.gbk
 ``` 
 
 ## File viewing with less
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/less.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/less.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 The `less` command will display a file’s contents one page at a time. Various keys on the keyboard will allow you to navigate the contents of the files. The below actions will occur identically with the man command.
 
 - __q__ : Exit
@@ -129,9 +133,10 @@ man less
 ``` 
 
 ## Word count
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/wc.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/wc.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 The `wc` command will allow allow you to word count files. It will display line, word and byte counts for files in that order.
 
 Use `wc` to see the line, word and byte count of the __"short_file.txt"__ and __"ecoli.gbk"__ files. As you can see you can carry this out on multiple files at once.
@@ -150,9 +155,10 @@ wc -l ecoli.gbk
 ``` 
 
 ## Pattern searching
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/pattern.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/pattern.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 The `grep` command will search for a pattern in a text file and output all the lines containing the pattern.
 
 Print out the lines from __"Scientist.txt"__ that have the number 18 in them. In this particular example it prints out all scientists which were born in the 1800s. This will not always be the case depending on the data in the file.
@@ -177,9 +183,10 @@ grep Scientist.txt
 The above command will be stuck as `grep` does not know what it is looking for. To cancel the command use __‘Ctrl’ + ‘c’__
 
 ## Text editor
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/text_editor.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/text_editor.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 Three of the most popular text editors are __vim__, __gedit__ and __nano__. Below are quick introductions to __nano__ and __vim__. 
 
 __nano__ is the easiest to learn but is quite limiting. __vim__ and __gedit__ are quite similar in power with different people preferring one or the other. 
@@ -187,9 +194,10 @@ __nano__ is the easiest to learn but is quite limiting. __vim__ and __gedit__ ar
 The below will teach you __nano__. If you are interested in learning __vim__ in the future you can find a quick guide in the [appendix](#vim).
 
 ### nano
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/1200px-Gnu-nano.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/1200px-Gnu-nano.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 To enter the `nano` text editor you can use the command `nano`. The command is: `nano file.txt`. 
 
 `nano` can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.
@@ -207,7 +215,7 @@ Below are some important examples:
 - __Ctrl+O__ - Save file as
 - __Ctrl+A__ - Jump to the start of a line
 - __Ctrl+E__ - Jump to the end of a line
-- __Ctrl+W__ - Start search (Where is) __Note__ This unfortunately is also the shortcut to close a tab in internet browsers. Therefore this can't be used with our webVNC.
+- __Ctrl+W__ - Start search (Where is) __Note__ This unfortunately is also the shortcut to close a tab in internet browsers. Therefore this can't be used within our webVNC.
 - __Alt+W__ - Continue search forward (find next occurrence forward)
 - __Alt+Q__ - Find next occurrence backward
 - __Alt+K__ - Cut current line
@@ -224,9 +232,9 @@ Using a text editor (__nano__ or __vim__) add an entry for Scientist Mae Jemison
 Using your text editor of choice delete all the scientists born before 1000 in the __"Scientist.txt"__ file and save this as __"Scientist_post_1000.txt"__.
 
 ## MCQs: File reading and processing
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_purple.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble_purple.png){style="width:200px"}
+</center>
 
 Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 

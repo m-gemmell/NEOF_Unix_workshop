@@ -1,8 +1,7 @@
 # Starting
-
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/start.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/start.png){style="width:200px"}
+</center>
 
 ## Logon instructions {#cluster}
 
@@ -10,9 +9,9 @@ For this workshop we will be using Virtual Network Computing (VNC). Connect to t
 
 You will now be in a logged-in Linux VNC desktop with two terminals. You will see something as below (there may be only one terminal which is fine). If you do not see something similar please ask for assistance.
 
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/logon_pic.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/logon_pic.png){style="width:800px"}
+</center>
 
 If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
 
@@ -25,9 +24,9 @@ https://linuxmint-installation-guide.readthedocs.io/en/latest/
 
 In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.
 
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/terminal_window.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/terminal_window.png){style="width:800px"}
+</center>
 
 Already there is useful information for us on the terminal window.
 
@@ -42,9 +41,9 @@ To open a new terminal window, right click on the main screen, choose `Applicati
 
 Commands are typed into the terminal and then run by pressing **"enter"**"
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/enter_symbol.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/enter_symbol.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 To run a command select your terminal by clicking on it or using **"alt+shift"**.
 

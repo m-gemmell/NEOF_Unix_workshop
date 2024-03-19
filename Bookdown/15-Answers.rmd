@@ -1,9 +1,9 @@
 # (PART\*) Answers {-}
 
 # Exercise 1 {-#exercise1_answers}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/exercise.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/exercise.png){style="width:200px"}
+</center>
 
 Ensure you are in the correct directory before carrying out the below commands
 ```{bash eval=FALSE}
@@ -52,9 +52,9 @@ rm copy_this_file.txt
 ```
 
 # Exercise 2 {-#exercise2_answers}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/exercise_2.png){style="width:200px"}
+</center>
 
 Ensure you are in the correct directory before carrying out the below commands
 ```{bash eval=FALSE}
@@ -148,9 +148,10 @@ grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R2_001.fastq
 ```
 
 # Advanced exercise {-#exerciseadv_answers}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/adv_exercise.png){style="width:200px"}
+</center>
+
 1. Copy the directory ~/Linux/advanced_practice to ~/Linux/advanced_practice_exercise
 ```{bash eval=FALSE}
 cp -r ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise

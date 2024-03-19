@@ -32,15 +32,11 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/NEOF.png", auto_pdf = TRUE)
-```
+<center>![](figures/NEOF.png){style="width:300px; border-radius:15px; border:5px solid #333333; background:null"}</center>
 
 # Introduction {#intro}
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/linux_beginner.png", auto_pdf = TRUE)
-```
+<center>![](figures/linux_beginner.png){style="width:200px"}</center>
 
 Bioinformatics is an increasingly important skill for biological scientists. Many bioinformatic tools can only be run on Linux based operating systems. This course aims to introduce you to Linux and is aimed at beginners and novices to the command line.
 
@@ -48,51 +44,62 @@ Sessions will start with a brief presentation followed by self-paced computer pr
 
 At the end of the course learners will be able to:
 
-- Explain how the user, shell, and kernel interact with each other in the Linux OS.
-- Navigate & manipulate directories in the Linux environment.
-- List and view the contents of directories.
-- Carry out a variety of commands with files including printing them to terminal.
-- Utilise the text editor nano to create, edit, and save files.
-- Understand the structure of fastq files.
+-   Explain how the user, shell, and kernel interact with each other in the Linux OS.
+-   Navigate & manipulate directories in the Linux environment.
+-   List and view the contents of directories.
+-   Carry out a variety of commands with files including printing them to terminal.
+-   Utilise the text editor nano to create, edit, and save files.
+-   Understand the structure of fastq files.
 
 There are additional materials in chapters 12-14 which include some advanced Linux commands and introductions to other programming languages used by bioinformaticians.
 
-Commands are in the following font, colour, and box. 
-They should be run in the command line.
+Commands are in the following font, colour, and box. They should be run in the command line.
 
 ```{bash eval=FALSE}
 echo "This is a command example" 
 ```
 
-In some chapters there are video walk-throughs. 
-These are optional and give you a guided visual walk-through of running the practice code in the chapter.
-These are found in an expandable box at the start of the chapters 4,5,6, and 8.
+In some chapters there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the chapter. These are found in an expandable box at the start of the chapters 4,5,6, and 8.
 
 Additionally, please use the [cheatsheet](#cheatsheet) as a reminder of all the commands you will be learning.
 
-## Table of contents {-}
+## Table of contents {.unnumbered}
 
-+:-------------------------------------------------------------------:+:----------------------------------------------------------------:+
-| [**What is Linux?**](#linuxintro)                                   | [**Logging in to our teaching VNC**](#cluster)                   |
-|                                                                     |                                                                  |
-| [![](figures/linux_beginner.png){width="142"}](#linuxintro)         | [![](figures/start.png){width="189"}](#cluster)                  |
-+---------------------------------------------------------------------+------------------------------------------------------------------+
-| [**Directories and files**](#dirsandfiles)                          | [**Tips and tricks**](#tipsandtricks)                            |
-|                                                                     |                                                                  |
-| [![](figures/directory.png){width="125"}](#dirsandfiles)            | [![](figures/skateboard_trick.png){width="302"}](#tipsandtricks) |
-+---------------------------------------------------------------------+------------------------------------------------------------------+
-| [**Manipulating Directories**](#manipulatingdirectories)            | [**File reading and processing**](#filereadingandprocessing)     |
-|                                                                     |                                                                  |
-| [![](figures/transform.png){width="150"}](#manipulatingdirectories) | [![](figures/files.png){width="205"}](#filereadingandprocessing) |
-+---------------------------------------------------------------------+------------------------------------------------------------------+
-| [**Advanced Linux**](#advancedlinux)                                | [**Other Bioinformatics programming languages**](#bfxlanguages)  |
-|                                                                     |                                                                  |
-| [![](figures/linux_intermdiary.png){width="142"}](#advancedlinux)   | [![](figures/languages.png){width="159"}](#bfxlanguages)         |
-+---------------------------------------------------------------------+------------------------------------------------------------------+
-| [**Appendix**](#cheatsheet)                                         |                                                                  |
-|                                                                     |                                                                  |
-| [![](figures/cheatsheet.png){width="150"}](#cheatsheet)             |                                                                  |
-+---------------------------------------------------------------------+------------------------------------------------------------------+
+```{r, echo=FALSE, align="centre"}
+#Create 2 coilumn dataframe
+column_1 <- c(
+ '[**What is Linux?**](#linuxintro)', 
+ '[![](figures/linux_beginner.png){height="150"}](#linuxintro)',
+ '[**Directories and files**](#dirsandfiles)',
+ '[![](figures/directory.png){height="150"}](#dirsandfiles)',
+ '[**Manipulating Directories**](#manipulatingdirectories)',
+ '[![](figures/transform.png){height="150"}](#manipulatingdirectories)',
+ '[**Advanced Linux**](#advancedlinux)',
+ '[![](figures/linux_intermdiary.png){height="150"}](#advancedlinux)',
+ '[**Appendix**](#cheatsheet)',
+ '[![](figures/cheatsheet.png){height="150"}](#cheatsheet)'
+)
+column_2 <- c(
+  '[**Logging in to our teaching VNC**](#cluster)',
+ '[![](figures/start.png){height="150"}](#cluster)',
+ '[**Tips and tricks**](#tipsandtricks)',
+ '[![](figures/skateboard_trick.png){height="150"}](#tipsandtricks)',
+ '[**File reading and processing**](#filereadingandprocessing)',
+ '[![](figures/files.png){height="150"}](#filereadingandprocessing)',
+ '[**Other Bioinformatics programming languages**](#bfxlanguages)',
+ '[![](figures/languages.png){height="150"}](#bfxlanguages)',
+ "",""
+)
+table_df <- data.frame(column_1, column_2)
+#Kable and kableextra libraries
+library(knitr)
+library(kableExtra)
+#Create table
+#ALign both column in centre (align = "cc")
+table_df %>%
+  kbl(align= "cc", col.names = NULL) %>%
+  kable_styling(position = "center")
+```
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
@@ -104,10 +111,9 @@ library(webexercises)
 # (PART\*) Part 1 {.unnumbered}
 
 # Linux {#linuxintro}
-
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/linux_beginner.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/linux_beginner.png){style="width:200px"}
+</center>
 
 Linux is a multitasking, multiuser Unix-like computer operating system (OS). Linux can run many different applications (multitasking) and it can be used by many different people (multiuser) on the same computer at the same time.
 
@@ -119,9 +125,9 @@ There are three parts of the Linux OS:
 -   **The shell**: This acts as the interface between the user and the kernel. When a user runs commands, the shell will interpret these commands for the kernel. The shell can be any program that constitutes the user interface e.g. command line, internet browser, start menu etc.
 -   **Programs**: Programs allow the OS to perform specific tasks. Examples of programs include Internet browsers, genome assembly tools, text editors etc.
 
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/linux_user_to_kernel.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/linux_user_to_kernel.png){style="width:800px"}
+</center>
 
 It is important to learn the Linux language so you can run commands on the command line. This is because:
 
@@ -135,10 +141,9 @@ It is important to learn the Linux language so you can run commands on the comma
 library(webexercises)
 ```
 # Starting
-
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/start.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/start.png){style="width:200px"}
+</center>
 
 ## Logon instructions {#cluster}
 
@@ -146,9 +151,9 @@ For this workshop we will be using Virtual Network Computing (VNC). Connect to t
 
 You will now be in a logged-in Linux VNC desktop with two terminals. You will see something as below (there may be only one terminal which is fine). If you do not see something similar please ask for assistance.
 
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/logon_pic.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/logon_pic.png){style="width:800px"}
+</center>
 
 If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
 
@@ -161,9 +166,9 @@ https://linuxmint-installation-guide.readthedocs.io/en/latest/
 
 In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.
 
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/terminal_window.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/terminal_window.png){style="width:800px"}
+</center>
 
 Already there is useful information for us on the terminal window.
 
@@ -178,9 +183,9 @@ To open a new terminal window, right click on the main screen, choose `Applicati
 
 Commands are typed into the terminal and then run by pressing **"enter"**"
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/enter_symbol.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/enter_symbol.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 To run a command select your terminal by clicking on it or using **"alt+shift"**.
 
@@ -228,9 +233,9 @@ man man
 library(webexercises)
 ```
 # Directories and Files {#dirsandfiles}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/directory.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/directory.png){style="width:200px"}
+</center>
 
 `r hide("Chapter 4 video walk-through")`
 <div class="container">
@@ -311,9 +316,9 @@ This starts as the root (**"/"**) which branches out into directories and files.
 
 Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as a tree. This only includes a subset of directories.
 
-```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
-knitr::include_graphics(path = "figures/linux_tree_structure.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/linux_tree_structure.png){style="width:1000px; border-radius:15px; border:5px solid #333333; background:null"}
+</center>
 
 ### Boxes
 
@@ -321,15 +326,14 @@ Another analogy to the directory structure is boxes and items. In this case ther
 
 Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as boxes. This only includes a subset of directories.
 
-```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
-knitr::include_graphics(path = "figures/linux_box_structure.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/linux_box_structure.png){style="width:600px; border-radius:15px; border:5px solid #333333; background:null"}
+</center>
 
 ## Paths
-
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/paths.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/paths.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 On the command line directories and files are referred to by paths e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
 
@@ -391,10 +395,9 @@ cd Linux/
 ```
 
 ## Listing Directory content
-
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/List.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/List.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 To list the contents (files and directories) within a directory you can use the `ls` command.
 
@@ -425,9 +428,9 @@ ls -1 /
 `ls` is my most typed command. I am consistently using it to see what directories and files are in my current directory and other directories. I suggest you do the same.
 
 ## MCQs: Files & Directories
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble.png){style="width:200px"}
+</center>
 
 Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
@@ -477,9 +480,9 @@ opts_p <- c(answer="__./Linux__", "__/pub14/tea/nsc206/Linux/__")
 library(webexercises)
 ```
 # Tips and tricks {#tipsandtricks}
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/skateboard_trick.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/skateboard_trick.png){style="width:300px"}
+</center>
 
 `r hide("Chapter 5 viedo walk-through")`
 <div class="container">
@@ -490,9 +493,10 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Tab complete
 Tab complete is a method to quickly type commands and file paths without error. In bioinformatics tab complete is your best friend. The tab key looks like:
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/tab_complete.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/tab_complete.png){style="width:150px; border-radius:5px; border:2px solid #333333; background:white"}
+</center>
+
 Tab complete serves the following purposes:
 
 1. To complete path names and commands
@@ -536,9 +540,10 @@ There are times when you will want to abandon a command on the command line. To 
 This is useful if a command won't respond or you noticed you have run a command with a typo or with the wrong file.
 
 ## History
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/history.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/history.png){style="width:150px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 Linux will save commands you have previously entered. In the terminal, whilst at the command line, you can press the up and down keys to scroll through your history. You can then rerun previous commands or edit them with the left and right arrow keys, and run the edited version. 
 
 ## Clear
@@ -558,9 +563,9 @@ Notice that there is a space before the `\`. This is because there needs to be a
 Bash escape is useful for this document as it will show if commands in this document are separate commands or one command over multiple lines.
 
 ## Annotations
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/hashtag.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/hashtag.png){style="width:150px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 You can annotate your code so it will not run. This is carried out by putting a `#` at the start of a code line.
 
@@ -577,9 +582,9 @@ This is useful to give yourself information about what your code is doing and it
 I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. Just be sure to remove the `#` at the start of the line before you want to run it.
 
 ## MCQs: Tips & tricks
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_blue.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble_blue.png){style="width:200px"}
+</center>
 
 Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
@@ -619,9 +624,9 @@ opts_p <- c("__Ctrl + c__", answer="__`\\\`__", "__Up and down arrow__")
 library(webexercises)
 ```
 # Manipulating directories {#manipulatingdirectories}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/transform.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 `r hide("Chapter 6 video walk-through")`
 <div class="container">
@@ -653,9 +658,9 @@ ls Chicken
 __Tip__: You can use the up arrow key to get to previously run commands which you can edit using the right and left keys.
 
 ## Moving Directories and Files
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/chicken.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/chicken.png){style="width:200px"}
+</center>
 
 Files and directories can be moved with the `mv` command. This can also be used to change the name of a file or a directory.
 
@@ -702,9 +707,9 @@ ls 3_chicken_farm/3_2_field/
 ``` 
 
 ## Copying Directories and Files
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/copy.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/copy.png){style="width:150px"}
+</center>
 
 Files and directories can be copied with the `cp` command. Directories and files can be copied to any directory and given a new name.
 Note: If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.
@@ -751,9 +756,10 @@ ls
 ``` 
 
 ## Deleting Files and Directories
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/erase.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/erase.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 To delete files and directories the command `rm` can be used. 
 
 __Important__: This command can be very dangerous. There is no recycle bin on Linux machines so once you delete something it cannot be recovered. Be very careful when deleting files and directories. To avoid major loss try to keep backups of important data and scripts.
@@ -781,9 +787,9 @@ ls
 ``` 
 
 ## MCQs: Manipulating directories
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_green.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble_green.png){style="width:200px"}
+</center>
 
 Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
@@ -818,9 +824,10 @@ opts_p <- c("__`-r`__", "__`mkdir`__", answer="__`ls`__")
 library(webexercises)
 ```
 # Exercise 1
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/exercise.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/exercise.png){style="width:200px"}
+</center>
+
 Perform the following tasks with the skills and knowledge you have gained.  
 
 Change the name of the subdirectory __"four_exercises"__ within your __"Linux"__ directory to __"4_exercises"__  
@@ -844,9 +851,10 @@ library(webexercises)
 # (PART\*) Part 2 {-}
 
 # File reading and processing {#filereadingandprocessing}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/files.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/files.png){style="width:200px"}
+</center>
+
 There are many ways to show the contents of a file. Below are a few examples. 
 
 The files for the examples are within the directory:  __"/pub14/tea/nsc2xx/Linux/5_reading_files/"__ __(replace xxx with your user number)__.
@@ -859,9 +867,10 @@ frameborder="0" allowfullscreen class="video"></iframe>
 `r unhide()`
 
 ## Print out a file
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/cat.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/cat.png){style="width:200px"}
+</center>
+
 The `cat` command will print out the entire contents of a file to the screen. This is useful for small text files and pipelines (pipelines are not covered here).
 Example commands are below (remember to replace xxx with your user name number):
 
@@ -884,9 +893,10 @@ cat /pub14/tea/nsc2xx/Linux/5_reading_files/ecoli.gbk
 __Remember__: The `clear` command.
 
 ## head and tail
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/head_and_tails.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/head_and_tails.png){style="width:300px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 The `head` command will print out to screen the top n lines of a file.
 
 The `tail` command will print out to screen the bottom n lines of a file.
@@ -946,9 +956,10 @@ tail -n -2 ecoli.gbk
 ``` 
 
 ## File viewing with less
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/less.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/less.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 The `less` command will display a file’s contents one page at a time. Various keys on the keyboard will allow you to navigate the contents of the files. The below actions will occur identically with the man command.
 
 - __q__ : Exit
@@ -972,9 +983,10 @@ man less
 ``` 
 
 ## Word count
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/wc.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/wc.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 The `wc` command will allow allow you to word count files. It will display line, word and byte counts for files in that order.
 
 Use `wc` to see the line, word and byte count of the __"short_file.txt"__ and __"ecoli.gbk"__ files. As you can see you can carry this out on multiple files at once.
@@ -993,9 +1005,10 @@ wc -l ecoli.gbk
 ``` 
 
 ## Pattern searching
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/pattern.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/pattern.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 The `grep` command will search for a pattern in a text file and output all the lines containing the pattern.
 
 Print out the lines from __"Scientist.txt"__ that have the number 18 in them. In this particular example it prints out all scientists which were born in the 1800s. This will not always be the case depending on the data in the file.
@@ -1020,9 +1033,10 @@ grep Scientist.txt
 The above command will be stuck as `grep` does not know what it is looking for. To cancel the command use __‘Ctrl’ + ‘c’__
 
 ## Text editor
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/text_editor.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/text_editor.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 Three of the most popular text editors are __vim__, __gedit__ and __nano__. Below are quick introductions to __nano__ and __vim__. 
 
 __nano__ is the easiest to learn but is quite limiting. __vim__ and __gedit__ are quite similar in power with different people preferring one or the other. 
@@ -1030,9 +1044,10 @@ __nano__ is the easiest to learn but is quite limiting. __vim__ and __gedit__ ar
 The below will teach you __nano__. If you are interested in learning __vim__ in the future you can find a quick guide in the [appendix](#vim).
 
 ### nano
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/1200px-Gnu-nano.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/1200px-Gnu-nano.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 To enter the `nano` text editor you can use the command `nano`. The command is: `nano file.txt`. 
 
 `nano` can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.
@@ -1050,7 +1065,7 @@ Below are some important examples:
 - __Ctrl+O__ - Save file as
 - __Ctrl+A__ - Jump to the start of a line
 - __Ctrl+E__ - Jump to the end of a line
-- __Ctrl+W__ - Start search (Where is) __Note__ This unfortunately is also the shortcut to close a tab in internet browsers. Therefore this can't be used with our webVNC.
+- __Ctrl+W__ - Start search (Where is) __Note__ This unfortunately is also the shortcut to close a tab in internet browsers. Therefore this can't be used within our webVNC.
 - __Alt+W__ - Continue search forward (find next occurrence forward)
 - __Alt+Q__ - Find next occurrence backward
 - __Alt+K__ - Cut current line
@@ -1067,9 +1082,9 @@ Using a text editor (__nano__ or __vim__) add an entry for Scientist Mae Jemison
 Using your text editor of choice delete all the scientists born before 1000 in the __"Scientist.txt"__ file and save this as __"Scientist_post_1000.txt"__.
 
 ## MCQs: File reading and processing
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_purple.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble_purple.png){style="width:200px"}
+</center>
 
 Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
@@ -1109,9 +1124,9 @@ opts_p <- c("__`less`__", answer="__`tail`__", "__`head`__")
 library(webexercises)
 ```
 # Recap
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/recap.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/recap.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 Throughout this practical we have covered the topics:
 
@@ -1144,9 +1159,10 @@ __Note__: There is a cheatsheet at the end of this book with these commands.
 library(webexercises)
 ```
 # Fastq format
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/files.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/files.png){style="width:200px"}
+</center>
+
 The next exercise will focus on a set of files including fastq files.
 
 - Fastq files are very commonly used in bioinformatics.
@@ -1180,9 +1196,10 @@ https://en.wikipedia.org/wiki/FASTQ_format
 library(webexercises)
 ```
 # Exercise 2
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/exercise_2.png){style="width:200px"}
+</center>
+
 The directory __"~/Linux/6_final_exercise/"__ has all the files you need. Below is a set of tasks and questions that will require all the skills you have gained from this practical.
 
 1. See what files are in the directory.  
@@ -1207,9 +1224,10 @@ library(webexercises)
 # (PART\*) Advanced topics {-}
 
 # Advanced Linux practice {#advancedlinux}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/linux_intermdiary.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/linux_intermdiary.png){style="width:200px"}
+</center>
+
 We have covered a small amount of Linux coding. This should be sufficient to carry out our future workshops but if you were to continue in bioinformatics we would recommend learning more advanced methods.
 
 Below are some short sections to introduce you to some more advanced linux coding techniques. These give you a quick overview and some examples. This will hopefully put you in a good position to allow you to to learn these techniques in more depth outside of this workshop.
@@ -1217,9 +1235,10 @@ Below are some short sections to introduce you to some more advanced linux codin
 The following sections will all be run with the files in the directory __"~/Linux/advanced_practice/"__. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and txt file for uncorrected and corrected reads. These fastq files are single end (i.e. there is no reverse/R2 reads).
 
 ## Wildcard characters
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/wildcard.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/wildcard.png){style="width:200px"}
+</center>
+
 These are characters that can be used to represent a variety of other characters. This can be useful for deleting many files, searching for files with specific patterns in their names and more! 
 
 Be very careful when using wildcard character with the command __rm__.  
@@ -1298,9 +1317,10 @@ ls sample_[0-9][0]_*corrected.txt
 ``` 
 
 ## Redirection
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/chevron.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/chevron.png){style="width:150px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 Redirection allows you to put the output of a command to a file. The redirect symbol is `>`. Be careful when redirecting as it will overwrite any existing files. To append to the bottom of a file use `>>`.
 
 Below are various examples of redirecting in action.
@@ -1353,9 +1373,10 @@ rm *tmp
 ``` 
 
 ## Pipes
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/pipes.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/pipes.png){style="width:200px"}
+</center>
+
 Pipes allow you to put the output of one command to the input of another. For example you could use `grep` to get all the lines with a certain string and pipe the output to `wc` to count the number of lines that have the specific string. 
 
 The pipe symbol is `|`. This is normally found on your keyboard directly left of the Z key. Weirdly the symbol is represented by `|` but split in the middle on some keyboards.
@@ -1384,9 +1405,10 @@ cat *fastq | grep “TAG” | wc -l
 ``` 
 
 ## Regular expressions
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/trex.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/trex.png){style="width:200px"}
+</center>
+
 Regular expressions are similar to wildcard characters but more complex and used for commands like `grep` and `sed`.
 
 Below are a basic set of regular expressions:
@@ -1485,9 +1507,10 @@ Regex Crossword, A online game like soduku that is useful to practice regular ex
 https://regexcrossword.com/
 
 ## sed
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/sed.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/sed.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 This is a complicated yet powerful command that can be used to edit text files quickly and efficiently. The main use is to substitute text with other text. `sed` can be used with regular expressions.
 
 The basic outline of a `sed` substitute command is as below. In the below case `s/` signifies that `sed` will be used for substitution
@@ -1543,9 +1566,9 @@ Below is a useful link to learn about file permissions:
 https://www.guru99.com/file-permissions.html
 
 ## MCQs: Advanced linux
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_red.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble_red.png){style="width:200px"}
+</center>
 
 Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
@@ -1615,9 +1638,9 @@ opts_p <- c("__`|`__", answer="__`^`__", "__`$`__")
 library(webexercises)
 ```
 # Advance practice exercise
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/adv_exercise.png){style="width:200px"}
+</center>
 
 1. Copy the directory __~/Linux/advanced_practice__ to __~/Linux/advanced_practice_exercise__
 2. Move into __~/Linux/advanced_practice_exercise__
@@ -1638,9 +1661,9 @@ You can check my solutions in the [Answers section](#exerciseadv_answers). These
 library(webexercises)
 ```
 # Bioinformatic Languages {#bfxlanguages}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/languages.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/languages.png){style="width:200px"}
+</center>
 
 Unfortunately you cannot do everything you would want directly on the Linux command line. Even the tasks you can do are sometimes not very efficient or easy.
 Fortunately there are many other programming languages you can use. There is a large amount of other programming languages and it can be hard to know which one to learn. Below is a list of commonly used bioinformatic program languages with a brief summary on their purpose and links to online resources to introduce you to the language.
@@ -1657,9 +1680,10 @@ Manual:
 https://www.gnu.org/software/gawk/manual/gawk.html
 
 ## Python
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/python.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/python.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 Python is used for software development and other applications It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e. genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.
 
 Python website:
@@ -1671,9 +1695,10 @@ BioPython:
 https://biopython.org/
 
 ## Perl
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/perl.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/perl.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:null"}
+</center>
+
 Perl is a similar language to python with similar uses. The main difference is how they look.
 
 Tutorial:
@@ -1692,9 +1717,10 @@ https://bioperl.org/
 Generally speaking people normally choose to either learn python or perl. However there are many bioinformatic tools written in perl and many written in python. Therefore it is good to know a bit in both so you can debug scripts and specialise in one so you can write your own scripts. Our suggestion would be to specialise in Python due to its ease to learn and its growing popularity in the Bioinformatics field. However there are also other upcoming programming languages that are becoming more popular in bioinformatics, so you may like to give them a look.
 
 ## Ruby
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/ruby.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/ruby.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:null"}
+</center>
+
 A programming language that is becoming more popular in bioinformatics due to its beginner friendliness. 
 
 Tutorial:
@@ -1714,9 +1740,10 @@ Why learn Ruby?
 http://www.bestprogramminglanguagefor.me/why-learn-ruby
 
 ## Golang (AKA Go)
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/golang.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/golang.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 Another easy programming language with a library specifically made for bioinformatics.
 
 Tutorial:
@@ -1732,9 +1759,10 @@ biogo:
 https://github.com/biogo/biogo
 
 ## R
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/R.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/R.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 R is a very powerful programming language for statistical analysis and visualisation. It unfortunately has a large barrier to entry and normally quite unclear documentation. However it will unlikely be surpassed by another language any time soon due to its widespread use and large amount of very useful and powerful packages for various uses in the public domain. We would recommend using the IDE Rstudio when using R.
 
 Tutorial:
@@ -1761,9 +1789,9 @@ library(webexercises)
 # (PART\*) Answers {-}
 
 # Exercise 1 {-#exercise1_answers}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/exercise.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/exercise.png){style="width:200px"}
+</center>
 
 Ensure you are in the correct directory before carrying out the below commands
 ```{bash eval=FALSE}
@@ -1812,9 +1840,9 @@ rm copy_this_file.txt
 ```
 
 # Exercise 2 {-#exercise2_answers}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/exercise_2.png){style="width:200px"}
+</center>
 
 Ensure you are in the correct directory before carrying out the below commands
 ```{bash eval=FALSE}
@@ -1908,9 +1936,10 @@ grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R2_001.fastq
 ```
 
 # Advanced exercise {-#exerciseadv_answers}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/adv_exercise.png){style="width:200px"}
+</center>
+
 1. Copy the directory ~/Linux/advanced_practice to ~/Linux/advanced_practice_exercise
 ```{bash eval=FALSE}
 cp -r ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise
@@ -1966,9 +1995,9 @@ library(webexercises)
 
 # Practical cheat sheet {#cheatsheet}
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/cheatsheet.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/cheatsheet.png){style="width:200px; border-radius:5px; border:3px solid #333333; background:white"}
+</center>
 
 +-------------+--------------------------------------------------+------------------------------------------------------------+
 | **Command** | **Description**                                  | **Usage example**                                          |
@@ -2011,10 +2040,9 @@ knitr::include_graphics(path = "figures/cheatsheet.png", auto_pdf = TRUE)
 +-------------+--------------------------------------------------+------------------------------------------------------------+
 
 # Windows terminals
-
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/windows.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/windows.png){style="width:200px"}
+</center>
 
 If you are on a windows you may need to download a terminal program to `ssh` to a linux cluster. Thankfully Macs come with an in built terminal. Below are a few suggestions of windows terminals:
 
@@ -2024,17 +2052,16 @@ If you are on a windows you may need to download a terminal program to `ssh` to 
 
 # `ssh`
 
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/turtle_shell.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/turtle_shell.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 The `ssh` (Secure Shell Protocol) command is used to login into cluster and other machines. For more information on this please see the following online tutorial: https://opensource.com/article/20/9/ssh
 
 # File transferring
-
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/file_transfer.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/file_transfer.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 When working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.
 
@@ -2043,10 +2070,9 @@ For transferring on windows machine I would suggest [WinSCP](https://winscp.net/
 For transferring on Macs I would suggest [FileZIlla](https://filezilla-project.org/)
 
 # Mamba
-
-```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
-knitr::include_graphics(path = "figures/mamba_logo.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/mamba_logo.png){style="width:250px; border-radius:15px; border:5px solid #333333"}
+</center>
 
 ## Mamba installation {#mamba_install}
 
@@ -2063,9 +2089,10 @@ Miniforge installation: <https://github.com/conda-forge/miniforge>
 Mamba guide: <https://mamba.readthedocs.io/en/latest/user_guide/mamba.html>
 
 # vim {#vim}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/Vimlogo.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/Vimlogo.png){style="width:200px"}
+</center>
+
 To enter the `vim` text editor you can use the command `vim`. The command is: `vim file.txt`. 
 
 `vim` can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.

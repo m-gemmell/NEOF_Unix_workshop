@@ -1,7 +1,7 @@
 # Directories and Files {#dirsandfiles}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/directory.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/directory.png){style="width:200px"}
+</center>
 
 `r hide("Chapter 4 video walk-through")`
 <div class="container">
@@ -82,9 +82,9 @@ This starts as the root (**"/"**) which branches out into directories and files.
 
 Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as a tree. This only includes a subset of directories.
 
-```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
-knitr::include_graphics(path = "figures/linux_tree_structure.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/linux_tree_structure.png){style="width:1000px; border-radius:15px; border:5px solid #333333; background:null"}
+</center>
 
 ### Boxes
 
@@ -92,15 +92,14 @@ Another analogy to the directory structure is boxes and items. In this case ther
 
 Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as boxes. This only includes a subset of directories.
 
-```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
-knitr::include_graphics(path = "figures/linux_box_structure.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/linux_box_structure.png){style="width:600px; border-radius:15px; border:5px solid #333333; background:null"}
+</center>
 
 ## Paths
-
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/paths.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/paths.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 On the command line directories and files are referred to by paths e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
 
@@ -162,10 +161,9 @@ cd Linux/
 ```
 
 ## Listing Directory content
-
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/List.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/List.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 To list the contents (files and directories) within a directory you can use the `ls` command.
 
@@ -196,9 +194,9 @@ ls -1 /
 `ls` is my most typed command. I am consistently using it to see what directories and files are in my current directory and other directories. I suggest you do the same.
 
 ## MCQs: Files & Directories
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble.png){style="width:200px"}
+</center>
 
 Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 

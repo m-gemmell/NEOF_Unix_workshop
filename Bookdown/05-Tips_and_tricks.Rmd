@@ -1,7 +1,7 @@
 # Tips and tricks {#tipsandtricks}
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/skateboard_trick.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/skateboard_trick.png){style="width:300px"}
+</center>
 
 `r hide("Chapter 5 viedo walk-through")`
 <div class="container">
@@ -12,9 +12,10 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Tab complete
 Tab complete is a method to quickly type commands and file paths without error. In bioinformatics tab complete is your best friend. The tab key looks like:
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/tab_complete.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/tab_complete.png){style="width:150px; border-radius:5px; border:2px solid #333333; background:white"}
+</center>
+
 Tab complete serves the following purposes:
 
 1. To complete path names and commands
@@ -58,9 +59,10 @@ There are times when you will want to abandon a command on the command line. To 
 This is useful if a command won't respond or you noticed you have run a command with a typo or with the wrong file.
 
 ## History
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/history.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/history.png){style="width:150px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
+
 Linux will save commands you have previously entered. In the terminal, whilst at the command line, you can press the up and down keys to scroll through your history. You can then rerun previous commands or edit them with the left and right arrow keys, and run the edited version. 
 
 ## Clear
@@ -80,9 +82,9 @@ Notice that there is a space before the `\`. This is because there needs to be a
 Bash escape is useful for this document as it will show if commands in this document are separate commands or one command over multiple lines.
 
 ## Annotations
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/hashtag.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/hashtag.png){style="width:150px; border-radius:15px; border:5px solid #333333; background:white"}
+</center>
 
 You can annotate your code so it will not run. This is carried out by putting a `#` at the start of a code line.
 
@@ -99,9 +101,9 @@ This is useful to give yourself information about what your code is doing and it
 I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. Just be sure to remove the `#` at the start of the line before you want to run it.
 
 ## MCQs: Tips & tricks
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_blue.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble_blue.png){style="width:200px"}
+</center>
 
 Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
