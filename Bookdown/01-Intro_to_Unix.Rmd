@@ -29,11 +29,15 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-<center>![](figures/NEOF.png){style="width:300px; border-radius:15px; border:5px solid #333333; background:null"}</center>
+<center>
+![](figures/NEOF.png){style="width:300px; border-radius:15px; border:5px solid #333333; background:null"}
+</center>
 
 # Introduction {#intro}
 
-<center>![](figures/linux_beginner.png){style="width:200px"}</center>
+<center>
+![](figures/linux_beginner.png){style="width:200px"}
+</center>
 
 Bioinformatics is an increasingly important skill for biological scientists. Many bioinformatic tools can only be run on Linux based operating systems. This course aims to introduce you to Linux and is aimed at beginners and novices to the command line.
 

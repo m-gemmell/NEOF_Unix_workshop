@@ -11,10 +11,16 @@ frameborder="0" allowfullscreen class="video"></iframe>
 `r unhide()`
 
 ## Acquiring Workshop data
+<center>
+![](figures/data_files.png){style="width:150px"}
+</center>
 
 The first step to carry out is to copy the data for the workshop to your home directory.
 
 ### Changing directories
+<center>
+![](figures/cd.png){style="width:200px"}
+</center>
 
 Before copying you will change directory to your home directory.
 
@@ -47,6 +53,9 @@ In this case it will not show a **"\~"** but the full path of your home director
 -   **"nsc206"**: The home directory of user nsc206. It is a subdirectory of **"tea/"** which is a subdirectory of **"pub14/"** which is a subdirectory of the root (**"/"**).
 
 ### Copying
+<center>
+![](figures/copy_vaporwave.png){style="width:200px"}
+</center>
 
 Now that we are in our home directory we can copy the data we need to it.
 
@@ -83,29 +92,29 @@ This starts as the root (**"/"**) which branches out into directories and files.
 Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as a tree. This only includes a subset of directories.
 
 <center>
-![](figures/linux_tree_structure.png){style="width:1000px; border-radius:15px; border:5px solid #333333; background:null"}
+![](figures/linux_tree_structure.png){style="width:1000px; border-radius:15px"}
 </center>
 
 ### Boxes
 
 Another analogy to the directory structure is boxes and items. In this case there is one large box that contains all the boxes and items, this is the root (**"/"**). In the root are items and boxes which hold items and boxes etc.
 
-Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as boxes. This only includes a subset of directories.
+Below is an example of visualising the location of the **"Linux"** directory within the user ncs206's home directory as boxes. This only includes a subset of directories.
 
 <center>
-![](figures/linux_box_structure.png){style="width:600px; border-radius:15px; border:5px solid #333333; background:null"}
+![](figures/linux_box_structure.png){style="width:600px; border-radius:15px"}
 </center>
 
 ## Paths
 <center>
-![](figures/paths.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/paths.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 On the command line directories and files are referred to by paths e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
 
 Paths are case sensitive. The path **"directory/file.txt"** is different than **"diRectory/File.txt"**.
 
-Spaces should always be avoided in path names. It is highly recommended to **"\_"** instead. This is because spaces are used to separate options and parameters in commands.
+Spaces should always be avoided in path names. It is highly recommended to use **"\_"** instead. This is because spaces are used to separate options and parameters in commands.
 
 There are multiple ways to refer to a path. The two main ways are through **absolute paths** and **relative paths**.
 
@@ -162,7 +171,7 @@ cd Linux/
 
 ## Listing Directory content
 <center>
-![](figures/List.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/List.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 To list the contents (files and directories) within a directory you can use the `ls` command.

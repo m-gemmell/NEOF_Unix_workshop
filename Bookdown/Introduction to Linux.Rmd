@@ -32,11 +32,15 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-<center>![](figures/NEOF.png){style="width:300px; border-radius:15px; border:5px solid #333333; background:null"}</center>
+<center>
+![](figures/NEOF.png){style="width:300px; border-radius:15px; border:5px solid #333333; background:null"}
+</center>
 
 # Introduction {#intro}
 
-<center>![](figures/linux_beginner.png){style="width:200px"}</center>
+<center>
+![](figures/linux_beginner.png){style="width:200px"}
+</center>
 
 Bioinformatics is an increasingly important skill for biological scientists. Many bioinformatic tools can only be run on Linux based operating systems. This course aims to introduce you to Linux and is aimed at beginners and novices to the command line.
 
@@ -162,6 +166,12 @@ These instructions will not work outside of this workshop. If you would like to 
 The following link is a guide to install Mint Linux:  
 https://linuxmint-installation-guide.readthedocs.io/en/latest/
 
+If you have a windows machine and would like to install linux on it you can install Windows Subsystem for Linux. 
+
+The following link is a guide to instal linux via WSL:
+https://learn.microsoft.com/en-us/windows/wsl/install
+
+
 ## The Terminal Window
 
 In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.
@@ -172,8 +182,8 @@ In our case the terminal window looks like the picture below. We are using the t
 
 Already there is useful information for us on the terminal window.
 
--   **nsc006**: This is the login name, also known as the username. In this case nsc006 is a demonstrator's account. Your screen should show a different account name which will be your username for the Linux machine/cluster you are logged into.
--   **gauss03**: This is the machine name the user is logged into.
+-   **nsc206**: This is the login name, also known as the username. In this case nsc206 is a demonstrator's account. Your screen should show a different account name which will be your username for the Linux machine/cluster you are logged into.
+-   **ada02**: This is the machine name the user is logged into.
 -   **\~**: This represents the current directory of the user, or the directory a command was run in. In the Linux OS and others **'\~'** is a shortcut to the user's home directory.
 -   Everything after the **'\$'** is where commands are typed into the terminal. This is also referred to as the command line.
 
@@ -184,7 +194,7 @@ To open a new terminal window, right click on the main screen, choose `Applicati
 Commands are typed into the terminal and then run by pressing **"enter"**"
 
 <center>
-![](figures/enter_symbol.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/enter_symbol.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 To run a command select your terminal by clicking on it or using **"alt+shift"**.
@@ -217,13 +227,13 @@ E.g. The below command will show the manual page for the echo command:
 man echo
 ```
 
+**Note**: The `man` page acts like using the command **less** (we will get into more specifics later). Important notes for now are to use the **arrow keys** to go **up** and **down** the page and press **q** to exit the manual
+
 The below command will show the manual page for the `man` command:
 
 ```{bash eval=FALSE}
 man man
 ```
-
-**Note**: The `man` page acts like using the command **less** (we will get into more specifics later). Important notes for now are to use the **arrow keys** to go **up** and **down** the page and press **q** to exit the manual
 
 **Note**: There is a cheat sheet at the end of this document with all the commands covered in this practical.
 
@@ -245,10 +255,16 @@ frameborder="0" allowfullscreen class="video"></iframe>
 `r unhide()`
 
 ## Acquiring Workshop data
+<center>
+![](figures/data_files.png){style="width:150px"}
+</center>
 
 The first step to carry out is to copy the data for the workshop to your home directory.
 
 ### Changing directories
+<center>
+![](figures/cd.png){style="width:200px"}
+</center>
 
 Before copying you will change directory to your home directory.
 
@@ -281,6 +297,9 @@ In this case it will not show a **"\~"** but the full path of your home director
 -   **"nsc206"**: The home directory of user nsc206. It is a subdirectory of **"tea/"** which is a subdirectory of **"pub14/"** which is a subdirectory of the root (**"/"**).
 
 ### Copying
+<center>
+![](figures/copy_vaporwave.png){style="width:200px"}
+</center>
 
 Now that we are in our home directory we can copy the data we need to it.
 
@@ -317,29 +336,29 @@ This starts as the root (**"/"**) which branches out into directories and files.
 Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as a tree. This only includes a subset of directories.
 
 <center>
-![](figures/linux_tree_structure.png){style="width:1000px; border-radius:15px; border:5px solid #333333; background:null"}
+![](figures/linux_tree_structure.png){style="width:1000px; border-radius:15px"}
 </center>
 
 ### Boxes
 
 Another analogy to the directory structure is boxes and items. In this case there is one large box that contains all the boxes and items, this is the root (**"/"**). In the root are items and boxes which hold items and boxes etc.
 
-Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as boxes. This only includes a subset of directories.
+Below is an example of visualising the location of the **"Linux"** directory within the user ncs206's home directory as boxes. This only includes a subset of directories.
 
 <center>
-![](figures/linux_box_structure.png){style="width:600px; border-radius:15px; border:5px solid #333333; background:null"}
+![](figures/linux_box_structure.png){style="width:600px; border-radius:15px"}
 </center>
 
 ## Paths
 <center>
-![](figures/paths.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/paths.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 On the command line directories and files are referred to by paths e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
 
 Paths are case sensitive. The path **"directory/file.txt"** is different than **"diRectory/File.txt"**.
 
-Spaces should always be avoided in path names. It is highly recommended to **"\_"** instead. This is because spaces are used to separate options and parameters in commands.
+Spaces should always be avoided in path names. It is highly recommended to use **"\_"** instead. This is because spaces are used to separate options and parameters in commands.
 
 There are multiple ways to refer to a path. The two main ways are through **absolute paths** and **relative paths**.
 
@@ -396,7 +415,7 @@ cd Linux/
 
 ## Listing Directory content
 <center>
-![](figures/List.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/List.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 To list the contents (files and directories) within a directory you can use the `ls` command.
@@ -493,8 +512,9 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Tab complete
 Tab complete is a method to quickly type commands and file paths without error. In bioinformatics tab complete is your best friend. The tab key looks like:
+
 <center>
-![](figures/tab_complete.png){style="width:150px; border-radius:5px; border:2px solid #333333; background:white"}
+![](figures/tab_complete.png){style="width:150px; border-radius:5px; border:2px solid white; background:white"}
 </center>
 
 Tab complete serves the following purposes:
@@ -535,18 +555,26 @@ cd e<tab>1<tab>1<tab>
 In this practical session I have given paths purposefully long names. This has been carried out to demonstrate the usefulness of tab complete and to encourage its use. Although they have been artificially extended in this case, in Bioinformatics long and informative path names are advised. 
 
 ## Ending a command
+<center>
+![](figures/ctrl_c.png){style="width:300px; border-radius:5px; border:2px solid white; background:white"}
+</center>
+
 There are times when you will want to abandon a command on the command line. To do this simple press __‘Ctrl’ + ‘c’__.
 
 This is useful if a command won't respond or you noticed you have run a command with a typo or with the wrong file.
 
 ## History
 <center>
-![](figures/history.png){style="width:150px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/history.png){style="width:150px; border-radius:15px; background:white"}
 </center>
 
 Linux will save commands you have previously entered. In the terminal, whilst at the command line, you can press the up and down keys to scroll through your history. You can then rerun previous commands or edit them with the left and right arrow keys, and run the edited version. 
 
 ## Clear
+<center>
+![](figures/clean.png){style="width:150px"}
+</center>
+
 The `clear` command can be used to clear all the text from the terminal. This is useful for keeping a tidy terminal.
 
 ## Bash escape
@@ -564,7 +592,7 @@ Bash escape is useful for this document as it will show if commands in this docu
 
 ## Annotations
 <center>
-![](figures/hashtag.png){style="width:150px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/hashtag.png){style="width:150px; border-radius:15px; background:white"}
 </center>
 
 You can annotate your code so it will not run. This is carried out by putting a `#` at the start of a code line.
@@ -579,7 +607,7 @@ echo "this line is not annotated"
 
 This is useful to give yourself information about what your code is doing and it is vital if you are creating scripts. We will also use annotations in this workbook to explain what some lines of code are doing.
 
-I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. Just be sure to remove the `#` at the start of the line before you want to run it.
+I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. However, be sure to remove the `#` at the start of the line before you want to run it.
 
 ## MCQs: Tips & tricks
 <center>
@@ -625,7 +653,7 @@ library(webexercises)
 ```
 # Manipulating directories {#manipulatingdirectories}
 <center>
-![](figures/transform.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/transform.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 `r hide("Chapter 6 video walk-through")`
@@ -638,7 +666,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 ## Make a directory
 To make a directory the command `mkdir` is used.
 
-For the below examples we will be making heavy use of `ls` so you can hopefully visualise the contents of the directories.
+For the below examples we will be making heavy use of `ls` to visualise the contents of the directories.
 
 Type in the following commands to make a subdirectory within the __"CGR_Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
 
@@ -757,7 +785,7 @@ ls
 
 ## Deleting Files and Directories
 <center>
-![](figures/erase.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/erase.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 To delete files and directories the command `rm` can be used. 

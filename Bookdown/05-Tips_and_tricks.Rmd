@@ -12,8 +12,9 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Tab complete
 Tab complete is a method to quickly type commands and file paths without error. In bioinformatics tab complete is your best friend. The tab key looks like:
+
 <center>
-![](figures/tab_complete.png){style="width:150px; border-radius:5px; border:2px solid #333333; background:white"}
+![](figures/tab_complete.png){style="width:150px; border-radius:5px; border:2px solid white; background:white"}
 </center>
 
 Tab complete serves the following purposes:
@@ -54,18 +55,26 @@ cd e<tab>1<tab>1<tab>
 In this practical session I have given paths purposefully long names. This has been carried out to demonstrate the usefulness of tab complete and to encourage its use. Although they have been artificially extended in this case, in Bioinformatics long and informative path names are advised. 
 
 ## Ending a command
+<center>
+![](figures/ctrl_c.png){style="width:300px; border-radius:5px; border:2px solid white; background:white"}
+</center>
+
 There are times when you will want to abandon a command on the command line. To do this simple press __‘Ctrl’ + ‘c’__.
 
 This is useful if a command won't respond or you noticed you have run a command with a typo or with the wrong file.
 
 ## History
 <center>
-![](figures/history.png){style="width:150px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/history.png){style="width:150px; border-radius:15px; background:white"}
 </center>
 
 Linux will save commands you have previously entered. In the terminal, whilst at the command line, you can press the up and down keys to scroll through your history. You can then rerun previous commands or edit them with the left and right arrow keys, and run the edited version. 
 
 ## Clear
+<center>
+![](figures/clean.png){style="width:150px"}
+</center>
+
 The `clear` command can be used to clear all the text from the terminal. This is useful for keeping a tidy terminal.
 
 ## Bash escape
@@ -83,7 +92,7 @@ Bash escape is useful for this document as it will show if commands in this docu
 
 ## Annotations
 <center>
-![](figures/hashtag.png){style="width:150px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/hashtag.png){style="width:150px; border-radius:15px; background:white"}
 </center>
 
 You can annotate your code so it will not run. This is carried out by putting a `#` at the start of a code line.
@@ -98,7 +107,7 @@ echo "this line is not annotated"
 
 This is useful to give yourself information about what your code is doing and it is vital if you are creating scripts. We will also use annotations in this workbook to explain what some lines of code are doing.
 
-I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. Just be sure to remove the `#` at the start of the line before you want to run it.
+I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. However, be sure to remove the `#` at the start of the line before you want to run it.
 
 ## MCQs: Tips & tricks
 <center>

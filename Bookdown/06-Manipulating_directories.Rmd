@@ -1,6 +1,6 @@
 # Manipulating directories {#manipulatingdirectories}
 <center>
-![](figures/transform.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/transform.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 `r hide("Chapter 6 video walk-through")`
@@ -13,7 +13,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 ## Make a directory
 To make a directory the command `mkdir` is used.
 
-For the below examples we will be making heavy use of `ls` so you can hopefully visualise the contents of the directories.
+For the below examples we will be making heavy use of `ls` to visualise the contents of the directories.
 
 Type in the following commands to make a subdirectory within the __"CGR_Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
 
@@ -132,7 +132,7 @@ ls
 
 ## Deleting Files and Directories
 <center>
-![](figures/erase.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/erase.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 To delete files and directories the command `rm` can be used. 
