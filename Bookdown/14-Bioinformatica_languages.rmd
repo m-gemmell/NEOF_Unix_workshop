@@ -4,7 +4,9 @@
 </center>
 
 Unfortunately you cannot do everything you would want directly on the Linux command line. Even the tasks you can do are sometimes not very efficient or easy.
-Fortunately there are many other programming languages you can use. There is a large amount of other programming languages and it can be hard to know which one to learn. Below is a list of commonly used bioinformatic program languages with a brief summary on their purpose and links to online resources to introduce you to the language.
+Fortunately there are many other programming languages you can use. 
+
+There is a large amount of other programming languages and it can be hard to know which one to learn. Below is a list of commonly used bioinformatic program languages with a brief summary on their purpose and links to online resources to introduce you to the language.
 
 ## awk
 `awk` is typically used as a data extraction and reporting tool. It is very good due to its power and versatility.
@@ -22,7 +24,7 @@ https://www.gnu.org/software/gawk/manual/gawk.html
 ![](figures/python.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
 </center>
 
-Python is used for software development and other applications It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e. genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.
+Python is used for software development and other applications. It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e. genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.
 
 Python website:
 
@@ -52,14 +54,16 @@ BioPerl:
 https://bioperl.org/
 
 ## Python or Perl?
-Generally speaking people normally choose to either learn python or perl. However there are many bioinformatic tools written in perl and many written in python. Therefore it is good to know a bit in both so you can debug scripts and specialise in one so you can write your own scripts. Our suggestion would be to specialise in Python due to its ease to learn and its growing popularity in the Bioinformatics field. However there are also other upcoming programming languages that are becoming more popular in bioinformatics, so you may like to give them a look.
+Generally the answer is Python. Many programs are written in Python so even if you don't make any programs yourself it can be useful to know a little python so you can debug Python scripts. 
+
+Some programs are written in Perl but it has lost a lot of popularity so there are less and less programs written in Perl. Many Perl programs that were useful are now outdated.
 
 ## Ruby
 <center>
 ![](figures/ruby.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:null"}
 </center>
 
-A programming language that is becoming more popular in bioinformatics due to its beginner friendliness. 
+A programming language that was becoming more popular in bioinformatics due to its beginner friendliness. However, it does not appear to have been widely adopted.
 
 Tutorial:
 
@@ -82,7 +86,7 @@ http://www.bestprogramminglanguagefor.me/why-learn-ruby
 ![](figures/golang.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
 </center>
 
-Another easy programming language with a library specifically made for bioinformatics.
+Another easy programming language with a library specifically made for bioinformatics. Has not been widely adopted.
 
 Tutorial:
 

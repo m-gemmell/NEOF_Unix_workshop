@@ -13,7 +13,7 @@ The directory __"~/Linux/6_final_exercise/"__ has all the files you need. Below 
 6. Update the backup files with the previous change.  
 7. Check if the 1st read names match in the paired files.  
 8. Check if the last read names match in the paired files.  
-9. In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter'.  
+9. In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter'. (__Tip:__ Use `grep`)  
 10. In the sample __1-P1__ remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 files.  
 11. Print to screen the fastq header, sequence and quality data for the 25th sequence in sample __2-P2__ for both the R1 and R2 file. Do this with one command for R1 and a separate command for R2.
 

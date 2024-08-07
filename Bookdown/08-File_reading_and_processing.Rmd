@@ -44,7 +44,7 @@ __Remember__: The `clear` command.
 
 ## head and tail
 <center>
-![](figures/head_and_tails.png){style="width:300px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/head_and_tails.png){style="width:300px; border-radius:15px; background:white"}
 </center>
 
 The `head` command will print out to screen the top n lines of a file.
@@ -107,7 +107,7 @@ tail -n -2 ecoli.gbk
 
 ## File viewing with less
 <center>
-![](figures/less.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/less.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 The `less` command will display a file’s contents one page at a time. Various keys on the keyboard will allow you to navigate the contents of the files. The below actions will occur identically with the man command.
@@ -134,12 +134,12 @@ man less
 
 ## Word count
 <center>
-![](figures/wc.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/wc.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
-The `wc` command will allow allow you to word count files. It will display line, word and byte counts for files in that order.
+The `wc` command will allow you to word count files. It will display line, word and byte counts for files in that order.
 
-Use `wc` to see the line, word and byte count of the __"short_file.txt"__ and __"ecoli.gbk"__ files. As you can see you can carry this out on multiple files at once.
+Use `wc` to see the line, word and byte count of the __"short_file.txt"__, __"Scientist.txt"__ and __"ecoli.gbk"__ files. As you can see you can carry this out on multiple files at once.
 ```{bash eval=FALSE}
 wc short_file.txt Scientist.txt ecoli.gbk
 ``` 
@@ -156,7 +156,7 @@ wc -l ecoli.gbk
 
 ## Pattern searching
 <center>
-![](figures/pattern.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/pattern.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 The `grep` command will search for a pattern in a text file and output all the lines containing the pattern.
@@ -184,10 +184,10 @@ The above command will be stuck as `grep` does not know what it is looking for. 
 
 ## Text editor
 <center>
-![](figures/text_editor.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/text_editor.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
-Three of the most popular text editors are __vim__, __gedit__ and __nano__. Below are quick introductions to __nano__ and __vim__. 
+Three of the most popular text editors are __vim__, __gedit__ and __nano__. Below is a quick introductions to __nano__. 
 
 __nano__ is the easiest to learn but is quite limiting. __vim__ and __gedit__ are quite similar in power with different people preferring one or the other. 
 
@@ -195,10 +195,10 @@ The below will teach you __nano__. If you are interested in learning __vim__ in 
 
 ### nano
 <center>
-![](figures/1200px-Gnu-nano.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/1200px-Gnu-nano.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
-To enter the `nano` text editor you can use the command `nano`. The command is: `nano file.txt`. 
+To enter the `nano` text editor you can use the command `nano`. The command structure is: `nano file.txt`. 
 
 `nano` can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.
 

@@ -9,16 +9,16 @@ We have covered a small amount of Linux coding. This should be sufficient to car
 
 Below are some short sections to introduce you to some more advanced linux coding techniques. These give you a quick overview and some examples. This will hopefully put you in a good position to allow you to to learn these techniques in more depth outside of this workshop.
 
-The following sections will all be run with the files in the directory __"~/Linux/advanced_practice/"__. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and txt file for uncorrected and corrected reads. These fastq files are single end (i.e. there is no reverse/R2 reads).
+The following sections will all be run with the files in the directory __"~/Linux/advanced_practice/"__. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and a txt file for uncorrected and corrected reads. These fastq files are single end (i.e. there are no reverse/R2 reads).
 
 ## Wildcard characters
 <center>
 ![](figures/wildcard.png){style="width:200px"}
 </center>
 
-These are characters that can be used to represent a variety of other characters. This can be useful for deleting many files, searching for files with specific patterns in their names and more! 
+These are characters that can be used to represent a variety of other characters. This can be useful for deleting many files, searching for files with specific patterns in their names and more.
 
-Be very careful when using wildcard character with the command __rm__.  
+Be very careful when using wildcard character with the command `rm`.  
 
 Three basic and useful wildcards include:  
 
@@ -211,7 +211,7 @@ Look at the contents of __metadata.txt__
 cat metadata.txt
 ``` 
 
-!Print out the lines for the Healthy patients
+Print out the lines for the Healthy patients
 ```{bash eval=FALSE}
 cat metadata.txt | grep “HEALTHY”
 ``` 
@@ -246,7 +246,7 @@ Print to screen every line within the file __sample_3_AAAG_corrected.fastq__ tha
 grep "^[^@].*AC[ACTG]" sample_3_AAAG_corrected.fastq
 ``` 
 
-In the above example fastq quality lines are also extracted as some of them also contain the pattern we are searching for. To get around this we can pipe. First grep the fastq quality header (i.e. +), as no other line only contains “+”, and the line before it. Then we can remove lines with only a plus with an invert grep. Finally we can grep for the threonine pattern using only the sequence lines. Let us build this up step by step.  
+In the above example fastq quality lines are also extracted as some of them also contain the pattern we are searching for. To get around this we can pipe. First `grep` the fastq quality header (i.e. +), as no other line only contains “+”, and the line before it. Then we can remove lines with a plus with an invert `grep`. Finally we can `grep` for the threonine pattern using only the sequence lines. Let us build this up step by step.  
 
 Print to screen the fastq quality header plus the one line preceding each (i.e. Sequence line) for file __sample_3_AAAG_corrected.fastq.__
 ```{bash eval=FALSE}

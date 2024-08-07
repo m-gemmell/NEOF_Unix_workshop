@@ -1,6 +1,6 @@
 # Recap
 <center>
-![](figures/recap.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/recap.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 Throughout this practical we have covered the topics:
@@ -24,6 +24,6 @@ Throughout this practical we have covered the topics:
 * Looking at files
     + Commands: `cat`, `head`, `tail`, `less`, `wc`, `grep`
 * Text editor
-    + Commands: `vim`
+    + Commands: `nano`
     
 __Note__: There is a cheatsheet at the end of this book with these commands.

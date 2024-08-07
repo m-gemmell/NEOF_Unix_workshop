@@ -55,7 +55,6 @@ If you are on a windows you may need to download a terminal program to `ssh` to 
 
 - [MobaXterm](https://mobaxterm.mobatek.net/)
 - [Putty](https://www.putty.org/)
-- [Ubuntu on Windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab)
 
 # `ssh`
 

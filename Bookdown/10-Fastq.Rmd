@@ -6,7 +6,7 @@
 The next exercise will focus on a set of files including fastq files.
 
 - Fastq files are very commonly used in bioinformatics.
-- Fastq files contain DNA or Amino acid sequenceing data.
+- Fastq files contain DNA or Amino acid sequencing data.
 - Fastq files contain the nucleotide/amino acid content and its sequencing quality for sequences. 
 - Generally these files are separated by sample but not always.
 - A fastq file acts as a normal txt file that can be read but is of a specific format. 
