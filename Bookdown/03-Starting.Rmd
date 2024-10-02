@@ -41,7 +41,7 @@ Already there is useful information for us on the terminal window.
 -   **\~**: This represents the current directory of the user, or the directory a command was run in. In the Linux OS and others **'\~'** is a shortcut to the user's home directory.
 -   Everything after the **'\$'** is where commands are typed into the terminal. This is also referred to as the command line.
 
-To open a new terminal window, right click on the main screen, choose `Applications` -\> `Shell` -\> `bash`
+To open a new terminal window, right click on the main screen, choose `Terminal`.
 
 ## Commands
 
@@ -51,7 +51,7 @@ Commands are typed into the terminal and then run by pressing **"enter"**"
 ![](figures/enter_symbol.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
-To run a command select your terminal by clicking on it or using **"alt+shift"**.
+To run a command select your terminal by clicking on it.
 
 Now run the below command:
 
