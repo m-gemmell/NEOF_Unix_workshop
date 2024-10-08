@@ -3,7 +3,7 @@
 ![](figures/skateboard_trick.png){style="width:300px"}
 </center>
 
-`r hide("Chapter 5 viedo walk-through")`
+`r hide("Chapter 5 video walk-through")`
 <div class="container">
 <iframe src="https://www.youtube.com/embed/968QURuAplk" 
 frameborder="0" allowfullscreen class="video"></iframe>
