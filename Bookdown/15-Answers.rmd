@@ -13,7 +13,7 @@ cd ~/Linux/
 
 1. Change the name of the subdirectory 4_exercises_aaaa within your Linux to 4_exercises
 ```{bash eval=FALSE}
-mv 4_exercises_aaaa 4_exercises
+mv four_exercises 4_exercises
 ```
 
 2. Make a backup of the 4_exercises directory
