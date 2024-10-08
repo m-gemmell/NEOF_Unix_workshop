@@ -436,10 +436,10 @@ List the contents in your home directory:
 ls ..
 ```
 
-List the contents in the root directory and put each separate file/directory on a separate line. In the below command the `-1` is a parameter that indicates there will be only 1 piece of content on each line. Note: `-2`, `-3` etc are not parameters that work with `ls`.
+List the contents in the `/pub14/tea/` directory and put each separate file/directory on a separate line. In the below command the `-1` is a parameter that indicates there will be only 1 piece of content on each line. Note: `-2`, `-3` etc are not parameters that work with `ls`.
 
 ```{bash eval=FALSE}
-ls -1 /
+ls -1 /pub14/tea/
 ```
 
 **Reminder**: you can use the `man` command to look at more options for commands.
