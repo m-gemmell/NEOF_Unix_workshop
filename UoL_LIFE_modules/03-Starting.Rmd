@@ -1,0 +1,84 @@
+# Starting
+<center>
+![](figures/start.png){style="width:200px"}
+</center>
+
+## Logon instructions {#cluster}
+
+For this workshop we will be using the course HPC. Follow the log in instructions you were sent.
+
+
+## The Terminal Window
+
+Once logged in you will have a terminal with info like the below:
+
+<center>
+![](figures/HPC_terminal.png){style="width:800px"}
+</center>
+
+Already there is useful information for us on the terminal window.
+
+-   **mgemmell**: This is the login name, also known as the username. In this case mgemmell is a demonstrator's account. Your screen should show a different account name which will be your username for the Linux machine/cluster you are logged into.
+-   **login01**: This is the machine name the user is logged into.
+-   **\~**: This represents the current directory of the user, or the directory a command was run in. In the Linux OS and others **'\~'** is a shortcut to the user's home directory.
+-   Everything after the **'\$'** is where commands are typed into the terminal. This is also referred to as the command line.
+
+## Activate an interactive session
+
+Every time you log into the course HPC please run the following command:
+
+```{bash, eval = FALSE}
+srun --nodes=1 --ntasks-per-node=1 --time=04:00:00 --pty bash -i
+```
+
+This will create an interactive session with 1 node and 4 hours of time. This is important for the allocation of resources in the HPC. If you do not within an interactive session the machine may run slowly for you.
+
+You will know you are in an interative session if your machine name is `computer01`. When you first log in your machine name will be `login`.
+
+## Commands
+
+Commands are typed into the terminal and then run by pressing **"enter"**"
+
+<center>
+![](figures/enter_symbol.png){style="width:200px; border-radius:15px; background:white"}
+</center>
+
+To run a command select your terminal by clicking on it.
+
+Now run the below command:
+
+```{bash eval=FALSE}
+echo "Hello World"
+```
+
+In this case `echo` is a command that prints out the term "Hello World".
+
+Now try:
+
+```{bash eval=FALSE}
+echo "Bye World"
+```
+
+There are many different Linux commands and we will run through a few. With a large variety it can be hard to remember all the commands and how they work.
+
+Three convenient resources are:
+
+1.  **Search engines** (e.g. Google): There are many forums where people ask for help with command line issues. If you have an issue and are not sure what to do, most likely someone else has had the same issue and asked for help on a forum. The tricky part of this is knowing the specific terminology to use when searching. Forums where people ask bioinformatics questions include SEQanswers, Stack overflow and biostars.
+2.  **Cheat sheets**: It is never wrong to "cheat" when coding. Cheat sheets with many commands and good descriptions are very useful. Here is a good example of one: <https://files.fosswire.com/2007/08/fwunixref.pdf>
+3.  **Manual pages**: Linux commands have many different parameters and options. If you ever need to figure out what they all are and what they do you can use the `man` command.
+
+E.g. The below command will show the manual page for the echo command:
+
+```{bash eval=FALSE}
+man echo
+```
+
+**Note**: The `man` page acts like using the command **less** (we will get into more specifics later). Important notes for now are to use the **arrow keys** to go **up** and **down** the page and press **q** to exit the manual
+
+The below command will show the manual page for the `man` command:
+
+```{bash eval=FALSE}
+man man
+```
+
+**Note**: There is a cheat sheet at the end of this document with all the commands covered in this practical.
