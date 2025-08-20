@@ -3,7 +3,7 @@
 # Practical cheat sheet {#cheatsheet}
 
 <center>
-![](figures/cheatsheet.png){style="width:200px; border-radius:5px; border:3px solid #333333; background:white"}
+![](figures/cheatsheet.png){style="width:200px; border-radius:5px; border:3px solid white; background:white"}
 </center>
 
 +-------------+--------------------------------------------------+------------------------------------------------------------+
@@ -59,14 +59,14 @@ If you are on a windows you may need to download a terminal program to `ssh` to 
 # `ssh`
 
 <center>
-![](figures/turtle_shell.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/turtle_shell.png){style="width:200px; border-radius:15px; border:5px solid white; background:white"}
 </center>
 
 The `ssh` (Secure Shell Protocol) command is used to login into cluster and other machines. For more information on this please see the following online tutorial: https://opensource.com/article/20/9/ssh
 
 # File transferring
 <center>
-![](figures/file_transfer.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/file_transfer.png){style="width:200px; border-radius:15px; border:5px solid white; background:white"}
 </center>
 
 When working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.
@@ -77,7 +77,7 @@ For transferring on Macs I would suggest [FileZIlla](https://filezilla-project.o
 
 # Mamba
 <center>
-![](figures/mamba_logo.png){style="width:250px; border-radius:15px; border:5px solid #333333"}
+![](figures/mamba_logo.png){style="width:250px; border-radius:15px; border:5px solid white"}
 </center>
 
 ## Mamba installation {#mamba_install}

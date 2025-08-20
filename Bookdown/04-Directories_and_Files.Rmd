@@ -1,6 +1,6 @@
 # Directories and Files {#dirsandfiles}
 <center>
-![](figures/directory.png){style="width:200px"}
+![](figures/directory.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 `r hide("Chapter 4 video walk-through")`
@@ -12,14 +12,16 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Acquiring Workshop data
 <center>
-![](figures/data_files.png){style="width:150px"}
+![](figures/data_files.png){style="width:150px; background: white; border-radius:5px"}
 </center>
 
 The first step to carry out is to copy the data for the workshop to your home directory.
 
+__Note:__ A directory is known as a folder in common parlance.
+
 ### Changing directories
 <center>
-![](figures/cd.png){style="width:200px"}
+![](figures/cd.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 Before copying you will change directory to your home directory.
@@ -54,7 +56,7 @@ In this case it will not show a **"\~"** but the full path of your home director
 
 ### Copying
 <center>
-![](figures/copy_vaporwave.png){style="width:200px"}
+![](figures/copy_vaporwave.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
 </center>
 
 Now that we are in our home directory we can copy the data we need to it.

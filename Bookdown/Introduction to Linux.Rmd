@@ -63,7 +63,7 @@ Commands are in the following font, colour, and box. They should be run in the c
 echo "This is a command example" 
 ```
 
-In some chapters there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the chapter. These are found in an expandable box at the start of the chapters 4,5,6, and 8.
+In some chapters there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the chapter. These are found in an expandable box at the start of the chapters 4, 5, 6, and 8.
 
 Additionally, please use the [cheatsheet](#cheatsheet) as a reminder of all the commands you will be learning.
 
@@ -119,15 +119,15 @@ library(webexercises)
 ![](figures/linux_beginner.png){style="width:200px"}
 </center>
 
-Linux is a multitasking, multiuser Unix-like computer operating system (OS). Linux can run many different applications (multitasking) and it can be used by many different people (multiuser) on the same computer at the same time.
+Linux is a multitasking, multiuser Unix-like computer operating system (<u id='os'>OS</u>). Linux can run many different applications (multitasking) and it can be used by many different people (multiuser) on the same computer at the same time.
 
-It is utilised by many programmers, including Bioinformaticians. It is a relatively easy OS to run commands and develop software for. The vast majority of programs and tools for computational analysis of biological data will work in Linux.
+It is utilised by many programmers, including Bioinformaticians. It is a relatively easy <u id='os'>OS</u> to run commands and develop software for. The vast majority of programs and tools for computational analysis of biological data will work in Linux.
 
-There are three parts of the Linux OS:
+There are three parts of the Linux (<u id='os'>OS</u>):
 
--   **The kernel**: This is the hub of the operating systems. This is the "behind the scenes" part of the OS which allocates time and memory to programs. This controls the hardware.
+-   **The kernel**: This is the hub of the operating systems. This is the "behind the scenes" part of the (<u id='os'>OS</u>) which allocates time and memory to programs. This controls the hardware.
 -   **The shell**: This acts as the interface between the user and the kernel. When a user runs commands, the shell will interpret these commands for the kernel. The shell can be any program that constitutes the user interface e.g. command line, internet browser, start menu etc.
--   **Programs**: Programs allow the OS to perform specific tasks. Examples of programs include Internet browsers, genome assembly tools, text editors etc.
+-   **Programs**: Programs allow the <u id='os'>OS</u> to perform specific tasks. Examples of programs include Internet browsers, genome assembly tools, text editors etc.
 
 <center>
 ![](figures/linux_user_to_kernel.png){style="width:800px"}
@@ -135,9 +135,19 @@ There are three parts of the Linux OS:
 
 It is important to learn the Linux language so you can run commands on the command line. This is because:
 
--   Many bioinformatic tools do not have a graphical user interface (gui) and so must be run on the command line.
+-   Many bioinformatic tools do not have a graphical user interface (<u id='gui'>gui</u>) and so must be run on the command line.
 -   There are many powerful commands that can be run on the Linux command line.
--   It is quicker and more reproducible to run commands through a shell than through a gui.
+-   It is quicker and more reproducible to run commands through a shell than through a <u id='gui'>gui</u>.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "os", 
+                  tooltip = "Operating System",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "gui", 
+                  tooltip = "Graphical User Interface",
+                  arrow = TRUE, placement = "bottom")
+```
 
 <!--chapter:end:02-Linux_Introduction.Rmd-->
 
@@ -151,24 +161,44 @@ library(webexercises)
 
 ## Logon instructions {#cluster}
 
-For this workshop we will be using Virtual Network Computing (VNC). Connect to the VNC with a browser by using the webVNC link you were sent.
+For this workshop we will be using Virtual Network Computing (<u id='vnc'>VNC</u>). Connect to the <u id='vnc'>VNC</u> with a browser by using the webVNC link you were sent.
 
-You will now be in a logged-in Linux VNC desktop with two terminals. You will see something as below (there may be only one terminal which is fine). If you do not see something similar please ask for assistance.
+You will now be in a logged-in Linux <u id='vnc'>VNC</u> desktop with two terminals. You will see something as below (there may be only one terminal which is fine). If you do not see something similar please ask for assistance.
 
 <center>
 ![](figures/logon_pic.png){style="width:800px"}
 </center>
 
-If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
+If the <u id='vnc'>VNC</u> is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
 
-These instructions will not work outside of this workshop. If you would like to install your own Linux OS on your desktop or laptop we would recommend Mint Linux 
+`r hide("How to zoom with your browser")`
+You may need to zoom out with your browser so you can see the full webVNC window.
+
+- __Chrome__: Click on the __three dots in vertical line__ (
+```{r, echo=FALSE}
+icons::icon_style(icons::ionicons("ellipsis-vertical"), background="white", border="solid white")
+``` 
+) on the top left for a dropdown menu which includes zoom options.
+- __Edge__: Click on the __three horizontal lines__ (
+```{r, echo=FALSE}
+icons::icon_style(icons::ionicons("ellipsis-horizontal"), background="white", border="solid white")
+``` 
+) on the top left for a dropdown menu which includes zoom options.
+- __Firefox__: Click on the __three dots in horizontal line__ (
+```{r, echo=FALSE}
+icons::icon_style(icons::fontawesome("bars", style="solid"), background="white", border="solid white")
+```
+) on the top left for a dropdown menu which includes zoom options.
+`r unhide()`
+
+These instructions will not work outside of this workshop. If you would like to install your own Linux <u id='os'>OS</u> on your desktop or laptop we would recommend Mint Linux 
 
 The following link is a guide to install Mint Linux:  
 https://linuxmint-installation-guide.readthedocs.io/en/latest/
 
-If you have a windows machine and would like to install linux on it you can install Windows Subsystem for Linux. 
+If you have a windows machine and would like to install linux on it you can install Windows Subsystem for Linux (<u id='wsl'>WSL</u>). 
 
-The following link is a guide to instal linux via WSL:
+The following link is a guide to install linux via (<u id='wsl'>WSL</u>):
 https://learn.microsoft.com/en-us/windows/wsl/install
 
 
@@ -184,14 +214,14 @@ Already there is useful information for us on the terminal window.
 
 -   **nsc206**: This is the login name, also known as the username. In this case nsc206 is a demonstrator's account. Your screen should show a different account name which will be your username for the Linux machine/cluster you are logged into.
 -   **ada02**: This is the machine name the user is logged into.
--   **\~**: This represents the current directory of the user, or the directory a command was run in. In the Linux OS and others **'\~'** is a shortcut to the user's home directory.
+-   **\~**: This represents the current directory of the user, or the directory a command was run in. In the Linux (<u id='os'>OS</u>) and others **'\~'** is a shortcut to the user's home directory.
 -   Everything after the **'\$'** is where commands are typed into the terminal. This is also referred to as the command line.
 
 To open a new terminal window, right click on the main screen, choose `Terminal`.
 
 ## Commands
 
-Commands are typed into the terminal and then run by pressing **"enter"**"
+Commands are typed into the terminal and then run by pressing **"enter"**
 
 <center>
 ![](figures/enter_symbol.png){style="width:200px; border-radius:15px; background:white"}
@@ -227,7 +257,7 @@ E.g. The below command will show the manual page for the echo command:
 man echo
 ```
 
-**Note**: The `man` page acts like using the command **less** (we will get into more specifics later). Important notes for now are to use the **arrow keys** to go **up** and **down** the page and press **q** to exit the manual
+**Note**: The `man` page acts like using the command **less** (we will get into more specifics later). Important notes for now are to use the **arrow keys** to go **up** and **down** the page and press `q` to exit the manual
 
 The below command will show the manual page for the `man` command:
 
@@ -235,7 +265,20 @@ The below command will show the manual page for the `man` command:
 man man
 ```
 
-**Note**: There is a cheat sheet at the end of this document with all the commands covered in this practical.
+**Note**: There is a [cheat sheet](#cheatsheet) at the end of this document with all the commands covered in this practical.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "os", 
+                  tooltip = "Operating System",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vnc", 
+                  tooltip = "Virtual Network Computing",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "wsl", 
+                  tooltip = "Windows Subsystem for Linux",
+                  arrow = TRUE, placement = "bottom")
+```
 
 <!--chapter:end:03-Starting.Rmd-->
 
@@ -244,7 +287,7 @@ library(webexercises)
 ```
 # Directories and Files {#dirsandfiles}
 <center>
-![](figures/directory.png){style="width:200px"}
+![](figures/directory.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 `r hide("Chapter 4 video walk-through")`
@@ -256,14 +299,16 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Acquiring Workshop data
 <center>
-![](figures/data_files.png){style="width:150px"}
+![](figures/data_files.png){style="width:150px; background: white; border-radius:5px"}
 </center>
 
 The first step to carry out is to copy the data for the workshop to your home directory.
 
+__Note:__ A directory is known as a folder in common parlance.
+
 ### Changing directories
 <center>
-![](figures/cd.png){style="width:200px"}
+![](figures/cd.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 Before copying you will change directory to your home directory.
@@ -298,7 +343,7 @@ In this case it will not show a **"\~"** but the full path of your home director
 
 ### Copying
 <center>
-![](figures/copy_vaporwave.png){style="width:200px"}
+![](figures/copy_vaporwave.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
 </center>
 
 Now that we are in our home directory we can copy the data we need to it.
@@ -2031,7 +2076,7 @@ library(webexercises)
 # Practical cheat sheet {#cheatsheet}
 
 <center>
-![](figures/cheatsheet.png){style="width:200px; border-radius:5px; border:3px solid #333333; background:white"}
+![](figures/cheatsheet.png){style="width:200px; border-radius:5px; border:3px solid white; background:white"}
 </center>
 
 +-------------+--------------------------------------------------+------------------------------------------------------------+
@@ -2087,14 +2132,14 @@ If you are on a windows you may need to download a terminal program to `ssh` to 
 # `ssh`
 
 <center>
-![](figures/turtle_shell.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/turtle_shell.png){style="width:200px; border-radius:15px; border:5px solid white; background:white"}
 </center>
 
 The `ssh` (Secure Shell Protocol) command is used to login into cluster and other machines. For more information on this please see the following online tutorial: https://opensource.com/article/20/9/ssh
 
 # File transferring
 <center>
-![](figures/file_transfer.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/file_transfer.png){style="width:200px; border-radius:15px; border:5px solid white; background:white"}
 </center>
 
 When working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.
@@ -2105,7 +2150,7 @@ For transferring on Macs I would suggest [FileZIlla](https://filezilla-project.o
 
 # Mamba
 <center>
-![](figures/mamba_logo.png){style="width:250px; border-radius:15px; border:5px solid #333333"}
+![](figures/mamba_logo.png){style="width:250px; border-radius:15px; border:5px solid white"}
 </center>
 
 ## Mamba installation {#mamba_install}

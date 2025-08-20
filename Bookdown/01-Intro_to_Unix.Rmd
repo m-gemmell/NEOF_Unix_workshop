@@ -60,7 +60,7 @@ Commands are in the following font, colour, and box. They should be run in the c
 echo "This is a command example" 
 ```
 
-In some chapters there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the chapter. These are found in an expandable box at the start of the chapters 4,5,6, and 8.
+In some chapters there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the chapter. These are found in an expandable box at the start of the chapters 4, 5, 6, and 8.
 
 Additionally, please use the [cheatsheet](#cheatsheet) as a reminder of all the commands you will be learning.
 

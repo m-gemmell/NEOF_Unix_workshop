@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 12 Advanced Linux practice | Intro to Linux</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 12 Advanced Linux practice | Intro to Linux" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2024-10-08" />
+<meta name="date" content="2025-08-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,11 +56,19 @@
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
 <script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet" />
+<script src="libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+<script src="libs/tippy-binding-0.1.0/tippy.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -70,7 +78,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -481,52 +489,52 @@ Print <strong>metadata.txt</strong> to screen and then change the “P” in “
 <p>Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
 <ol style="list-style-type: decimal">
 <li>Which symbol is used to pipe the output of one command to the input of another?
-<div id="radio_HOXSMFJRYQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HOXSMFJRYQ" value=""></input> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HOXSMFJRYQ" value="answer"></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HOXSMFJRYQ" value=""></input> <span><strong><code>sed</code></strong></span></label>
+<div id="radio_MCQACMNBNI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MCQACMNBNI" value=""></input> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MCQACMNBNI" value="answer"></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MCQACMNBNI" value=""></input> <span><strong><code>sed</code></strong></span></label>
 </div></li>
 <li>What command can be used to substitute text with other text?
-<div id="radio_FUKLUKHDPC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FUKLUKHDPC" value=""></input> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FUKLUKHDPC" value=""></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FUKLUKHDPC" value="answer"></input> <span><strong><code>sed</code></strong></span></label>
+<div id="radio_KIAJTROJNH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KIAJTROJNH" value=""></input> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KIAJTROJNH" value=""></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KIAJTROJNH" value="answer"></input> <span><strong><code>sed</code></strong></span></label>
 </div></li>
 <li>Which symbol is used to redirect the output of a command to a file?
-<div id="radio_BAPGOTQOLK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BAPGOTQOLK" value="answer"></input> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BAPGOTQOLK" value=""></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BAPGOTQOLK" value=""></input> <span><strong><code>sed</code></strong></span></label>
+<div id="radio_BZGMGNJOQR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BZGMGNJOQR" value="answer"></input> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BZGMGNJOQR" value=""></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BZGMGNJOQR" value=""></input> <span><strong><code>sed</code></strong></span></label>
 </div></li>
 <li>Which wildcard represents a single character?
-<div id="radio_UDLFKQXDAR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UDLFKQXDAR" value=""></input> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UDLFKQXDAR" value=""></input> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UDLFKQXDAR" value="answer"></input> <span><strong><code>?</code></strong></span></label>
+<div id="radio_DGSEZTHDQP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DGSEZTHDQP" value=""></input> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DGSEZTHDQP" value=""></input> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DGSEZTHDQP" value="answer"></input> <span><strong><code>?</code></strong></span></label>
 </div></li>
 <li>Which wildcard represents zero or more characters?
-<div id="radio_VFNCIADJGC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_VFNCIADJGC" value="answer"></input> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VFNCIADJGC" value=""></input> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VFNCIADJGC" value=""></input> <span><strong><code>?</code></strong></span></label>
+<div id="radio_MQNXNOYMRY" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MQNXNOYMRY" value="answer"></input> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MQNXNOYMRY" value=""></input> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MQNXNOYMRY" value=""></input> <span><strong><code>?</code></strong></span></label>
 </div></li>
 <li>Which wildcard represents a range of characters?
-<div id="radio_KGMZXUPHZQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KGMZXUPHZQ" value=""></input> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KGMZXUPHZQ" value="answer"></input> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KGMZXUPHZQ" value=""></input> <span><strong><code>?</code></strong></span></label>
+<div id="radio_MXELDGQFYE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MXELDGQFYE" value=""></input> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MXELDGQFYE" value="answer"></input> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MXELDGQFYE" value=""></input> <span><strong><code>?</code></strong></span></label>
 </div></li>
 <li>Which regular expression indicates that the preceding character matches 1 or 0 times?
-<div id="radio_JAOARHDVWU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_JAOARHDVWU" value=""></input> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_JAOARHDVWU" value="answer"></input> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_JAOARHDVWU" value=""></input> <span><strong><code>*</code></strong></span></label>
+<div id="radio_MBHMZHCHYQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MBHMZHCHYQ" value=""></input> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MBHMZHCHYQ" value="answer"></input> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MBHMZHCHYQ" value=""></input> <span><strong><code>*</code></strong></span></label>
 </div></li>
 <li>Which regular expression represents a single character?
-<div id="radio_BIPMZEQIHL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BIPMZEQIHL" value="answer"></input> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BIPMZEQIHL" value=""></input> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BIPMZEQIHL" value=""></input> <span><strong><code>*</code></strong></span></label>
+<div id="radio_KFYXOQJERG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KFYXOQJERG" value="answer"></input> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KFYXOQJERG" value=""></input> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KFYXOQJERG" value=""></input> <span><strong><code>*</code></strong></span></label>
 </div></li>
 <li>Which regular expression indicates that the preceding character matches zero or more times?
-<div id="radio_NOVHOHLCWU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NOVHOHLCWU" value=""></input> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NOVHOHLCWU" value=""></input> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NOVHOHLCWU" value="answer"></input> <span><strong><code>*</code></strong></span></label>
+<div id="radio_KPWJVURFFN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KPWJVURFFN" value=""></input> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KPWJVURFFN" value=""></input> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KPWJVURFFN" value="answer"></input> <span><strong><code>*</code></strong></span></label>
 </div></li>
 <li>Which regular expression matches the end of the line?
-<div id="radio_PHYSAARLKY" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PHYSAARLKY" value=""></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PHYSAARLKY" value=""></input> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PHYSAARLKY" value="answer"></input> <span><strong><code>$</code></strong></span></label>
+<div id="radio_MQVFQZMZZP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MQVFQZMZZP" value=""></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MQVFQZMZZP" value=""></input> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MQVFQZMZZP" value="answer"></input> <span><strong><code>$</code></strong></span></label>
 </div></li>
 <li>Which regular expression is a logical OR operator?
-<div id="radio_NERYDKNBLF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NERYDKNBLF" value="answer"></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NERYDKNBLF" value=""></input> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NERYDKNBLF" value=""></input> <span><strong><code>$</code></strong></span></label>
+<div id="radio_GOSFBPEPUN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GOSFBPEPUN" value="answer"></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GOSFBPEPUN" value=""></input> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GOSFBPEPUN" value=""></input> <span><strong><code>$</code></strong></span></label>
 </div></li>
 <li>Which regular expression matches the start of the line?
-<div id="radio_THCHDOIBIX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_THCHDOIBIX" value=""></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_THCHDOIBIX" value="answer"></input> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_THCHDOIBIX" value=""></input> <span><strong><code>$</code></strong></span></label>
+<div id="radio_YSAGMDAAJO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YSAGMDAAJO" value=""></input> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YSAGMDAAJO" value="answer"></input> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YSAGMDAAJO" value=""></input> <span><strong><code>$</code></strong></span></label>
 </div></li>
 </ol>
 
@@ -758,29 +766,29 @@ window.onload = function() {
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": null,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>
