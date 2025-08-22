@@ -1,20 +1,210 @@
 # Exercise 2
 <center>
-![](figures/exercise_2.png){style="width:200px"}
+![](figures/punching_bag_2.png){style="width:200px"}
 </center>
 
 The directory __"~/Linux/6_final_exercise/"__ has all the files you need. Below is a set of tasks and questions that will require all the skills you have gained from this practical.
 
-1. See what files are in the directory.  
-2. Rename the file "3-P£_CACTTCGA_L001_R1_001.fastq" as "3-P3_CACTTCGA_L001_R1_001.fastq".  
-3. Make a backup of the files in a directory called __backup__.  
-4. How many reads are in the samples?  
-5. Remove the fastq files with no data.
-6. Update the backup files with the previous change.  
-7. Check if the 1st read names match in the paired files.  
-8. Check if the last read names match in the paired files.  
-9. In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter'. (__Tip:__ Use `grep`)  
-10. In the sample __1-P1__ remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 files.  
-11. Print to screen the fastq header, sequence and quality data for the 25th sequence in sample __2-P2__ for both the R1 and R2 file. Do this with one command for R1 and a separate command for R2.
+You can check my solutions by clicking the expandable boxes like the one below ("Move to correct directory"). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have carried it out correctly.
 
-You can check my solutions in the [Answers section](#exercise2_answers). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.
+`r hide("Move to correct directory")`
+```{bash eval=FALSE}
+cd ~/Linux/6_final_exercise
+```
+`r unhide()`
+
+
+## Exercise 2 tasks
+
+### Task 1 {-}
+<center>
+![](figures/eye_3.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+See what files are in the directory.  
+
+`r hide("Task 1 solution")`
+```{bash eval=FALSE}
+ls
+```
+`r unhide()`
+
+### Task 2 {-}
+<center>
+![](figures/rename_2.png){style="width:150px; background:white; border-radius:5px; border: 5px white solid"}
+</center>
+
+Rename the file "3-P£_CACTTCGA_L001_R1_001.fastq" as "3-P3_CACTTCGA_L001_R1_001.fastq".  
+
+`r hide("Task 2 solution")`
+```{bash eval=FALSE}
+mv 3-P£_CACTTCGA_L001_R1_001.fastq \
+3-P3_CACTTCGA_L001_R1_001.fastq
+```
+`r unhide()`
+
+### Task 3 {-}
+<center>
+![](figures/backup_2.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Make a backup of the files in a directory called __backup__.  
+
+`r hide("Task 3 solution")`
+```{bash eval=FALSE}
+mkdir backup
+cp 1-P1_ATGCCTGG_L001_R1_001.fastq backup/
+cp 1-P1_ATGCCTGG_L001_R2_001.fastq backup/
+cp 2-P2_AAGGACAC_L001_R1_001.fastq backup/
+cp 2-P2_AAGGACAC_L001_R2_001.fastq backup/
+cp 3-P3_CACTTCGA_L001_R1_001.fastq backup/
+cp 3-P3_CACTTCGA_L001_R2_001.fastq backup/
+cp 4-E1_ATTGGCTC_L001_R1_001.fastq backup/
+cp 4-E1_ATTGGCTC_L001_R2_001.fastq backup/
+cp metadata.txt backup/
+```
+This can be done a lot quicker with the use of wildcard characters (Covered in Advanced Linux section)
+```{bash eval=FALSE}
+mkdir backup
+cp *fastq backup
+cp *txt backup
+```
+`r unhide()`
+
+### Task 4 {-}
+<center>
+![](figures/abacus_2.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+How many reads are in the samples?  
+
+`r hide("Task 4 solution")`
+The below command will give the number of lines in the files, this number can then be divided by 4 (mentally or using a calculator). These values will be the same for the R2 files as they are for the matching R1 file.
+```{bash eval=FALSE}
+wc -l 1-P1_ATGCCTGG_L001_R1_001.fastq \
+2-P2_AAGGACAC_L001_R1_001.fastq \
+3-P3_CACTTCGA_L001_R1_001.fastq
+```
+An advanced method using regular expressions, wildcard characters and grep:
+```{bash eval=FALSE}
+grep -c "^@[0-9]*_" *R1*.fastq
+```
+`r unhide()`
+
+### Task 5 {-}
+<center>
+![](figures/remove.png){style="width:150px; background:white; border-radius:5px; border: 5px white solid"}
+</center>
+
+Remove the fastq files with no data.
+
+`r hide("Task 5 solution")`
+Check which files have no data
+```{bash eval=FALSE}
+wc \
+1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \
+2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \
+3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq \
+4-E1_ATTGGCTC_L001_R1_001.fastq 4-E1_ATTGGCTC_L001_R2_001.fastq 
+```
+Remove empty files
+```{bash eval=FALSE}
+rm \
+4-E1_ATTGGCTC_L001_R1_001.fastq 4-E1_ATTGGCTC_L001_R2_001.fastq
+```
+`r unhide()`
+
+### Task 6 {-}
+<center>
+![](figures/update.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Update the backup files with the previous change.  
+
+`r hide("Task 6 solution")`
+```{bash eval=FALSE}
+rm backup/4-E1_ATTGGCTC_L001_R1_001.fastq \
+backup/4-E1_ATTGGCTC_L001_R2_001.fastq 
+```
+`r unhide()`
+
+### Task 7 {-}
+<center>
+![](figures/reading_glass.png){style="width:150px; background:white; border-radius:5px; border: 5px white solid"}
+</center>
+
+Check if the 1st read names match in the paired files.  
+
+`r hide("Task 7 solution")`
+```{bash eval=FALSE}
+head -n 1 \
+1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \
+2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \
+3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq 
+```
+`r unhide()`
+
+### Task 8 {-}
+<center>
+![](figures/tail.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Check if the last read names match in the paired files.  
+
+`r hide("Task 8 solution")`
+```{bash eval=FALSE}
+tail -n 4 \
+1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \
+2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \
+3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq 
+```
+`r unhide()`
+
+### Task 9 {-}
+<center>
+![](figures/pattern_1.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter'. (__Tip:__ Use `grep`)  
+
+`r hide("Task 9 solution")`
+```{bash eval=FALSE}
+grep “psychrobacter” 1-P1_ATGCCTGG_L001_R1_001.fastq
+```
+`r unhide()`
+
+### Task 10 {-}
+<center>
+![](figures/nanochip.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+In the sample __1-P1__ remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 files.  
+
+`r hide("Task 10 solution")`
+Using __nano__ navigate to the psychrobacter sequences. Then use "Ctrl+K" to cut the lines followed by "Ctrl+W" and "Ctrl+X" to save and exit.
+`r unhide()`
+
+### Task 11 {-}
+<center>
+![](figures/print_2.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Print to screen the fastq header, sequence and quality data for the 25th sequence in sample __2-P2__ for both the R1 and R2 file. Do this with one command for R1 and a separate command for R2.
+
+`r hide("Task 11 solution")`
+\@24_ecoli is grepped as the first sequence is \@0_ecoli
+```{bash eval=FALSE}
+grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R1_001.fastq
+grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R2_001.fastq
+```
+`r unhide()`
+
+## Exercise 2 conclusion
+
+<center>
+![](figures/finish.png){style="width:200px; background: white; border-radius:5px"}
+</center>
+
+Stupendous! You have finished the last exercise of the intro to linux section.
+
+Thanks for your hard work. You have learnt a lot throughout this course but there is more to learn if you are willing and have the time. The next section is the Advanced Linux section. This is not required for any of our other workshops but the skills are very useful for bioinformatics analysis in Linux.

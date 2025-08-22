@@ -66,14 +66,14 @@ ls ~/Linux/3_chicken_farm/3_1_hut
 mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
 ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 #List the contents of the destination directory
-ls ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+ls ~/Linux/3_chicken_farm/3_2_field/
 ``` 
 
 Move the file __"3_chicken_farm/3_3_supplies/feed.txt"__ to the directory __"3_chicken_farm/3_2_field"__ and rename it __"used_feed.txt"__
 
 ```{bash eval=FALSE}
 #List start directory to see if the feed.txt file exists
-ls 3_chicken_farm/3_3_supplies/feed.txt
+ls 3_chicken_farm/3_3_supplies/
 #Move and rename the feed.txt file
 mv 3_chicken_farm/3_3_supplies/feed.txt \
 3_chicken_farm/3_2_field/used_feed.txt
@@ -83,7 +83,7 @@ ls 3_chicken_farm/3_2_field/
 
 ## Copying Directories and Files
 <center>
-![](figures/copy.png){style="width:150px"}
+![](figures/copy.png){style="width:150px; background:white; border-radius:5px; border: 5px solid white"}
 </center>
 
 Files and directories can be copied with the `cp` command. Directories and files can be copied to any directory and given a new name.
@@ -166,7 +166,7 @@ ls
 ![](figures/question_bubble_green.png){style="width:200px"}
 </center>
 
-Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+Splendid! Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
 ```{r, echo = FALSE}
 opts_p <- c(answer="__`rm`__", "__`mv`__", "__`ls`__")
@@ -191,4 +191,4 @@ opts_p <- c(answer="__`-r`__", "__`mkdir`__", "__`ls`__")
 ```{r, echo = FALSE}
 opts_p <- c("__`-r`__", "__`mkdir`__", answer="__`ls`__")
 ```
-5.  What command list the contents of directories? `r longmcq(opts_p)`
+5.  What command lists the contents of directories? `r longmcq(opts_p)`

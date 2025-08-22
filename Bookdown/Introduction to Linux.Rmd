@@ -399,7 +399,7 @@ Below is an example of visualising the location of the **"Linux"** directory wit
 ![](figures/paths.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
-On the command line directories and files are referred to by paths e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
+On the command line directories and files are referred to as __paths__ e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
 
 Paths are case sensitive. The path **"directory/file.txt"** is different than **"diRectory/File.txt"**.
 
@@ -496,7 +496,7 @@ ls -1 /pub14/tea/
 ![](figures/question_bubble.png){style="width:200px"}
 </center>
 
-Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+Great! Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
 ```{r, echo = FALSE}
 opts_p <- c("__`cp`__", "__`cd`__", answer="__`ls`__")
@@ -570,6 +570,8 @@ Tab complete serves the following purposes:
 
 In the below examples press the tab button when you see __\<tab>__ and __replace 2xx with your user number.__
 
+[Video demonstration](https://www.youtube.com/watch?v=968QURuAplk&t=20s)
+
 Move into the directory __"1_directory"__
 ```{bash eval=FALSE}
 cd /pub14/t<tab>n<tab>2xx<tab>L<tab>1_d<tab>
@@ -625,6 +627,8 @@ The `clear` command can be used to clear all the text from the terminal. This is
 ## Bash escape
 To continue a command on a new line on the command line use the backslash character,  __`\`__. When you press `\` followed by enter, the command will not run and you will be on a new line on the command line. This can be useful for clarity and for long commands. 
 In the below example press "enter" after the end of a line.
+
+[Video demonstration](https://www.youtube.com/watch?v=968QURuAplk&t=607s)
 
 Print to screen the term “Hello universe, today is a very nice day. Don’t you think so?”
 ```{bash eval=FALSE}
@@ -764,14 +768,14 @@ ls ~/Linux/3_chicken_farm/3_1_hut
 mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
 ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 #List the contents of the destination directory
-ls ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+ls ~/Linux/3_chicken_farm/3_2_field/
 ``` 
 
 Move the file __"3_chicken_farm/3_3_supplies/feed.txt"__ to the directory __"3_chicken_farm/3_2_field"__ and rename it __"used_feed.txt"__
 
 ```{bash eval=FALSE}
 #List start directory to see if the feed.txt file exists
-ls 3_chicken_farm/3_3_supplies/feed.txt
+ls 3_chicken_farm/3_3_supplies/
 #Move and rename the feed.txt file
 mv 3_chicken_farm/3_3_supplies/feed.txt \
 3_chicken_farm/3_2_field/used_feed.txt
@@ -781,7 +785,7 @@ ls 3_chicken_farm/3_2_field/
 
 ## Copying Directories and Files
 <center>
-![](figures/copy.png){style="width:150px"}
+![](figures/copy.png){style="width:150px; background:white; border-radius:5px; border: 5px solid white"}
 </center>
 
 Files and directories can be copied with the `cp` command. Directories and files can be copied to any directory and given a new name.
@@ -864,7 +868,7 @@ ls
 ![](figures/question_bubble_green.png){style="width:200px"}
 </center>
 
-Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+Splendid! Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
 ```{r, echo = FALSE}
 opts_p <- c(answer="__`rm`__", "__`mv`__", "__`ls`__")
@@ -889,7 +893,7 @@ opts_p <- c(answer="__`-r`__", "__`mkdir`__", "__`ls`__")
 ```{r, echo = FALSE}
 opts_p <- c("__`-r`__", "__`mkdir`__", answer="__`ls`__")
 ```
-5.  What command list the contents of directories? `r longmcq(opts_p)`
+5.  What command lists the contents of directories? `r longmcq(opts_p)`
 
 <!--chapter:end:06-Manipulating_directories.Rmd-->
 
@@ -898,23 +902,110 @@ library(webexercises)
 ```
 # Exercise 1
 <center>
-![](figures/exercise.png){style="width:200px"}
+![](figures/skipping_rope.png){style="width:200px; background:white; border-radius:5px"}
 </center>
 
 Perform the following tasks with the skills and knowledge you have gained.  
 
-Change the name of the subdirectory __"four_exercises"__ within your __"Linux"__ directory to __"4_exercises"__  
+Before carrying out the tasks, ensure you are in your `~/Linux` directory.
 
-1. Make a backup of the __"4_exercises"__ directory 
-2. List the contents of the __"4_exercises"__ directory
-3. Within the directory __"4_exercises"__ 
-    1. Print the working directory.
-    2. Print out to screen the phrase ‘__the echo command allows me to print phrases to screen__’.
-    3. Copy the file __"copy_this_file.txt"__ to the directory __"to_me"__ 
-    4. Rename the directory __"to_me"__ to __"you"__
-    5. Delete the initial __"copy_this_file.txt"__ file
-    
-You can check my solutions in the [Answers section](#exercise1_answers). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.
+You can check my solutions by clicking the expandable boxes like the one below ("Move to correct directory"). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have carried it out correctly.
+
+`r hide("Move to correct directory")`
+```{bash eval=FALSE}
+cd ~/Linux/
+```
+`r unhide()`
+
+## Exercise 1 tasks
+
+### Task 1
+<center>
+![](figures/file_move.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Change the name of the subdirectory __"four_exercises"__ within your __"Linux"__ directory to __"4_exercises"__.
+
+`r hide("Task 1 solution")`
+```{bash eval=FALSE}
+mv four_exercises 4_exercises
+```
+`r unhide()`
+
+### Task 2 {-}
+<center>
+![](figures/backup.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Make a backup of the __"4_exercises"__ directory 
+
+`r hide("Task 2 solution")`
+```{bash eval=FALSE}
+cp -r 4_exercises 4_exercises_backup 
+```
+`r unhide()`
+
+### Task 3 {-}
+<center>
+![](figures/list_1.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+List the contents of the __"4_exercises"__ directory
+
+`r hide("Task 3 solution")`
+```{bash eval=FALSE}
+ls 4_exercises
+```
+`r unhide()`
+
+### Task 4 {-}
+<center>
+![](figures/print.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Within the directory __"4_exercises"__ 
+
+  1. Print the working directory.
+  2. Print out to screen the phrase ‘__the echo command allows me to print phrases to screen__’.
+  3. Copy the file __"copy_this_file.txt"__ to the directory __"to_me"__ 
+  4. Rename the directory __"to_me"__ to __"you"__
+  5. Delete the initial __"copy_this_file.txt"__ file
+
+`r hide("Task 4 solutions")`
+First move into the "2_exercises" directory
+```{bash eval=FALSE}
+cd 4_exercises
+```
+Print the working directory
+```{bash eval=FALSE}
+pwd
+```
+Print out to screen the phrase ‘the echo command allows me to print phrases to screen’
+```{bash eval=FALSE}
+echo “the echo command allows me to print phrases to screen”
+```
+Copy the file copy_this_file.txt to the directory to_me
+```{bash eval=FALSE}
+cp copy_this_file.txt to_me
+```
+Rename the directory to_me to you
+```{bash eval=FALSE}
+mv to_me you
+```
+Delete the initial copy_this_file.txt file
+```{bash eval=FALSE}
+rm copy_this_file.txt
+```
+`r unhide()`
+  
+## Exercise 1 conclusion
+<center>
+![](figures/finish.png){style="width:200px; background: white; border-radius:5px"}
+</center>
+
+Brilliant! I hope those tasks helped improve your Linux skills through application.
+
+Please continue on with the materials and remember you can ask for help and look at the [cheatsheet](#cheatsheet).
 
 <!--chapter:end:07-Exercise1.Rmd-->
 
@@ -1270,24 +1361,214 @@ library(webexercises)
 ```
 # Exercise 2
 <center>
-![](figures/exercise_2.png){style="width:200px"}
+![](figures/punching_bag_2.png){style="width:200px"}
 </center>
 
 The directory __"~/Linux/6_final_exercise/"__ has all the files you need. Below is a set of tasks and questions that will require all the skills you have gained from this practical.
 
-1. See what files are in the directory.  
-2. Rename the file "3-P£_CACTTCGA_L001_R1_001.fastq" as "3-P3_CACTTCGA_L001_R1_001.fastq".  
-3. Make a backup of the files in a directory called __backup__.  
-4. How many reads are in the samples?  
-5. Remove the fastq files with no data.
-6. Update the backup files with the previous change.  
-7. Check if the 1st read names match in the paired files.  
-8. Check if the last read names match in the paired files.  
-9. In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter'. (__Tip:__ Use `grep`)  
-10. In the sample __1-P1__ remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 files.  
-11. Print to screen the fastq header, sequence and quality data for the 25th sequence in sample __2-P2__ for both the R1 and R2 file. Do this with one command for R1 and a separate command for R2.
+You can check my solutions by clicking the expandable boxes like the one below ("Move to correct directory"). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have carried it out correctly.
 
-You can check my solutions in the [Answers section](#exercise2_answers). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.
+`r hide("Move to correct directory")`
+```{bash eval=FALSE}
+cd ~/Linux/6_final_exercise
+```
+`r unhide()`
+
+
+## Exercise 2 tasks
+
+### Task 1 {-}
+<center>
+![](figures/eye_3.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+See what files are in the directory.  
+
+`r hide("Task 1 solution")`
+```{bash eval=FALSE}
+ls
+```
+`r unhide()`
+
+### Task 2 {-}
+<center>
+![](figures/rename_2.png){style="width:150px; background:white; border-radius:5px; border: 5px white solid"}
+</center>
+
+Rename the file "3-P£_CACTTCGA_L001_R1_001.fastq" as "3-P3_CACTTCGA_L001_R1_001.fastq".  
+
+`r hide("Task 2 solution")`
+```{bash eval=FALSE}
+mv 3-P£_CACTTCGA_L001_R1_001.fastq \
+3-P3_CACTTCGA_L001_R1_001.fastq
+```
+`r unhide()`
+
+### Task 3 {-}
+<center>
+![](figures/backup_2.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Make a backup of the files in a directory called __backup__.  
+
+`r hide("Task 3 solution")`
+```{bash eval=FALSE}
+mkdir backup
+cp 1-P1_ATGCCTGG_L001_R1_001.fastq backup/
+cp 1-P1_ATGCCTGG_L001_R2_001.fastq backup/
+cp 2-P2_AAGGACAC_L001_R1_001.fastq backup/
+cp 2-P2_AAGGACAC_L001_R2_001.fastq backup/
+cp 3-P3_CACTTCGA_L001_R1_001.fastq backup/
+cp 3-P3_CACTTCGA_L001_R2_001.fastq backup/
+cp 4-E1_ATTGGCTC_L001_R1_001.fastq backup/
+cp 4-E1_ATTGGCTC_L001_R2_001.fastq backup/
+cp metadata.txt backup/
+```
+This can be done a lot quicker with the use of wildcard characters (Covered in Advanced Linux section)
+```{bash eval=FALSE}
+mkdir backup
+cp *fastq backup
+cp *txt backup
+```
+`r unhide()`
+
+### Task 4 {-}
+<center>
+![](figures/abacus_2.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+How many reads are in the samples?  
+
+`r hide("Task 4 solution")`
+The below command will give the number of lines in the files, this number can then be divided by 4 (mentally or using a calculator). These values will be the same for the R2 files as they are for the matching R1 file.
+```{bash eval=FALSE}
+wc -l 1-P1_ATGCCTGG_L001_R1_001.fastq \
+2-P2_AAGGACAC_L001_R1_001.fastq \
+3-P3_CACTTCGA_L001_R1_001.fastq
+```
+An advanced method using regular expressions, wildcard characters and grep:
+```{bash eval=FALSE}
+grep -c "^@[0-9]*_" *R1*.fastq
+```
+`r unhide()`
+
+### Task 5 {-}
+<center>
+![](figures/remove.png){style="width:150px; background:white; border-radius:5px; border: 5px white solid"}
+</center>
+
+Remove the fastq files with no data.
+
+`r hide("Task 5 solution")`
+Check which files have no data
+```{bash eval=FALSE}
+wc \
+1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \
+2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \
+3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq \
+4-E1_ATTGGCTC_L001_R1_001.fastq 4-E1_ATTGGCTC_L001_R2_001.fastq 
+```
+Remove empty files
+```{bash eval=FALSE}
+rm \
+4-E1_ATTGGCTC_L001_R1_001.fastq 4-E1_ATTGGCTC_L001_R2_001.fastq
+```
+`r unhide()`
+
+### Task 6 {-}
+<center>
+![](figures/update.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Update the backup files with the previous change.  
+
+`r hide("Task 6 solution")`
+```{bash eval=FALSE}
+rm backup/4-E1_ATTGGCTC_L001_R1_001.fastq \
+backup/4-E1_ATTGGCTC_L001_R2_001.fastq 
+```
+`r unhide()`
+
+### Task 7 {-}
+<center>
+![](figures/reading_glass.png){style="width:150px; background:white; border-radius:5px; border: 5px white solid"}
+</center>
+
+Check if the 1st read names match in the paired files.  
+
+`r hide("Task 7 solution")`
+```{bash eval=FALSE}
+head -n 1 \
+1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \
+2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \
+3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq 
+```
+`r unhide()`
+
+### Task 8 {-}
+<center>
+![](figures/tail.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Check if the last read names match in the paired files.  
+
+`r hide("Task 8 solution")`
+```{bash eval=FALSE}
+tail -n 4 \
+1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \
+2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \
+3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq 
+```
+`r unhide()`
+
+### Task 9 {-}
+<center>
+![](figures/pattern_1.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter'. (__Tip:__ Use `grep`)  
+
+`r hide("Task 9 solution")`
+```{bash eval=FALSE}
+grep “psychrobacter” 1-P1_ATGCCTGG_L001_R1_001.fastq
+```
+`r unhide()`
+
+### Task 10 {-}
+<center>
+![](figures/nanochip.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+In the sample __1-P1__ remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 files.  
+
+`r hide("Task 10 solution")`
+Using __nano__ navigate to the psychrobacter sequences. Then use "Ctrl+K" to cut the lines followed by "Ctrl+W" and "Ctrl+X" to save and exit.
+`r unhide()`
+
+### Task 11 {-}
+<center>
+![](figures/print_2.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Print to screen the fastq header, sequence and quality data for the 25th sequence in sample __2-P2__ for both the R1 and R2 file. Do this with one command for R1 and a separate command for R2.
+
+`r hide("Task 11 solution")`
+\@24_ecoli is grepped as the first sequence is \@0_ecoli
+```{bash eval=FALSE}
+grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R1_001.fastq
+grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R2_001.fastq
+```
+`r unhide()`
+
+## Exercise 2 conclusion
+
+<center>
+![](figures/finish.png){style="width:200px; background: white; border-radius:5px"}
+</center>
+
+Stupendous! You have finished the last exercise of the intro to linux section.
+
+Thanks for your hard work. You have learnt a lot throughout this course but there is more to learn if you are willing and have the time. The next section is the Advanced Linux section. This is not required for any of our other workshops but the skills are very useful for bioinformatics analysis in Linux.
 
 <!--chapter:end:11-Exercise2.Rmd-->
 
@@ -1715,18 +1996,124 @@ library(webexercises)
 ![](figures/adv_exercise.png){style="width:200px"}
 </center>
 
-1. Copy the directory __~/Linux/advanced_practice__ to __~/Linux/advanced_practice_exercise__
-2. Move into __~/Linux/advanced_practice_exercise__
-3. Make a directory called __fastq__ and one called __txt__
-4. With one command move all the fastq files into the directory __fastq__
-5. With one command move all the txt files, excluding __metadata.txt__ and __samples.txt__, into the directory __txt__
-6. Create a file in the __fastq__ directory called __patient_1_corrected.fastq__ and put all the corrected fastq data for patient_1 into the file. You can look at the metadat.txt file to see which samples belong to patient_1.
-7. Append the metadata line for sample_1_AAAA to the bottom of the file __sample_1_AAAA.txt__ in the __txt__  directory.
-8. For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (e.g. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)
-9. Count the number of Gs and Cs within file __sample_16_AACC.fastq__
-10. Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.
+Below is a set of tasks and questions that will require all the skills you have gained from the advanced linux part practical.
 
-You can check my solutions in the [Answers section](#exerciseadv_answers). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.
+You can check my solutions by clicking the expandable boxes. These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have carried it out correctly.
+
+## Advanced tasks
+
+### Task 1 {-}
+
+Copy the directory __~/Linux/advanced_practice__ to __~/Linux/advanced_practice_exercise__
+
+`r hide("Task 1 solution")`
+```{bash eval=FALSE}
+cp -r ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise
+```
+`r unhide()`
+
+### Task 2 {-}
+
+Move into __~/Linux/advanced_practice_exercise__
+
+`r hide("Task 2 solution")`
+```{bash eval=FALSE}
+cd ~/Linux/advanced_practice_exercise
+```
+`r unhide()`
+
+### Task 3 {-}
+
+Make a directory called __fastq__ and one called __txt__
+
+`r hide("Task 3 solution")`
+```{bash eval=FALSE}
+mkdir fastq txt
+```
+`r unhide()`
+
+### Task 4 {-}
+
+With one command move all the fastq files into the directory __fastq__
+
+`r hide("Task 4 solution")`
+```{bash eval=FALSE}
+mv *.fastq fastq/
+```
+`r unhide()`
+
+### Task 5 {-}
+
+With one command move all the txt files, excluding __metadata.txt__ and __samples.txt__, into the directory __txt__
+
+`r hide("Task 5 solution")`
+```{bash eval=FALSE}
+mv sample_*txt txt/
+```
+`r unhide()`
+
+### Task 6 {-}
+
+Create a file in the __fastq__ directory called __patient_1_corrected.fastq__ and put all the corrected fastq data for patient_1 into the file. You can look at the metadat.txt file to see which samples belong to patient_1.
+
+`r hide("Task 6 solution")`
+```{bash eval=FALSE}
+cat fastq/sample_[1-2]_*corrected.fastq > \
+fastq/patient_1_corrected.fastq
+```
+`r unhide()`
+
+### Task 7 {-}
+
+Append the metadata line for sample_1_AAAA to the bottom of the file __sample_1_AAAA.txt__ in the __txt__  directory.
+
+`r hide("Task 7 solution")`
+```{bash eval=FALSE}
+cat metadata.txt | grep "sample_1_AAAA" >> txt/sample_1_AAAA.txt
+```
+`r unhide()`
+
+### Task 8 {-}
+
+For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (e.g. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)
+
+`r hide("Task 8 solution")`
+```{bash eval=FALSE}
+grep "^TA[AG]\|^TGA" fastq/*corrected.fastq | \
+sed "s/.*sample/sample/" | sed "s/_corrected.fastq//"
+```
+`r unhide()`
+
+### Task 9 {-}
+
+Count the number of Gs and Cs within file __sample_16_AACC.fastq__
+
+`r hide("Task 9 solution")`
+```{bash eval=FALSE}
+cat fastq/sample_16_AACC.fastq | grep -B 1 "^+$" | \
+grep -v "+\|--" | sed "s/A\|T//g" | wc -c
+```
+`r unhide()`
+
+### Task 10 {-}
+
+Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.
+
+`r hide("Task 10 solution")`
+```{bash eval=FALSE}
+cat fastq/*[3-5]*[AGCT].fastq | grep -B 2 "^+$" | \
+grep -B 1 "AAAAA" | grep "^@" | sed "s/^@s/S/" | \
+sed "s/_[AGCT]*_/: Sequence /" | sed "s/ 1:$//"
+```
+`r unhide()`
+
+## Advanced exercise conclusion
+
+<center>
+![](figures/finish.png){style="width:200px; background: white; border-radius:5px"}
+</center>
+
+Superlative! 
 
 <!--chapter:end:13-Advanced_practice_exercise.Rmd-->
 
@@ -1859,214 +2246,6 @@ Rstudio Website:
 https://www.rstudio.com/
 
 <!--chapter:end:14-Bioinformatica_languages.rmd-->
-
-```{r include=FALSE, cache=FALSE}
-library(webexercises)
-```
-# (PART\*) Answers {-}
-
-# Exercise 1 {-#exercise1_answers}
-<center>
-![](figures/exercise.png){style="width:200px"}
-</center>
-
-Ensure you are in the correct directory before carrying out the below commands
-```{bash eval=FALSE}
-cd ~/Linux/
-```
-
-
-1. Change the name of the subdirectory 4_exercises_aaaa within your Linux to 4_exercises
-```{bash eval=FALSE}
-mv four_exercises 4_exercises
-```
-
-2. Make a backup of the 4_exercises directory
-```{bash eval=FALSE}
-cp -r 4_exercises 4_exercises_backup 
-```
-
-3. List the contents of the 4_exercises directory
-```{bash eval=FALSE}
-ls 4_exercises
-```
-
-4. Within the directory 4_exercises
-```{bash eval=FALSE}
-cd 4_exercises
-```
-Print the working directory
-```{bash eval=FALSE}
-pwd
-```
-b. Print out to screen the phrase ‘the echo command allows me to print phrases to screen’
-```{bash eval=FALSE}
-echo “the echo command allows me to print phrases to screen”
-```
-c. Copy the file copy_this_file.txt to the directory to_me
-```{bash eval=FALSE}
-cp copy_this_file.txt to_me
-```
-d. Rename the directory to_me to you
-```{bash eval=FALSE}
-mv to_me you
-```
-f. Delete the initial copy_this_file.txt file
-```{bash eval=FALSE}
-rm copy_this_file.txt
-```
-
-# Exercise 2 {-#exercise2_answers}
-<center>
-![](figures/exercise_2.png){style="width:200px"}
-</center>
-
-Ensure you are in the correct directory before carrying out the below commands
-```{bash eval=FALSE}
-cd ~/Linux/6_final_exercise
-```
-1. See what files are in the directory
-```{bash eval=FALSE}
-ls
-```
-2. Rename the file 3-P£_CACTTCGA_L001_R1_001.fastq to 3-P3_CACTTCGA_L001_R1_001.fastq
-```{bash eval=FALSE}
-mv 3-P£_CACTTCGA_L001_R1_001.fastq \
-3-P3_CACTTCGA_L001_R1_001.fastq
-```
-3. Make a backup of the files in a directory called backup
-```{bash eval=FALSE}
-mkdir backup
-cp 1-P1_ATGCCTGG_L001_R1_001.fastq backup/
-cp 1-P1_ATGCCTGG_L001_R2_001.fastq backup/
-cp 2-P2_AAGGACAC_L001_R1_001.fastq backup/
-cp 2-P2_AAGGACAC_L001_R2_001.fastq backup/
-cp 3-P3_CACTTCGA_L001_R1_001.fastq backup/
-cp 3-P3_CACTTCGA_L001_R2_001.fastq backup/
-cp 4-E1_ATTGGCTC_L001_R1_001.fastq backup/
-cp 4-E1_ATTGGCTC_L001_R2_001.fastq backup/
-cp metadata.txt backup/
-```
-This can be done a lot quicker with the use of wildcard characters (Covered in Advanced Linux section)
-```{bash eval=FALSE}
-mkdir backup
-cp *fastq backup
-cp *txt backup
-```
-4. How many reads are in the samples?
-
-The below command will give the number of lines in the files, this number can then be divided by 4 (mentally or using a calculator). These values will be the same for the R2 files as they are for the matching R1 file.
-```{bash eval=FALSE}
-wc -l 1-P1_ATGCCTGG_L001_R1_001.fastq \
-2-P2_AAGGACAC_L001_R1_001.fastq \
-3-P3_CACTTCGA_L001_R1_001.fastq
-```
-An advanced method using regular expressions, wildcard characters and grep
-```{bash eval=FALSE}
-grep -c "^@[0-9]*_" *R1*.fastq
-```
-5. Remove the fastq files with no data
-
-Check which files have no data
-```{bash eval=FALSE}
-wc \
-1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \
-2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \
-3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq \
-4-E1_ATTGGCTC_L001_R1_001.fastq 4-E1_ATTGGCTC_L001_R2_001.fastq 
-```
-Remove empty files
-```{bash eval=FALSE}
-rm \
-4-E1_ATTGGCTC_L001_R1_001.fastq 4-E1_ATTGGCTC_L001_R2_001.fastq
-```
-6. Update the backup files with the previous change
-```{bash eval=FALSE}
-rm backup/4-E1_ATTGGCTC_L001_R1_001.fastq \
-backup/4-E1_ATTGGCTC_L001_R2_001.fastq 
-```
-7. Check if the 1st read names match in the paired files
-```{bash eval=FALSE}
-head -n 1 \
-1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \
-2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \
-3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq 
-```
-8. Check if the last read names match in the paired files
-```{bash eval=FALSE}
-tail -n 4 \
-1-P1_ATGCCTGG_L001_R1_001.fastq 1-P1_ATGCCTGG_L001_R2_001.fastq \
-2-P2_AAGGACAC_L001_R1_001.fastq 2-P2_AAGGACAC_L001_R2_001.fastq \
-3-P3_CACTTCGA_L001_R1_001.fastq 3-P3_CACTTCGA_L001_R2_001.fastq 
-```
-9. In file 1-P1_ATGCCTGG_L001_R1_001.fastq look for sequence headers with the term ‘psychrobacter’
-```{bash eval=FALSE}
-grep “psychrobacter” 1-P1_ATGCCTGG_L001_R1_001.fastq
-```
-10. In the sample 1-P1 remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 file.
-
-Using __nano__ navigate to the psychrobacter sequences. Then use "Ctrl+K" to cut the lines followed by "Ctrl+W" and "Ctrl+X" to save and exit.
-
-11. Print to screen the fastq header, sequence and quality data for the 25th sequence in sample 2-P2 for both the R1 and R2 file. Do this with one command.
-
-\@24_ecoli is grepped as the first sequence is \@0_ecoli
-```{bash eval=FALSE}
-grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R1_001.fastq
-grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R2_001.fastq
-```
-
-# Advanced exercise {-#exerciseadv_answers}
-<center>
-![](figures/adv_exercise.png){style="width:200px"}
-</center>
-
-1. Copy the directory ~/Linux/advanced_practice to ~/Linux/advanced_practice_exercise
-```{bash eval=FALSE}
-cp -r ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise
-```
-2. Move into ~/Linux/advanced_practice_exercise
-```{bash eval=FALSE}
-cd ~/Linux/advanced_practice_exercise
-```
-3. Make a directory called fastq and one called txt
-```{bash eval=FALSE}
-mkdir fastq txt
-```
-4. With one command move all the fastq files into the directory fastq
-```{bash eval=FALSE}
-mv *.fastq fastq/
-```
-5. With one command move all the txt files, excluding metadata.txt and samples.txt, into the directory txt.
-```{bash eval=FALSE}
-mv sample_*txt txt/
-```
-6. Create a file in the fastq directory called patient_1_corrected.fastq and put all the corrected fastq data for patient_1 into the file.
-```{bash eval=FALSE}
-cat fastq/sample_[1-2]_*corrected.fastq > \
-fastq/patient_1_corrected.fastq
-```
-7. Append the metadata line for sample_1_AAAA from metadata.txt to the bottom of the file sample_1_AAA.txt in the txt  directory.
-```{bash eval=FALSE}
-cat metadata.txt | grep "sample_1_AAAA" >> txt/sample_1_AAAA.txt
-```
-8. For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (i.e. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)
-```{bash eval=FALSE}
-grep "^TA[AG]\|^TGA" fastq/*corrected.fastq | \
-sed "s/.*sample/sample/" | sed "s/_corrected.fastq//"
-```
-9. Count the number of Gs and Cs within the sequences of file sample_16_AACC.fastq
-```{bash eval=FALSE}
-cat fastq/sample_16_AACC.fastq | grep -B 1 "^+$" | \
-grep -v "+\|--" | sed "s/A\|T//g" | wc -c
-```
-10. Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 8-13 with one command. Then in the same command make the final output of each line in the format of “Sample_13: Sequence 12”
-```{bash eval=FALSE}
-cat fastq/*[3-5]*[AGCT].fastq | grep -B 2 "^+$" | \
-grep -B 1 "AAAAA" | grep "^@" | sed "s/^@s/S/" | \
-sed "s/_[AGCT]*_/: Sequence /" | sed "s/ 1:$//"
-```
-
-<!--chapter:end:15-Answers.rmd-->
 
 ```{r include=FALSE, cache=FALSE}
 library(webexercises)
@@ -2205,5 +2384,5 @@ Below are a subset of commands you can use in the command mode of vim.
 
 [__Vim cheatsheet__](https://vim.rtorr.com/)
 
-<!--chapter:end:16-Appendix.rmd-->
+<!--chapter:end:15-Appendix.rmd-->
 

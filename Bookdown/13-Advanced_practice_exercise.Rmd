@@ -3,15 +3,121 @@
 ![](figures/adv_exercise.png){style="width:200px"}
 </center>
 
-1. Copy the directory __~/Linux/advanced_practice__ to __~/Linux/advanced_practice_exercise__
-2. Move into __~/Linux/advanced_practice_exercise__
-3. Make a directory called __fastq__ and one called __txt__
-4. With one command move all the fastq files into the directory __fastq__
-5. With one command move all the txt files, excluding __metadata.txt__ and __samples.txt__, into the directory __txt__
-6. Create a file in the __fastq__ directory called __patient_1_corrected.fastq__ and put all the corrected fastq data for patient_1 into the file. You can look at the metadat.txt file to see which samples belong to patient_1.
-7. Append the metadata line for sample_1_AAAA to the bottom of the file __sample_1_AAAA.txt__ in the __txt__  directory.
-8. For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (e.g. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)
-9. Count the number of Gs and Cs within file __sample_16_AACC.fastq__
-10. Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.
+Below is a set of tasks and questions that will require all the skills you have gained from the advanced linux part practical.
 
-You can check my solutions in the [Answers section](#exerciseadv_answers). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.
+You can check my solutions by clicking the expandable boxes. These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have carried it out correctly.
+
+## Advanced tasks
+
+### Task 1 {-}
+
+Copy the directory __~/Linux/advanced_practice__ to __~/Linux/advanced_practice_exercise__
+
+`r hide("Task 1 solution")`
+```{bash eval=FALSE}
+cp -r ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise
+```
+`r unhide()`
+
+### Task 2 {-}
+
+Move into __~/Linux/advanced_practice_exercise__
+
+`r hide("Task 2 solution")`
+```{bash eval=FALSE}
+cd ~/Linux/advanced_practice_exercise
+```
+`r unhide()`
+
+### Task 3 {-}
+
+Make a directory called __fastq__ and one called __txt__
+
+`r hide("Task 3 solution")`
+```{bash eval=FALSE}
+mkdir fastq txt
+```
+`r unhide()`
+
+### Task 4 {-}
+
+With one command move all the fastq files into the directory __fastq__
+
+`r hide("Task 4 solution")`
+```{bash eval=FALSE}
+mv *.fastq fastq/
+```
+`r unhide()`
+
+### Task 5 {-}
+
+With one command move all the txt files, excluding __metadata.txt__ and __samples.txt__, into the directory __txt__
+
+`r hide("Task 5 solution")`
+```{bash eval=FALSE}
+mv sample_*txt txt/
+```
+`r unhide()`
+
+### Task 6 {-}
+
+Create a file in the __fastq__ directory called __patient_1_corrected.fastq__ and put all the corrected fastq data for patient_1 into the file. You can look at the metadat.txt file to see which samples belong to patient_1.
+
+`r hide("Task 6 solution")`
+```{bash eval=FALSE}
+cat fastq/sample_[1-2]_*corrected.fastq > \
+fastq/patient_1_corrected.fastq
+```
+`r unhide()`
+
+### Task 7 {-}
+
+Append the metadata line for sample_1_AAAA to the bottom of the file __sample_1_AAAA.txt__ in the __txt__  directory.
+
+`r hide("Task 7 solution")`
+```{bash eval=FALSE}
+cat metadata.txt | grep "sample_1_AAAA" >> txt/sample_1_AAAA.txt
+```
+`r unhide()`
+
+### Task 8 {-}
+
+For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (e.g. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)
+
+`r hide("Task 8 solution")`
+```{bash eval=FALSE}
+grep "^TA[AG]\|^TGA" fastq/*corrected.fastq | \
+sed "s/.*sample/sample/" | sed "s/_corrected.fastq//"
+```
+`r unhide()`
+
+### Task 9 {-}
+
+Count the number of Gs and Cs within file __sample_16_AACC.fastq__
+
+`r hide("Task 9 solution")`
+```{bash eval=FALSE}
+cat fastq/sample_16_AACC.fastq | grep -B 1 "^+$" | \
+grep -v "+\|--" | sed "s/A\|T//g" | wc -c
+```
+`r unhide()`
+
+### Task 10 {-}
+
+Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.
+
+`r hide("Task 10 solution")`
+```{bash eval=FALSE}
+cat fastq/*[3-5]*[AGCT].fastq | grep -B 2 "^+$" | \
+grep -B 1 "AAAAA" | grep "^@" | sed "s/^@s/S/" | \
+sed "s/_[AGCT]*_/: Sequence /" | sed "s/ 1:$//"
+```
+`r unhide()`
+
+## Advanced exercise conclusion
+
+<center>
+![](figures/finish.png){style="width:200px; background: white; border-radius:5px"}
+</center>
+
+Superlative! 

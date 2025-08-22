@@ -112,7 +112,7 @@ Below is an example of visualising the location of the **"Linux"** directory wit
 ![](figures/paths.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
-On the command line directories and files are referred to by paths e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
+On the command line directories and files are referred to as __paths__ e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
 
 Paths are case sensitive. The path **"directory/file.txt"** is different than **"diRectory/File.txt"**.
 
@@ -209,7 +209,7 @@ ls -1 /pub14/tea/
 ![](figures/question_bubble.png){style="width:200px"}
 </center>
 
-Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+Great! Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
 ```{r, echo = FALSE}
 opts_p <- c("__`cp`__", "__`cd`__", answer="__`ls`__")
