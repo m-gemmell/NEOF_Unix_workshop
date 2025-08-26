@@ -26,4 +26,4 @@ Throughout this practical we have covered the topics:
 * Text editor
     + Commands: `nano`
     
-__Note__: There is a cheatsheet at the end of this book with these commands.
+__Note__: There is a [cheatsheet](#cheatsheet) at the end of this book with these commands.

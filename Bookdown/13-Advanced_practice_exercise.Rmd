@@ -1,6 +1,6 @@
 # Advance practice exercise
 <center>
-![](figures/adv_exercise.png){style="width:200px"}
+![](figures/exercise_bike.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 Below is a set of tasks and questions that will require all the skills you have gained from the advanced linux part practical.
@@ -10,6 +10,9 @@ You can check my solutions by clicking the expandable boxes. These are not the d
 ## Advanced tasks
 
 ### Task 1 {-}
+<center>
+![](figures/copy_2.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Copy the directory __~/Linux/advanced_practice__ to __~/Linux/advanced_practice_exercise__
 
@@ -20,6 +23,9 @@ cp -r ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise
 `r unhide()`
 
 ### Task 2 {-}
+<center>
+![](figures/move.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Move into __~/Linux/advanced_practice_exercise__
 
@@ -30,6 +36,9 @@ cd ~/Linux/advanced_practice_exercise
 `r unhide()`
 
 ### Task 3 {-}
+<center>
+![](figures/make.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Make a directory called __fastq__ and one called __txt__
 
@@ -40,6 +49,9 @@ mkdir fastq txt
 `r unhide()`
 
 ### Task 4 {-}
+<center>
+![](figures/box.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 With one command move all the fastq files into the directory __fastq__
 
@@ -50,6 +62,9 @@ mv *.fastq fastq/
 `r unhide()`
 
 ### Task 5 {-}
+<center>
+![](figures/txt_files.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 With one command move all the txt files, excluding __metadata.txt__ and __samples.txt__, into the directory __txt__
 
@@ -60,6 +75,9 @@ mv sample_*txt txt/
 `r unhide()`
 
 ### Task 6 {-}
+<center>
+![](figures/patient.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Create a file in the __fastq__ directory called __patient_1_corrected.fastq__ and put all the corrected fastq data for patient_1 into the file. You can look at the metadat.txt file to see which samples belong to patient_1.
 
@@ -71,6 +89,9 @@ fastq/patient_1_corrected.fastq
 `r unhide()`
 
 ### Task 7 {-}
+<center>
+![](figures/metadata_2.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Append the metadata line for sample_1_AAAA to the bottom of the file __sample_1_AAAA.txt__ in the __txt__  directory.
 
@@ -81,6 +102,9 @@ cat metadata.txt | grep "sample_1_AAAA" >> txt/sample_1_AAAA.txt
 `r unhide()`
 
 ### Task 8 {-}
+<center>
+![](figures/stop_sign.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (e.g. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)
 
@@ -92,6 +116,9 @@ sed "s/.*sample/sample/" | sed "s/_corrected.fastq//"
 `r unhide()`
 
 ### Task 9 {-}
+<center>
+![](figures/abacus_3.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Count the number of Gs and Cs within file __sample_16_AACC.fastq__
 
@@ -103,6 +130,9 @@ grep -v "+\|--" | sed "s/A\|T//g" | wc -c
 `r unhide()`
 
 ### Task 10 {-}
+<center>
+![](figures/heads.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.
 
@@ -120,4 +150,4 @@ sed "s/_[AGCT]*_/: Sequence /" | sed "s/ 1:$//"
 ![](figures/finish.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
-Superlative! 
+Superlative! Those were definetly difficult tasks so great going getting through them all. That is all the practice and challenges done, there is some information on other languages and the appendix you can continue onto.

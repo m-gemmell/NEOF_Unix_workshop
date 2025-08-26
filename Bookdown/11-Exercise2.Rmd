@@ -165,7 +165,7 @@ tail -n 4 \
 ![](figures/pattern_1.png){style="width:150px; background:white; border-radius:5px"}
 </center>
 
-In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter'. (__Tip:__ Use `grep`)  
+In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter' (__Tip:__ Use `grep`).
 
 `r hide("Task 9 solution")`
 ```{bash eval=FALSE}
@@ -181,7 +181,7 @@ grep “psychrobacter” 1-P1_ATGCCTGG_L001_R1_001.fastq
 In the sample __1-P1__ remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 files.  
 
 `r hide("Task 10 solution")`
-Using __nano__ navigate to the psychrobacter sequences. Then use "Ctrl+K" to cut the lines followed by "Ctrl+W" and "Ctrl+X" to save and exit.
+Using __nano__ navigate to the psychrobacter sequences. Then use "Ctrl+K" to cut the lines followed by "Ctrl+S" and "Ctrl+X" to save and exit.
 `r unhide()`
 
 ### Task 11 {-}

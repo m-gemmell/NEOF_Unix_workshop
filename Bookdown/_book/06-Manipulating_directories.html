@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2025-08-22" />
+<meta name="date" content="2025-08-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -233,7 +233,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.7" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#mcqs-file-reading-and-processing"><i class="fa fa-check"></i><b>8.7</b> MCQs: File reading and processing</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="09-Recap.html"><a href="09-Recap.html"><i class="fa fa-check"></i><b>9</b> Recap</a></li>
-<li class="chapter" data-level="10" data-path="10-Fastq.html"><a href="10-Fastq.html"><i class="fa fa-check"></i><b>10</b> Fastq format</a></li>
+<li class="chapter" data-level="10" data-path="10-Fastq.html"><a href="10-Fastq.html"><i class="fa fa-check"></i><b>10</b> Fastq format</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10-Fastq.html"><a href="10-Fastq.html#format"><i class="fa fa-check"></i><b>10.1</b> Format</a></li>
+</ul></li>
 <li class="chapter" data-level="11" data-path="11-Exercise2.html"><a href="11-Exercise2.html"><i class="fa fa-check"></i><b>11</b> Exercise 2</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="11-Exercise2.html"><a href="11-Exercise2.html#exercise-2-tasks"><i class="fa fa-check"></i><b>11.1</b> Exercise 2 tasks</a>
@@ -286,9 +289,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.2" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#python"><i class="fa fa-check"></i><b>14.2</b> Python</a></li>
 <li class="chapter" data-level="14.3" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#perl"><i class="fa fa-check"></i><b>14.3</b> Perl</a></li>
 <li class="chapter" data-level="14.4" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#python-or-perl"><i class="fa fa-check"></i><b>14.4</b> Python or Perl?</a></li>
-<li class="chapter" data-level="14.5" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#ruby"><i class="fa fa-check"></i><b>14.5</b> Ruby</a></li>
-<li class="chapter" data-level="14.6" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#golang-aka-go"><i class="fa fa-check"></i><b>14.6</b> Golang (AKA Go)</a></li>
-<li class="chapter" data-level="14.7" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#r"><i class="fa fa-check"></i><b>14.7</b> R</a></li>
+<li class="chapter" data-level="14.5" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#golang-aka-go"><i class="fa fa-check"></i><b>14.5</b> Golang (AKA Go)</a></li>
+<li class="chapter" data-level="14.6" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#r"><i class="fa fa-check"></i><b>14.6</b> R</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="15-Appendix.html"><a href="15-Appendix.html"><i class="fa fa-check"></i><b>A</b> Practical cheat sheet</a></li>
@@ -451,24 +453,24 @@ Note: If you copy a file to the path of a file that already exists, the pre exis
 <p>Splendid! Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
 <ol style="list-style-type: decimal">
 <li>What command removes files and directories?
-<div id="radio_FVOVZTKVBV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FVOVZTKVBV" value="answer"></input> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FVOVZTKVBV" value=""></input> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FVOVZTKVBV" value=""></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_VVPWQKEWTN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VVPWQKEWTN" value="answer"></input> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VVPWQKEWTN" value=""></input> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VVPWQKEWTN" value=""></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>What command moves files and directories?
-<div id="radio_PLFPWUTUCA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PLFPWUTUCA" value=""></input> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PLFPWUTUCA" value="answer"></input> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PLFPWUTUCA" value=""></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_MQTJABFACI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MQTJABFACI" value=""></input> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MQTJABFACI" value="answer"></input> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MQTJABFACI" value=""></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>What command makes a new directory?
-<div id="radio_FHMJZRJZJG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FHMJZRJZJG" value=""></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FHMJZRJZJG" value="answer"></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FHMJZRJZJG" value=""></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_PKNZHUCQBG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PKNZHUCQBG" value=""></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PKNZHUCQBG" value="answer"></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PKNZHUCQBG" value=""></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>What option is needed for moving or removing a directory?
-<div id="radio_GRLDTVPRBR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GRLDTVPRBR" value="answer"></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GRLDTVPRBR" value=""></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GRLDTVPRBR" value=""></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_EHTYMKJMMR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_EHTYMKJMMR" value="answer"></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_EHTYMKJMMR" value=""></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_EHTYMKJMMR" value=""></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>What command lists the contents of directories?
-<div id="radio_GOERZCICAH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GOERZCICAH" value=""></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GOERZCICAH" value=""></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GOERZCICAH" value="answer"></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_KLROAXLTFU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KLROAXLTFU" value=""></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KLROAXLTFU" value=""></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KLROAXLTFU" value="answer"></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 </ol>
 

@@ -14,6 +14,8 @@ The next exercise will focus on a set of files including fastq files.
 - Each fastq entry contains four lines. 
     + One fastq entry represents one sequence. 
 
+## Format
+
 The format of one entry is as below:
 
 __\@Sequence 1__  
@@ -23,9 +25,9 @@ __=<<<=>\@\@\@ACDCBCDAC\@BAA\@BA\@BBCBBDA\@BB\@>CD\@A\@B?B\@\@__
 
 The lines represent:  
 1. Header for fastq entry known as the fastq header. This always begins with a ‘@’.  
-2. Sequence content of sequence  
+2. Sequence content of sequence.  
 3. Quality header. Always begins with a ‘+’. Sometimes also contains the same information as fastq header.  
 4. Quality values for each base in the 2nd line. NOTE: ‘@’ can be used as quality values.
 
 For more information on the fastq format the below resource is good:
-https://en.wikipedia.org/wiki/FASTQ_format
+[https://en.wikipedia.org/wiki/FASTQ_format](https://en.wikipedia.org/wiki/FASTQ_format)

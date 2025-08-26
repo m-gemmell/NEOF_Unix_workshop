@@ -47,6 +47,7 @@ tasks
 mcqs-file-reading-and-processing
 recap
 fastq-format
+format
 exercise-2
 exercise-2-tasks
 exercise-2-conclusion
@@ -66,7 +67,6 @@ awk
 python
 perl
 python-or-perl
-ruby
 golang-aka-go
 r
 cheatsheet

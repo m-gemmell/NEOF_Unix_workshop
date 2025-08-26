@@ -18,7 +18,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Print out a file
 <center>
-![](figures/cat.png){style="width:200px"}
+![](figures/cat.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 The `cat` command will print out the entire contents of a file to the screen. This is useful for small text files and pipelines (pipelines are not covered here).
@@ -180,7 +180,7 @@ Type in the following command.
 ```{bash eval=FALSE}
 grep Scientist.txt
 ``` 
-The above command will be stuck as `grep` does not know what it is looking for. To cancel the command use __‘Ctrl’ + ‘c’__
+The above command will be stuck as no search pattern has be privided to `grep`. This means it does not know what it is looking for. To cancel the command use __‘Ctrl’ + ‘c’__
 
 ## Text editor
 <center>
@@ -200,7 +200,10 @@ The below will teach you __nano__. If you are interested in learning __vim__ in 
 
 To enter the `nano` text editor you can use the command `nano`. The command structure is: `nano file.txt`. 
 
-`nano` can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.
+`nano` can be run with :
+
+- The name of an existing file name. You can then edit this file.
+- A new file name. This will create a new file which you can then edit.
 
 Once you are in the editor you can type characters and move around with the arrow keys.
 
@@ -227,7 +230,7 @@ Below are some important examples:
 ### Tasks
 Carry out the following tasks in the directory: __"/pub14/tea/nscxx/Linux/5_reading_files/"__
 
-Using a text editor (__nano__ or __vim__) add an entry for Scientist Mae Jemison (Born: 1956) to the file __"Scientist.txt"__. The names and date are separated by one tab.
+Using a text editor (__nano__) add an entry for Scientist Mae Jemison (Born: 1956) to the file __"Scientist.txt"__. The names and date are separated by one tab.
 
 Using your text editor of choice delete all the scientists born before 1000 in the __"Scientist.txt"__ file and save this as __"Scientist_post_1000.txt"__.
 

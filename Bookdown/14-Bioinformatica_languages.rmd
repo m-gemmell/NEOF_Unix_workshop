@@ -1,6 +1,6 @@
 # Bioinformatic Languages {#bfxlanguages}
 <center>
-![](figures/languages.png){style="width:200px"}
+![](figures/languages.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 Unfortunately you cannot do everything you would want directly on the Linux command line. Even the tasks you can do are sometimes not very efficient or easy.
@@ -21,7 +21,7 @@ https://www.gnu.org/software/gawk/manual/gawk.html
 
 ## Python
 <center>
-![](figures/python.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/python.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 Python is used for software development and other applications. It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e. genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.
@@ -36,7 +36,7 @@ https://biopython.org/
 
 ## Perl
 <center>
-![](figures/perl.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:null"}
+![](figures/perl.png){style="width:200px; border-radius:15px; background:null"}
 </center>
 
 Perl is a similar language to python with similar uses. The main difference is how they look.
@@ -58,32 +58,9 @@ Generally the answer is Python. Many programs are written in Python so even if y
 
 Some programs are written in Perl but it has lost a lot of popularity so there are less and less programs written in Perl. Many Perl programs that were useful are now outdated.
 
-## Ruby
-<center>
-![](figures/ruby.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:null"}
-</center>
-
-A programming language that was becoming more popular in bioinformatics due to its beginner friendliness. However, it does not appear to have been widely adopted.
-
-Tutorial:
-
-http://rubylearning.com/
-
-Ruby website:
-
-https://www.ruby-lang.org/en/
-
-BioRuby:
-
-http://bioruby.org/
-
-Why learn Ruby?
-
-http://www.bestprogramminglanguagefor.me/why-learn-ruby
-
 ## Golang (AKA Go)
 <center>
-![](figures/golang.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/golang.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 Another easy programming language with a library specifically made for bioinformatics. Has not been widely adopted.
@@ -102,7 +79,7 @@ https://github.com/biogo/biogo
 
 ## R
 <center>
-![](figures/R.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/R.png){style="width:200px; border-radius:15px; border:5px solid white; background:white"}
 </center>
 
 R is a very powerful programming language for statistical analysis and visualisation. It unfortunately has a large barrier to entry and normally quite unclear documentation. However it will unlikely be surpassed by another language any time soon due to its widespread use and large amount of very useful and powerful packages for various uses in the public domain. We would recommend using the IDE Rstudio when using R.

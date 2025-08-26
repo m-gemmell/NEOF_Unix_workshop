@@ -1032,7 +1032,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Print out a file
 <center>
-![](figures/cat.png){style="width:200px"}
+![](figures/cat.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 The `cat` command will print out the entire contents of a file to the screen. This is useful for small text files and pipelines (pipelines are not covered here).
@@ -1194,7 +1194,7 @@ Type in the following command.
 ```{bash eval=FALSE}
 grep Scientist.txt
 ``` 
-The above command will be stuck as `grep` does not know what it is looking for. To cancel the command use __‘Ctrl’ + ‘c’__
+The above command will be stuck as no search pattern has be privided to `grep`. This means it does not know what it is looking for. To cancel the command use __‘Ctrl’ + ‘c’__
 
 ## Text editor
 <center>
@@ -1214,7 +1214,10 @@ The below will teach you __nano__. If you are interested in learning __vim__ in 
 
 To enter the `nano` text editor you can use the command `nano`. The command structure is: `nano file.txt`. 
 
-`nano` can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.
+`nano` can be run with :
+
+- The name of an existing file name. You can then edit this file.
+- A new file name. This will create a new file which you can then edit.
 
 Once you are in the editor you can type characters and move around with the arrow keys.
 
@@ -1241,7 +1244,7 @@ Below are some important examples:
 ### Tasks
 Carry out the following tasks in the directory: __"/pub14/tea/nscxx/Linux/5_reading_files/"__
 
-Using a text editor (__nano__ or __vim__) add an entry for Scientist Mae Jemison (Born: 1956) to the file __"Scientist.txt"__. The names and date are separated by one tab.
+Using a text editor (__nano__) add an entry for Scientist Mae Jemison (Born: 1956) to the file __"Scientist.txt"__. The names and date are separated by one tab.
 
 Using your text editor of choice delete all the scientists born before 1000 in the __"Scientist.txt"__ file and save this as __"Scientist_post_1000.txt"__.
 
@@ -1315,7 +1318,7 @@ Throughout this practical we have covered the topics:
 * Text editor
     + Commands: `nano`
     
-__Note__: There is a cheatsheet at the end of this book with these commands.
+__Note__: There is a [cheatsheet](#cheatsheet) at the end of this book with these commands.
 
 <!--chapter:end:09-Recap.Rmd-->
 
@@ -1338,6 +1341,8 @@ The next exercise will focus on a set of files including fastq files.
 - Each fastq entry contains four lines. 
     + One fastq entry represents one sequence. 
 
+## Format
+
 The format of one entry is as below:
 
 __\@Sequence 1__  
@@ -1347,12 +1352,12 @@ __=<<<=>\@\@\@ACDCBCDAC\@BAA\@BA\@BBCBBDA\@BB\@>CD\@A\@B?B\@\@__
 
 The lines represent:  
 1. Header for fastq entry known as the fastq header. This always begins with a ‘@’.  
-2. Sequence content of sequence  
+2. Sequence content of sequence.  
 3. Quality header. Always begins with a ‘+’. Sometimes also contains the same information as fastq header.  
 4. Quality values for each base in the 2nd line. NOTE: ‘@’ can be used as quality values.
 
 For more information on the fastq format the below resource is good:
-https://en.wikipedia.org/wiki/FASTQ_format
+[https://en.wikipedia.org/wiki/FASTQ_format](https://en.wikipedia.org/wiki/FASTQ_format)
 
 <!--chapter:end:10-Fastq.Rmd-->
 
@@ -1526,7 +1531,7 @@ tail -n 4 \
 ![](figures/pattern_1.png){style="width:150px; background:white; border-radius:5px"}
 </center>
 
-In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter'. (__Tip:__ Use `grep`)  
+In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the term ‘psychrobacter' (__Tip:__ Use `grep`).
 
 `r hide("Task 9 solution")`
 ```{bash eval=FALSE}
@@ -1542,7 +1547,7 @@ grep “psychrobacter” 1-P1_ATGCCTGG_L001_R1_001.fastq
 In the sample __1-P1__ remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 files.  
 
 `r hide("Task 10 solution")`
-Using __nano__ navigate to the psychrobacter sequences. Then use "Ctrl+K" to cut the lines followed by "Ctrl+W" and "Ctrl+X" to save and exit.
+Using __nano__ navigate to the psychrobacter sequences. Then use "Ctrl+K" to cut the lines followed by "Ctrl+S" and "Ctrl+X" to save and exit.
 `r unhide()`
 
 ### Task 11 {-}
@@ -1586,14 +1591,14 @@ We have covered a small amount of Linux coding. This should be sufficient to car
 
 Below are some short sections to introduce you to some more advanced linux coding techniques. These give you a quick overview and some examples. This will hopefully put you in a good position to allow you to to learn these techniques in more depth outside of this workshop.
 
-The following sections will all be run with the files in the directory __"~/Linux/advanced_practice/"__. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and a txt file for uncorrected and corrected reads. These fastq files are single end (i.e. there are no reverse/R2 reads).
+The following sections will all be run with the files in the directory __"~/Linux/advanced_practice/"__. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and a txt file for uncorrected and corrected reads. These fastq files are single ended (i.e. there are no reverse/R2 reads).
 
 ## Wildcard characters
 <center>
 ![](figures/wildcard.png){style="width:200px"}
 </center>
 
-These are characters that can be used to represent a variety of other characters. This can be useful for deleting many files, searching for files with specific patterns in their names and more.
+These are characters that can be used to represent a variety of other characters. This can be useful for deleting many files, searching for files with specific patterns in their names, and more.
 
 Be very careful when using wildcard character with the command `rm`.  
 
@@ -1625,7 +1630,7 @@ List all files with the string “corrected” somewhere in the file name
 ls *corrected*
 ``` 
 
-List all files with the string “corrected” somewhere in the file name and it ends in “fastq”
+List all files with the string “corrected” somewhere in the file name that also ends with “fastq”
 ```{bash eval=FALSE}
 ls *corrected*fastq
 ``` 
@@ -1650,7 +1655,7 @@ List the fastq files of samples with a single digit number
 ls sample_?_*fastq
 ``` 
 
-List the txt files of samples with a number in the tens
+List the txt files of samples with a number in the tens (10-19)
 ```{bash eval=FALSE}
 ls sample_1?_*txt
 ``` 
@@ -1728,7 +1733,7 @@ rm *tmp
 
 ## Pipes
 <center>
-![](figures/pipes.png){style="width:200px"}
+![](figures/pipes.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 Pipes allow you to put the output of one command to the input of another. For example you could use `grep` to get all the lines with a certain string and pipe the output to `wc` to count the number of lines that have the specific string. 
@@ -1901,7 +1906,7 @@ cat metadata.txt | sed "s/P/Human_P/"
 
 To replace every instance of the old pattern within each line `g` can be added after the last `/`. This stands for global therefore it changes the command to a global substitute.
 
-Print __metadata.txt__ to screen and change every occurrence of a number to “number”. To get the regular expression meaning of “+” it needs a “__`\`__” before the “+”
+Print __metadata.txt__ to screen and change every occurrence of a number to “number”. To get the regular expression meaning of “+” it needs a “__`\`__” before the “+”.
 ```{bash eval=FALSE}
 cat metadata.txt | sed "s/[0-9]\+/number/g"
 ``` 
@@ -1910,7 +1915,7 @@ The file metadata.txt is tab delimited (i.e. there is a tab between each column.
 cat metadata.txt | sed "s/\t/,/g" > metadata.csv
 ``` 
 
-For a very in depth look into the sed command please look at the following link:
+For an in depth look into the sed command please look at the following link:
 http://www.grymoire.com/Unix/Sed.html
 
 ## Permissions
@@ -1993,7 +1998,7 @@ library(webexercises)
 ```
 # Advance practice exercise
 <center>
-![](figures/adv_exercise.png){style="width:200px"}
+![](figures/exercise_bike.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 Below is a set of tasks and questions that will require all the skills you have gained from the advanced linux part practical.
@@ -2003,6 +2008,9 @@ You can check my solutions by clicking the expandable boxes. These are not the d
 ## Advanced tasks
 
 ### Task 1 {-}
+<center>
+![](figures/copy_2.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Copy the directory __~/Linux/advanced_practice__ to __~/Linux/advanced_practice_exercise__
 
@@ -2013,6 +2021,9 @@ cp -r ~/Linux/advanced_practice ~/Linux/advanced_practice_exercise
 `r unhide()`
 
 ### Task 2 {-}
+<center>
+![](figures/move.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Move into __~/Linux/advanced_practice_exercise__
 
@@ -2023,6 +2034,9 @@ cd ~/Linux/advanced_practice_exercise
 `r unhide()`
 
 ### Task 3 {-}
+<center>
+![](figures/make.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Make a directory called __fastq__ and one called __txt__
 
@@ -2033,6 +2047,9 @@ mkdir fastq txt
 `r unhide()`
 
 ### Task 4 {-}
+<center>
+![](figures/box.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 With one command move all the fastq files into the directory __fastq__
 
@@ -2043,6 +2060,9 @@ mv *.fastq fastq/
 `r unhide()`
 
 ### Task 5 {-}
+<center>
+![](figures/txt_files.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 With one command move all the txt files, excluding __metadata.txt__ and __samples.txt__, into the directory __txt__
 
@@ -2053,6 +2073,9 @@ mv sample_*txt txt/
 `r unhide()`
 
 ### Task 6 {-}
+<center>
+![](figures/patient.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Create a file in the __fastq__ directory called __patient_1_corrected.fastq__ and put all the corrected fastq data for patient_1 into the file. You can look at the metadat.txt file to see which samples belong to patient_1.
 
@@ -2064,6 +2087,9 @@ fastq/patient_1_corrected.fastq
 `r unhide()`
 
 ### Task 7 {-}
+<center>
+![](figures/metadata_2.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Append the metadata line for sample_1_AAAA to the bottom of the file __sample_1_AAAA.txt__ in the __txt__  directory.
 
@@ -2074,6 +2100,9 @@ cat metadata.txt | grep "sample_1_AAAA" >> txt/sample_1_AAAA.txt
 `r unhide()`
 
 ### Task 8 {-}
+<center>
+![](figures/stop_sign.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 For all the corrected fastq files find the sequences that start with a stop codon in the forward orientation (i.e. TAG, TAA or TGA). Print out to screen the sample name and sequence info separated by a “:” only (e.g. sample_10_AAGT:TAAGAGAACAATGAACAGATATTAATAATTTTGCCGCTTTTCTGCGGGAT)
 
@@ -2085,6 +2114,9 @@ sed "s/.*sample/sample/" | sed "s/_corrected.fastq//"
 `r unhide()`
 
 ### Task 9 {-}
+<center>
+![](figures/abacus_3.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Count the number of Gs and Cs within file __sample_16_AACC.fastq__
 
@@ -2096,6 +2128,9 @@ grep -v "+\|--" | sed "s/A\|T//g" | wc -c
 `r unhide()`
 
 ### Task 10 {-}
+<center>
+![](figures/heads.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.
 
@@ -2113,7 +2148,7 @@ sed "s/_[AGCT]*_/: Sequence /" | sed "s/ 1:$//"
 ![](figures/finish.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
-Superlative! 
+Superlative! Those were definetly difficult tasks so great going getting through them all. That is all the practice and challenges done, there is some information on other languages and the appendix you can continue onto.
 
 <!--chapter:end:13-Advanced_practice_exercise.Rmd-->
 
@@ -2122,7 +2157,7 @@ library(webexercises)
 ```
 # Bioinformatic Languages {#bfxlanguages}
 <center>
-![](figures/languages.png){style="width:200px"}
+![](figures/languages.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 Unfortunately you cannot do everything you would want directly on the Linux command line. Even the tasks you can do are sometimes not very efficient or easy.
@@ -2143,7 +2178,7 @@ https://www.gnu.org/software/gawk/manual/gawk.html
 
 ## Python
 <center>
-![](figures/python.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/python.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 Python is used for software development and other applications. It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e. genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.
@@ -2158,7 +2193,7 @@ https://biopython.org/
 
 ## Perl
 <center>
-![](figures/perl.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:null"}
+![](figures/perl.png){style="width:200px; border-radius:15px; background:null"}
 </center>
 
 Perl is a similar language to python with similar uses. The main difference is how they look.
@@ -2180,32 +2215,9 @@ Generally the answer is Python. Many programs are written in Python so even if y
 
 Some programs are written in Perl but it has lost a lot of popularity so there are less and less programs written in Perl. Many Perl programs that were useful are now outdated.
 
-## Ruby
-<center>
-![](figures/ruby.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:null"}
-</center>
-
-A programming language that was becoming more popular in bioinformatics due to its beginner friendliness. However, it does not appear to have been widely adopted.
-
-Tutorial:
-
-http://rubylearning.com/
-
-Ruby website:
-
-https://www.ruby-lang.org/en/
-
-BioRuby:
-
-http://bioruby.org/
-
-Why learn Ruby?
-
-http://www.bestprogramminglanguagefor.me/why-learn-ruby
-
 ## Golang (AKA Go)
 <center>
-![](figures/golang.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/golang.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
 Another easy programming language with a library specifically made for bioinformatics. Has not been widely adopted.
@@ -2224,7 +2236,7 @@ https://github.com/biogo/biogo
 
 ## R
 <center>
-![](figures/R.png){style="width:200px; border-radius:15px; border:5px solid #333333; background:white"}
+![](figures/R.png){style="width:200px; border-radius:15px; border:5px solid white; background:white"}
 </center>
 
 R is a very powerful programming language for statistical analysis and visualisation. It unfortunately has a large barrier to entry and normally quite unclear documentation. However it will unlikely be surpassed by another language any time soon due to its widespread use and large amount of very useful and powerful packages for various uses in the public domain. We would recommend using the IDE Rstudio when using R.

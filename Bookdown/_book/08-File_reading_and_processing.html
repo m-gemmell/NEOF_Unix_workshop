@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2025-08-22" />
+<meta name="date" content="2025-08-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -233,7 +233,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.7" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#mcqs-file-reading-and-processing"><i class="fa fa-check"></i><b>8.7</b> MCQs: File reading and processing</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="09-Recap.html"><a href="09-Recap.html"><i class="fa fa-check"></i><b>9</b> Recap</a></li>
-<li class="chapter" data-level="10" data-path="10-Fastq.html"><a href="10-Fastq.html"><i class="fa fa-check"></i><b>10</b> Fastq format</a></li>
+<li class="chapter" data-level="10" data-path="10-Fastq.html"><a href="10-Fastq.html"><i class="fa fa-check"></i><b>10</b> Fastq format</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10-Fastq.html"><a href="10-Fastq.html#format"><i class="fa fa-check"></i><b>10.1</b> Format</a></li>
+</ul></li>
 <li class="chapter" data-level="11" data-path="11-Exercise2.html"><a href="11-Exercise2.html"><i class="fa fa-check"></i><b>11</b> Exercise 2</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="11-Exercise2.html"><a href="11-Exercise2.html#exercise-2-tasks"><i class="fa fa-check"></i><b>11.1</b> Exercise 2 tasks</a>
@@ -286,9 +289,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.2" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#python"><i class="fa fa-check"></i><b>14.2</b> Python</a></li>
 <li class="chapter" data-level="14.3" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#perl"><i class="fa fa-check"></i><b>14.3</b> Perl</a></li>
 <li class="chapter" data-level="14.4" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#python-or-perl"><i class="fa fa-check"></i><b>14.4</b> Python or Perl?</a></li>
-<li class="chapter" data-level="14.5" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#ruby"><i class="fa fa-check"></i><b>14.5</b> Ruby</a></li>
-<li class="chapter" data-level="14.6" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#golang-aka-go"><i class="fa fa-check"></i><b>14.6</b> Golang (AKA Go)</a></li>
-<li class="chapter" data-level="14.7" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#r"><i class="fa fa-check"></i><b>14.7</b> R</a></li>
+<li class="chapter" data-level="14.5" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#golang-aka-go"><i class="fa fa-check"></i><b>14.5</b> Golang (AKA Go)</a></li>
+<li class="chapter" data-level="14.6" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#r"><i class="fa fa-check"></i><b>14.6</b> R</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="15-Appendix.html"><a href="15-Appendix.html"><i class="fa fa-check"></i><b>A</b> Practical cheat sheet</a></li>
@@ -339,7 +341,7 @@ Chapter 8 video walk-through
 <div id="print-out-a-file" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Print out a file<a href="08-File_reading_and_processing.html#print-out-a-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <center>
-<img src="figures/cat.png" style="width:200px" />
+<img src="figures/cat.png" style="width:200px; background: white; border-radius:5px" />
 </center>
 <p>The <code>cat</code> command will print out the entire contents of a file to the screen. This is useful for small text files and pipelines (pipelines are not covered here).
 Example commands are below (remember to replace xxx with your user name number):</p>
@@ -431,7 +433,7 @@ Example commands are below (remember to replace xxx with your user name number):
 <div class="sourceCode" id="cb66"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb66-1"><a href="08-File_reading_and_processing.html#cb66-1" tabindex="-1"></a><span class="fu">grep</span> “ada” Scientist.txt</span></code></pre></div>
 <p>Type in the following command.</p>
 <div class="sourceCode" id="cb67"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb67-1"><a href="08-File_reading_and_processing.html#cb67-1" tabindex="-1"></a><span class="fu">grep</span> Scientist.txt</span></code></pre></div>
-<p>The above command will be stuck as <code>grep</code> does not know what it is looking for. To cancel the command use <strong>‘Ctrl’ + ‘c’</strong></p>
+<p>The above command will be stuck as no search pattern has be privided to <code>grep</code>. This means it does not know what it is looking for. To cancel the command use <strong>‘Ctrl’ + ‘c’</strong></p>
 </div>
 <div id="text-editor" class="section level2 hasAnchor" number="8.6">
 <h2><span class="header-section-number">8.6</span> Text editor<a href="08-File_reading_and_processing.html#text-editor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -447,7 +449,11 @@ Example commands are below (remember to replace xxx with your user name number):
 <img src="figures/1200px-Gnu-nano.png" style="width:200px; border-radius:15px; background:white" />
 </center>
 <p>To enter the <code>nano</code> text editor you can use the command <code>nano</code>. The command structure is: <code>nano file.txt</code>.</p>
-<p><code>nano</code> can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.</p>
+<p><code>nano</code> can be run with :</p>
+<ul>
+<li>The name of an existing file name. You can then edit this file.</li>
+<li>A new file name. This will create a new file which you can then edit.</li>
+</ul>
 <p>Once you are in the editor you can type characters and move around with the arrow keys.</p>
 <p>To carry out specific functions you will need to use <strong>Ctrl</strong> or <strong>Alt</strong> with another key. At the bottom of the editor are a few examples where the <code>^</code> indicates <strong>Ctrl</strong>. For example the <code>^G Get Help</code> means you need to press <strong>Ctrl+G</strong> to get help. When you use letters this way in <strong>nano</strong> they are case insensitive (i.e. the CAPS lock can be on or off and you will get the same result).</p>
 <p>After you carry out a function ensure you look at the bottom of the editor again as it may ask you to type something or you may get a new series of functions you can use.</p>
@@ -470,7 +476,7 @@ Example commands are below (remember to replace xxx with your user name number):
 <div id="tasks" class="section level3 hasAnchor" number="8.6.2">
 <h3><span class="header-section-number">8.6.2</span> Tasks<a href="08-File_reading_and_processing.html#tasks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Carry out the following tasks in the directory: <strong>"/pub14/tea/nscxx/Linux/5_reading_files/"</strong></p>
-<p>Using a text editor (<strong>nano</strong> or <strong>vim</strong>) add an entry for Scientist Mae Jemison (Born: 1956) to the file <strong>"Scientist.txt"</strong>. The names and date are separated by one tab.</p>
+<p>Using a text editor (<strong>nano</strong>) add an entry for Scientist Mae Jemison (Born: 1956) to the file <strong>"Scientist.txt"</strong>. The names and date are separated by one tab.</p>
 <p>Using your text editor of choice delete all the scientists born before 1000 in the <strong>"Scientist.txt"</strong> file and save this as <strong>"Scientist_post_1000.txt"</strong>.</p>
 </div>
 </div>
@@ -482,28 +488,28 @@ Example commands are below (remember to replace xxx with your user name number):
 <p>Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
 <ol style="list-style-type: decimal">
 <li>What command searches for a pattern?
-<div id="radio_VLODDCJKGJ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_VLODDCJKGJ" value=""></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VLODDCJKGJ" value="answer"></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VLODDCJKGJ" value=""></input> <span><strong><code>cat</code></strong></span></label>
+<div id="radio_WYPUVMYWUE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WYPUVMYWUE" value=""></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WYPUVMYWUE" value="answer"></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WYPUVMYWUE" value=""></input> <span><strong><code>cat</code></strong></span></label>
 </div></li>
 <li>What command word counts files?
-<div id="radio_QQXTRANTDE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QQXTRANTDE" value="answer"></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QQXTRANTDE" value=""></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QQXTRANTDE" value=""></input> <span><strong><code>cat</code></strong></span></label>
+<div id="radio_ILHKOTXMLH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ILHKOTXMLH" value="answer"></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ILHKOTXMLH" value=""></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ILHKOTXMLH" value=""></input> <span><strong><code>cat</code></strong></span></label>
 </div></li>
 <li>What command prints the contents of a file?
-<div id="radio_WZJJCVQPIX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WZJJCVQPIX" value=""></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WZJJCVQPIX" value=""></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WZJJCVQPIX" value="answer"></input> <span><strong><code>cat</code></strong></span></label>
+<div id="radio_OCIVBKRQLQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OCIVBKRQLQ" value=""></input> <span><strong><code>wc</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OCIVBKRQLQ" value=""></input> <span><strong><code>grep</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OCIVBKRQLQ" value="answer"></input> <span><strong><code>cat</code></strong></span></label>
 </div></li>
 <li>What command displays a file's contents one page at a time and allows keyboard navigation?
-<div id="radio_BMMISEZXAV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BMMISEZXAV" value="answer"></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BMMISEZXAV" value=""></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BMMISEZXAV" value=""></input> <span><strong><code>head</code></strong></span></label>
+<div id="radio_ZUPBBHEQXG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZUPBBHEQXG" value="answer"></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZUPBBHEQXG" value=""></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZUPBBHEQXG" value=""></input> <span><strong><code>head</code></strong></span></label>
 </div></li>
 <li>What command prints out the top n lines of a file
-<div id="radio_ITUSTHMMGL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ITUSTHMMGL" value=""></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ITUSTHMMGL" value=""></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ITUSTHMMGL" value="answer"></input> <span><strong><code>head</code></strong></span></label>
+<div id="radio_YJNTTFTCYR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YJNTTFTCYR" value=""></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YJNTTFTCYR" value=""></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YJNTTFTCYR" value="answer"></input> <span><strong><code>head</code></strong></span></label>
 </div></li>
 <li>What command prints out the bottom n lines of a file
-<div id="radio_SQEDDIXNNK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_SQEDDIXNNK" value=""></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SQEDDIXNNK" value="answer"></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SQEDDIXNNK" value=""></input> <span><strong><code>head</code></strong></span></label>
+<div id="radio_FOBTEJUEBJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FOBTEJUEBJ" value=""></input> <span><strong><code>less</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FOBTEJUEBJ" value="answer"></input> <span><strong><code>tail</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FOBTEJUEBJ" value=""></input> <span><strong><code>head</code></strong></span></label>
 </div></li>
 </ol>
 
