@@ -15,10 +15,10 @@ To make a directory the command `mkdir` is used.
 
 For the below examples we will be making heavy use of `ls` to visualise the contents of the directories.
 
-Type in the following commands to make a subdirectory within the __"CGR_Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
+Type in the following commands to make a subdirectory within the __"Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
 
 ```{bash eval=FALSE}
-#Change directory to CGR_linux in your home (~)
+#Change directory to Linux in your home (~)
 cd ~/Linux/
 #Always good to list contents when you move into a directory
 ls
