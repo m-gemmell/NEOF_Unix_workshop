@@ -70,7 +70,7 @@ Within the directory __"4_exercises"__
   5. Delete the initial __"copy_this_file.txt"__ file
 
 `r hide("Task 4 solutions")`
-First move into the "2_exercises" directory
+First move into the "4_exercises" directory
 ```{bash eval=FALSE}
 cd 4_exercises
 ```
@@ -80,7 +80,7 @@ pwd
 ```
 Print out to screen the phrase ‘the echo command allows me to print phrases to screen’
 ```{bash eval=FALSE}
-echo “the echo command allows me to print phrases to screen”
+echo "the echo command allows me to print phrases to screen"
 ```
 Copy the file copy_this_file.txt to the directory to_me
 ```{bash eval=FALSE}

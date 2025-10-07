@@ -163,17 +163,17 @@ The `grep` command will search for a pattern in a text file and output all the l
 
 Print out the lines from __"Scientist.txt"__ that have the number 18 in them. In this particular example it prints out all scientists which were born in the 1800s. This will not always be the case depending on the data in the file.
 ```{bash eval=FALSE}
-grep “18” Scientist.txt
+grep "18" Scientist.txt
 ``` 
 
 Print out the lines which have the string "Ada" in them.
 ```{bash eval=FALSE}
-grep “Ada” Scientist.txt
+grep "Ada" Scientist.txt
 ``` 
 
 Print out the lines which have the string "ada" in them. There should be none, as grep is case sensitive.
 ```{bash eval=FALSE}
-grep “ada” Scientist.txt
+grep "ada" Scientist.txt
 ``` 
 
 Type in the following command.

@@ -85,10 +85,10 @@ In the below example press "enter" after the end of a line.
 
 [Video demonstration](https://www.youtube.com/watch?v=968QURuAplk&t=607s)
 
-Print to screen the term “Hello universe, today is a very nice day. Don’t you think so?”
+Print to screen the term "Hello universe, today is a very nice day. Don’t you think so?"
 ```{bash eval=FALSE}
 echo \
-“Hello universe, today is a very nice day. Don’t you think so?”
+"Hello universe, today is a very nice day. Don’t you think so?"
 ```
 Notice that there is a space before the `\`. This is because there needs to be a space between the echo and text to print out. It is always recommended to use a space before a `\` to bash escape.
 

@@ -69,6 +69,7 @@ perl
 python-or-perl
 golang-aka-go
 r
+neof
 cheatsheet
 windows-terminals
 ssh

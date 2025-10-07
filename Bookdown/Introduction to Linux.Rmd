@@ -630,10 +630,10 @@ In the below example press "enter" after the end of a line.
 
 [Video demonstration](https://www.youtube.com/watch?v=968QURuAplk&t=607s)
 
-Print to screen the term “Hello universe, today is a very nice day. Don’t you think so?”
+Print to screen the term "Hello universe, today is a very nice day. Don’t you think so?"
 ```{bash eval=FALSE}
 echo \
-“Hello universe, today is a very nice day. Don’t you think so?”
+"Hello universe, today is a very nice day. Don’t you think so?"
 ```
 Notice that there is a space before the `\`. This is because there needs to be a space between the echo and text to print out. It is always recommended to use a space before a `\` to bash escape.
 
@@ -972,7 +972,7 @@ Within the directory __"4_exercises"__
   5. Delete the initial __"copy_this_file.txt"__ file
 
 `r hide("Task 4 solutions")`
-First move into the "2_exercises" directory
+First move into the "4_exercises" directory
 ```{bash eval=FALSE}
 cd 4_exercises
 ```
@@ -982,7 +982,7 @@ pwd
 ```
 Print out to screen the phrase ‘the echo command allows me to print phrases to screen’
 ```{bash eval=FALSE}
-echo “the echo command allows me to print phrases to screen”
+echo "the echo command allows me to print phrases to screen"
 ```
 Copy the file copy_this_file.txt to the directory to_me
 ```{bash eval=FALSE}
@@ -1177,17 +1177,17 @@ The `grep` command will search for a pattern in a text file and output all the l
 
 Print out the lines from __"Scientist.txt"__ that have the number 18 in them. In this particular example it prints out all scientists which were born in the 1800s. This will not always be the case depending on the data in the file.
 ```{bash eval=FALSE}
-grep “18” Scientist.txt
+grep "18" Scientist.txt
 ``` 
 
 Print out the lines which have the string "Ada" in them.
 ```{bash eval=FALSE}
-grep “Ada” Scientist.txt
+grep "Ada" Scientist.txt
 ``` 
 
 Print out the lines which have the string "ada" in them. There should be none, as grep is case sensitive.
 ```{bash eval=FALSE}
-grep “ada” Scientist.txt
+grep "ada" Scientist.txt
 ``` 
 
 Type in the following command.
@@ -2263,6 +2263,19 @@ https://www.rstudio.com/
 library(webexercises)
 ```
 # (APPENDIX) Appendix {.unnumbered}
+
+# NEOF
+
+<center>
+![](figures/NEOF_rounded_corners.png){style="width:300px"}
+</center>
+
+NEOF is a centre of excellence that allows the UK to maintain and develop its world-leading position in environmental omics.
+
+- [NEOF website](https://neof.org.uk/)
+- [Subscribe to the NEOF email newsletter](https://eepurl.com/heBOiX)
+- [Register for other NEOF workshops](https://neof.org.uk/training/)
+- [NEOF Bioinformatics resources](https://neof-workshops.github.io/BFX_resources/)
 
 # Practical cheat sheet {#cheatsheet}
 
