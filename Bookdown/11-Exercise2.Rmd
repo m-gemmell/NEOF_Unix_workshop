@@ -169,7 +169,7 @@ In file __"1-P1_ATGCCTGG_L001_R1_001.fastq"__ look for sequence headers with the
 
 `r hide("Task 9 solution")`
 ```{bash eval=FALSE}
-grep “psychrobacter” 1-P1_ATGCCTGG_L001_R1_001.fastq
+grep "psychrobacter" 1-P1_ATGCCTGG_L001_R1_001.fastq
 ```
 `r unhide()`
 
