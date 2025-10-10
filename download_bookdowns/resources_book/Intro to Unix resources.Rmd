@@ -12,6 +12,17 @@ favicon: figures/NEOF_favicon.png
 description: NEOF book for the Intro to Unix resources
 cover-image: "figures/NEOF.png"
 ---
+```{r include=FALSE, cache=FALSE}
+library(webexercises)
+```
+
+```{r cite-packages, include = FALSE}
+# automatically create a bib database for R packages
+# add any packages you want to cite here
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'webexercises'
+), 'packages.bib')
+```
 
 <center>
 ![](figures/NEOF_rounded_corners.png){style="width:300px"}
@@ -26,11 +37,32 @@ knitr::include_graphics(path = "figures/linux_beginner.png", auto_pdf = TRUE)
 ## Presentation
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/yMKqbABhbnE" 
+<iframe src="https://www.youtube.com/embed/9EEeOC4gpV0" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
 [__Slides__](https://docs.google.com/presentation/d/1DlVAlNRlb4TjgRAlCG5OphyS_W3UGA0htN0-9WvItQ0/edit?usp=sharing)
+
+`r hide("07 OCT 2025 recording")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/_nRzVrjFOb0" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
+`r hide("08 OCT 2024 recording")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/yMKqbABhbnE" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
+`r hide("28 NOV 2023 recording")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/x6fLv-ewGHQ" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
 
 ## Workshop files
 
