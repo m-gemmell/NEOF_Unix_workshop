@@ -1,0 +1,137 @@
+{
+  "index.qmd": {
+    "index.html": "07d843a4"
+  },
+  "intro.qmd": {
+    "intro.html": "f30f9ec8"
+  },
+  "summary.qmd": {
+    "summary.html": "68f77fbd"
+  },
+  "references.qmd": {
+    "references.html": "ad569b53"
+  },
+  "01-Linux_Introduction.qmd": {
+    "01-Linux_Introduction.html": "2fbc2ebb"
+  },
+  "02-Starting.qmd": {
+    "02-Starting.html": "6e0f0290"
+  },
+  "03-Directories_and_Files.qmd": {
+    "03-Directories_and_Files.html": "1fa70c73"
+  },
+  "04-Tips_and_tricks.qmd": {
+    "04-Tips_and_tricks.html": "5e78359d"
+  },
+  "05-Manipulating_directories.qmd": {
+    "05-Manipulating_directories.html": "a2a56427"
+  },
+  "06-Exercise1.qmd": {
+    "06-Exercise1.html": "c73ad740"
+  },
+  "07-File_reading_and_processing.qmd": {
+    "07-File_reading_and_processing.html": "7c96aa1e"
+  },
+  "08-Recap.qmd": {
+    "08-Recap.html": "c2311a66"
+  },
+  "09-Fastq.qmd": {
+    "09-Fastq.html": "237c1cc4"
+  },
+  "10-Exercise2.qmd": {
+    "10-Exercise2.html": "33f5e93b"
+  },
+  "11-Advanced_linux_practice.qmd": {
+    "11-Advanced_linux_practice.html": "93c9f176"
+  },
+  "12-Advanced_practice_exercise.qmd": {
+    "12-Advanced_practice_exercise.html": "ad29a124"
+  },
+  "13-Bioinformatica_languages.qmd": {
+    "13-Bioinformatica_languages.html": "c5c955c7"
+  },
+  "14-Answers.qmd": {
+    "14-Answers.html": "fed786d6"
+  },
+  "15-Appendix.qmd": {
+    "15-Appendix.html": "d0df5062"
+  },
+  "a1-cheat_sheet.qmd": {
+    "a1-cheat_sheet.html": "8505e15c"
+  },
+  "a2-on_your_pc.qmd": {
+    "a2-on_your_pc.html": "0ab73f2f"
+  },
+  "a3-mamba.qmd": {
+    "a3-mamba.html": "ec066452"
+  },
+  "a4-vim.qmd": {
+    "a4-vim.html": "c37d9b77"
+  },
+  "14-Answers_1.qmd": {
+    "14-Answers_1.html": "14e875ec"
+  },
+  "15-Answers_2.qmd": {
+    "15-Answers_2.html": "77f148eb"
+  },
+  "16-Answers_advanced.qmd": {
+    "16-Answers_advanced.html": "2e7f6dcc"
+  },
+  "part_1/directories_and_files.qmd": {
+    "directories_and_files.html": "c5ce3624"
+  },
+  "part_1/tips_and_tricks.qmd": {
+    "tips_and_tricks.html": "bf703cfc"
+  },
+  "part_1/manipulating_directories.qmd": {
+    "manipulating_directories.html": "b78f0d37"
+  },
+  "part_1/linux_introduction.qmd": {
+    "linux_introduction.html": "6e266d7f"
+  },
+  "part_1/starting.qmd": {
+    "starting.html": "9f155837"
+  },
+  "part_1/exercise1.qmd": {
+    "exercise1.html": "cfc02b8f"
+  },
+  "webexercises.qmd": {
+    "webexercises.html": "e026a65c"
+  },
+  "appendix/on_your_pc.qmd": {
+    "on_your_pc.html": "092746a2"
+  },
+  "appendix/mamba.qmd": {
+    "mamba.html": "f457c2e3"
+  },
+  "appendix/cheat_sheet.qmd": {
+    "cheat_sheet.html": "11ae01e9"
+  },
+  "appendix/vim.qmd": {
+    "vim.html": "ecace7d0"
+  },
+  "advanced/dvanced_linux_practice.qmd": {
+    "dvanced_linux_practice.html": "e3e32f17"
+  },
+  "advanced/bioinformatic_languages.qmd": {
+    "bioinformatic_languages.html": "74d9bfeb"
+  },
+  "advanced/advanced_practice_exercise.qmd": {
+    "advanced_practice_exercise.html": "e509d5e5"
+  },
+  "part_2/recap.qmd": {
+    "recap.html": "64576273"
+  },
+  "part_2/fastq.qmd": {
+    "fastq.html": "c58f0240"
+  },
+  "part_2/exercise2.qmd": {
+    "exercise2.html": "cbea3bfe"
+  },
+  "part_2/file_reading_and_processing.qmd": {
+    "file_reading_and_processing.html": "ec51a65d"
+  },
+  "advanced/advanced_linux_practice.qmd": {
+    "advanced_linux_practice.html": "f9edf54b"
+  }
+}

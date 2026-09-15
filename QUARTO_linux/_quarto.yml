@@ -64,7 +64,7 @@ format:
     top-level-division: section
     numbersections : true
     toc: true
-    toc-location: left
+    toc-location: right
     toc-title: In this chapter
     #Page layout
     page-layout: full
@@ -82,5 +82,3 @@ format:
     mainfont: Lexend
     monofont: Fira Mono
     include-after-body: include/webex.js
-  pdf:
-    documentclass: scrreprt
