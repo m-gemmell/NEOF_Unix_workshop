@@ -82,8 +82,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-eaeb381c6b7494c50009502241a4985c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c911dacb53fd75be6f7e538071149d2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-3a5804b326eceed6ff220c0b31a2c418.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5ff86afcab613e4ddd69836011fbfac3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-3fa8645101ca5b03c5f6878d083093ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -299,14 +299,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Intro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./overview/linux_introduction.html"> 
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./part_1/linux_introduction.html"> 
+    <a class="nav-link" href="./part_1/starting.html"> 
 <span class="menu-text">Part 1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./part_1/file_reading_and_processing.qmd"> 
+    <a class="nav-link" href="./part_2/file_reading_and_processing.html"> 
 <span class="menu-text">Part 2</span></a>
   </li>  
   <li class="nav-item">
@@ -376,7 +380,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro">Introduction</a>
   <ul class="collapse">
-  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#start" id="toc-start" class="nav-link" data-scroll-target="#start">Start</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -388,28 +393,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./images/NEOF.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
-</figure>
-</div>
-</div>
-</div>
 <section id="intro" class="level1">
 <h1>Introduction</h1>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./images/linux_beginner.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="./images/linux_beginner.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Bioinformatics is an increasingly important skill for biological scientists. Many bioinformatic tools can only be run on Linux based operating systems. This course aims to introduce you to Linux and is aimed at beginners and novices to the command line.</p>
 <p>Sessions will start with a brief presentation followed by self-paced computer practicals guided by an online interactive book. The book will contain theory, practice code, and exercises. Multiple choice questions will help reinforce what you have learnt throughout the book.</p>
+<section id="learning-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/chalkboard.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px"></p>
+</figure>
+</div>
 <p>At the end of the course learners will be able to:</p>
 <ul>
 <li>Explain how the user, shell, and kernel interact with each other in the Linux OS.</li>
@@ -419,34 +418,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Utilise the text editor nano to create, edit, and save files.</li>
 <li>Understand the structure of fastq files.</li>
 </ul>
-<p>There are additional materials in chapters 12-14 which include some advanced Linux commands and introductions to other programming languages used by bioinformaticians.</p>
+<p>There are additional materials in the <a href="./advanced/advanced_linux_practice.html">Advanced part</a> which include some advanced Linux commands and introductions to other programming languages used by bioinformaticians.</p>
 <p>Commands are in the following font, colour, and box. They should be run in the command line.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"This is a command example"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>In some chapters there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the chapter. These are found in an expandable box at the start of the chapters 4,5,6, and 8.</p>
-<p>Additionally, please use the <a href="#cheatsheet">cheatsheet</a> as a reminder of all the commands you will be learning.</p>
-<section id="table-of-contents" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="table-of-contents">Table of contents</h2>
-<table class="caption-top table">
-<tbody>
-<tr class="odd">
-<td><a href="#linuxintro"><strong>What is Linux?</strong></a> | <a href="#cluster"><strong>Logging in to our teaching VNC</strong></a> | | | <a href="#linuxintro"><img src="./images/linux_beginner.png" class="img-fluid" width="142"></a> | <a href="#cluster"><img src="./images/start.png" class="img-fluid" width="189"></a></td>
-</tr>
-<tr class="even">
-<td><a href="#dirsandfiles"><strong>Directories and files</strong></a> | <a href="#tipsandtricks"><strong>Tips and tricks</strong></a> | | | <a href="#dirsandfiles"><img src="./images/directory.png" class="img-fluid" width="125"></a> | <a href="#tipsandtricks"><img src="./images/skateboard_trick.png" class="img-fluid" width="302"></a></td>
-</tr>
-<tr class="odd">
-<td><a href="#manipulatingdirectories"><strong>Manipulating Directories</strong></a> | <a href="#filereadingandprocessing"><strong>File reading and processing</strong></a> | | | <a href="#manipulatingdirectories"><img src="./images/transform.png" class="img-fluid" width="150"></a> | <a href="#filereadingandprocessing"><img src="./images/files.png" class="img-fluid" width="205"></a></td>
-</tr>
-<tr class="even">
-<td><a href="#advancedlinux"><strong>Advanced Linux</strong></a> | <a href="#bfxlanguages"><strong>Other Bioinformatics programming languages</strong></a> | | | <a href="#advancedlinux"><img src="./images/linux_intermdiary.png" class="img-fluid" width="142"></a> | <a href="#bfxlanguages"><img src="./images/languages.png" class="img-fluid" width="159"></a></td>
-</tr>
-<tr class="odd">
-<td><a href="#cheatsheet"><strong>Appendix</strong></a> | | | | <a href="#cheatsheet"><img src="./images/cheatsheet.png" class="img-fluid" width="150"></a> | |</td>
-</tr>
-</tbody>
-</table>
+<p>In some pages there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the page.</p>
+<p>Additionally, please use the <a href="./appendix/cheat_sheet.html">cheatsheet</a> as a reminder of all the commands you will be learning.</p>
+</section>
+<section id="start" class="level2">
+<h2 class="anchored" data-anchor-id="start">Start</h2>
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 
 

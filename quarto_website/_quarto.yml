@@ -17,10 +17,12 @@ website:
     collapse-below: lg
 ###Navbar left
     left:
-      - text: "Overview"
+      - text: "Intro"
         href: index.qmd
+      - text: "Overview"
+        href: overview/linux_introduction.qmd
       - text: "Part 1"
-        href: part_1/linux_introduction.qmd
+        href: part_1/starting.qmd
       - text: "Part 2"
         href: part_2/file_reading_and_processing.qmd
       - text: "Advanced"
@@ -46,16 +48,21 @@ website:
       [![](//images/NEOF_rounded_corners.png){fig-alt="NEOF" height=60px}](https://neof.org.uk/)
 ##Sidebar
   sidebar:
+    - id: Intro
+      title: "Intro"
+      style: "floating"
+      contents:
+        - href: index.qmd
     - id: Overview
       title: "Overview"
       style: "floating"
       contents:
-        - href: index.qmd
+        - href: overview/linux_introduction.qmd
+        - href: overview/tutorial.qmd
     - id: Part_one
       title: "Part 1"
       style: "floating"
       contents:
-        - href: part_1/linux_introduction.qmd
         - href: part_1/starting.qmd
         - href: part_1/directories_and_files.qmd
         - href: part_1/tips_and_tricks.qmd

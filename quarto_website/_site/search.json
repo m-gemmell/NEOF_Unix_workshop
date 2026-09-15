@@ -6,6 +6,7 @@
     "section": "",
     "text": "There are many ways to show the contents of a file. Below are a few examples.\nThe files for the examples are within the directory: “/pub14/tea/nsc2xx/Linux/5_reading_files/” (replace xxx with your user number).\n\n\nChapter 8 video walk-through\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe cat command will print out the entire contents of a file to the screen. This is useful for small text files and pipelines (pipelines are not covered here). Example commands are below (remember to replace xxx with your user name number):\nNote: remember tab complete and using the arrow keys\nPrint contents of “short_file.txt” to screen\n\ncat /pub14/tea/nsc2xx/Linux/5_reading_files/short_file.txt\n\nPrint contents of “Scientist.txt” to screen\n\ncat /pub14/tea/nsc2xx/Linux/5_reading_files/Scientist.txt\n\nPrint contents of “ecoli.gbk” to screen\n\ncat /pub14/tea/nsc2xx/Linux/5_reading_files/ecoli.gbk\n\nRemember: The clear command.\n\n\n\n\n\n\n\n\n\n\n\n\nThe head command will print out to screen the top n lines of a file.\nThe tail command will print out to screen the bottom n lines of a file.\nThe default value is 10. The -n option can be used to indicate how many lines to print out.\nCarry out the below commands in the directory “/pub14/tea/nsc2xx/Linux/5_reading_files/”\nPrint out the top 10 lines of “ecoli.gbk”\n\nhead ecoli.gbk\n\nPrint out the bottom 10 lines of “ecoli.gbk”\n\ntail ecoli.gbk\n\nPrint out the top 25 lines of “ecoli.gbk”\n\nhead -n 25 ecoli.gbk\n\nPrint out the bottom 2 lines of “ecoli.gbk”\n\ntail -n 2 ecoli.gbk\n\nPrint out all but the bottom 2 lines of “Scientist.txt”\n\nhead -n -2 Scientist.txt\n\nPrint out all lines starting from the 2nd top line of “Scientist.txt”\n\ntail -n +2 Scientist.txt\n\nPrint out all but the bottom 5 lines of “Scientist.txt”\n\nhead -n -5 Scientist.txt\n\nPrint out all lines starting from the 3rd top line of “Scientist.txt”\n\ntail -n +3 Scientist.txt\n\nPrint out the top 25 lines of “ecoli.gbk”\n\nhead -n +25 ecoli.gbk\n\nPrint out the bottom 2 lines of “ecoli.gbk”\n\ntail -n -2 ecoli.gbk\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe less command will display a file’s contents one page at a time. Various keys on the keyboard will allow you to navigate the contents of the files. The below actions will occur identically with the man command.\n\nq : Exit\nup and down arrow keys : Will move up/down 1 line at a time\nspace : Move down one page\nb : Move up one page\n/ : Follow this by a term to search for it in the file’s contents\nn : Find the next occurrence of the term last searched for\nN : Find the previous occurrence of the term last searched for\ng : Jump to the first line of the file\nG : Jump to the bottom line of the file\n\nUse the less command to view the contents of the “ecoli.gbk” file. Then find the 3rd occurrence of the word ‘ribosome’. Afterwards move around the file.\n\nless ecoli.gbk\n\nLook at the manual for less and search for the first occurrence of the string ‘percent’. Afterwards look around the manual page.\n\nman less\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe wc command will allow allow you to word count files. It will display line, word and byte counts for files in that order.\nUse wc to see the line, word and byte count of the “short_file.txt” and “ecoli.gbk” files. As you can see you can carry this out on multiple files at once.\n\nwc short_file.txt Scientist.txt ecoli.gbk\n\nCount the number of characters in the “short_file.txt” file\n\nwc -m short_file.txt\n\nCount the number of lines in the “ecoli.gbk” file\n\nwc -l ecoli.gbk\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe grep command will search for a pattern in a text file and output all the lines containing the pattern.\nPrint out the lines from “Scientist.txt” that have the number 18 in them. In this particular example it prints out all scientists which were born in the 1800s. This will not always be the case depending on the data in the file.\n\ngrep “18” Scientist.txt\n\nPrint out the lines which have the string “Ada” in them.\n\ngrep “Ada” Scientist.txt\n\nPrint out the lines which have the string “ada” in them. There should be none, as grep is case sensitive.\n\ngrep “ada” Scientist.txt\n\nType in the following command.\n\ngrep Scientist.txt\n\nThe above command will be stuck as grep does not know what it is looking for. To cancel the command use ‘Ctrl’ + ‘c’\n\n\n\n\n\n\n\n\n\n\n\n\nThree of the most popular text editors are vim, gedit and nano. Below are quick introductions to nano and vim.\nnano is the easiest to learn but is quite limiting. vim and gedit are quite similar in power with different people preferring one or the other.\nThe below will teach you nano. If you are interested in learning vim in the future you can find a quick guide in the appendix.\n\n\n\n\n\n\n\n\n\n\n\nTo enter the nano text editor you can use the command nano. The command is: nano file.txt.\nnano can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.\nOnce you are in the editor you can type characters and move around with the arrow keys.\nTo carry out specific functions you will need to use Ctrl or Alt with another key. At the bottom of the editor are a few examples where the ^ indicates Ctrl. For example the ^G Get Help means you need to press Ctrl+G to get help. When you use letters this way in nano they are case insensitive (i.e. the CAPS lock can be on or off and you will get the same result).\nAfter you carry out a function ensure you look at the bottom of the editor again as it may ask you to type something or you may get a new series of functions you can use.\nBelow are some important examples:\n\nCtrl+X - Exit nano\nCtrl+S - Save file\nCtrl+O - Save file as\nCtrl+A - Jump to the start of a line\nCtrl+E - Jump to the end of a line\nCtrl+W - Start search (Where is) Note This unfortunately is also the shortcut to close a tab in internet browsers. Therefore this can’t be used with our webVNC.\nAlt+W - Continue search forward (find next occurrence forward)\nAlt+Q - Find next occurrence backward\nAlt+K - Cut current line\nAlt+\\ - Go to the first line\nAlt+/ - Go to the last line\n\nNano cheatsheet\n\n\n\nCarry out the following tasks in the directory: “/pub14/tea/nscxx/Linux/5_reading_files/”\nUsing a text editor (nano or vim) add an entry for Scientist Mae Jemison (Born: 1956) to the file “Scientist.txt”. The names and date are separated by one tab.\nUsing your text editor of choice delete all the scientists born before 1000 in the “Scientist.txt” file and save this as “Scientist_post_1000.txt”.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlease attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.\n\nWhat command searches for a pattern?\n\n wc grep cat\n\n\n\nWhat command word counts files?\n\n wc grep cat\n\n\n\nWhat command prints the contents of a file?\n\n wc grep cat\n\n\n\nWhat command displays a file’s contents one page at a time and allows keyboard navigation?\n\n less tail head\n\n\n\nWhat command prints out the top n lines of a file\n\n less tail head\n\n\n\nWhat command prints out the bottom n lines of a file\n\n less tail head",
     "crumbs": [
+      "Part 2",
       "File reading and processing"
     ]
   },
@@ -16,6 +17,7 @@
     "section": "",
     "text": "The cat command will print out the entire contents of a file to the screen. This is useful for small text files and pipelines (pipelines are not covered here). Example commands are below (remember to replace xxx with your user name number):\nNote: remember tab complete and using the arrow keys\nPrint contents of “short_file.txt” to screen\n\ncat /pub14/tea/nsc2xx/Linux/5_reading_files/short_file.txt\n\nPrint contents of “Scientist.txt” to screen\n\ncat /pub14/tea/nsc2xx/Linux/5_reading_files/Scientist.txt\n\nPrint contents of “ecoli.gbk” to screen\n\ncat /pub14/tea/nsc2xx/Linux/5_reading_files/ecoli.gbk\n\nRemember: The clear command.",
     "crumbs": [
+      "Part 2",
       "File reading and processing"
     ]
   },
@@ -26,6 +28,7 @@
     "section": "",
     "text": "The head command will print out to screen the top n lines of a file.\nThe tail command will print out to screen the bottom n lines of a file.\nThe default value is 10. The -n option can be used to indicate how many lines to print out.\nCarry out the below commands in the directory “/pub14/tea/nsc2xx/Linux/5_reading_files/”\nPrint out the top 10 lines of “ecoli.gbk”\n\nhead ecoli.gbk\n\nPrint out the bottom 10 lines of “ecoli.gbk”\n\ntail ecoli.gbk\n\nPrint out the top 25 lines of “ecoli.gbk”\n\nhead -n 25 ecoli.gbk\n\nPrint out the bottom 2 lines of “ecoli.gbk”\n\ntail -n 2 ecoli.gbk\n\nPrint out all but the bottom 2 lines of “Scientist.txt”\n\nhead -n -2 Scientist.txt\n\nPrint out all lines starting from the 2nd top line of “Scientist.txt”\n\ntail -n +2 Scientist.txt\n\nPrint out all but the bottom 5 lines of “Scientist.txt”\n\nhead -n -5 Scientist.txt\n\nPrint out all lines starting from the 3rd top line of “Scientist.txt”\n\ntail -n +3 Scientist.txt\n\nPrint out the top 25 lines of “ecoli.gbk”\n\nhead -n +25 ecoli.gbk\n\nPrint out the bottom 2 lines of “ecoli.gbk”\n\ntail -n -2 ecoli.gbk",
     "crumbs": [
+      "Part 2",
       "File reading and processing"
     ]
   },
@@ -36,6 +39,7 @@
     "section": "",
     "text": "The less command will display a file’s contents one page at a time. Various keys on the keyboard will allow you to navigate the contents of the files. The below actions will occur identically with the man command.\n\nq : Exit\nup and down arrow keys : Will move up/down 1 line at a time\nspace : Move down one page\nb : Move up one page\n/ : Follow this by a term to search for it in the file’s contents\nn : Find the next occurrence of the term last searched for\nN : Find the previous occurrence of the term last searched for\ng : Jump to the first line of the file\nG : Jump to the bottom line of the file\n\nUse the less command to view the contents of the “ecoli.gbk” file. Then find the 3rd occurrence of the word ‘ribosome’. Afterwards move around the file.\n\nless ecoli.gbk\n\nLook at the manual for less and search for the first occurrence of the string ‘percent’. Afterwards look around the manual page.\n\nman less",
     "crumbs": [
+      "Part 2",
       "File reading and processing"
     ]
   },
@@ -46,6 +50,7 @@
     "section": "",
     "text": "The wc command will allow allow you to word count files. It will display line, word and byte counts for files in that order.\nUse wc to see the line, word and byte count of the “short_file.txt” and “ecoli.gbk” files. As you can see you can carry this out on multiple files at once.\n\nwc short_file.txt Scientist.txt ecoli.gbk\n\nCount the number of characters in the “short_file.txt” file\n\nwc -m short_file.txt\n\nCount the number of lines in the “ecoli.gbk” file\n\nwc -l ecoli.gbk",
     "crumbs": [
+      "Part 2",
       "File reading and processing"
     ]
   },
@@ -56,6 +61,7 @@
     "section": "",
     "text": "The grep command will search for a pattern in a text file and output all the lines containing the pattern.\nPrint out the lines from “Scientist.txt” that have the number 18 in them. In this particular example it prints out all scientists which were born in the 1800s. This will not always be the case depending on the data in the file.\n\ngrep “18” Scientist.txt\n\nPrint out the lines which have the string “Ada” in them.\n\ngrep “Ada” Scientist.txt\n\nPrint out the lines which have the string “ada” in them. There should be none, as grep is case sensitive.\n\ngrep “ada” Scientist.txt\n\nType in the following command.\n\ngrep Scientist.txt\n\nThe above command will be stuck as grep does not know what it is looking for. To cancel the command use ‘Ctrl’ + ‘c’",
     "crumbs": [
+      "Part 2",
       "File reading and processing"
     ]
   },
@@ -66,6 +72,7 @@
     "section": "",
     "text": "Three of the most popular text editors are vim, gedit and nano. Below are quick introductions to nano and vim.\nnano is the easiest to learn but is quite limiting. vim and gedit are quite similar in power with different people preferring one or the other.\nThe below will teach you nano. If you are interested in learning vim in the future you can find a quick guide in the appendix.\n\n\n\n\n\n\n\n\n\n\n\nTo enter the nano text editor you can use the command nano. The command is: nano file.txt.\nnano can be run with a previous file name which you can then edit or a new file name in which case you will create a new file.\nOnce you are in the editor you can type characters and move around with the arrow keys.\nTo carry out specific functions you will need to use Ctrl or Alt with another key. At the bottom of the editor are a few examples where the ^ indicates Ctrl. For example the ^G Get Help means you need to press Ctrl+G to get help. When you use letters this way in nano they are case insensitive (i.e. the CAPS lock can be on or off and you will get the same result).\nAfter you carry out a function ensure you look at the bottom of the editor again as it may ask you to type something or you may get a new series of functions you can use.\nBelow are some important examples:\n\nCtrl+X - Exit nano\nCtrl+S - Save file\nCtrl+O - Save file as\nCtrl+A - Jump to the start of a line\nCtrl+E - Jump to the end of a line\nCtrl+W - Start search (Where is) Note This unfortunately is also the shortcut to close a tab in internet browsers. Therefore this can’t be used with our webVNC.\nAlt+W - Continue search forward (find next occurrence forward)\nAlt+Q - Find next occurrence backward\nAlt+K - Cut current line\nAlt+\\ - Go to the first line\nAlt+/ - Go to the last line\n\nNano cheatsheet\n\n\n\nCarry out the following tasks in the directory: “/pub14/tea/nscxx/Linux/5_reading_files/”\nUsing a text editor (nano or vim) add an entry for Scientist Mae Jemison (Born: 1956) to the file “Scientist.txt”. The names and date are separated by one tab.\nUsing your text editor of choice delete all the scientists born before 1000 in the “Scientist.txt” file and save this as “Scientist_post_1000.txt”.",
     "crumbs": [
+      "Part 2",
       "File reading and processing"
     ]
   },
@@ -76,6 +83,7 @@
     "section": "",
     "text": "Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.\n\nWhat command searches for a pattern?\n\n wc grep cat\n\n\n\nWhat command word counts files?\n\n wc grep cat\n\n\n\nWhat command prints the contents of a file?\n\n wc grep cat\n\n\n\nWhat command displays a file’s contents one page at a time and allows keyboard navigation?\n\n less tail head\n\n\n\nWhat command prints out the top n lines of a file\n\n less tail head\n\n\n\nWhat command prints out the bottom n lines of a file\n\n less tail head",
     "crumbs": [
+      "Part 2",
       "File reading and processing"
     ]
   },
@@ -86,6 +94,7 @@
     "section": "",
     "text": "Fastq format\n\n\n\n\n\n\n\n\n\nThe next exercise will focus on a set of files including fastq files.\n\nFastq files are very commonly used in bioinformatics.\nFastq files contain DNA or Amino acid sequenceing data.\nFastq files contain the nucleotide/amino acid content and its sequencing quality for sequences.\nGenerally these files are separated by sample but not always.\nA fastq file acts as a normal txt file that can be read but is of a specific format.\nOne fastq file contains many fastq entries, one after the other.\nEach fastq entry contains four lines.\n\nOne fastq entry represents one sequence.\n\n\nThe format of one entry is as below:\n@Sequence 1\nCTGTTAAATACCGACTTGCGTCAGGTGCGTGAACAACTGGGCCGCTTT\n+\n=&lt;&lt;&lt;=&gt;@@@ACDCBCDAC@BAA@BA@BBCBBDA@BB@&gt;CD@A@B?B@@\nThe lines represent:\n1. Header for fastq entry known as the fastq header. This always begins with a ‘@’.\n2. Sequence content of sequence\n3. Quality header. Always begins with a ‘+’. Sometimes also contains the same information as fastq header.\n4. Quality values for each base in the 2nd line. NOTE: ‘@’ can be used as quality values.\nFor more information on the fastq format the below resource is good: https://en.wikipedia.org/wiki/FASTQ_format",
     "crumbs": [
+      "Part 2",
       "Fastq format"
     ]
   },
@@ -254,10 +263,10 @@
     "objectID": "index.html#table-of-contents",
     "href": "index.html#table-of-contents",
     "title": "Introduction",
-    "section": "Table of contents",
-    "text": "Table of contents\n\n\n\nWhat is Linux? | Logging in to our teaching VNC | | |  | \n\n\nDirectories and files | Tips and tricks | | |  | \n\n\nManipulating Directories | File reading and processing | | |  | \n\n\nAdvanced Linux | Other Bioinformatics programming languages | | |  | \n\n\nAppendix | | | |  | |\n\n\n\nThis work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
+    "section": "",
+    "text": "What is Linux? | Logging in to our teaching VNC | | |  | \n\n\nDirectories and files | Tips and tricks | | |  | \n\n\nManipulating Directories | File reading and processing | | |  | \n\n\nAdvanced Linux | Other Bioinformatics programming languages | | |  | \n\n\nAppendix | | | |  | |\n\n\n\nThis work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
     "crumbs": [
-      "Overview",
+      "Intro",
       "Introduction"
     ]
   },
@@ -566,7 +575,7 @@
     "href": "webexercises.html#example-questions",
     "title": "Webexercises",
     "section": "Example Questions",
-    "text": "Example Questions\n\nFill-In-The-Blanks (fitb())\nCreate fill-in-the-blank questions using fitb(), providing the answer as the first argument.\n\n2 + 2 is \n\nYou can also create these questions dynamically, using variables from your R session.\n\nThe square root of 4 is: \n\nThe blanks are case-sensitive; if you don’t care about case, use the argument ignore_case = TRUE.\n\nWhat is the letter after D? \n\nIf you want to ignore differences in whitespace use, use the argument ignore_ws = TRUE (which is the default) and include spaces in your answer anywhere they could be acceptable.\n\nHow do you load the tidyverse package? \n\nYou can set more than one possible correct answer by setting the answers as a vector.\n\nType a vowel: \n\nYou can use regular expressions to test answers against more complex rules.\n\nType any 3 letters: \n\n\n\nMultiple Choice (mcq())\n\n“Never gonna give you up, never gonna: let you goturn you downrun awaylet you down”\n“I bless the rainsguess it rainssense the rain down in Africa” -Toto\n\n\n\nTrue or False (torf())\n\nTrue or False? You can permute values in a vector using sample(). TRUEFALSE\n\n\n\nLonger MCQs (longmcq())\nWhen your answers are very long, sometimes a drop-down select box gets formatted oddly. You can use longmcq() to deal with this. Since the answers are long, It’s probably best to set up the options inside an R chunk with echo=FALSE.\nWhat is a p-value?\n\n the probability that the null hypothesis is true the probability of the observed, or more extreme, data, under the assumption that the null-hypothesis is true the probability of making an error in your conclusion\n\nWhat is true about a 95% confidence interval of the mean?\n\n if you repeated the process many times, 95% of intervals calculated in this way contain the true mean there is a 95% probability that the true mean lies within this range 95% of the data fall within this range"
+    "text": "Example Questions\n\nFill-In-The-Blanks (fitb())\nCreate fill-in-the-blank questions using fitb(), providing the answer as the first argument.\n\n2 + 2 is \n\nYou can also create these questions dynamically, using variables from your R session.\n\nThe square root of 4 is: \n\nThe blanks are case-sensitive; if you don’t care about case, use the argument ignore_case = TRUE.\n\nWhat is the letter after D? \n\nIf you want to ignore differences in whitespace use, use the argument ignore_ws = TRUE (which is the default) and include spaces in your answer anywhere they could be acceptable.\n\nHow do you load the tidyverse package? \n\nYou can set more than one possible correct answer by setting the answers as a vector.\n\nType a vowel: \n\nYou can use regular expressions to test answers against more complex rules.\n\nType any 3 letters: \n\n\n\nMultiple Choice (mcq())\n\n“Never gonna give you up, never gonna: let you goturn you downrun awaylet you down”\n“I bless the rainsguess it rainssense the rain down in Africa” -Toto\n\n\n\nTrue or False (torf())\n\nTrue or False? You can permute values in a vector using sample(). TRUEFALSE\n\n\n\nLonger MCQs (longmcq())\nWhen your answers are very long, sometimes a drop-down select box gets formatted oddly. You can use longmcq() to deal with this. Since the answers are long, It’s probably best to set up the options inside an R chunk with echo=FALSE.\nWhat is a p-value?\n\n the probability that the null hypothesis is true the probability of the observed, or more extreme, data, under the assumption that the null-hypothesis is true the probability of making an error in your conclusion\n\nWhat is true about a 95% confidence interval of the mean?\n\n there is a 95% probability that the true mean lies within this range if you repeated the process many times, 95% of intervals calculated in this way contain the true mean 95% of the data fall within this range"
   },
   {
     "objectID": "webexercises.html#checked-sections",
@@ -717,6 +726,7 @@
     "section": "",
     "text": "Recap\n\n\n\n\n\n\n\n\n\nThroughout this practical we have covered the topics:\n\nLinux\n\nMultiuser Multitasking OS\nUser, Shell and Kernel\n\nRunning commands on the command line\n\nSearch engines, cheat sheets and manual pages\nCommands: man\n\nUseful Linux practice and commands\n\nTab complete\nUp and Down arrow keys to access history\n‘Ctrl’ + ‘c’ to stop a command\nCommands: clear\n\nFiles and Directories\n\nNavigating through directory structure and looking at files with paths\nCommands: cd, pwd, ls, mkdir\n\nManipulating files i.e. creating, copying, moving, deleting\n\nCommands: cp, mv, rm\n\nLooking at files\n\nCommands: cat, head, tail, less, wc, grep\n\nText editor\n\nCommands: vim\n\n\nNote: There is a cheatsheet at the end of this book with these commands.",
     "crumbs": [
+      "Part 2",
       "Recap"
     ]
   },
@@ -727,7 +737,107 @@
     "section": "",
     "text": "Exercise 2\n\n\n\n\n\n\n\n\n\nThe directory “~/Linux/6_final_exercise/” has all the files you need. Below is a set of tasks and questions that will require all the skills you have gained from this practical.\n\nSee what files are in the directory.\n\nRename the file “3-P£_CACTTCGA_L001_R1_001.fastq” as “3-P3_CACTTCGA_L001_R1_001.fastq”.\n\nMake a backup of the files in a directory called backup.\n\nHow many reads are in the samples?\n\nRemove the fastq files with no data.\nUpdate the backup files with the previous change.\n\nCheck if the 1st read names match in the paired files.\n\nCheck if the last read names match in the paired files.\n\nIn file “1-P1_ATGCCTGG_L001_R1_001.fastq” look for sequence headers with the term ‘psychrobacter’.\n\nIn the sample 1-P1 remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 files.\n\nPrint to screen the fastq header, sequence and quality data for the 25th sequence in sample 2-P2 for both the R1 and R2 file. Do this with one command for R1 and a separate command for R2.\n\nYou can check my solutions in the Answers section. These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.",
     "crumbs": [
+      "Part 2",
       "Exercise 2"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Bioinformatics is an increasingly important skill for biological scientists. Many bioinformatic tools can only be run on Linux based operating systems. This course aims to introduce you to Linux and is aimed at beginners and novices to the command line.\nSessions will start with a brief presentation followed by self-paced computer practicals guided by an online interactive book. The book will contain theory, practice code, and exercises. Multiple choice questions will help reinforce what you have learnt throughout the book.\n\n\n\n\n\n\n\nAt the end of the course learners will be able to:\n\nExplain how the user, shell, and kernel interact with each other in the Linux OS.\nNavigate & manipulate directories in the Linux environment.\nList and view the contents of directories.\nCarry out a variety of commands with files including printing them to terminal.\nUtilise the text editor nano to create, edit, and save files.\nUnderstand the structure of fastq files.\n\nThere are additional materials in the Advanced part which include some advanced Linux commands and introductions to other programming languages used by bioinformaticians.\nCommands are in the following font, colour, and box. They should be run in the command line.\n\necho \"This is a command example\" \n\nIn some pages there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the page.\nAdditionally, please use the cheatsheet as a reminder of all the commands you will be learning.\n\n\n\nThis work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
+    "crumbs": [
+      "Intro",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#learning-outcomes",
+    "href": "index.html#learning-outcomes",
+    "title": "Introduction",
+    "section": "",
+    "text": "At the end of the course learners will be able to:\n\nExplain how the user, shell, and kernel interact with each other in the Linux OS.\nNavigate & manipulate directories in the Linux environment.\nList and view the contents of directories.\nCarry out a variety of commands with files including printing them to terminal.\nUtilise the text editor nano to create, edit, and save files.\nUnderstand the structure of fastq files.\n\nThere are additional materials in the Advanced part which include some advanced Linux commands and introductions to other programming languages used by bioinformaticians.\nCommands are in the following font, colour, and box. They should be run in the command line.\n\necho \"This is a command example\" \n\nIn some pages there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the page.\nAdditionally, please use the cheatsheet as a reminder of all the commands you will be learning.",
+    "crumbs": [
+      "Intro",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#start",
+    "href": "index.html#start",
+    "title": "Introduction",
+    "section": "",
+    "text": "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
+    "crumbs": [
+      "Intro",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "overview/linux_introduction.html",
+    "href": "overview/linux_introduction.html",
+    "title": "Linux",
+    "section": "",
+    "text": "Linux\n\n\n\n\n\nLinux is a multitasking, multiuser Unix-like computer operating system (OS). Linux can run many different applications (multitasking) and it can be used by many different people (multiuser) on the same computer at the same time.\nIt is utilised by many programmers, including Bioinformaticians. It is a relatively easy OS to run commands and develop software for. The vast majority of programs and tools for computational analysis of biological data will work in Linux.\nThere are three parts of the Linux OS:\n\nThe kernel: This is the hub of the operating systems. This is the “behind the scenes” part of the OS which allocates time and memory to programs. This controls the hardware.\nThe shell: This acts as the interface between the user and the kernel. When a user runs commands, the shell will interpret these commands for the kernel. The shell can be any program that constitutes the user interface e.g. command line, internet browser, start menu etc.\nPrograms: Programs allow the OS to perform specific tasks. Examples of programs include Internet browsers, genome assembly tools, text editors etc.\n\n\n\n\n\n\nIt is important to learn the Linux language so you can run commands on the command line. This is because:\n\nMany bioinformatic tools do not have a graphical user interface (gui) and so must be run on the command line.\nThere are many powerful commands that can be run on the Linux command line.\nIt is quicker and more reproducible to run commands through a shell than through a gui.",
+    "crumbs": [
+      "Overview",
+      "Linux"
+    ]
+  },
+  {
+    "objectID": "overview/tutorial.html",
+    "href": "overview/tutorial.html",
+    "title": "Tutorial overview",
+    "section": "",
+    "text": "This tutorial and practical session focuses on learning the foundations of linux coding and using it on a HPC.\n\n\n\nWe prefer to allow people to work at a pace that they are comfortable with rather than ensuring that everyone is at the same point of the tutorial at the same time. There will be no instructor telling you what to type and click. Instead, everything you require to carry out the practical is written in this document. Take your time; it’s important to spend some time understanding why you are running the commands, rather than simply typing them out.\nIf at any point you are having trouble or have a question, let one of us know and we’ll provide 1-to-1 assistance.\n\n\n\n\n\n\n\n\nThis practical is broken up into the following parts.\n\nIntro: Introduction and learning outcomes\nOverview: A quick overview of linux and the course structure\nPart 1\n\nStarting:\nDirectories and files:\nTips and tricks:\nManipulating directories:\nExercise 1:\n\nPart 2\n\nFile reading and processing:\nRecap:\nFastq format:\nExercise 2:\n\n\n\n\n\n\n\n\n\n\nThe next part is Part 1.",
+    "crumbs": [
+      "Overview",
+      "Tutorial overview"
+    ]
+  },
+  {
+    "objectID": "overview/tutorial.html#basics",
+    "href": "overview/tutorial.html#basics",
+    "title": "Tutorial overview",
+    "section": "",
+    "text": "This tutorial and practical session focuses on learning the foundations of linux coding and using it on a HPC.",
+    "crumbs": [
+      "Overview",
+      "Tutorial overview"
+    ]
+  },
+  {
+    "objectID": "overview/tutorial.html#structure",
+    "href": "overview/tutorial.html#structure",
+    "title": "Tutorial overview",
+    "section": "",
+    "text": "We prefer to allow people to work at a pace that they are comfortable with rather than ensuring that everyone is at the same point of the tutorial at the same time. There will be no instructor telling you what to type and click. Instead, everything you require to carry out the practical is written in this document. Take your time; it’s important to spend some time understanding why you are running the commands, rather than simply typing them out.\nIf at any point you are having trouble or have a question, let one of us know and we’ll provide 1-to-1 assistance.",
+    "crumbs": [
+      "Overview",
+      "Tutorial overview"
+    ]
+  },
+  {
+    "objectID": "overview/tutorial.html#content",
+    "href": "overview/tutorial.html#content",
+    "title": "Tutorial overview",
+    "section": "",
+    "text": "This practical is broken up into the following parts.\n\nIntro: Introduction and learning outcomes\nOverview: A quick overview of linux and the course structure\nPart 1\n\nStarting:\nDirectories and files:\nTips and tricks:\nManipulating directories:\nExercise 1:\n\nPart 2\n\nFile reading and processing:\nRecap:\nFastq format:\nExercise 2:",
+    "crumbs": [
+      "Overview",
+      "Tutorial overview"
+    ]
+  },
+  {
+    "objectID": "overview/tutorial.html#next-section",
+    "href": "overview/tutorial.html#next-section",
+    "title": "Tutorial overview",
+    "section": "",
+    "text": "The next part is Part 1.",
+    "crumbs": [
+      "Overview",
+      "Tutorial overview"
     ]
   }
 ]

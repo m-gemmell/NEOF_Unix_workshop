@@ -1,0 +1,37 @@
+# Tutorial overview
+![](/images/tutorial.png){style="width:200px" fig-align="center"}
+
+## Basics
+
+This tutorial and practical session focuses on learning the foundations of linux coding and using it on a HPC.
+
+## Structure
+
+We prefer to allow people to work at a pace that they are comfortable with rather than ensuring that everyone is at the same point of the tutorial at the same time. There will be no instructor telling you what to type and click. Instead, everything you require to carry out the practical is written in this document. Take your time; it's important to spend some time understanding why you are running the commands, rather than simply typing them out. 
+
+If at any point you are having trouble or have a question, let one of us know and we'll provide 1-to-1 assistance.
+
+## Content
+![](/images/sections.png){style="width:100px; border-radius:5px; background-color:white; border: solid white 5px" fig-align="center"}
+
+This practical is broken up into the following parts.
+
+1. __[Intro](/index.qmd):__ Introduction and learning outcomes
+2. __[Overview](/overview.qmd):__ A quick overview of linux and the course structure
+3. Part 1
+    - __[Starting](/part_1/starting.qmd):__
+    - __[Directories and files](/part_1/directories_and_files.qmd):__
+    - __[Tips and tricks](/part_1/tips_and_tricks.qmd):__
+    - __[Manipulating directories](/part_1/manipulating_directories.qmd):__
+    - __[Exercise 1](/part_1/exercise1.qmd):__
+4. Part 2
+    - __[File reading and processing](/part_2/file_reading_and_processing.qmd):__
+    - __[Recap](/part_2/recap.qmd):__
+    - __[Fastq format](/part_2/fastq.qmd):__
+    - __[Exercise 2](/part_2/exercise2.qmd):__
+
+
+## Next section
+![](/images/start.png){style="width:200px" fig-align="center"}
+
+The next part is [Part 1](/part_1/starting.qmd).

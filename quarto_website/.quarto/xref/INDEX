@@ -133,5 +133,11 @@
   },
   "advanced/advanced_linux_practice.qmd": {
     "advanced_linux_practice.html": "f9edf54b"
+  },
+  "overview/linux_introduction.qmd": {
+    "linux_introduction.html": "1e9fc301"
+  },
+  "overview/tutorial.qmd": {
+    "tutorial.html": "cb36c0a2"
   }
 }
