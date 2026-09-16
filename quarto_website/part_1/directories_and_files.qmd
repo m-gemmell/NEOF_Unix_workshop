@@ -1,24 +1,22 @@
 # Directories and Files {#dirsandfiles}
+![](/images/directory.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "../images/directory.png", auto_pdf = TRUE)
-```
-
-`r hide("Chapter 4 video walk-through")`
-
-::: container
-<iframe src="https://www.youtube.com/embed/hJCuJXZQjac" frameborder="0" allowfullscreen class="video">
-
-</iframe>
-:::
-
+`r hide("Optional video walk-through")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/hJCuJXZQjac" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 `r unhide()`
 
 ## Acquiring Workshop data
+![](/images/data_files.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
 
 The first step to carry out is to copy the data for the workshop to your home directory.
 
+__Note:__ A directory is known as a folder in common parlance.
+
 ### Changing directories
+![](/images/cd.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
 
 Before copying you will change directory to your home directory.
 
@@ -51,6 +49,7 @@ In this case it will not show a **"\~"** but the full path of your home director
 -   **"nsc206"**: The home directory of user nsc206. It is a subdirectory of **"tea/"** which is a subdirectory of **"pub14/"** which is a subdirectory of the root (**"/"**).
 
 ### Copying
+![](/images/copy_vaporwave.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
 Now that we are in our home directory we can copy the data we need to it.
 
@@ -86,31 +85,24 @@ This starts as the root (**"/"**) which branches out into directories and files.
 
 Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as a tree. This only includes a subset of directories.
 
-```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
-knitr::include_graphics(path = "../images//linux_tree_structure.png", auto_pdf = TRUE)
-```
+![](/images/linux_tree_structure.png){style="width:600px; border-radius:15px" fig-align="center"}
 
 ### Boxes
 
 Another analogy to the directory structure is boxes and items. In this case there is one large box that contains all the boxes and items, this is the root (**"/"**). In the root are items and boxes which hold items and boxes etc.
 
-Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as boxes. This only includes a subset of directories.
+Below is an example of visualising the location of the **"Linux"** directory within the user ncs206's home directory as boxes. This only includes a subset of directories.
 
-```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
-knitr::include_graphics(path = "../images//linux_box_structure.png", auto_pdf = TRUE)
-```
+![](/images/linux_box_structure.png){style="width:400px; border-radius:15px" fig-align="center"}
 
 ## Paths
+![](/images/paths.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "../images//paths.png", auto_pdf = TRUE)
-```
-
-On the command line directories and files are referred to by paths e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
+On the command line directories and files are referred to as __paths__ e.g. **"/pub14/tea/nsc206/Linux/"** is a path.
 
 Paths are case sensitive. The path **"directory/file.txt"** is different than **"diRectory/File.txt"**.
 
-Spaces should always be avoided in path names. It is highly recommended to **"\_"** instead. This is because spaces are used to separate options and parameters in commands.
+Spaces should always be avoided in path names. It is highly recommended to use **"\_"** instead. This is because spaces are used to separate options and parameters in commands.
 
 There are multiple ways to refer to a path. The two main ways are through **absolute paths** and **relative paths**.
 
@@ -166,10 +158,7 @@ cd Linux/
 ```
 
 ## Listing Directory content
-
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "../images//List.png", auto_pdf = TRUE)
-```
+![](/images/List.png){style="width:200px; background: white; border-radius:15px" fig-align="center"}
 
 To list the contents (files and directories) within a directory you can use the `ls` command.
 
@@ -189,10 +178,10 @@ List the contents in your home directory:
 ls ..
 ```
 
-List the contents in the root directory and put each separate file/directory on a separate line. In the below command the `-1` is a parameter that indicates there will be only 1 piece of content on each line. Note: `-2`, `-3` etc are not parameters that work with `ls`.
+List the contents in the `/pub14/tea/` directory and put each separate file/directory on a separate line. In the below command the `-1` is a parameter that indicates there will be only 1 piece of content on each line. Note: `-2`, `-3` etc are not parameters that work with `ls`.
 
 ```{bash eval=FALSE}
-ls -1 /
+ls -1 /pub14/tea/
 ```
 
 **Reminder**: you can use the `man` command to look at more options for commands.
@@ -200,57 +189,46 @@ ls -1 /
 `ls` is my most typed command. I am consistently using it to see what directories and files are in my current directory and other directories. I suggest you do the same.
 
 ## MCQs: Files & Directories
+![](/images/question_bubble.png){style="width:200px" fig-align="center"}
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "../images//question_bubble.png", auto_pdf = TRUE)
-```
-
-Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+Great! Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
 ```{r, echo = FALSE}
 opts_p <- c("__`cp`__", "__`cd`__", answer="__`ls`__")
 ```
-
-1.  What command lists the contents of directories? `r longmcq(opts_p)`
+1. What command lists the contents of directories? `r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
 opts_p <- c("__`cp`__", answer="__`cd`__", "__`ls`__")
 ```
-
-2.  What command changes directory? `r longmcq(opts_p)`
+2. What command changes directory? `r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
 opts_p <- c(answer="__`cp`__", "__`cd`__", "__`ls`__")
 ```
-
-3.  What command copies files and directories? `r longmcq(opts_p)`
+3. What command copies files and directories? `r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
 opts_p <- c("__`~`__", answer="__`/`__", "__`..`__")
 ```
-
 4.  Choose the option that represents the root directory.`r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
 opts_p <- c(answer="__`~`__", "__`/`__", "__`..`__")
 ```
-
-5.  Choose the option that represents your home directory. `r longmcq(opts_p)`
+5. Choose the option that represents your home directory. `r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
 opts_p <- c("__`~`__", "__`/`__", answer="__`..`__")
 ```
-
-6.  Choose the option that represents one directory above. `r longmcq(opts_p)`
+6. Choose the option that represents one directory above. `r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
 opts_p <- c("__./Linux/__", answer="__/pub14/tea/nsc206/Linux/__")
 ```
-
 7.  Which path is an absolute path? `r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
 opts_p <- c(answer="__./Linux__", "__/pub14/tea/nsc206/Linux/__")
 ```
-
 8.  Which path is a relative path? `r longmcq(opts_p)`

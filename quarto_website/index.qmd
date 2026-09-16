@@ -14,8 +14,8 @@ Sessions will start with a brief presentation followed by self-paced computer pr
 
 At the end of the course learners will be able to:
 
--   Explain how the user, shell, and kernel interact with each other in the Linux OS.
--   Navigate & manipulate directories in the Linux environment.
+-   Explain how the user, shell, and kernel interact with each other in the Linux OS
+-   Navigate & manipulate directories in the Linux environment
 -   List and view the contents of directories.
 -   Carry out a variety of commands with files including printing them to terminal.
 -   Utilise the text editor nano to create, edit, and save files.
@@ -35,5 +35,16 @@ Additionally, please use the [cheatsheet](/appendix/cheat_sheet.qmd) as a remind
 
 ## Start
 
+![](/images/linux_beginner.png){style="width:150px" fig-align="center"}
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+To start please go to the [Overview part](/overview/linux_introduction.qmd).
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "os", 
+                  tooltip = "Operating System",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "gui", 
+                  tooltip = "Graphical User Interface",
+                  arrow = TRUE, placement = "bottom")
+```

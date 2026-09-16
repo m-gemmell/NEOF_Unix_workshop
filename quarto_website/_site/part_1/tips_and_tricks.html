@@ -426,18 +426,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="tipsandtricks" class="level1">
 <h1>Tips and tricks</h1>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//skateboard_trick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
+<p><img src="../images/skateboard_trick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px"></p>
 </figure>
-</div>
-</div>
 </div>
 <div class="webex-solution">
 <button>
-Chapter 5 viedo walk-through
+Optional video walk-through
 </button>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/968QURuAplk" frameborder="0" allowfullscreen="" class="video">
@@ -447,14 +443,10 @@ Chapter 5 viedo walk-through
 <section id="tab-complete" class="level2">
 <h2 class="anchored" data-anchor-id="tab-complete">Tab complete</h2>
 <p>Tab complete is a method to quickly type commands and file paths without error. In bioinformatics tab complete is your best friend. The tab key looks like:</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//tab_complete.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:15.0%"></p>
+<p><img src="../images/tab_complete.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; border-radius:5px; border:5px solid white; background:white"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Tab complete serves the following purposes:</p>
 <ol type="1">
@@ -463,9 +455,10 @@ Chapter 5 viedo walk-through
 <li>To ensure you have no typos</li>
 </ol>
 <p>In the below examples press the tab button when you see <strong>&lt;tab&gt;</strong> and <strong>replace 2xx with your user number.</strong></p>
+<p><a href="https://www.youtube.com/watch?v=968QURuAplk&amp;t=20s">Video demonstration</a></p>
 <p>Move into the directory <strong>“1_directory”</strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /pub14/t<span class="op">&lt;</span>tab<span class="op">&gt;</span>n<span class="op">&lt;</span>tab<span class="op">&gt;</span>2xx<span class="op">&lt;</span>tab<span class="op">&gt;</span>L<span class="op">&lt;</span>tab<span class="op">&gt;</span>1_d<span class="op">&lt;</span>tab<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /pub14/tea/n<span class="op">&lt;</span>tab<span class="op">&gt;</span>2xx<span class="op">&lt;</span>tab<span class="op">&gt;</span>L<span class="op">&lt;</span>tab<span class="op">&gt;</span>1_d<span class="op">&lt;</span>tab<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Print out all the content within the current directory that starts with <strong>“1_”</strong> in the file or directory name. This is carried out with a double tab.</p>
 <p><strong>Note</strong>: the <strong>“./”</strong> is put before the 1 so it only looks in the current directory otherwise it will also look for commands.</p>
@@ -488,47 +481,50 @@ Chapter 5 viedo walk-through
 </section>
 <section id="ending-a-command" class="level2">
 <h2 class="anchored" data-anchor-id="ending-a-command">Ending a command</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/ctrl_c.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:300px; ; border-radius:5px; border:2px solid white; background:white"></p>
+</figure>
+</div>
 <p>There are times when you will want to abandon a command on the command line. To do this simple press <strong>‘Ctrl’ + ‘c’</strong>.</p>
 <p>This is useful if a command won’t respond or you noticed you have run a command with a typo or with the wrong file.</p>
 </section>
 <section id="history" class="level2">
 <h2 class="anchored" data-anchor-id="history">History</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//history.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:15.0%"></p>
+<p><img src="../images/history.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; border-radius:5px; background:white"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Linux will save commands you have previously entered. In the terminal, whilst at the command line, you can press the up and down keys to scroll through your history. You can then rerun previous commands or edit them with the left and right arrow keys, and run the edited version.</p>
 </section>
 <section id="clear" class="level2">
 <h2 class="anchored" data-anchor-id="clear">Clear</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/clean.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px"></p>
+</figure>
+</div>
 <p>The <code>clear</code> command can be used to clear all the text from the terminal. This is useful for keeping a tidy terminal.</p>
 </section>
 <section id="bash-escape" class="level2">
 <h2 class="anchored" data-anchor-id="bash-escape">Bash escape</h2>
 <p>To continue a command on a new line on the command line use the backslash character, <strong><code>\</code></strong>. When you press <code>\</code> followed by enter, the command will not run and you will be on a new line on the command line. This can be useful for clarity and for long commands. In the below example press “enter” after the end of a line.</p>
+<p><a href="https://www.youtube.com/watch?v=968QURuAplk&amp;t=607s">Video demonstration</a></p>
 <p>Print to screen the term “Hello universe, today is a very nice day. Don’t you think so?”</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="dt">\</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>“Hello universe, today is a very nice day. Don’t you think so<span class="pp">?</span>”</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="st">"Hello universe, today is a very nice day. Don’t you think so?"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Notice that there is a space before the <code>\</code>. This is because there needs to be a space between the echo and text to print out. It is always recommended to use a space before a <code>\</code> to bash escape.</p>
 <p>Bash escape is useful for this document as it will show if commands in this document are separate commands or one command over multiple lines.</p>
 </section>
 <section id="annotations" class="level2">
 <h2 class="anchored" data-anchor-id="annotations">Annotations</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//hashtag.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:15.0%"></p>
+<p><img src="../images/hashtag.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; border-radius:15px; background:white"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>You can annotate your code so it will not run. This is carried out by putting a <code>#</code> at the start of a code line.</p>
 <p>An example:</p>
@@ -538,54 +534,50 @@ Chapter 5 viedo walk-through
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"this line is not annotated"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>This is useful to give yourself information about what your code is doing and it is vital if you are creating scripts. We will also use annotations in this workbook to explain what some lines of code are doing.</p>
-<p>I also find it useful to put a <code>#</code> at the front of a long command that I am typing or editing. This means the command won’t run if I accidentally press enter. Just be sure to remove the <code>#</code> at the start of the line before you want to run it.</p>
+<p>I also find it useful to put a <code>#</code> at the front of a long command that I am typing or editing. This means the command won’t run if I accidentally press enter. However, be sure to remove the <code>#</code> at the start of the line before you want to run it.</p>
 </section>
 <section id="mcqs-tips-tricks" class="level2">
 <h2 class="anchored" data-anchor-id="mcqs-tips-tricks">MCQs: Tips &amp; tricks</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//question_bubble_blue.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/question_bubble_blue.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
 <ol type="1">
 <li>What allows you to auto fill paths and commands so you can quickly type without error?
-<div id="radio_GRVVTXHGGC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GRVVTXHGGC" value=""> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GRVVTXHGGC" value="answer"> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GRVVTXHGGC" value=""> <span><strong><code>clear</code></strong></span></label>
+<div id="radio_VDVSFUQHJX" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VDVSFUQHJX" value=""> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VDVSFUQHJX" value="answer"> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_VDVSFUQHJX" value=""> <span><strong><code>clear</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="2" type="1">
 <li>What command clears text from the terminal?
-<div id="radio_PDYWVIZJPG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PDYWVIZJPG" value=""> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PDYWVIZJPG" value=""> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PDYWVIZJPG" value="answer"> <span><strong><code>clear</code></strong></span></label>
+<div id="radio_USWNEYXEVA" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_USWNEYXEVA" value=""> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_USWNEYXEVA" value=""> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_USWNEYXEVA" value="answer"> <span><strong><code>clear</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="3" type="1">
 <li>What symbol is used for annotation?
-<div id="radio_SYKOBWNEAG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_SYKOBWNEAG" value="answer"> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SYKOBWNEAG" value=""> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_SYKOBWNEAG" value=""> <span><strong><code>clear</code></strong></span></label>
+<div id="radio_ZAEVUXTYLE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZAEVUXTYLE" value="answer"> <span><strong><code>#</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZAEVUXTYLE" value=""> <span><strong>Tab complete</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZAEVUXTYLE" value=""> <span><strong><code>clear</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="4" type="1">
 <li>What keyboard short cut cancels/ends a command?
-<div id="radio_NIVEVYOKUV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NIVEVYOKUV" value="answer"> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NIVEVYOKUV" value=""> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NIVEVYOKUV" value=""> <span><strong>Up and down arrow</strong></span></label>
+<div id="radio_RAXQLORHVQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_RAXQLORHVQ" value="answer"> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RAXQLORHVQ" value=""> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_RAXQLORHVQ" value=""> <span><strong>Up and down arrow</strong></span></label>
 </div></li>
 </ol>
 <ol start="5" type="1">
 <li>What keys scroll through your previously run commands (aka history)?
-<div id="radio_CQRAXNEDPV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_CQRAXNEDPV" value=""> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_CQRAXNEDPV" value=""> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_CQRAXNEDPV" value="answer"> <span><strong>Up and down arrows</strong></span></label>
+<div id="radio_SLENDHHGSC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SLENDHHGSC" value=""> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_SLENDHHGSC" value=""> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SLENDHHGSC" value="answer"> <span><strong>Up and down arrows</strong></span></label>
 </div></li>
 </ol>
 <ol start="6" type="1">
 <li>Bash escape allows you to run commands over multiple lines. What symbol is used for bash escape?
-<div id="radio_MADNSAECYZ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MADNSAECYZ" value=""> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MADNSAECYZ" value="answer"> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MADNSAECYZ" value=""> <span><strong>Up and down arrow</strong></span></label>
+<div id="radio_MJMHYUKYTF" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MJMHYUKYTF" value=""> <span><strong>Ctrl + c</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MJMHYUKYTF" value="answer"> <span><strong><code>\</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MJMHYUKYTF" value=""> <span><strong>Up and down arrow</strong></span></label>
 </div></li>
 </ol>
 

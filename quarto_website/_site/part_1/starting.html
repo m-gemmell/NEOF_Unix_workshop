@@ -112,6 +112,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="../site_libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet">
+<link href="../site_libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet">
+<link href="../site_libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet">
+<link href="../site_libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet">
+<script src="../site_libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+<script src="../site_libs/tippy-binding-0.1.0/tippy.js"></script>
 
 
 <link rel="stylesheet" href="../include/webex.css">
@@ -421,67 +429,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="starting" class="level1">
 <h1>Starting</h1>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//start.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/start.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; backgorund:white; brder-radius:5px"></p>
 </figure>
-</div>
-</div>
 </div>
 <section id="cluster" class="level2">
 <h2 class="anchored" data-anchor-id="cluster">Logon instructions</h2>
-<p>For this workshop we will be using Virtual Network Computing (VNC). Connect to the VNC with a browser by using the webVNC link you were sent.</p>
-<p>You will now be in a logged-in Linux VNC desktop with two terminals. You will see something as below (there may be only one terminal which is fine). If you do not see something similar please ask for assistance.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
+<p>For this workshop we will be using Virtual Network Computing (<u id="vnc">VNC</u>). Connect to the <u id="vnc">VNC</u> with a browser by using the webVNC link you were sent.</p>
+<p>You will now be in a logged-in Linux <u id="vnc">VNC</u> desktop with two terminals. You will see something as below (there may be only one terminal which is fine). If you do not see something similar please ask for assistance.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//logon_pic.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<p><img src="../images/nsc200_logon.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:800px; border-radius:5px; border: #282828 solid 5px"></p>
 </figure>
 </div>
-</div>
-</div>
-<p>If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.</p>
-<p>These instructions will not work outside of this workshop. If you would like to install your own Linux OS on your desktop or laptop we would recommend Mint Linux</p>
+<p>If the <u id="vnc">VNC</u> is taking up too much/little space of your browser you can press the button “Fit Desktop to Browser”. This will automatically adjust the size of the webVNC desktop to your browser window.</p>
+<p>These instructions will not work outside of this workshop. If you would like to install your own Linux <u id="os">OS</u> on your desktop or laptop we would recommend Mint Linux</p>
 <p>The following link is a guide to install Mint Linux:<br>
 https://linuxmint-installation-guide.readthedocs.io/en/latest/</p>
+<p>If you have a windows machine and would like to install linux on it you can install Windows Subsystem for Linux (<u id="wsl">WSL</u>).</p>
+<p>The following link is a guide to install linux via (<u id="wsl">WSL</u>): https://learn.microsoft.com/en-us/windows/wsl/install</p>
 </section>
 <section id="the-terminal-window" class="level2">
 <h2 class="anchored" data-anchor-id="the-terminal-window">The Terminal Window</h2>
 <p>In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//terminal_window.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<p><img src="../images/terminal_window.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:700px; border:radius:5px"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Already there is useful information for us on the terminal window.</p>
 <ul>
-<li><strong>nsc006</strong>: This is the login name, also known as the username. In this case nsc006 is a demonstrator’s account. Your screen should show a different account name which will be your username for the Linux machine/cluster you are logged into.</li>
-<li><strong>gauss03</strong>: This is the machine name the user is logged into.</li>
-<li><strong>~</strong>: This represents the current directory of the user, or the directory a command was run in. In the Linux OS and others <strong>‘~’</strong> is a shortcut to the user’s home directory.</li>
+<li><strong>nsc206</strong>: This is the login name, also known as the username. In this case nsc206 is a demonstrator’s account. Your screen should show a different account name which will be your username for the Linux machine/cluster you are logged into.</li>
+<li><strong>ada02</strong>: This is the machine name the user is logged into.</li>
+<li><strong>~</strong>: This represents the current directory of the user, or the directory a command was run in. In the Linux (<u id="os">OS</u>) and others <strong>‘~’</strong> is a shortcut to the user’s home directory.</li>
 <li>Everything after the <strong>‘$’</strong> is where commands are typed into the terminal. This is also referred to as the command line.</li>
 </ul>
-<p>To open a new terminal window, right click on the main screen, choose <code>Applications</code> -&gt; <code>Shell</code> -&gt; <code>bash</code></p>
+<p>To open a new terminal window, right click on the main screen, choose <code>Terminal</code>.</p>
 </section>
 <section id="commands" class="level2">
 <h2 class="anchored" data-anchor-id="commands">Commands</h2>
-<p>Commands are typed into the terminal and then run by pressing <strong>“enter”</strong>”</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
+<p>Commands are typed into the terminal and then run by pressing <strong>“enter”</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//enter_symbol.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/enter_symbol.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:15px; background:white"></p>
 </figure>
 </div>
-</div>
-</div>
-<p>To run a command select your terminal by clicking on it or using <strong>“alt+shift”</strong>.</p>
+<p>To run a command select your terminal by clicking on it.</p>
 <p>Now run the below command:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello World"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -502,12 +496,50 @@ https://linuxmint-installation-guide.readthedocs.io/en/latest/</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> echo</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>man</code> page acts like using the command <strong>less</strong> (we will get into more specifics later). Important notes for now are to use the <strong>arrow keys</strong> to go <strong>up</strong> and <strong>down</strong> the page and press <code>q</code> to exit the manual.</p>
+</div>
+</div>
 <p>The below command will show the manual page for the <code>man</code> command:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> man</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><strong>Note</strong>: The <code>man</code> page acts like using the command <strong>less</strong> (we will get into more specifics later). Important notes for now are to use the <strong>arrow keys</strong> to go <strong>up</strong> and <strong>down</strong> the page and press <strong>q</strong> to exit the manual</p>
-<p><strong>Note</strong>: There is a cheat sheet at the end of this document with all the commands covered in this practical.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is a <a href="../appendix/cheat_sheet.html">cheat sheet</a> at the end of this document with all the commands covered in this practical.</p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-0dc54ceb8fc3fb6d327b" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-0dc54ceb8fc3fb6d327b">{"x":{"element":"os","opts":{"content":"Operating System","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-862b98d7e430ad21ff58" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-862b98d7e430ad21ff58">{"x":{"element":"vnc","opts":{"content":"Virtual Network Computing","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-ed4809822cdecfede454" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-ed4809822cdecfede454">{"x":{"element":"wsl","opts":{"content":"Windows Subsystem for Linux","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
 </section>
