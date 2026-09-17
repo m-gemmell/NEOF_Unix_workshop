@@ -65,7 +65,7 @@ This is useful if a command won't respond or you noticed you have run a command 
 Linux will save commands you have previously entered. In the terminal, whilst at the command line, you can press the up and down keys to scroll through your history. You can then rerun previous commands or edit them with the left and right arrow keys, and run the edited version. 
 
 ## Clear
-![](/images/clean.png){style="width:150px" fig-align="center"}
+![](/images/clean.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
 
 The `clear` command can be used to clear all the text from the terminal. This is useful for keeping a tidy terminal.
 

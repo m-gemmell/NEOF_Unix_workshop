@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>linux_introduction – NEOF Intro to Linux</title>
+<title>faq – NEOF Intro to Linux</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../part_1/starting.html" rel="next">
+<link href="../appendix/vim.html" rel="prev">
 <link href="../images/NEOF_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -268,7 +268,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Intro</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../part_1/linux_introduction.html" aria-current="page"> 
+    <a class="nav-link" href="../overview/linux_introduction.html"> 
+<span class="menu-text">Overview</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../part_1/starting.html"> 
 <span class="menu-text">Part 1</span></a>
   </li>  
   <li class="nav-item">
@@ -280,7 +284,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Advanced</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../appendix/cheat_sheet.html"> 
+    <a class="nav-link active" href="../appendix/neof.html" aria-current="page"> 
 <span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
@@ -326,38 +330,38 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part_1/linux_introduction.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Linux</span></a>
+  <a href="../appendix/neof.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NEOF</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part_1/starting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Starting</span></a>
+  <a href="../appendix/cheat_sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cheat sheet</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part_1/directories_and_files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Directories and Files</span></a>
+  <a href="../appendix/on_your_pc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">On your computer</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part_1/tips_and_tricks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tips and tricks</span></a>
+  <a href="../appendix/mamba.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mamba</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part_1/manipulating_directories.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Manipulating directories</span></a>
+  <a href="../appendix/vim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vim</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part_1/exercise1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 1</span></a>
+  <a href="../appendix/faq.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">FAQ</span></a>
   </div>
 </li>
     </ul>
@@ -370,7 +374,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#linuxintro" id="toc-linuxintro" class="nav-link active" data-scroll-target="#linuxintro">Linux</a></li>
+  <li><a href="#faq" id="toc-faq" class="nav-link active" data-scroll-target="#faq">FAQ</a>
+  <ul class="collapse">
+  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general">General</a>
+  <ul class="collapse">
+  <li><a href="#copy-and-paste-from-computer-to-webvnc" id="toc-copy-and-paste-from-computer-to-webvnc" class="nav-link" data-scroll-target="#copy-and-paste-from-computer-to-webvnc">Copy and paste from computer to webVNC?</a></li>
+  <li><a href="#where-can-i-get-the-presentation-recordings-and-the-dataset" id="toc-where-can-i-get-the-presentation-recordings-and-the-dataset" class="nav-link" data-scroll-target="#where-can-i-get-the-presentation-recordings-and-the-dataset">Where can I get the presentation recordings and the dataset?</a></li>
+  <li><a href="#how-can-i-quitexit-less" id="toc-how-can-i-quitexit-less" class="nav-link" data-scroll-target="#how-can-i-quitexit-less">How can I quit/exit less</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -381,42 +393,26 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="linuxintro" class="level1">
-<h1>Linux</h1>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images//linux_beginner.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Linux is a multitasking, multiuser Unix-like computer operating system (OS). Linux can run many different applications (multitasking) and it can be used by many different people (multiuser) on the same computer at the same time.</p>
-<p>It is utilised by many programmers, including Bioinformaticians. It is a relatively easy OS to run commands and develop software for. The vast majority of programs and tools for computational analysis of biological data will work in Linux.</p>
-<p>There are three parts of the Linux OS:</p>
-<ul>
-<li><strong>The kernel</strong>: This is the hub of the operating systems. This is the “behind the scenes” part of the OS which allocates time and memory to programs. This controls the hardware.</li>
-<li><strong>The shell</strong>: This acts as the interface between the user and the kernel. When a user runs commands, the shell will interpret these commands for the kernel. The shell can be any program that constitutes the user interface e.g.&nbsp;command line, internet browser, start menu etc.</li>
-<li><strong>Programs</strong>: Programs allow the OS to perform specific tasks. Examples of programs include Internet browsers, genome assembly tools, text editors etc.</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images//linux_user_to_kernel.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>It is important to learn the Linux language so you can run commands on the command line. This is because:</p>
-<ul>
-<li>Many bioinformatic tools do not have a graphical user interface (gui) and so must be run on the command line.</li>
-<li>There are many powerful commands that can be run on the Linux command line.</li>
-<li>It is quicker and more reproducible to run commands through a shell than through a gui.</li>
-</ul>
+<section id="faq" class="level1">
+<h1>FAQ</h1>
+<p>This is a page of frequently asked questions. It will be updated with the answers to questions asked during these courses.</p>
+<section id="general" class="level2">
+<h2 class="anchored" data-anchor-id="general">General</h2>
+<section id="copy-and-paste-from-computer-to-webvnc" class="level3">
+<h3 class="anchored" data-anchor-id="copy-and-paste-from-computer-to-webvnc">Copy and paste from computer to webVNC?</h3>
+<p>You cannot copy and paste from your computer to the webVNC and vice versa. This is because the webVNC and your computer have two different clipboards (used for copy and pasting) which are not able to interact with each other as they are 2 different computers.</p>
+</section>
+<section id="where-can-i-get-the-presentation-recordings-and-the-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="where-can-i-get-the-presentation-recordings-and-the-dataset">Where can I get the presentation recordings and the dataset?</h3>
+<p>These are included in the resources webpage that is accessed after filling in the feedback form.</p>
+</section>
+<section id="how-can-i-quitexit-less" class="level3">
+<h3 class="anchored" data-anchor-id="how-can-i-quitexit-less">How can I quit/exit less</h3>
+<p>You can quite less by press the <code>q</code> key.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1041,11 +1037,11 @@ window.onload = function() {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../appendix/vim.html" class="pagination-link" aria-label="Vim">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Vim</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../part_1/starting.html" class="pagination-link" aria-label="Starting">
-        <span class="nav-page-text">Starting</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

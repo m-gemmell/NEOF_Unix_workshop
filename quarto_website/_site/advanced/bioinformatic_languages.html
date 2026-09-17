@@ -48,8 +48,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaeb381c6b7494c50009502241a4985c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c911dacb53fd75be6f7e538071149d2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-3a5804b326eceed6ff220c0b31a2c418.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5ff86afcab613e4ddd69836011fbfac3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-3fa8645101ca5b03c5f6878d083093ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -265,10 +265,14 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Intro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../overview/linux_introduction.html"> 
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../part_1/linux_introduction.html"> 
+    <a class="nav-link" href="../part_1/starting.html"> 
 <span class="menu-text">Part 1</span></a>
   </li>  
   <li class="nav-item">
@@ -280,7 +284,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Advanced</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../appendix/cheat_sheet.html"> 
+    <a class="nav-link" href="../appendix/neof.html"> 
 <span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
@@ -339,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../advanced/bioinformatic_languages.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Bioinformatic Languages</span></a>
+ <span class="menu-text">Bioinformatic languages</span></a>
   </div>
 </li>
     </ul>
@@ -352,14 +356,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#bfxlanguages" id="toc-bfxlanguages" class="nav-link active" data-scroll-target="#bfxlanguages">Bioinformatic Languages</a>
+  <li><a href="#bioinformatic-languages" id="toc-bioinformatic-languages" class="nav-link active" data-scroll-target="#bioinformatic-languages">Bioinformatic languages</a>
   <ul class="collapse">
   <li><a href="#awk" id="toc-awk" class="nav-link" data-scroll-target="#awk">awk</a></li>
   <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
   <li><a href="#perl" id="toc-perl" class="nav-link" data-scroll-target="#perl">Perl</a></li>
   <li><a href="#python-or-perl" id="toc-python-or-perl" class="nav-link" data-scroll-target="#python-or-perl">Python or Perl?</a></li>
-  <li><a href="#ruby" id="toc-ruby" class="nav-link" data-scroll-target="#ruby">Ruby</a></li>
-  <li><a href="#golang-aka-go" id="toc-golang-aka-go" class="nav-link" data-scroll-target="#golang-aka-go">Golang (AKA Go)</a></li>
   <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
   </ul></li>
   </ul>
@@ -372,126 +374,72 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="bfxlanguages" class="level1">
-<h1>Bioinformatic Languages</h1>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
+<section id="bioinformatic-languages" class="level1">
+<h1>Bioinformatic languages</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//languages.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/languages.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px"></p>
 </figure>
 </div>
-</div>
-</div>
-<p>Unfortunately you cannot do everything you would want directly on the Linux command line. Even the tasks you can do are sometimes not very efficient or easy. Fortunately there are many other programming languages you can use. There is a large amount of other programming languages and it can be hard to know which one to learn. Below is a list of commonly used bioinformatic program languages with a brief summary on their purpose and links to online resources to introduce you to the language.</p>
+<p>Unfortunately you cannot do everything you would want directly on the Linux command line. Even the tasks you can do are sometimes not very efficient or easy. Fortunately there are many other programming languages you can use.</p>
+<p>There is a large amount of other programming languages and it can be hard to know which one to learn. Below is a list of commonly used bioinformatic program languages with a brief summary on their purpose and links to online resources to introduce you to the language.</p>
 <section id="awk" class="level2">
 <h2 class="anchored" data-anchor-id="awk">awk</h2>
 <p><code>awk</code> is typically used as a data extraction and reporting tool. It is very good due to its power and versatility.</p>
 <p>Tutorial:</p>
-<p>http://www.grymoire.com/Unix/Awk.html</p>
+<p><a href="http://www.grymoire.com/Unix/Awk.html">http://www.grymoire.com/Unix/Awk.html</a></p>
 <p>Manual:</p>
-<p>https://www.gnu.org/software/gawk/manual/gawk.html</p>
+<p><a href="https://www.gnu.org/software/gawk/manual/gawk.html">https://www.gnu.org/software/gawk/manual/gawk.html</a></p>
 </section>
 <section id="python" class="level2">
 <h2 class="anchored" data-anchor-id="python">Python</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//python.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/python.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:15px; background:white"></p>
 </figure>
 </div>
-</div>
-</div>
-<p>Python is used for software development and other applications It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e.&nbsp;genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.</p>
+<p>Python is used for software development and other applications. It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e.&nbsp;genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.</p>
 <p>Python website:</p>
-<p>https://www.python.org/</p>
+<p><a href="https://www.python.org/">https://www.python.org/</a></p>
 <p>BioPython:</p>
-<p>https://biopython.org/</p>
+<p><a href="https://biopython.org/">https://biopython.org/</a></p>
 </section>
 <section id="perl" class="level2">
 <h2 class="anchored" data-anchor-id="perl">Perl</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//perl.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/perl.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:15px; background:null"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Perl is a similar language to python with similar uses. The main difference is how they look.</p>
 <p>Tutorial:</p>
-<p>https://www.tutorialspoint.com/perl/perl_introduction.htm</p>
+<p><a href="https://www.tutorialspoint.com/perl/perl_introduction.htm">https://www.tutorialspoint.com/perl/perl_introduction.htm</a></p>
 <p>Perl website:</p>
-<p>https://www.perl.org/</p>
+<p><a href="https://www.perl.org/">https://www.perl.org/</a></p>
 <p>BioPerl:</p>
-<p>https://bioperl.org/</p>
+<p><a href="https://bioperl.org/">https://bioperl.org/</a></p>
 </section>
 <section id="python-or-perl" class="level2">
 <h2 class="anchored" data-anchor-id="python-or-perl">Python or Perl?</h2>
-<p>Generally speaking people normally choose to either learn python or perl. However there are many bioinformatic tools written in perl and many written in python. Therefore it is good to know a bit in both so you can debug scripts and specialise in one so you can write your own scripts. Our suggestion would be to specialise in Python due to its ease to learn and its growing popularity in the Bioinformatics field. However there are also other upcoming programming languages that are becoming more popular in bioinformatics, so you may like to give them a look.</p>
-</section>
-<section id="ruby" class="level2">
-<h2 class="anchored" data-anchor-id="ruby">Ruby</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images//ruby.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>A programming language that is becoming more popular in bioinformatics due to its beginner friendliness.</p>
-<p>Tutorial:</p>
-<p>http://rubylearning.com/</p>
-<p>Ruby website:</p>
-<p>https://www.ruby-lang.org/en/</p>
-<p>BioRuby:</p>
-<p>http://bioruby.org/</p>
-<p>Why learn Ruby?</p>
-<p>http://www.bestprogramminglanguagefor.me/why-learn-ruby</p>
-</section>
-<section id="golang-aka-go" class="level2">
-<h2 class="anchored" data-anchor-id="golang-aka-go">Golang (AKA Go)</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images//golang.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Another easy programming language with a library specifically made for bioinformatics.</p>
-<p>Tutorial:</p>
-<p>https://tour.golang.org/welcome/1</p>
-<p>Go website:</p>
-<p>https://golang.org/</p>
-<p>biogo:</p>
-<p>https://github.com/biogo/biogo</p>
+<p>Generally the answer is Python. Many programs are written in Python so even if you don’t make any programs yourself it can be useful to know a little python so you can debug Python scripts.</p>
+<p>Some programs are written in Perl but it has lost a lot of popularity so there are less and less programs written in Perl. Many Perl programs that were useful are now outdated.</p>
 </section>
 <section id="r" class="level2">
 <h2 class="anchored" data-anchor-id="r">R</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//R.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/R.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:15px; border:5px solid white; background:white"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>R is a very powerful programming language for statistical analysis and visualisation. It unfortunately has a large barrier to entry and normally quite unclear documentation. However it will unlikely be surpassed by another language any time soon due to its widespread use and large amount of very useful and powerful packages for various uses in the public domain. We would recommend using the IDE Rstudio when using R.</p>
 <p>Tutorial:</p>
-<p>https://swirlstats.com/</p>
+<p><a href="https://swirlstats.com/">https://swirlstats.com/</a></p>
 <p>R Website:</p>
-<p>https://www.r-project.org/</p>
+<p><a href="https://www.r-project.org/">https://www.r-project.org/</a></p>
 <p>Cran Website:</p>
-<p>https://cran.r-project.org/</p>
+<p><a href="https://cran.r-project.org/">https://cran.r-project.org/</a></p>
 <p>Rstudio Website:</p>
-<p>https://www.rstudio.com/</p>
+<p><a href="https://www.rstudio.com/">https://www.rstudio.com/</a></p>
 
 
 </section>

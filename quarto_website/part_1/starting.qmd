@@ -1,5 +1,5 @@
 # Starting
-![](/images/start.png){style="width:200px; backgorund:white; brder-radius:5px" fig-align="center"}
+![](/images/start.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
 ## Logon instructions {#cluster}
 

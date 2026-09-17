@@ -28,7 +28,7 @@ website:
       - text: "Advanced"
         href: advanced/advanced_linux_practice.qmd
       - text: "Appendix"
-        href: appendix/cheat_sheet.qmd
+        href: appendix/neof.qmd
 ###Navbar right
     right:
     - icon: house-fill
@@ -87,10 +87,12 @@ website:
       title: "Appendix"
       style: "floating"
       contents:
+        - href: appendix/neof.qmd
         - href: appendix/cheat_sheet.qmd
         - href: appendix/on_your_pc.qmd
         - href: appendix/mamba.qmd
         - href: appendix/vim.qmd
+        - href: appendix/faq.qmd
 
 
 #Format

@@ -83,8 +83,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaeb381c6b7494c50009502241a4985c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c911dacb53fd75be6f7e538071149d2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-3a5804b326eceed6ff220c0b31a2c418.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5ff86afcab613e4ddd69836011fbfac3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-3fa8645101ca5b03c5f6878d083093ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -300,10 +300,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Intro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../overview/linux_introduction.html"> 
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../part_1/linux_introduction.html"> 
+    <a class="nav-link" href="../part_1/starting.html"> 
 <span class="menu-text">Part 1</span></a>
   </li>  
   <li class="nav-item">
@@ -315,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Advanced</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../appendix/cheat_sheet.html"> 
+    <a class="nav-link" href="../appendix/neof.html"> 
 <span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
@@ -374,7 +378,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../advanced/bioinformatic_languages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bioinformatic Languages</span></a>
+ <span class="menu-text">Bioinformatic languages</span></a>
   </div>
 </li>
     </ul>
@@ -387,7 +391,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#advancedlinux" id="toc-advancedlinux" class="nav-link active" data-scroll-target="#advancedlinux">Advanced Linux practice</a>
+  <li><a href="#advanced-linux-practice" id="toc-advanced-linux-practice" class="nav-link active" data-scroll-target="#advanced-linux-practice">Advanced Linux practice</a>
   <ul class="collapse">
   <li><a href="#wildcard-characters" id="toc-wildcard-characters" class="nav-link" data-scroll-target="#wildcard-characters">Wildcard characters</a></li>
   <li><a href="#redirection" id="toc-redirection" class="nav-link" data-scroll-target="#redirection">Redirection</a></li>
@@ -407,33 +411,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="advancedlinux" class="level1">
+<section id="advanced-linux-practice" class="level1">
 <h1>Advanced Linux practice</h1>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//linux_intermdiary.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/linux_intermdiary.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>We have covered a small amount of Linux coding. This should be sufficient to carry out our future workshops but if you were to continue in bioinformatics we would recommend learning more advanced methods.</p>
 <p>Below are some short sections to introduce you to some more advanced linux coding techniques. These give you a quick overview and some examples. This will hopefully put you in a good position to allow you to to learn these techniques in more depth outside of this workshop.</p>
-<p>The following sections will all be run with the files in the directory <strong>“~/Linux/advanced_practice/”</strong>. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and txt file for uncorrected and corrected reads. These fastq files are single end (i.e.&nbsp;there is no reverse/R2 reads).</p>
+<p>The following sections will all be run with the files in the directory <strong>“~/Linux/advanced_practice/”</strong>. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and a txt file for uncorrected and corrected reads. These fastq files are single ended (i.e.&nbsp;there are no reverse/R2 reads).</p>
 <section id="wildcard-characters" class="level2">
 <h2 class="anchored" data-anchor-id="wildcard-characters">Wildcard characters</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//wildcard.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/wildcard.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px"></p>
 </figure>
 </div>
-</div>
-</div>
-<p>These are characters that can be used to represent a variety of other characters. This can be useful for deleting many files, searching for files with specific patterns in their names and more!</p>
-<p>Be very careful when using wildcard character with the command <strong>rm</strong>.</p>
+<p>These are characters that can be used to represent a variety of other characters. This can be useful for deleting many files, searching for files with specific patterns in their names, and more.</p>
+<p>Be very careful when using wildcard character with the command <code>rm</code>.</p>
 <p>Three basic and useful wildcards include:</p>
 <ul>
 <li><code>*</code> - This represents zero or more characters<br>
@@ -459,7 +455,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="pp">*</span>corrected<span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>List all files with the string “corrected” somewhere in the file name and it ends in “fastq”</p>
+<p>List all files with the string “corrected” somewhere in the file name that also ends with “fastq”</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="pp">*</span>corrected<span class="pp">*</span>fastq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -479,7 +475,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> sample_<span class="pp">?</span>_<span class="pp">*</span>fastq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>List the txt files of samples with a number in the tens</p>
+<p>List the txt files of samples with a number in the tens (10-19)</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> sample_1<span class="pp">?</span>_<span class="pp">*</span>txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -498,24 +494,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="redirection" class="level2">
 <h2 class="anchored" data-anchor-id="redirection">Redirection</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//chevron.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:15.0%"></p>
+<p><img src="../images/chevron.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; border-radius:15px; background:white"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Redirection allows you to put the output of a command to a file. The redirect symbol is <code>&gt;</code>. Be careful when redirecting as it will overwrite any existing files. To append to the bottom of a file use <code>&gt;&gt;</code>.</p>
 <p>Below are various examples of redirecting in action.</p>
 <p>Create a file called <strong>ecoli.tmp</strong> containing the text “I am escherichia coli”</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> “I am escherichia coli” <span class="op">&gt;</span> ecoli.tmp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"I am escherichia coli"</span> <span class="op">&gt;</span> ecoli.tmp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Create a file called <strong>pcryohalolentis.tmp</strong> containing the text “I am psychrobacter cryohalolentis”</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> “I am psychrobacter cryohaloloentis” <span class="op">&gt;</span> pcryohalolentis.tmp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"I am psychrobacter cryohaloloentis"</span> <span class="op">&gt;</span> pcryohalolentis.tmp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Create a new file called <strong>bacteria.tmp</strong> which will contain the text from <strong>ecoli.tmp</strong> and <strong>pcryohalolentis.tmp</strong></p>
 <div class="cell">
@@ -523,7 +515,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Create a file called <strong>vcholerae.tmp</strong> containing the text “I am not ecoli or pcryohalolentis”</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> “I am not ecoli or pcryohalolentis” <span class="op">&gt;</span> vcholerae.tmp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"I am not ecoli or pcryohalolentis"</span> <span class="op">&gt;</span> vcholerae.tmp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>cat</code> the file <strong>vcholerae.tmp</strong> and redirect it to <strong>bacteria.tmp</strong>.</p>
 <div class="cell">
@@ -549,14 +541,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="pipes" class="level2">
 <h2 class="anchored" data-anchor-id="pipes">Pipes</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//pipes.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/pipes.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Pipes allow you to put the output of one command to the input of another. For example you could use <code>grep</code> to get all the lines with a certain string and pipe the output to <code>wc</code> to count the number of lines that have the specific string.</p>
 <p>The pipe symbol is <code>|</code>. This is normally found on your keyboard directly left of the Z key. Weirdly the symbol is represented by <code>|</code> but split in the middle on some keyboards.</p>
@@ -581,14 +569,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="regular-expressions" class="level2">
 <h2 class="anchored" data-anchor-id="regular-expressions">Regular expressions</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//trex.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/trex.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Regular expressions are similar to wildcard characters but more complex and used for commands like <code>grep</code> and <code>sed</code>.</p>
 <p>Below are a basic set of regular expressions:</p>
@@ -624,9 +608,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>!Print out the lines for the Healthy patients</p>
+<p>Print out the lines for the Healthy patients</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">grep</span> “HEALTHY”</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">grep</span> <span class="st">"HEALTHY"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Print out the lines for the IBD patients from Craigavon and Belfast. In the below command <code>\</code> is used to allow <code>|</code> to be used as an <strong>or</strong> operator instead of acting as a string to match.</p>
 <div class="cell">
@@ -642,20 +626,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Print to screen every fastq header of file <strong>sample_15_AACG_corrected.fastq</strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> sample_15_AACG_corrected.fastq <span class="kw">|</span> <span class="fu">grep</span> “^@sample”</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> sample_15_AACG_corrected.fastq <span class="kw">|</span> <span class="fu">grep</span> <span class="st">"^@sample"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>In the piping examples we counted the number of lines with the text “TAG” within the fastq files. However this also counted fastq headers due to the name of the samples. Let us use a regular expression to only count the number of sequences within the fastq files that contain “TAG”.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> <span class="pp">*</span>fastq <span class="kw">|</span> <span class="fu">grep</span> “^<span class="pp">[^</span><span class="ss">@</span><span class="pp">]</span>.<span class="pp">*</span>TAG”</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> <span class="pp">*</span>fastq <span class="kw">|</span> <span class="fu">grep</span> <span class="st">"^[^@].*TAG"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Print to screen every line within the file <strong>sample_3_AAAG_corrected.fastq</strong> that has a possible Threonine codon in the forward direction.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">"^[^@].*AC[ACTG]"</span> sample_3_AAAG_corrected.fastq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>In the above example fastq quality lines are also extracted as some of them also contain the pattern we are searching for. To get around this we can pipe. First grep the fastq quality header (i.e.&nbsp;+), as no other line only contains “+”, and the line before it. Then we can remove lines with only a plus with an invert grep. Finally we can grep for the threonine pattern using only the sequence lines. Let us build this up step by step.</p>
+<p>In the above example fastq quality lines are also extracted as some of them also contain the pattern we are searching for. To get around this we can pipe. First <code>grep</code> the fastq quality header (i.e.&nbsp;+), as no other line only contains “+”, and the line before it. Then we can remove lines with a plus with an invert <code>grep</code>. Finally we can <code>grep</code> for the threonine pattern using only the sequence lines. Let us build this up step by step.</p>
 <p>Print to screen the fastq quality header plus the one line preceding each (i.e.&nbsp;Sequence line) for file <strong>sample_3_AAAG_corrected.fastq.</strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-B</span> 1 “^+$” sample_3_AAAG_corrected.fastq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-B</span> 1 <span class="st">"^+$"</span> sample_3_AAAG_corrected.fastq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Now pipe this output so it removes the lines with “+” (fastq quality headers) and “–” (separators of each <code>grep</code> match provided by grep because of the -B 1 option).</p>
 <div class="cell">
@@ -680,19 +664,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sed" class="level2">
 <h2 class="anchored" data-anchor-id="sed">sed</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//sed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/sed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; border-radius:5px; background:white"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>This is a complicated yet powerful command that can be used to edit text files quickly and efficiently. The main use is to substitute text with other text. <code>sed</code> can be used with regular expressions.</p>
 <p>The basic outline of a <code>sed</code> substitute command is as below. In the below case <code>s/</code> signifies that <code>sed</code> will be used for substitution</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sed</span> “s/old_text/new_text/” old_file <span class="op">&gt;</span> new_file</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sed</span> <span class="st">"s/old_text/new_text/"</span> old_file <span class="op">&gt;</span> new_file</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Below are some examples of sed in action.</p>
 <p>Print out a list of all the sample names using the fastq files</p>
@@ -716,7 +696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">sed</span> <span class="st">"s/P/Human_P/"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>To replace every instance of the old pattern within each line <code>g</code> can be added after the last <code>/</code>. This stands for global therefore it changes the command to a global substitute.</p>
-<p>Print <strong>metadata.txt</strong> to screen and change every occurrence of a number to “number”. To get the regular expression meaning of “+” it needs a “<strong><code>\</code></strong>” before the “+”</p>
+<p>Print <strong>metadata.txt</strong> to screen and change every occurrence of a number to “number”. To get the regular expression meaning of “+” it needs a “<strong><code>\</code></strong>” before the “+”.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">sed</span> <span class="st">"s/[0-9]\+/number/g"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -724,7 +704,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> metadata.txt <span class="kw">|</span> <span class="fu">sed</span> <span class="st">"s/\t/,/g"</span> <span class="op">&gt;</span> metadata.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>For a very in depth look into the sed command please look at the following link: http://www.grymoire.com/Unix/Sed.html</p>
+<p>For an in depth look into the sed command please look at the following link: http://www.grymoire.com/Unix/Sed.html</p>
 </section>
 <section id="permissions" class="level2">
 <h2 class="anchored" data-anchor-id="permissions">Permissions</h2>
@@ -734,86 +714,82 @@ https://www.guru99.com/file-permissions.html</p>
 </section>
 <section id="mcqs-advanced-linux" class="level2">
 <h2 class="anchored" data-anchor-id="mcqs-advanced-linux">MCQs: Advanced linux</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//question_bubble_red.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/question_bubble_red.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
 <ol type="1">
 <li>Which symbol is used to pipe the output of one command to the input of another?
-<div id="radio_CLGFZTJVGV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_CLGFZTJVGV" value=""> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_CLGFZTJVGV" value="answer"> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_CLGFZTJVGV" value=""> <span><strong><code>sed</code></strong></span></label>
+<div id="radio_QBMWXVNQJQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QBMWXVNQJQ" value=""> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QBMWXVNQJQ" value="answer"> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QBMWXVNQJQ" value=""> <span><strong><code>sed</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="2" type="1">
 <li>What command can be used to substitute text with other text?
-<div id="radio_JGYRRMYRVA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_JGYRRMYRVA" value=""> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_JGYRRMYRVA" value=""> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_JGYRRMYRVA" value="answer"> <span><strong><code>sed</code></strong></span></label>
+<div id="radio_TFBPAWJQHV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TFBPAWJQHV" value=""> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TFBPAWJQHV" value=""> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TFBPAWJQHV" value="answer"> <span><strong><code>sed</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="3" type="1">
 <li>Which symbol is used to redirect the output of a command to a file?
-<div id="radio_HFUOKOPAKD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HFUOKOPAKD" value="answer"> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HFUOKOPAKD" value=""> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HFUOKOPAKD" value=""> <span><strong><code>sed</code></strong></span></label>
+<div id="radio_ZVFKUASTGX" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZVFKUASTGX" value="answer"> <span><strong><code>&gt;</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZVFKUASTGX" value=""> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZVFKUASTGX" value=""> <span><strong><code>sed</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="4" type="1">
 <li>Which wildcard represents a single character?
-<div id="radio_GZOQLGAQZP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GZOQLGAQZP" value=""> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GZOQLGAQZP" value=""> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GZOQLGAQZP" value="answer"> <span><strong><code>?</code></strong></span></label>
+<div id="radio_MNXDXKXEYY" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MNXDXKXEYY" value=""> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MNXDXKXEYY" value=""> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MNXDXKXEYY" value="answer"> <span><strong><code>?</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="5" type="1">
 <li>Which wildcard represents zero or more characters?
-<div id="radio_TBATTTERMC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TBATTTERMC" value="answer"> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TBATTTERMC" value=""> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TBATTTERMC" value=""> <span><strong><code>?</code></strong></span></label>
+<div id="radio_LJZVTBDDLR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LJZVTBDDLR" value="answer"> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LJZVTBDDLR" value=""> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LJZVTBDDLR" value=""> <span><strong><code>?</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="6" type="1">
 <li>Which wildcard represents a range of characters?
-<div id="radio_KWYMADXJCR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KWYMADXJCR" value=""> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KWYMADXJCR" value="answer"> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KWYMADXJCR" value=""> <span><strong><code>?</code></strong></span></label>
+<div id="radio_GXXHOBGQHG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GXXHOBGQHG" value=""> <span><strong><code>*</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GXXHOBGQHG" value="answer"> <span><strong><code>[]</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GXXHOBGQHG" value=""> <span><strong><code>?</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="7" type="1">
 <li>Which regular expression indicates that the preceding character matches 1 or 0 times?
-<div id="radio_LZSCNJBJKR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_LZSCNJBJKR" value=""> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LZSCNJBJKR" value="answer"> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LZSCNJBJKR" value=""> <span><strong><code>*</code></strong></span></label>
+<div id="radio_YQPEVDXTEY" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YQPEVDXTEY" value=""> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YQPEVDXTEY" value="answer"> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YQPEVDXTEY" value=""> <span><strong><code>*</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="8" type="1">
 <li>Which regular expression represents a single character?
-<div id="radio_DERHASDWQC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_DERHASDWQC" value="answer"> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DERHASDWQC" value=""> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DERHASDWQC" value=""> <span><strong><code>*</code></strong></span></label>
+<div id="radio_TVQZFVHMBJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TVQZFVHMBJ" value="answer"> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TVQZFVHMBJ" value=""> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TVQZFVHMBJ" value=""> <span><strong><code>*</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="9" type="1">
 <li>Which regular expression indicates that the preceding character matches zero or more times?
-<div id="radio_OJGAHNXMHC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OJGAHNXMHC" value=""> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OJGAHNXMHC" value=""> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OJGAHNXMHC" value="answer"> <span><strong><code>*</code></strong></span></label>
+<div id="radio_AMLCNNCDBS" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_AMLCNNCDBS" value=""> <span><strong><code>.</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_AMLCNNCDBS" value=""> <span><strong><code>?</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_AMLCNNCDBS" value="answer"> <span><strong><code>*</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="10" type="1">
 <li>Which regular expression matches the end of the line?
-<div id="radio_HOTVUSZOGV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HOTVUSZOGV" value=""> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HOTVUSZOGV" value=""> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HOTVUSZOGV" value="answer"> <span><strong><code>$</code></strong></span></label>
+<div id="radio_VTSZYKYDLA" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VTSZYKYDLA" value=""> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VTSZYKYDLA" value=""> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VTSZYKYDLA" value="answer"> <span><strong><code>$</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="11" type="1">
 <li>Which regular expression is a logical OR operator?
-<div id="radio_NFIRHSDGAR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NFIRHSDGAR" value="answer"> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NFIRHSDGAR" value=""> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NFIRHSDGAR" value=""> <span><strong><code>$</code></strong></span></label>
+<div id="radio_VGTOBDBJVM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VGTOBDBJVM" value="answer"> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VGTOBDBJVM" value=""> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_VGTOBDBJVM" value=""> <span><strong><code>$</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="12" type="1">
 <li>Which regular expression matches the start of the line?
-<div id="radio_PTQRNJENYU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PTQRNJENYU" value=""> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PTQRNJENYU" value="answer"> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PTQRNJENYU" value=""> <span><strong><code>$</code></strong></span></label>
+<div id="radio_IENFXCQRDR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_IENFXCQRDR" value=""> <span><strong><code>|</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_IENFXCQRDR" value="answer"> <span><strong><code>^</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_IENFXCQRDR" value=""> <span><strong><code>$</code></strong></span></label>
 </div></li>
 </ol>
 

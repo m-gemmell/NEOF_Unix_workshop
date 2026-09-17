@@ -82,8 +82,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-eaeb381c6b7494c50009502241a4985c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c911dacb53fd75be6f7e538071149d2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-3a5804b326eceed6ff220c0b31a2c418.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5ff86afcab613e4ddd69836011fbfac3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-3fa8645101ca5b03c5f6878d083093ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -299,10 +299,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Intro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./overview/linux_introduction.html"> 
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./part_1/linux_introduction.html"> 
+    <a class="nav-link" href="./part_1/starting.html"> 
 <span class="menu-text">Part 1</span></a>
   </li>  
   <li class="nav-item">
@@ -314,7 +318,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Advanced</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./appendix/cheat_sheet.html"> 
+    <a class="nav-link" href="./appendix/neof.html"> 
 <span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
@@ -399,7 +403,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>You can also create these questions dynamically, using variables from your R session.</p>
 <ul>
-<li>The square root of 4 is: <input class="webex-solveme nospaces" size="1" data-answer="[&quot;2&quot;]"></li>
+<li>The square root of 25 is: <input class="webex-solveme nospaces" size="1" data-answer="[&quot;5&quot;]"></li>
 </ul>
 <p>The blanks are case-sensitive; if you don’t care about case, use the argument <code>ignore_case = TRUE</code>.</p>
 <ul>
@@ -435,12 +439,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="longer-mcqs-longmcq">Longer MCQs (<code>longmcq()</code>)</h3>
 <p>When your answers are very long, sometimes a drop-down select box gets formatted oddly. You can use <code>longmcq()</code> to deal with this. Since the answers are long, It’s probably best to set up the options inside an R chunk with <code>echo=FALSE</code>.</p>
 <p><strong>What is a p-value?</strong></p>
-<div id="radio_QIEXFGIBNY" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QIEXFGIBNY" value=""> <span>the probability that the null hypothesis is true</span></label><label><input type="radio" autocomplete="off" name="radio_QIEXFGIBNY" value="answer"> <span>the probability of the observed, or more extreme, data, under the assumption that the null-hypothesis is true</span></label><label><input type="radio" autocomplete="off" name="radio_QIEXFGIBNY" value=""> <span>the probability of making an error in your conclusion</span></label>
+<div id="radio_SOUVSBSTOW" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SOUVSBSTOW" value=""> <span>the probability that the null hypothesis is true</span></label><label><input type="radio" autocomplete="off" name="radio_SOUVSBSTOW" value="answer"> <span>the probability of the observed, or more extreme, data, under the assumption that the null-hypothesis is true</span></label><label><input type="radio" autocomplete="off" name="radio_SOUVSBSTOW" value=""> <span>the probability of making an error in your conclusion</span></label>
 </div>
 <p><strong>What is true about a 95% confidence interval of the mean?</strong></p>
-<div id="radio_UQDKLACWEG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UQDKLACWEG" value=""> <span>there is a 95% probability that the true mean lies within this range</span></label><label><input type="radio" autocomplete="off" name="radio_UQDKLACWEG" value="answer"> <span>if you repeated the process many times, 95% of intervals calculated in this way contain the true mean</span></label><label><input type="radio" autocomplete="off" name="radio_UQDKLACWEG" value=""> <span>95% of the data fall within this range</span></label>
+<div id="radio_NVGEKKTHAV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NVGEKKTHAV" value=""> <span>95% of the data fall within this range</span></label><label><input type="radio" autocomplete="off" name="radio_NVGEKKTHAV" value="answer"> <span>if you repeated the process many times, 95% of intervals calculated in this way contain the true mean</span></label><label><input type="radio" autocomplete="off" name="radio_NVGEKKTHAV" value=""> <span>there is a 95% probability that the true mean lies within this range</span></label>
 </div>
 </section>
 </section>
@@ -450,8 +454,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="webex-check webex-box">
 <p>I am going to learn a lot: <select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select></p>
 What is a p-value?
-<div id="radio_ZPRIZNHAQX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZPRIZNHAQX" value=""> <span>the probability that the null hypothesis is true</span></label><label><input type="radio" autocomplete="off" name="radio_ZPRIZNHAQX" value="answer"> <span>the probability of the observed, or more extreme, data, under the assumption that the null-hypothesis is true</span></label><label><input type="radio" autocomplete="off" name="radio_ZPRIZNHAQX" value=""> <span>the probability of making an error in your conclusion</span></label>
+<div id="radio_MYNQNUVHHG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MYNQNUVHHG" value=""> <span>the probability that the null hypothesis is true</span></label><label><input type="radio" autocomplete="off" name="radio_MYNQNUVHHG" value="answer"> <span>the probability of the observed, or more extreme, data, under the assumption that the null-hypothesis is true</span></label><label><input type="radio" autocomplete="off" name="radio_MYNQNUVHHG" value=""> <span>the probability of making an error in your conclusion</span></label>
 </div>
 </div>
 </section>

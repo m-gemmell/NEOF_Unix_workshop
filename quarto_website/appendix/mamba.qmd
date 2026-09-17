@@ -1,10 +1,8 @@
 # Mamba
 
-```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
-knitr::include_graphics(path = "../images//mamba_logo.png", auto_pdf = TRUE)
-```
+![](/images/mamba_logo.png){style="width:200px; border-radius:5px" fig-align="center"}
 
-## Mamba installation {#mamba_install}
+## Mamba installation
 
 Once you start using bioinformatic tools you will notice that a lot of installing is required. I would highly suggest using Mamba for this purpose.
 

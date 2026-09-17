@@ -1,20 +1,97 @@
+---
+engine: knitr
+---
 # Exercise 1
+![](/images/skipping_rope.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "../images//exercise.png", auto_pdf = TRUE)
+Perform the following tasks with the skills and knowledge you have gained.  
+
+Before carrying out the tasks, ensure you are in your `~/Linux` directory.
+
+You can check my solutions by clicking the expandable boxes like the one below ("Move to correct directory"). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have carried it out correctly.
+
+::: {.callout-note collapse="true" title="Move to correct directory"}
+```{bash eval=FALSE}
+cd ~/Linux/
 ```
+:::
 
-Perform the following tasks with the skills and knowledge you have gained.
+## Exercise 1 tasks
 
-Change the name of the subdirectory **"four_exercises"** within your **"Linux"** directory to **"4_exercises"**
+### Task 1
+![](/images/file_move.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
-1.  Make a backup of the **"4_exercises"** directory
-2.  List the contents of the **"4_exercises"** directory
-3.  Within the directory **"4_exercises"**
-    1.  Print the working directory.
-    2.  Print out to screen the phrase '**the echo command allows me to print phrases to screen**'.
-    3.  Copy the file **"copy_this_file.txt"** to the directory **"to_me"**
-    4.  Rename the directory **"to_me"** to **"you"**
-    5.  Delete the initial **"copy_this_file.txt"** file
+Change the name of the subdirectory __"four_exercises"__ within your __"Linux"__ directory to __"4_exercises"__.
 
-You can check my solutions in the [Answers section](#exercise1_answers). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.
+::: {.callout-note collapse="true" title="Task 1 solution"}
+```{bash eval=FALSE}
+mv four_exercises 4_exercises
+```
+:::
+
+### Task 2 {-}
+![](/images/backup.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+Make a backup of the __"4_exercises"__ directory 
+
+::: {.callout-note collapse="true" title="Task 2 solution"}
+```{bash eval=FALSE}
+cp -r 4_exercises 4_exercises_backup 
+```
+:::
+
+### Task 3 {-}
+![](/images/list_1.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+List the contents of the __"4_exercises"__ directory
+
+::: {.callout-note collapse="true" title="Task 3 solution"}
+```{bash eval=FALSE}
+ls 4_exercises
+```
+:::
+
+### Task 4 {-}
+![](/images/print.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+Within the directory __"4_exercises"__ 
+
+  1. Print the working directory.
+  2. Print out to screen the phrase ‘__the echo command allows me to print phrases to screen__’.
+  3. Copy the file __"copy_this_file.txt"__ to the directory __"to_me"__ 
+  4. Rename the directory __"to_me"__ to __"you"__
+  5. Delete the initial __"copy_this_file.txt"__ file
+
+::: {.callout-note collapse="true" title="Task 4 solutions"}
+First move into the "4_exercises" directory
+```{bash eval=FALSE}
+cd 4_exercises
+```
+Print the working directory
+```{bash eval=FALSE}
+pwd
+```
+Print out to screen the phrase ‘the echo command allows me to print phrases to screen’
+```{bash eval=FALSE}
+echo "the echo command allows me to print phrases to screen"
+```
+Copy the file copy_this_file.txt to the directory to_me
+```{bash eval=FALSE}
+cp copy_this_file.txt to_me
+```
+Rename the directory to_me to you
+```{bash eval=FALSE}
+mv to_me you
+```
+Delete the initial copy_this_file.txt file
+```{bash eval=FALSE}
+rm copy_this_file.txt
+```
+:::
+  
+## Exercise 1 conclusion
+![](/images/finish.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
+
+Brilliant! I hope those tasks helped improve your Linux skills through application.
+
+Please continue onto [Part 2](/part_2/file_reading_and_processing.qmd) and remember you can ask for help and look at the [cheatsheet](/appendix/cheat_sheet.qmd).

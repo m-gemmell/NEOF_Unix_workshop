@@ -1,6 +1,6 @@
 # Linux {#linuxintro}
 
-![](/images/linux_beginner.png){style="width:200px" fig-align="center"}
+![](/images/linuxshell.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
 
 Linux is a multitasking, multiuser Unix-like computer operating system (<u id='os'>OS</u>). Linux can run many different applications (multitasking) and it can be used by many different people (multiuser) on the same computer at the same time.
 

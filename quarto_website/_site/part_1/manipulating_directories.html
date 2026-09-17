@@ -320,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Advanced</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../appendix/cheat_sheet.html"> 
+    <a class="nav-link" href="../appendix/neof.html"> 
 <span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
@@ -404,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#manipulatingdirectories" id="toc-manipulatingdirectories" class="nav-link active" data-scroll-target="#manipulatingdirectories">Manipulating directories</a>
+  <li><a href="#manipulating-directories" id="toc-manipulating-directories" class="nav-link active" data-scroll-target="#manipulating-directories">Manipulating directories</a>
   <ul class="collapse">
   <li><a href="#make-a-directory" id="toc-make-a-directory" class="nav-link" data-scroll-target="#make-a-directory">Make a directory</a></li>
   <li><a href="#moving-directories-and-files" id="toc-moving-directories-and-files" class="nav-link" data-scroll-target="#moving-directories-and-files">Moving Directories and Files</a></li>
@@ -422,16 +422,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="manipulatingdirectories" class="level1">
+<section id="manipulating-directories" class="level1">
 <h1>Manipulating directories</h1>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//transform.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/transform.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:15px; background:white"></p>
 </figure>
-</div>
-</div>
 </div>
 <div class="webex-solution">
 <button>
@@ -445,10 +441,10 @@ Chapter 6 video walk-through
 <section id="make-a-directory" class="level2">
 <h2 class="anchored" data-anchor-id="make-a-directory">Make a directory</h2>
 <p>To make a directory the command <code>mkdir</code> is used.</p>
-<p>For the below examples we will be making heavy use of <code>ls</code> so you can hopefully visualise the contents of the directories.</p>
-<p>Type in the following commands to make a subdirectory within the <strong>“CGR_Linux”</strong> directory called <strong>“Chicken”</strong> then make a subdirectory within <strong>“Chicken”</strong> called <strong>“Egg”</strong>.</p>
+<p>For the below examples we will be making heavy use of <code>ls</code> to visualise the contents of the directories.</p>
+<p>Type in the following commands to make a subdirectory within the <strong>“Linux”</strong> directory called <strong>“Chicken”</strong> then make a subdirectory within <strong>“Chicken”</strong> called <strong>“Egg”</strong>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Change directory to CGR_linux in your home (~)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Change directory to Linux in your home (~)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Linux/</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Always good to list contents when you move into a directory</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span>
@@ -463,14 +459,10 @@ Chapter 6 video walk-through
 </section>
 <section id="moving-directories-and-files" class="level2">
 <h2 class="anchored" data-anchor-id="moving-directories-and-files">Moving Directories and Files</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//chicken.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/chicken.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px; border: white solid 5px"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Files and directories can be moved with the <code>mv</code> command. This can also be used to change the name of a file or a directory.</p>
 <p><strong>Note</strong>: If you move a file to the path of a file that already exists, the pre existing file will be overwritten.</p>
@@ -495,12 +487,12 @@ Chapter 6 video walk-through
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> ~/Linux/3_chicken_farm/3_1_hut/Chicken/ <span class="dt">\</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#List the contents of the destination directory</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> ~/Linux/3_chicken_farm/3_2_field/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Move the file <strong>“3_chicken_farm/3_3_supplies/feed.txt”</strong> to the directory <strong>“3_chicken_farm/3_2_field”</strong> and rename it <strong>“used_feed.txt”</strong></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#List start directory to see if the feed.txt file exists</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> 3_chicken_farm/3_3_supplies/feed.txt</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> 3_chicken_farm/3_3_supplies/</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Move and rename the feed.txt file</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> 3_chicken_farm/3_3_supplies/feed.txt <span class="dt">\</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>3_chicken_farm/3_2_field/used_feed.txt</span>
@@ -510,14 +502,10 @@ Chapter 6 video walk-through
 </section>
 <section id="copying-directories-and-files" class="level2">
 <h2 class="anchored" data-anchor-id="copying-directories-and-files">Copying Directories and Files</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//copy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/copy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px; border: 5px solid white"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Files and directories can be copied with the <code>cp</code> command. Directories and files can be copied to any directory and given a new name. Note: If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.</p>
 <p>Before running the below commands move into your <strong>“~/Linux/3_chicken_farm/”</strong> directory.</p>
@@ -557,14 +545,10 @@ Chapter 6 video walk-through
 </section>
 <section id="deleting-files-and-directories" class="level2">
 <h2 class="anchored" data-anchor-id="deleting-files-and-directories">Deleting Files and Directories</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//erase.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/erase.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:15px; background:white"></p>
 </figure>
-</div>
-</div>
 </div>
 <p>To delete files and directories the command <code>rm</code> can be used.</p>
 <p><strong>Important</strong>: This command can be very dangerous. There is no recycle bin on Linux machines so once you delete something it cannot be recovered. Be very careful when deleting files and directories. To avoid major loss try to keep backups of important data and scripts.</p>
@@ -590,44 +574,40 @@ Chapter 6 video walk-through
 </section>
 <section id="mcqs-manipulating-directories" class="level2">
 <h2 class="anchored" data-anchor-id="mcqs-manipulating-directories">MCQs: Manipulating directories</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images//question_bubble_green.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+<p><img src="../images/question_bubble_green.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px"></p>
 </figure>
 </div>
-</div>
-</div>
-<p>Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
+<p>Splendid! Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
 <ol type="1">
 <li>What command removes files and directories?
-<div id="radio_SQVRXCNABE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_SQVRXCNABE" value="answer"> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SQVRXCNABE" value=""> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SQVRXCNABE" value=""> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_HODXTBTBAC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HODXTBTBAC" value="answer"> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HODXTBTBAC" value=""> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HODXTBTBAC" value=""> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="2" type="1">
 <li>What command moves files and directories?
-<div id="radio_MDIXFRWTZI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MDIXFRWTZI" value=""> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MDIXFRWTZI" value="answer"> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MDIXFRWTZI" value=""> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_NVEGWNUDDE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NVEGWNUDDE" value=""> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NVEGWNUDDE" value="answer"> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NVEGWNUDDE" value=""> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="3" type="1">
 <li>What command makes a new directory?
-<div id="radio_HADZWVGMTA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HADZWVGMTA" value=""> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HADZWVGMTA" value="answer"> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HADZWVGMTA" value=""> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_SEPOHYEMEL" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SEPOHYEMEL" value=""> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SEPOHYEMEL" value="answer"> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SEPOHYEMEL" value=""> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="4" type="1">
 <li>What option is needed for moving or removing a directory?
-<div id="radio_IEHPYSNAAT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_IEHPYSNAAT" value="answer"> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_IEHPYSNAAT" value=""> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_IEHPYSNAAT" value=""> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_KCOYROYLVQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KCOYROYLVQ" value="answer"> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KCOYROYLVQ" value=""> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KCOYROYLVQ" value=""> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 </ol>
 <ol start="5" type="1">
-<li>What command list the contents of directories?
-<div id="radio_HOCFBJMDYI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HOCFBJMDYI" value=""> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HOCFBJMDYI" value=""> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HOCFBJMDYI" value="answer"> <span><strong><code>ls</code></strong></span></label>
+<li>What command lists the contents of directories?
+<div id="radio_QZOAYUUMKH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QZOAYUUMKH" value=""> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QZOAYUUMKH" value=""> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QZOAYUUMKH" value="answer"> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 </ol>
 

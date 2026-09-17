@@ -1,5 +1,5 @@
 # Directories and Files {#dirsandfiles}
-![](/images/directory.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+![](/images/directory.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
 `r hide("Optional video walk-through")`
 <div class="container">
@@ -126,7 +126,9 @@ Relative paths are paths that are relative to another location besides the root 
 
 Below is a subset of valid methods to change directory into your **"Linux/"** directory
 
-**Note**:change **nsc2xx** to your specific user name as shown on the command line prompt.
+::: {.callout-important}
+When typing the code you must change **nsc2xx** to your specific user name as shown on the command line prompt.
+:::
 
 Method 1
 
@@ -189,7 +191,7 @@ ls -1 /pub14/tea/
 `ls` is my most typed command. I am consistently using it to see what directories and files are in my current directory and other directories. I suggest you do the same.
 
 ## MCQs: Files & Directories
-![](/images/question_bubble.png){style="width:200px" fig-align="center"}
+![](/images/question_bubble.png){style="width:150px" fig-align="center"}
 
 Great! Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 

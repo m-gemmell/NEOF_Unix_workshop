@@ -139,5 +139,11 @@
   },
   "overview/tutorial.qmd": {
     "tutorial.html": "cb36c0a2"
+  },
+  "appendix/neof.qmd": {
+    "neof.html": "953f51b2"
+  },
+  "appendix/faq.qmd": {
+    "faq.html": "ae829d89"
   }
 }
