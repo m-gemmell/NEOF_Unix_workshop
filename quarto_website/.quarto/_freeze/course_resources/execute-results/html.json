@@ -1,0 +1,15 @@
+{
+  "hash": "29fe69b52e7224244155df8c2a770187",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Course resources\n\n\n\n## Videos & slides\n\n<div class=\"container\">\n<iframe src=\"https://www.youtube.com/embed/9EEeOC4gpV0\" \nframeborder=\"0\" allowfullscreen class=\"video\"></iframe>\n</div>\n\n[__Slides__](https://docs.google.com/presentation/d/1DlVAlNRlb4TjgRAlCG5OphyS_W3UGA0htN0-9WvItQ0/edit?usp=sharing)\n\n\n\n<div class='webex-solution'><button>07 OCT 2025 recording</button>\n\n<div class=\"container\">\n<iframe src=\"https://www.youtube.com/embed/_nRzVrjFOb0\" \nframeborder=\"0\" allowfullscreen class=\"video\"></iframe>\n</div>\n\n</div>\n\n\n\n<div class='webex-solution'><button>08 OCT 2024 recording</button>\n\n<div class=\"container\">\n<iframe src=\"https://www.youtube.com/embed/yMKqbABhbnE\" \nframeborder=\"0\" allowfullscreen class=\"video\"></iframe>\n</div>\n\n</div>\n\n\n\n<div class='webex-solution'><button>28 NOV 2023 recording</button>\n\n<div class=\"container\">\n<iframe src=\"https://www.youtube.com/embed/x6fLv-ewGHQ\" \nframeborder=\"0\" allowfullscreen class=\"video\"></iframe>\n</div>\n\n</div>\n\n\n## Workshop files\n\nThe below compressed directory is provided so you may attempt the workshop materials on a computer/cluster available to you.\n\nNote: The file locations will not match.\n\n[__Download files__](https://neof-workshops.github.io/Linux_nxcdf7/Resources/Files/Linux.zip)\n\n## Bookdown\n\n[__Online website link__](https://neof-workshops.github.io/Linux_nxcdf7/)\n\nYou can download the html files of the site below. Ensure you unzip the directory before use.\n\n[__Download zipped htmls__](https://neof-workshops.github.io/Linux_nxcdf7/Resources/course_html.zip)",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

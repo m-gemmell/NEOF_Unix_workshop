@@ -1,0 +1,52 @@
+# Course resources
+
+```{r include=FALSE, cache=FALSE}
+library(webexercises)
+```
+
+## Videos & slides
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/9EEeOC4gpV0" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[__Slides__](https://docs.google.com/presentation/d/1DlVAlNRlb4TjgRAlCG5OphyS_W3UGA0htN0-9WvItQ0/edit?usp=sharing)
+
+
+`r hide("07 OCT 2025 recording")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/_nRzVrjFOb0" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
+`r hide("08 OCT 2024 recording")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/yMKqbABhbnE" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
+`r hide("28 NOV 2023 recording")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/x6fLv-ewGHQ" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
+## Workshop files
+
+The below compressed directory is provided so you may attempt the workshop materials on a computer/cluster available to you.
+
+Note: The file locations will not match.
+
+[__Download files__](https://neof-workshops.github.io/Linux_nxcdf7/Resources/Files/Linux.zip)
+
+## Bookdown
+
+[__Online website link__](https://neof-workshops.github.io/Linux_nxcdf7/)
+
+You can download the html files of the site below. Ensure you unzip the directory before use.
+
+[__Download zipped htmls__](https://neof-workshops.github.io/Linux_nxcdf7/Resources/course_html.zip)

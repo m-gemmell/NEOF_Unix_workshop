@@ -145,5 +145,8 @@
   },
   "appendix/faq.qmd": {
     "faq.html": "ae829d89"
+  },
+  "course_resources.qmd": {
+    "course_resources.html": "0d8b9982"
   }
 }
