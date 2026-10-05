@@ -3,14 +3,14 @@
 
 The next exercise will focus on a set of files including fastq files.
 
-- Fastq files are very commonly used in bioinformatics.
-- Fastq files contain DNA or Amino acid sequencing data.
-- Fastq files contain the nucleotide/amino acid content and its sequencing quality for sequences. 
-- Generally these files are separated by sample but not always.
-- A fastq file acts as a normal txt file that can be read but is of a specific format. 
-- One fastq file contains many fastq entries, one after the other. 
-- Each fastq entry contains four lines. 
-    + One fastq entry represents one sequence. 
+- Fastq files are very commonly used in bioinformatics
+- Fastq files contain DNA or Amino acid sequencing data
+- Fastq files contain the nucleotide/amino acid content and its sequencing quality for sequences.
+- Generally these files are separated by sample but not always
+- A fastq file acts as a normal txt file that can be read but is of a specific format
+- One fastq file contains many fastq entries, one after the other
+- Each fastq entry contains four lines
+    + One fastq entry represents one sequence
 
 ## Format
 

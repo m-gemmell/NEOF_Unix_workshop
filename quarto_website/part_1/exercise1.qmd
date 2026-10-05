@@ -32,7 +32,7 @@ mv four_exercises 4_exercises
 ### Task 2 {-}
 ![](/images/backup.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
-Make a backup of the __"4_exercises"__ directory 
+Make a backup of the __"4_exercises"__ directory. Set the backup directory path as `~/Linux/4_exercises_backup`.
 
 ::: {.callout-note collapse="true" title="Task 2 solution"}
 ```{bash eval=FALSE}

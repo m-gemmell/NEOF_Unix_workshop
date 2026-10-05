@@ -55,7 +55,7 @@ In this practical session I have given paths purposefully long names. This has b
 ## Ending a command
 ![](/images/ctrl_c.png){style="width:300px; ; border-radius:5px; border:2px solid white; background:white" fig-align="center"}
 
-There are times when you will want to abandon a command on the command line. To do this simple press __‘Ctrl’ + ‘c’__.
+There are times when you will want to abandon a command on the command line. To do this press __‘Ctrl’ + ‘c’__.
 
 This is useful if a command won't respond or you noticed you have run a command with a typo or with the wrong file.
 
@@ -97,12 +97,12 @@ An example:
 echo "this line is not annotated"
 ```
 
-This is useful to give yourself information about what your code is doing and it is vital if you are creating scripts. We will also use annotations in this workbook to explain what some lines of code are doing.
+This is useful to give yourself information about what your code is doing. Annotations are vital if you are creating scripts. We will also use annotations in this workbook to explain what some lines of code are doing.
 
 I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. However, be sure to remove the `#` at the start of the line before you want to run it.
 
 ## MCQs: Tips & tricks
-![](/images/question_bubble_blue.png){style="width:150px" fig-align="center"}
+![](/images/question_bubble_blue.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
 Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 

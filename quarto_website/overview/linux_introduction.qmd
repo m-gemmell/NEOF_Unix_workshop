@@ -16,9 +16,9 @@ There are three parts of the Linux (<u id='os'>OS</u>):
 
 It is important to learn the Linux language so you can run commands on the command line. This is because:
 
--   Many bioinformatic tools do not have a graphical user interface (<u id='gui'>gui</u>) and so must be run on the command line.
--   There are many powerful commands that can be run on the Linux command line.
--   It is quicker and more reproducible to run commands through a shell than through a <u id='gui'>gui</u>.
+-   Many bioinformatic tools do not have a graphical user interface (<u id='gui'>gui</u>) and so must be run on the command line
+-   There are many powerful commands that can be run on the Linux command line
+-   It is quicker and more reproducible to run commands through a shell than through a <u id='gui'>gui</u>
 
 ```{r, echo=FALSE}
 #Tippy tooltips

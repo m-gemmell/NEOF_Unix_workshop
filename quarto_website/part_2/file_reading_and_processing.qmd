@@ -1,3 +1,6 @@
+---
+engine: knitr
+---
 # File reading and processing {#filereadingandprocessing}
 ![](/images/files.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
@@ -22,7 +25,9 @@ frameborder="0" allowfullscreen class="video"></iframe>
 The `cat` command will print out the entire contents of a file to the screen. This is useful for small text files and pipelines (pipelines are not covered here).
 Example commands are below (remember to replace xxx with your user name number):
 
-__Note__: remember tab complete and using the arrow keys
+::: {.callout-note}
+Remember tab complete and using the arrow keys.
+:::
 
 Print contents of __"short_file.txt"__ to screen
 ```{bash eval=FALSE}
@@ -38,7 +43,12 @@ Print contents of __"ecoli.gbk"__ to screen
 ```{bash eval=FALSE}
 cat /pub14/tea/nsc2xx/Linux/5_reading_files/ecoli.gbk
 ``` 
-__Remember__: The `clear` command.
+
+Clear the contents of your terminal.
+
+```{bash eval=FALSE}
+clear
+```
 
 ## head and tail
 ![](/images/head_and_tails.png){style="width:300px; border-radius:15px; background:white" fig-align="center"}
@@ -49,7 +59,9 @@ The `tail` command will print out to screen the bottom n lines of a file.
 
 The default value is 10. The `-n` option can be used to indicate how many lines to print out.
 
-Carry out the below commands in the directory __"/pub14/tea/nsc2xx/Linux/5_reading_files/"__
+::: {.callout-important}
+Change directory to __"/pub14/tea/nsc2xx/Linux/5_reading_files/"__ and run the rest of the commands on this page in it.
+:::
 
 Print out the top 10 lines of __"ecoli.gbk"__
 ```{bash eval=FALSE}
@@ -131,7 +143,7 @@ man less
 
 The `wc` command will allow you to word count files. It will display line, word and byte counts for files in that order.
 
-Use `wc` to see the line, word and byte count of the __"short_file.txt"__, __"Scientist.txt"__ and __"ecoli.gbk"__ files. As you can see you can carry this out on multiple files at once.
+Use `wc` to see the line, word and byte count of the __"short_file.txt"__, __"Scientist.txt"__, and __"ecoli.gbk"__ files. As you can see you can carry this out on multiple files at once.
 ```{bash eval=FALSE}
 wc short_file.txt Scientist.txt ecoli.gbk
 ``` 
@@ -170,7 +182,10 @@ Type in the following command.
 ```{bash eval=FALSE}
 grep Scientist.txt
 ``` 
-The above command will be stuck as no search pattern has be privided to `grep`. This means it does not know what it is looking for. To cancel the command use __‘Ctrl’ + ‘c’__
+
+::: {.callout-warning}
+The above command will be stuck as no search pattern has be provided to `grep`. This means it does not know what it is looking for. To cancel the command use __‘Ctrl’ + ‘c’__.
+:::
 
 ## Text editor
 ![](/images/text_editor.png){style="width:200px; border-radius:15px; background:white" fig-align="center"}
@@ -179,7 +194,7 @@ Three of the most popular text editors are __vim__, __gedit__ and __nano__. Belo
 
 __nano__ is the easiest to learn but is quite limiting. __vim__ and __gedit__ are quite similar in power with different people preferring one or the other. 
 
-The below will teach you __nano__. If you are interested in learning __vim__ in the future you can find a quick guide in the [appendix](#vim).
+The below will teach you __nano__. If you are interested in learning __vim__ in the future you can find a quick guide in the [appendix](/appendix/vim.qmd).
 
 ### nano
 ![](/images/1200px-Gnu-nano.png){style="width:200px; border-radius:15px; background:white" fig-align="center"}

@@ -20,8 +20,8 @@ __Note:__ A directory is known as a folder in common parlance.
 
 Before copying you will change directory to your home directory.
 
--   `cd` is the command to Change Directory. It is followed by the directory you want to change to.
--   **"\~"** represents your home directory.
+-   `cd` is the command to Change Directory, it is followed by the directory you want to change to
+-   **"\~"** represents your home directory
 
 Change directory to your home directory by running the following command in your terminal:
 
@@ -83,7 +83,7 @@ You can think of the directory structure in two different ways.
 
 This starts as the root (**"/"**) which branches out into directories and files. Directories contain files and subdirectories which contain files and subdirectories etc.
 
-Below is an example of visualising the location of the **"Linux"** directory within the user ncs006's home directory as a tree. This only includes a subset of directories.
+Below is an example of visualising the location of the **"Linux"** directory within the user ncs206's home directory as a tree. This only includes a subset of directories.
 
 ![](/images/linux_tree_structure.png){style="width:600px; border-radius:15px" fig-align="center"}
 
@@ -180,13 +180,17 @@ List the contents in your home directory:
 ls ..
 ```
 
-List the contents in the `/pub14/tea/` directory and put each separate file/directory on a separate line. In the below command the `-1` is a parameter that indicates there will be only 1 piece of content on each line. Note: `-2`, `-3` etc are not parameters that work with `ls`.
+List the contents in the `/pub14/tea/` directory and put each separate file/directory on a separate line. In the below command the `-1` is a parameter that indicates there will be only 1 piece of content on each line. 
 
 ```{bash eval=FALSE}
 ls -1 /pub14/tea/
 ```
 
-**Reminder**: you can use the `man` command to look at more options for commands.
+::: {.callout-note}
+`-2`, `-3` etc are not parameters that work with `ls`.
+
+You can use the `man` command to look at more options for commands.
+:::
 
 `ls` is my most typed command. I am consistently using it to see what directories and files are in my current directory and other directories. I suggest you do the same.
 

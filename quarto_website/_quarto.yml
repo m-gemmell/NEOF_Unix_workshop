@@ -101,7 +101,7 @@ format:
 ###Include table of contents
 ### "On this page" right of page
     toc: true
- 
+    toc-depth: 4
 ###Page size
     grid:
 ####Width of sidebar

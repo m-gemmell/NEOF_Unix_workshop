@@ -4,7 +4,7 @@ engine: knitr
 # Exercise 2
 ![](/images/punching_bag_2.png){style="width:200px; border-radius:5px; background:white" fig-align="center"}
 
-The directory __"~/Linux/6_final_exercise/"__ has all the files you need. Below is a set of tasks and questions that will require all the skills you have gained from this practical.
+Move into the directory __"~/Linux/6_final_exercise/"__ which has all the files you need for this exercise. Below is a set of tasks and questions that will require all the skills you have gained from this practical.
 
 You can check my solutions by clicking the expandable boxes like the one below ("Move to correct directory"). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have carried it out correctly.
 

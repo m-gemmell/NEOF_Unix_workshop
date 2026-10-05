@@ -16,10 +16,10 @@ At the end of the course learners will be able to:
 
 -   Explain how the user, shell, and kernel interact with each other in the Linux OS
 -   Navigate & manipulate directories in the Linux environment
--   List and view the contents of directories.
--   Carry out a variety of commands with files including printing them to terminal.
--   Utilise the text editor nano to create, edit, and save files.
--   Understand the structure of fastq files.
+-   List and view the contents of directories
+-   Carry out a variety of commands with files including printing them to terminal
+-   Utilise the text editor nano to create, edit, and save files
+-   Understand the structure of fastq files
 
 There are additional materials in the [Advanced part](/advanced/advanced_linux_practice.qmd) which include some advanced Linux commands and introductions to other programming languages used by bioinformaticians.
 

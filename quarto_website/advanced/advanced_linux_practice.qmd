@@ -6,7 +6,7 @@ engine: knitr
 
 We have covered a small amount of Linux coding. This should be sufficient to carry out our future workshops but if you were to continue in bioinformatics we would recommend learning more advanced methods.
 
-Below are some short sections to introduce you to some more advanced linux coding techniques. These give you a quick overview and some examples. This will hopefully put you in a good position to allow you to to learn these techniques in more depth outside of this workshop.
+Below are some short sections to introduce you to some more advanced linux coding techniques. These give you a quick overview and some examples. This will hopefully put you in a good position to allow you to learn these techniques in more depth outside of this workshop.
 
 The following sections will all be run with the files in the directory __"~/Linux/advanced_practice/"__. Therefore ensure you are in this directory before running the below examples. This contains fastq and txt files for 20 samples. Each sample contains a fastq file and a txt file for uncorrected and corrected reads. These fastq files are single ended (i.e. there are no reverse/R2 reads).
 
@@ -159,7 +159,11 @@ Print to screen the second last fastq entry of the file __sample_20_ATAC_correct
 ```{bash eval=FALSE}
 cat sample_20_ATAC_corrected.fastq | tail -n 8 | head -n 4 
 ``` 
-__Note__: In the above command the `tail` command is working on the output of the `cat` command. Therefore this would not work to get the second last fastq entry of multiple files. For example the following command would print the second last fastq entry of the last fastq file (i.e. __sample_9_AAGA.fastq__ due to file ordering)
+
+::: {.callout-note}
+In the above command the `tail` command is working on the output of the `cat` command. Therefore this would not work to get the second last fastq entry of multiple files. For example the following command would print the second last fastq entry of the last fastq file (i.e. __sample_9_AAGA.fastq__ due to file ordering)
+:::
+
 ```{bash eval=FALSE}
 cat *fastq | tail -n 8 | head -n 4
 ``` 
@@ -260,19 +264,15 @@ grep -B 1 "^+$" sample_3_AAAG_corrected.fastq | grep -v "+\|--" \
 | grep --color "AC[ACTG]\|[ACTG]CA"
 ``` 
 
-__Resources to learn more in the future__
+### Resources to learn more in the future__
 
 Rex Egg, A good resource to learn more about regular expressions: 
 
-https://www.rexegg.com/  
+<https://www.rexegg.com/>
 
 Cheatsheet: 
 
-https://www.rexegg.com/regex-quickstart.html
-
-Regex Crossword, A online game like soduku that is useful to practice regular expressions. Best used in conjunction with the above cheat sheet: 
-
-https://regexcrossword.com/
+<https://www.rexegg.com/regex-quickstart.html>
 
 ## sed
 ![](/images/sed.png){style="width:150px; border-radius:5px; background:white" fig-align="center"}
@@ -323,13 +323,13 @@ cat metadata.txt | sed "s/\t/,/g" > metadata.csv
 ``` 
 
 For an in depth look into the sed command please look at the following link:
-http://www.grymoire.com/Unix/Sed.html
+<http://www.grymoire.com/Unix/Sed.html>
 
 ## Permissions
 All files, directories and programs have permissions. It is important to know about this so you know your read, write and executability permissions for the content within machines.
 
 Below is a useful link to learn about file permissions:  
-https://www.guru99.com/file-permissions.html
+<https://www.guru99.com/file-permissions.html>
 
 ## MCQs: Advanced linux
 ![](/images/question_bubble_red.png){style="width:150px" fig-align="center"}

@@ -28,14 +28,18 @@ mkdir Chicken/Egg
 ls Chicken
 ``` 
 
-__Tip__: You can use the up arrow key to get to previously run commands which you can edit using the right and left keys.
+::: {.callout-tip}
+You can use the up arrow key to get to previously run commands which you can edit using the right and left keys.
+:::
 
 ## Moving Directories and Files
 ![](/images/chicken.png){style="width:150px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 Files and directories can be moved with the `mv` command. This can also be used to change the name of a file or a directory.
 
-__Note__: If you move a file to the path of a file that already exists, the pre existing file will be overwritten.
+::: {.callout-note}
+If you move a file to the path of a file that already exists, the pre existing file will be overwritten.
+:::
 
 First ensure your working directory is the __"Linux"__ directory.
 
@@ -81,7 +85,10 @@ ls 3_chicken_farm/3_2_field/
 ![](/images/copy.png){style="width:150px; background:white; border-radius:5px; border: 5px solid white" fig-align="center"}
 
 Files and directories can be copied with the `cp` command. Directories and files can be copied to any directory and given a new name.
-Note: If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.
+
+::: {.callout-note}
+If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.
+:::
 
 Before running the below commands move into your __"~/Linux/3_chicken_farm/"__ directory.
 
@@ -129,11 +136,13 @@ ls
 
 To delete files and directories the command `rm` can be used. 
 
-__Important__: This command can be very dangerous. There is no recycle bin on Linux machines so once you delete something it cannot be recovered. Be very careful when deleting files and directories. To avoid major loss try to keep backups of important data and scripts.
+::: {.callout-important}
+This command can be very dangerous. There is no recycle bin on Linux machines so once you delete something it cannot be recovered. Be very careful when deleting files and directories. To avoid major loss try to keep backups of important data and scripts.
+:::
 
-Ensure you are in your __"3_chicken_farm/"__ directory
+Ensure you are in your __"3_chicken_farm/"__ directory.
 
-Remove the file __"3_2_field/Chick_2.txt"__
+Remove the file __"3_2_field/Chick_2.txt"__.
 ```{bash eval=FALSE}
 #List contents of 3_2_field
 ls 3_2_field
@@ -143,7 +152,7 @@ rm 3_2_field/Chick_2.txt
 ls 3_2_field
 ``` 
 
-Remove the directory __"3_1_hut_2/"__ and its contents
+Remove the directory __"3_1_hut_2/"__ and its contents.
 ```{bash eval=FALSE}
 #List contents of current directory
 ls
@@ -176,7 +185,7 @@ opts_p <- c("__`-r`__", answer="__`mkdir`__", "__`ls`__")
 ```{r, echo = FALSE}
 opts_p <- c(answer="__`-r`__", "__`mkdir`__", "__`ls`__")
 ```
-4.  What option is needed for moving or removing a directory? `r longmcq(opts_p)`
+4.  What option is needed for removing a directory? `r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
 opts_p <- c("__`-r`__", "__`mkdir`__", answer="__`ls`__")
