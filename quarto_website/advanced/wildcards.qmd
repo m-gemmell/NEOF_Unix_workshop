@@ -1,0 +1,87 @@
+---
+engine: knitr
+---
+
+# Wildcard characters
+![](/images/wildcard.png){style="width:200px" fig-align="center"}
+
+These are characters that can be used to represent a variety of other characters. This can be useful for deleting many files, searching for files with specific patterns in their names, and more.
+
+Be very careful when using wildcard character with the command `rm`.  
+
+Three basic and useful wildcards include:  
+
+- `*` - This represents zero or more characters  
+- `?` - This represents a single character  
+- `[]` - This represents a range of characters
+
+Below are various examples you can run to show wildcards in action.
+
+## One *
+
+List all the files and directories in the working directory.
+```{bash eval=FALSE}
+ls *
+``` 
+
+List all files ending in “.fastq”.
+```{bash eval=FALSE}
+ls *.fastq
+``` 
+
+List all files ending in “.txt”.
+```{bash eval=FALSE}
+ls *.txt
+``` 
+
+List all files with the string “corrected” somewhere in the file name.
+```{bash eval=FALSE}
+ls *corrected*
+``` 
+
+List all files with the string “corrected” somewhere in the file name that also ends with “fastq”.
+```{bash eval=FALSE}
+ls *corrected*fastq
+``` 
+
+List all files that begin with “sample_2”.
+```{bash eval=FALSE}
+ls sample_2*
+``` 
+
+List all files that begin with “sample_2_”.
+```{bash eval=FALSE}
+ls sample_2_*
+``` 
+
+List the files that begin with “sample_1” and ends with “AAAA.txt”. It may have zero or more characters between these two.
+```{bash eval=FALSE}
+ls sample_1_*AAAA.txt
+``` 
+
+## Multiple wildcards
+
+List the fastq files of samples with a single digit number.
+```{bash eval=FALSE}
+ls sample_?_*fastq
+``` 
+
+List the txt files of samples with a number in the tens (10-19).
+```{bash eval=FALSE}
+ls sample_1?_*txt
+``` 
+
+List the txt files for samples 3,4,5,6 & 7 i.e. 3-7.
+```{bash eval=FALSE}
+ls sample_[3-7]_*txt
+``` 
+
+List the txt files for the non corrected information of samples with single digits.
+```{bash eval=FALSE}
+ls sample_?_*[ATGC].txt
+``` 
+
+List the corrected txt files for samples with numbers divisible by 10.
+```{bash eval=FALSE}
+ls sample_[0-9][0]_*corrected.txt
+```

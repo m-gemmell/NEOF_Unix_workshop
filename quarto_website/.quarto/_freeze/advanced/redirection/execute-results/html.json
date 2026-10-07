@@ -1,0 +1,15 @@
+{
+  "hash": "e787fc54e7abb9c0718312bceb4c0659",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nengine: knitr\n---\n# Redirection\n![](/images/chevron.png){style=\"width:150px; border-radius:15px; background:white\" fig-align=\"center\"}\n\nRedirection allows you to put the output of a command to a file. The redirect symbol is `>`. Be careful when redirecting as it will overwrite any existing files. To append to the bottom of a file use `>>`.\n\nBelow are various examples of redirecting in action.\n\n## Creating new files\n\nCreate a file called __ecoli.tmp__ containing the text “I am escherichia coli”.\n\n::: {.cell}\n\n```{.bash .cell-code}\necho \"I am escherichia coli\" > ecoli.tmp\n```\n:::\n\n\nCreate a file called __pcryohalolentis.tmp__ containing the text “I am psychrobacter cryohalolentis”.\n\n::: {.cell}\n\n```{.bash .cell-code}\necho \"I am psychrobacter cryohaloloentis\" > pcryohalolentis.tmp\n```\n:::\n\n\nCreate a new file called __bacteria.tmp__ which will contain the text from __ecoli.tmp__ and __pcryohalolentis.tmp__.\n\n::: {.cell}\n\n```{.bash .cell-code}\ncat *tmp > bacteria.tmp\n```\n:::\n\n\nCreate a file called __vcholerae.tmp__ containing the text “I am not ecoli or pcryohalolentis”.\n\n::: {.cell}\n\n```{.bash .cell-code}\necho \"I am not ecoli or pcryohalolentis\" > vcholerae.tmp\n```\n:::\n\n\n## Overwriting and appending to files\n\n`cat` the file __vcholerae.tmp__ and redirect it to __bacteria.tmp__.\n\n::: {.cell}\n\n```{.bash .cell-code}\ncat vcholerae.tmp > bacteria.tmp\n```\n:::\n\n\nLook at the contents of __bacteria.tmp__.\n\n::: {.cell}\n\n```{.bash .cell-code}\ncat bacteria.tmp\n```\n:::\n\n\nThis has removed the ecoli and pcryohalolentis lines. Append the contents of __ecoli.tmp__ and __pcryohalolentis.tmp__ to __bacteria.tmp__ and then check the file.\n\n::: {.cell}\n\n```{.bash .cell-code}\ncat ecoli.tmp pcryohalolentis.tmp >> bacteria.tmp\ncat bacteria.tmp\n```\n:::\n\n\n## Quick info and cleanup\n\nPut information regarding the number of lines of all the fastq files into a new file called __fastq_lines.tmp__.\n\n::: {.cell}\n\n```{.bash .cell-code}\nwc -l *fastq > fastq_lines.tmp\n```\n:::\n\n\nNow delete all the files that were created in the above examples. Again be very careful about using the `rm` command with wildcards.\n\n::: {.cell}\n\n```{.bash .cell-code}\nrm *tmp\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

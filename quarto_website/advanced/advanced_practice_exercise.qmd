@@ -2,7 +2,7 @@
 engine: knitr
 ---
 
-# Advance practice exercise
+# Exercise
 ![](/images/exercise_bike.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
 
 Below is a set of tasks and questions that will require all the skills you have gained from the advanced linux part practical.

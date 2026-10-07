@@ -1,0 +1,102 @@
+---
+engine: knitr
+---
+# Regular expressions
+![](/images/trex.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+Regular expressions are similar to wildcard characters but more complex and used for commands like `grep` and `sed`.
+
+Below are a basic set of regular expressions:
+
+- `.` : A single character  
+- `?` : The preceding character matches 1 or 0 times  
+- `*` : The preceding character matches zero or more times  
+- `+` : The preceding character matches one or more times  
+- `{n}` : The preceding character matches exactly n times  
+- `{n,m}` : The preceding character matches n to m times  
+- `[AT]` : The character is one of the characters in the brackets  
+- `[^CG]` : The character is not one of those in the brackets  
+- `[1-7]` : The character is 1,2,3,4,5,6 or 7. This works with letters too.  
+- `()` : Group several characters into one  
+- `|` : Logical OR operator  
+- `^` : Matches the beginning of the line  
+- `$` : Matches the end of the line  
+
+Below are various examples of regular expressions in action.
+
+## Metadata
+
+Look at the contents of __metadata.txt__.
+```{bash eval=FALSE}
+cat metadata.txt
+``` 
+
+Print out the lines for the Healthy patients.
+```{bash eval=FALSE}
+cat metadata.txt | grep "HEALTHY"
+``` 
+
+Print out the lines for the IBD patients from Craigavon and Belfast. In the below command `\` is used to allow `|` to be used as an __or__ operator instead of acting as a string to match.
+```{bash eval=FALSE}
+cat metadata.txt | grep "IBD" | grep "BELFAST\|CRAIGAVON"
+``` 
+
+Print out the lines for the Pre information of patients not from Edinburgh or Aberdeen.
+```{bash eval=FALSE}
+cat metadata.txt | grep "PRE$" | grep -v "ABERDEEN\|EDINBURGH"
+``` 
+
+Print out the lines for patients 1,2,3 and 4.
+```{bash eval=FALSE}
+cat metadata.txt | grep "Patient_[1-4][^0-9]" 
+``` 
+
+## Fastq
+
+Print to screen every fastq header of file __sample_15_AACG_corrected.fastq__.
+```{bash eval=FALSE}
+cat sample_15_AACG_corrected.fastq | grep "^@sample"
+``` 
+
+In the piping examples we counted the number of lines with the text “TAG” within the fastq files. However this also counted fastq headers due to the name of the samples. Let us use a regular expression to only count the number of sequences within the fastq files that contain “TAG”.
+```{bash eval=FALSE}
+cat *fastq | grep "^[^@].*TAG"
+``` 
+
+Print to screen every line within the file __sample_3_AAAG_corrected.fastq__ that has a possible Threonine codon in the forward direction.
+```{bash eval=FALSE}
+grep "^[^@].*AC[ACTG]" sample_3_AAAG_corrected.fastq
+``` 
+
+In the above example fastq quality lines are also extracted as some of them also contain the pattern we are searching for. To get around this we can pipe. First `grep` the fastq quality header (i.e. +), as no other line only contains “+”, and the line before it. Then we can remove lines with a plus with an invert `grep`. Finally we can `grep` for the threonine pattern using only the sequence lines. Let us build this up step by step.  
+
+Print to screen the fastq quality header plus the one line preceding each (i.e. Sequence line) for file __sample_3_AAAG_corrected.fastq__.
+```{bash eval=FALSE}
+grep -B 1 "^+$" sample_3_AAAG_corrected.fastq
+``` 
+
+Now pipe this output so it removes the lines with “+” (fastq quality headers) and “--” (separators of each `grep` match provided by grep because of the -B 1 option). 
+```{bash eval=FALSE}
+grep -B 1 "^+$" sample_3_AAAG_corrected.fastq | grep -v "+\|--"
+``` 
+
+Now from this output, `grep` for the Threonine pattern plus colour each match within the line with the option “__--color__”.
+```{bash eval=FALSE}
+grep -B 1 "^+$" sample_3_AAAG_corrected.fastq | grep -v "+\|--" | grep --color "AC[ACTG]"
+``` 
+
+Let us repeat the above but add the possibility of the threonine being in the reverse direction.
+```{bash eval=FALSE}
+grep -B 1 "^+$" sample_3_AAAG_corrected.fastq | grep -v "+\|--" \
+| grep --color "AC[ACTG]\|[ACTG]CA"
+``` 
+
+## Extra resources
+
+Rex Egg, A good resource to learn more about regular expressions: 
+
+<https://www.rexegg.com/>
+
+Cheatsheet: 
+
+<https://www.rexegg.com/regex-quickstart.html>

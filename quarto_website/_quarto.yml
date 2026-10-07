@@ -80,8 +80,16 @@ website:
       title: "Advanced"
       style: "floating"
       contents:
-        - href: advanced/advanced_linux_practice.qmd
-        - href: advanced/advanced_practice_exercise.qmd
+        - section: "Advanced Linux"
+          contents:
+          - href: advanced/advanced_linux_practice.qmd
+          - href: advanced/wildcards.qmd
+          - href: advanced/redirection.qmd
+          - href: advanced/pipes.qmd
+          - href: advanced/regular_expressions.qmd
+          - href: advanced/sed.qmd
+          - href: advanced/recap.qmd
+          - href: advanced/advanced_practice_exercise.qmd
         - href: advanced/bioinformatic_languages.qmd
     - id: Appendix
       title: "Appendix"

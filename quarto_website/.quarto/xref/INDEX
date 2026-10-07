@@ -148,5 +148,23 @@
   },
   "course_resources.qmd": {
     "course_resources.html": "0d8b9982"
+  },
+  "advanced/wildcards.qmd": {
+    "wildcards.html": "47820ed6"
+  },
+  "advanced/redirection.qmd": {
+    "redirection.html": "8fda8119"
+  },
+  "advanced/pipes.qmd": {
+    "pipes.html": "b4c1b60f"
+  },
+  "advanced/regular_expressions.qmd": {
+    "regular_expressions.html": "7a089c26"
+  },
+  "advanced/sed.qmd": {
+    "sed.html": "803d3477"
+  },
+  "advanced/recap.qmd": {
+    "recap.html": "baa3f401"
   }
 }

@@ -1,0 +1,15 @@
+{
+  "hash": "6065cf1050109a76435d92b8c72f71da",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nengine: knitr\n---\n# Pipes\n![](/images/pipes.png){style=\"width:200px; background: white; border-radius:5px\" fig-align=\"center\"}\n\nPipes allow you to put the output of one command to the input of another. For example you could use `grep` to get all the lines with a certain string and pipe the output to `wc` to count the number of lines that have the specific string. \n\nThe pipe symbol is `|`. This is normally found on your keyboard directly left of the Z key. Weirdly the symbol is represented by `|` but split in the middle on some keyboards.\n\nA useful tip when building up longer pipes is to start with a smaller amount of data and check the output of each step as you go. To do this you could use `head` instead of `cat` whilst testing.\n\nBelow are various examples of piping in action\n\n## Quick pipes of text files\n\nPrint to screen the second last fastq entry of the file __sample_20_ATAC_corrected.fastq__.\n\n::: {.cell}\n\n```{.bash .cell-code}\ncat sample_20_ATAC_corrected.fastq | tail -n 8 | head -n 4 \n```\n:::\n\n\n::: {.callout-note}\nIn the above command the `tail` command is working on the output of the `cat` command. Therefore this would not work to get the second last fastq entry of multiple files. For example the following command would print the second last fastq entry of the last fastq file (i.e. __sample_9_AAGA.fastq__ due to file ordering)\n:::\n\n\n::: {.cell}\n\n```{.bash .cell-code}\ncat *fastq | tail -n 8 | head -n 4\n```\n:::\n\n\nCount the number of lines within all the fastq files.\n\n::: {.cell}\n\n```{.bash .cell-code}\ncat *fastq | wc -l\n```\n:::\n\n\nCount the number of lines  which contain the text \"TAG\" within all the fastq files.\n\n::: {.cell}\n\n```{.bash .cell-code}\ncat *fastq | grep “TAG” | wc -l\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

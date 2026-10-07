@@ -1,0 +1,15 @@
+{
+  "hash": "8aa0182024eb6fea9d6bb01e2370ed22",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nengine: knitr\n---\n\n# Wildcard characters\n![](/images/wildcard.png){style=\"width:200px\" fig-align=\"center\"}\n\nThese are characters that can be used to represent a variety of other characters. This can be useful for deleting many files, searching for files with specific patterns in their names, and more.\n\nBe very careful when using wildcard character with the command `rm`.  \n\nThree basic and useful wildcards include:  \n\n- `*` - This represents zero or more characters  \n- `?` - This represents a single character  \n- `[]` - This represents a range of characters\n\nBelow are various examples you can run to show wildcards in action.\n\n## One *\n\nList all the files and directories in the working directory.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls *\n```\n:::\n\n\nList all files ending in “.fastq”.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls *.fastq\n```\n:::\n\n\nList all files ending in “.txt”.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls *.txt\n```\n:::\n\n\nList all files with the string “corrected” somewhere in the file name.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls *corrected*\n```\n:::\n\n\nList all files with the string “corrected” somewhere in the file name that also ends with “fastq”.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls *corrected*fastq\n```\n:::\n\n\nList all files that begin with “sample_2”.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls sample_2*\n```\n:::\n\n\nList all files that begin with “sample_2_”.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls sample_2_*\n```\n:::\n\n\nList the files that begin with “sample_1” and ends with “AAAA.txt”. It may have zero or more characters between these two.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls sample_1_*AAAA.txt\n```\n:::\n\n\n## Multiple wildcards\n\nList the fastq files of samples with a single digit number.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls sample_?_*fastq\n```\n:::\n\n\nList the txt files of samples with a number in the tens (10-19).\n\n::: {.cell}\n\n```{.bash .cell-code}\nls sample_1?_*txt\n```\n:::\n\n\nList the txt files for samples 3,4,5,6 & 7 i.e. 3-7.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls sample_[3-7]_*txt\n```\n:::\n\n\nList the txt files for the non corrected information of samples with single digits.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls sample_?_*[ATGC].txt\n```\n:::\n\n\nList the corrected txt files for samples with numbers divisible by 10.\n\n::: {.cell}\n\n```{.bash .cell-code}\nls sample_[0-9][0]_*corrected.txt\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

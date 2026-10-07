@@ -1,0 +1,61 @@
+---
+engine: knitr
+---
+# Redirection
+![](/images/chevron.png){style="width:150px; border-radius:15px; background:white" fig-align="center"}
+
+Redirection allows you to put the output of a command to a file. The redirect symbol is `>`. Be careful when redirecting as it will overwrite any existing files. To append to the bottom of a file use `>>`.
+
+Below are various examples of redirecting in action.
+
+## Creating new files
+
+Create a file called __ecoli.tmp__ containing the text “I am escherichia coli”.
+```{bash eval=FALSE}
+echo "I am escherichia coli" > ecoli.tmp
+``` 
+
+Create a file called __pcryohalolentis.tmp__ containing the text “I am psychrobacter cryohalolentis”.
+```{bash eval=FALSE}
+echo "I am psychrobacter cryohaloloentis" > pcryohalolentis.tmp
+``` 
+
+Create a new file called __bacteria.tmp__ which will contain the text from __ecoli.tmp__ and __pcryohalolentis.tmp__.
+```{bash eval=FALSE}
+cat *tmp > bacteria.tmp
+``` 
+
+Create a file called __vcholerae.tmp__ containing the text “I am not ecoli or pcryohalolentis”.
+```{bash eval=FALSE}
+echo "I am not ecoli or pcryohalolentis" > vcholerae.tmp
+``` 
+
+## Overwriting and appending to files
+
+`cat` the file __vcholerae.tmp__ and redirect it to __bacteria.tmp__.
+```{bash eval=FALSE}
+cat vcholerae.tmp > bacteria.tmp
+``` 
+
+Look at the contents of __bacteria.tmp__.
+```{bash eval=FALSE}
+cat bacteria.tmp
+``` 
+
+This has removed the ecoli and pcryohalolentis lines. Append the contents of __ecoli.tmp__ and __pcryohalolentis.tmp__ to __bacteria.tmp__ and then check the file.
+```{bash eval=FALSE}
+cat ecoli.tmp pcryohalolentis.tmp >> bacteria.tmp
+cat bacteria.tmp
+``` 
+
+## Quick info and cleanup
+
+Put information regarding the number of lines of all the fastq files into a new file called __fastq_lines.tmp__.
+```{bash eval=FALSE}
+wc -l *fastq > fastq_lines.tmp
+``` 
+
+Now delete all the files that were created in the above examples. Again be very careful about using the `rm` command with wildcards.
+```{bash eval=FALSE}
+rm *tmp
+``` 

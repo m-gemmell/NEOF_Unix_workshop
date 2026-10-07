@@ -7,11 +7,19 @@ library(webexercises)
 ## Videos & slides
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/9EEeOC4gpV0" 
+<iframe src="https://www.youtube.com/embed/Yqm8RLTMOuk" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
 [__Slides__](https://docs.google.com/presentation/d/1DlVAlNRlb4TjgRAlCG5OphyS_W3UGA0htN0-9WvItQ0/edit?usp=sharing)
+
+
+`r hide("09 OCT 2025 recording")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/9EEeOC4gpV0" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
 
 
 `r hide("07 OCT 2025 recording")`
