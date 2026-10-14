@@ -40,7 +40,13 @@ h2, h3, h4, h5, h6 {
   font-family: "Lexend";
 }
 monofont {
-  font-family: "Fira+Mono";
+  font-family: "Fira Mono", monospace;
+}
+
+.fira-mono-medium {
+  font-family: "Fira Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
 }
  
 .tippy-tooltip {
