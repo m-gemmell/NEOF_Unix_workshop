@@ -1,10 +1,7 @@
 /*-- scss:defaults --*/
 
 // Import fonts
-// Fira mono
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
-// Lexend
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lexend:wght@100..900&display=swap');
 
 // Colors
 $ibm-blue: #648fff;
@@ -23,6 +20,9 @@ $sidebar-hl: $neof-green;
 
 $link-color: $ibm-blue;
 
+$font-family-sans-serif: "Lexend";
+$font-family-monospace: "Fira code";
+
 //CSS code
 /*-- scss:rules --*/
 .navbar-logo {
@@ -39,12 +39,17 @@ h1 {
 h2, h3, h4, h5, h6 {
   font-family: "Lexend";
 }
-monofont {
-  font-family: "Fira+Mono", monospace;
+
+code {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal; 
 }
 
-.fira-mono-medium {
-  font-family: "Fira+Mono", monospace;
+.fira-code-medium {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
