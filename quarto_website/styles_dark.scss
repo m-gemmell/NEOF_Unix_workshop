@@ -1,16 +1,20 @@
 /*-- scss:defaults --*/
 
 // Import fonts
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Lexend:wght@100..900&display=swap');
 
 // Colors
 $ibm-blue: #648fff;
+$blue: #5282FF;
 $ibm-purple: #785ef0;
 $ibm-maroon: #dc267f;
 $ibm-orange: #fe6100;
 $ibm-yellow: #ffb000;
 $neof-green: #00af37;
 $neof-grey: #333e47;
+$code-purple: #7D12BA;
+$light-grey: #F8F9FA;
+$white: #FFFFFF;
 
 // Base document colors
 $navbar-bg: $neof-grey;
@@ -20,8 +24,11 @@ $sidebar-hl: $neof-green;
 
 $link-color: $ibm-blue;
 
+// Text of side bar (i.e. left)
+$sidebar-fg: $white; // Text colour
+
 $font-family-sans-serif: "Lexend";
-$font-family-monospace: "Fira Code";
+$font-family-monospace: "Fira Mono";
 
 //CSS code
 /*-- scss:rules --*/
@@ -39,17 +46,14 @@ h1 {
 h2, h3, h4, h5, h6 {
   font-family: "Lexend";
 }
-
 code {
-  font-family: "Fira Code", monospace;
+  font-family: "Fira Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal; 
 }
-
-.fira-code-medium {
-  font-family: "Fira Code", monospace;
-  font-optical-sizing: auto;
+.fira-mono-medium {
+  font-family: "Fira Mono", monospace;
   font-weight: 500;
   font-style: normal;
 }
@@ -72,39 +76,4 @@ code {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-// Placement of hex image rows in main index page
-.hexrowtop {
-  position: relative;
-  left:-50px;
-  display: flex;
-  flex-wrap:nowrap;
-  justify-content: center;
-}
-.hexrowmid {
-  position: relative;
-  top: -47px;
-  display: flex;
-  flex-wrap:nowrap;
-  justify-content: center;
-}
-.hexrowbottom {
-  position: relative;
-  top: -94px;
-  left: 50px;
-  display: flex;
-  justify-content: center;
-  height: 40px;
-}
-
-.hexcollast {
-}
-
-
-// Make images disappear if size of viewport is too small
-@media (max-width: 450px) {
-  .hexcollast {
-    display: none;
-  }
 }

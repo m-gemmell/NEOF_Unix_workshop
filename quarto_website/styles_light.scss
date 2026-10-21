@@ -1,7 +1,8 @@
 /*-- scss:defaults --*/
 
 // Import fonts
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Lexend:wght@100..900&display=swap');
+
 // Colors
 $ibm-blue: #648fff;
 $ibm-purple: #785ef0;
@@ -10,17 +11,20 @@ $ibm-orange: #fe6100;
 $ibm-yellow: #ffb000;
 $neof-green: #00af37;
 $neof-grey: #333e47;
+$black: #000000;
 
 // Base document colors
 $navbar-bg: $neof-grey;
 $navbar-hl: $neof-green; // highlight color when hovering over navbar links
 $footer-bg: $neof-grey; // footer
 $sidebar-hl: $neof-green;
+// Text of side bar (i.e. left)
+$sidebar-fg: $black; //Text colour
 
 $link-color: $ibm-blue;
 
 $font-family-sans-serif: "Lexend";
-$font-family-monospace: "Fira Code";
+$font-family-monospace: "Fira Mono";
 
 //CSS code
 /*-- scss:rules --*/
@@ -38,26 +42,23 @@ h1 {
 h2, h3, h4, h5, h6 {
   font-family: "Lexend";
 }
-
 code {
-  font-family: "Fira Code", monospace;
+  font-family: "Fira Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal; 
 }
-
-.fira-code-medium {
-  font-family: "Fira Code", monospace;
-  font-optical-sizing: auto;
+.fira-mono-medium {
+  font-family: "Fira Mono", monospace;
   font-weight: 500;
   font-style: normal;
 }
  
+// Tippy tooltips
 .tippy-tooltip {
   font-size: 16px;
   padding: 3px 5px;
 }
- 
 // Embed videos
 .container {
     position: relative;
@@ -71,67 +72,4 @@ code {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-// Placement of hex image rows in main index page
-.hexrowtop {
-  position: relative;
-  left:-50px;
-  display: flex;
-  flex-wrap:nowrap;
-  justify-content: center;
-}
-.hexrowmid {
-  position: relative;
-  top: -47px;
-  display: flex;
-  flex-wrap:nowrap;
-  justify-content: center;
-}
-.hexrowbottom {
-  position: relative;
-  top: -94px;
-  left: 50px;
-  display: flex;
-  justify-content: center;
-  height: 40px;
-}
-
-// Placement of hex image in one row
-.hexrow {
-  position: relative;
-  display: flex;
-  flex-wrap:nowrap;
-  justify-content: center;
-}
-
-// Placement of hex image rows in /dplyr/dplyr.qmd
-.hexdplyrcolumnstop {
-  left: -37.5px;
-  position: relative;
-  display: flex;
-  flex-wrap:nowrap;
-  justify-content: center;
-}
-.hexdplyrcolumnsbottom{
-  left:37.5px;
-  top:-61px;
-  height:130px;
-  position: relative;
-  display: flex;
-  flex-wrap:nowrap;
-  justify-content: center;
-}
-
-
-
-.hexcollast {
-}
-
-
-// Make images disappear if size of viewport is too small
-@media (max-width: 600px) {
-  .hexcollast {
-    display: none;
-  }
 }

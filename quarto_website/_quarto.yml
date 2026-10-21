@@ -140,7 +140,7 @@ format:
 ####Any text not determined in scss files will be mainfont
     mainfont: Lexend
 ####Ensure monofont set to fira Code
-    monofont: Fira Code
+    monofont: Fira Mono
  
 ###Paths for webexercises files
     css: include/webex.css
